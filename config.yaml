@@ -1,0 +1,100 @@
+baseURL: https://example.com
+languageCode: en
+defaultContentLanguage: en
+title: KeepIt
+theme: KeepIt
+paginate: 12
+enableEmoji: yes
+enableRobotsTXT: yes
+googleAnalytics: ''
+disqusShortname: yourdiscussshortname
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+blackfriday:
+  hrefTargetBlank: yes
+  nofollowLinks: yes
+  noreferrerLinks: yes
+Permalinks:
+  posts: /:year/:filename/
+menu:
+  main:
+    - name: Blog
+      url: /posts/
+      weight: 1
+    - name: Categories
+      url: /categories/
+      weight: 3
+    - name: About
+      url: /about
+      weight: 4
+params:
+  author: Dagwbl
+  avatar: /images/me/avatar.jpeg
+  baidu_verification: ''
+  bing_verification: ''
+  cdn_url: ''
+  dateFormatToUse: ''
+  description: ''
+  gitalk:
+    clientId: ''
+    clientSecret: ''
+    owner: ''
+    repo: ''
+  gitment:
+    clientId: ''
+    clientSecret: ''
+    owner: ''
+    repo: ''
+  google_verification: ''
+  gravatar: {}
+  home_mode: 'post'
+  image:
+    height: 600
+    url: cover.png
+    width: 800
+  keywords: ''
+  license: Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/"
+    target="_blank">CC BY-NC 4.0</a>
+  logo:
+    height: 40
+    url: logo.png
+    width: 127
+  pinterest_verification: ''
+  publisher:
+    logo:
+      height: 40
+      url: logo.png
+      width: 127
+    name: Dagwbl
+  share:
+    Facebook: yes
+    Linkedin: yes
+    Twitter: yes
+    copyright: This work is licensed under a Creative Commons Attribution-NonCommercial
+      4.0 International License.
+  since: 2012
+  social:
+    Facebook: xxxx
+    GitHub: xxxx
+    Linkedin: xxxx
+    Twitter: xxxx
+  socialShare: yes
+  subtitle: A Hugo theme
+  utterances:
+    owner: ''
+    repo: ''
+  valine:
+    appId: your appId
+    appKey: your appKey
+    avatar: mm
+    enable: no
+    language: en
+    notify: no
+    placeholder: your comments ...
+    verify: no
+    visitor: yes
+  yandex_verification: ''
+author:
+  name: Dagwbl
