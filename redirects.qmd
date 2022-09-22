@@ -1,0 +1,5 @@
+---
+title: "Renamed Page"
+aliases:
+  - page.html
+---

@@ -1,0 +1,9 @@
+---
+listing:
+  contents: posts
+  type: default
+  categories: numbered
+  sort: 
+    - "date desc"
+    - "title desc"
+---

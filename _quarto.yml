@@ -1,0 +1,55 @@
+project:
+  type: website
+  output-dir: docs
+  render: 
+      - "*.qmd"
+      - "!ignored.qmd"
+
+website:
+  # reader-mode: true
+  title: "Dagwbl"
+  site-url: https://dagwbl.github.io
+  description: "Dagwbl's blog"
+
+  navbar:
+    search: true
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+      - icon: rss
+        href: index.html
+    left: 
+          - text: "Blog"
+            file: blog.qmd
+          - text: "More"
+            menu: 
+              - talks.qmd
+  # sidebar: 
+  #   style: "docked"
+  #   search: true
+  #   contents:
+  #     - section: "Basics"
+  #       contents:
+  #         - index.qmd
+  #         - basics-knitr.qmd
+  #         - basics-jupyter.qmd
+  #     - section: "Layout"
+  #       contents:
+  #         - layout.qmd
+  #         - layout-knitr.qmd
+  #         - layout-jupyter.qmd
+  page-footer: 
+    # left: "Copyright 2021, Dagwbl"
+    center: "Copyright 2021, Dagwbl"
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+
+theme: 
+  light: flatly
+  dark: darkly
