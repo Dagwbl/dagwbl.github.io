@@ -4,21 +4,21 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "twitter\n  \n  \n    \n     Github\n  \n\n  \n  \n本人在口头上逻辑跟不上思维的脚步，喜欢实务胜于畅想，喜欢感受胜于虚行。喜欢折腾计算机相关的新技术，无论软硬件。有一个自己的博客网站，三年里折腾了从传感器到单片机到服务器的一体化系统并作为自己的论文；不喜与他人争虚名，但想证明自己，参加过两次数学建模比赛都没有取得最好的名次，但也不赖。曾有志成为信息安全专家，因填错了专业而入行大安全，一般情况下大小之选选其大，只是大安全相关的职业叫做安全管理员就有点头痛，好在曾经的兴趣变成了工作中的助手和乐趣。目前的志向是成为作家，退休后写小说，于是乎格外留意生活与工作中的感悟，闲暇时刻多阅读多记录以积累思想和文字，身心俱疲的时候就和朋友打打游戏或电话。\n\n\nUniversity of GuiZhou, HuaXi Master of Safety Science and Engineering | Sep 2020 - June 2023\nUniversity of GuiZhou, HuaXi Bachelor of Safety Engineering | Sep 2016 - June 2020\n\n\n\nStill alive."
+    "text": "twitter\n  \n  \n    \n     Github\n  \n\n  \n  \nI can’t keep up with the footsteps of thinking in verbal. I like practice than imagination, and I like to feel better than vanity.I like new technologies related to computer, regardless of software and hardware.There is an own blog website that tossed the integrated system from sensors to single -chip machines to server for three years and as its own papers; I do not like to compete with others, but I want to prove myself that I have won two mathematical modeling competitions.The best ranking, but it is not bad.Once I was determined to become an information security expert, I joined the big security because of filling in the wrong professional. Generally, the size of the size is large. It is only a headache for security administrators. FortunatelyAssistant and fun.The current ambition is to become a writer, writing novels after retirement, so he pays special attention to the perception of life and work. Read more records and record more at your spare time to accumulate thoughts and words.\n\n\nUniversity of GuiZhou, HuaXi Master of Safety Science and Engineering | Sep 2020 - June 2023\nUniversity of GuiZhou, HuaXi Bachelor of Safety Engineering | Sep 2016 - June 2020\n\n\n\nStill alive."
   },
   {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Dagwbl",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "测试MD\n\n\n\n\n\n\n\nMD\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Dagwbl",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "测试MD\n\n\n\n\n\n\n\nMD\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -28,17 +28,17 @@
     "text": "This is a post with executable code."
   },
   {
+    "objectID": "posts/test-md/test.html",
+    "href": "posts/test-md/test.html",
+    "title": "测试MD",
+    "section": "",
+    "text": "这是一个MD文件测试, 已经测试失败，只支持qmd文件"
+  },
+  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Dagwbl",
-    "section": "",
-    "text": "讨论"
   }
 ]

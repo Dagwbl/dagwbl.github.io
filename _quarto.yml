@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render: 
       - "*.qmd"
+      - "*.qmd"
       - "!ignored.qmd"
 
 website:
@@ -42,7 +43,6 @@ website:
   #         - layout-knitr.qmd
   #         - layout-jupyter.qmd
   page-footer: 
-    # left: "Copyright 2021, Dagwbl"
     center: "Copyright 2021, Dagwbl"
 
 format:

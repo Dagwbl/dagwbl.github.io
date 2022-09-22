@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dagwbl.github.io/about.html</loc>
-    <lastmod>2022-09-22T13:53:12.893Z</lastmod>
+    <lastmod>2022-09-22T14:15:54.860Z</lastmod>
   </url>
   <url>
     <loc>https://dagwbl.github.io/blog.html</loc>
-    <lastmod>2022-09-22T13:53:13.521Z</lastmod>
+    <lastmod>2022-09-22T14:15:55.498Z</lastmod>
   </url>
   <url>
     <loc>https://dagwbl.github.io/index.html</loc>
-    <lastmod>2022-09-22T13:53:14.153Z</lastmod>
+    <lastmod>2022-09-22T14:15:56.129Z</lastmod>
   </url>
   <url>
     <loc>https://dagwbl.github.io/posts/post-with-code/index.html</loc>
-    <lastmod>2022-09-22T13:53:14.681Z</lastmod>
+    <lastmod>2022-09-22T14:15:56.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dagwbl.github.io/posts/test-md/test.html</loc>
+    <lastmod>2022-09-22T14:15:58.316Z</lastmod>
   </url>
   <url>
     <loc>https://dagwbl.github.io/posts/welcome/index.html</loc>
-    <lastmod>2022-09-22T13:53:15.609Z</lastmod>
+    <lastmod>2022-09-22T14:15:59.050Z</lastmod>
   </url>
   <url>
     <loc>https://dagwbl.github.io/redirects.html</loc>
-    <lastmod>2022-09-22T13:53:16.778Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dagwbl.github.io/talks.html</loc>
-    <lastmod>2022-09-22T13:53:17.405Z</lastmod>
+    <lastmod>2022-09-22T14:15:59.657Z</lastmod>
   </url>
 </urlset>

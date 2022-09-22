@@ -53,5 +53,23 @@
   <pubDate>Sun, 18 Sep 2022 16:00:00 GMT</pubDate>
   <media:content url="https://dagwbl.github.io/posts/welcome/thumbnail.jpg" medium="image" type="image/jpeg"/>
 </item>
+<item>
+  <title>测试MD</title>
+  <link>https://dagwbl.github.io/posts/test-md/test.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<hr>
+<p>这是一个MD文件测试, 已经测试失败，只支持qmd文件</p>
+
+
+
+ ]]></description>
+  <category>MD</category>
+  <guid>https://dagwbl.github.io/posts/test-md/test.html</guid>
+  <pubDate>Thu, 22 Sep 2022 14:15:56 GMT</pubDate>
+</item>
 </channel>
 </rss>
