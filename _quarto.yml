@@ -14,7 +14,6 @@ website:
   navbar:
     search: true
     right:
-      - about.qmd
       - icon: github
         href: https://github.com/
       - icon: twitter
@@ -27,6 +26,7 @@ website:
           - text: "More"
             menu: 
               - talks.qmd
+          - about.qmd
   # sidebar: 
   #   style: "docked"
   #   search: true
