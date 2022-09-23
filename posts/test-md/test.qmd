@@ -1,9 +1,12 @@
 ---
-title: "Welcome To My Blog"
+title: "测试md文件"
 author: "Dagwbl"
 date: "2022-09-22"
-categories: [test]
----
+categories: [test,learn]
 ---
 
+
 这是一个MD文件测试, 已经测试失败，只支持qmd文件
+```{r}
+1+1
+```

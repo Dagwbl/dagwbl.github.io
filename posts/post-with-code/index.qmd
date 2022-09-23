@@ -1,6 +1,6 @@
 ---
 title: "Post With Code"
-author: "Harlow Malloc"
+author: "Dagwbl"
 date: "2022-09-22"
 categories: [news, code, analysis]
 image: "image.jpg"

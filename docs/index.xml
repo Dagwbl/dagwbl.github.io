@@ -13,7 +13,7 @@
 <lastBuildDate>Wed, 21 Sep 2022 16:00:00 GMT</lastBuildDate>
 <item>
   <title>Post With Code</title>
-  <dc:creator>Harlow Malloc</dc:creator>
+  <dc:creator>Dagwbl</dc:creator>
   <link>https://dagwbl.github.io/posts/post-with-code/index.html</link>
   <description><![CDATA[ 
 
@@ -33,7 +33,7 @@
   <media:content url="https://dagwbl.github.io/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Welcome To My Blog</title>
+  <title>测试md文件</title>
   <dc:creator>Dagwbl</dc:creator>
   <link>https://dagwbl.github.io/posts/test-md/test.html</link>
   <description><![CDATA[ 
@@ -41,13 +41,19 @@
 
 
 
-<hr>
 <p>这是一个MD文件测试, 已经测试失败，只支持qmd文件</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="dv" style="color: #AD0000;">1</span><span class="sc" style="color: #5E5E5E;">+</span><span class="dv" style="color: #AD0000;">1</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
 
 
 
  ]]></description>
   <category>test</category>
+  <category>learn</category>
   <guid>https://dagwbl.github.io/posts/test-md/test.html</guid>
   <pubDate>Wed, 21 Sep 2022 16:00:00 GMT</pubDate>
 </item>

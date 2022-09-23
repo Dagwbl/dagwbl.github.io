@@ -11,14 +11,14 @@
     "href": "blog.html",
     "title": "Dagwbl",
     "section": "",
-    "text": "Welcome To My Blog\n\n\n\n\n\n\n\ntest\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nDagwbl\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "测试md文件\n\n\n\n\n\n\n\ntest\n\n\nlearn\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nDagwbl\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nDagwbl\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Dagwbl",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\ntest\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nDagwbl\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nDagwbl\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n测试md文件\n\n\n\n\n\n\n\ntest\n\n\nlearn\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nDagwbl\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -30,9 +30,9 @@
   {
     "objectID": "posts/test-md/test.html",
     "href": "posts/test-md/test.html",
-    "title": "Welcome To My Blog",
+    "title": "测试md文件",
     "section": "",
-    "text": "这是一个MD文件测试, 已经测试失败，只支持qmd文件"
+    "text": "这是一个MD文件测试, 已经测试失败，只支持qmd文件\n\n1+1\n\n[1] 2"
   },
   {
     "objectID": "posts/welcome/index.html",

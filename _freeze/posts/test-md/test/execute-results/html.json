@@ -1,0 +1,14 @@
+{
+  "hash": "f24a688e7341cab9a505bc589dd60c93",
+  "result": {
+    "markdown": "---\ntitle: \"测试md文件\"\nauthor: \"Dagwbl\"\ndate: \"2022-09-22\"\ncategories: [test,learn]\n---\n\n\n\n这是一个MD文件测试, 已经测试失败，只支持qmd文件\n\n::: {.cell}\n\n```{.r .cell-code}\n1+1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
