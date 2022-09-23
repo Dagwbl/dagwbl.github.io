@@ -8,6 +8,7 @@ project:
 
 website:
   # reader-mode: true
+  favicon: favicon.ico
   title: "Dagwbl"
   site-url: https://dagwbl.github.io
   description: "Dagwbl's blog"
