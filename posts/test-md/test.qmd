@@ -1,7 +1,8 @@
 ---
-title: "测试MD"
-categories: 
-  - MD
+title: "Welcome To My Blog"
+author: "Dagwbl"
+date: "2022-09-22"
+categories: [test]
 ---
 ---
 

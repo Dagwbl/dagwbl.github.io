@@ -34,6 +34,25 @@
 </item>
 <item>
   <title>Welcome To My Blog</title>
+  <dc:creator>Dagwbl</dc:creator>
+  <link>https://dagwbl.github.io/posts/test-md/test.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<hr>
+<p>这是一个MD文件测试, 已经测试失败，只支持qmd文件</p>
+
+
+
+ ]]></description>
+  <category>test</category>
+  <guid>https://dagwbl.github.io/posts/test-md/test.html</guid>
+  <pubDate>Wed, 21 Sep 2022 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Welcome To My Blog</title>
   <dc:creator>Tristan O&#39;Malley</dc:creator>
   <link>https://dagwbl.github.io/posts/welcome/index.html</link>
   <description><![CDATA[ 
@@ -52,24 +71,6 @@
   <guid>https://dagwbl.github.io/posts/welcome/index.html</guid>
   <pubDate>Sun, 18 Sep 2022 16:00:00 GMT</pubDate>
   <media:content url="https://dagwbl.github.io/posts/welcome/thumbnail.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>测试MD</title>
-  <link>https://dagwbl.github.io/posts/test-md/test.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<hr>
-<p>这是一个MD文件测试, 已经测试失败，只支持qmd文件</p>
-
-
-
- ]]></description>
-  <category>MD</category>
-  <guid>https://dagwbl.github.io/posts/test-md/test.html</guid>
-  <pubDate>Fri, 23 Sep 2022 02:49:56 GMT</pubDate>
 </item>
 </channel>
 </rss>

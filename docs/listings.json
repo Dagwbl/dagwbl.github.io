@@ -10,8 +10,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/test-md/test.html",
       "/posts/post-with-code/index.html",
+      "/posts/test-md/test.html",
       "/posts/welcome/index.html"
     ]
   }
