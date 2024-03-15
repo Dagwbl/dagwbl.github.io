@@ -1,12 +1,146 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>ZJeapo&#39;s Blog</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content on ZJeapo&#39;s Blog</description>
+    <image>
+      <title>ZJeapo&#39;s Blog</title>
+      <url>http://localhost:1313/blog/images/papermod-cover.png</url>
+      <link>http://localhost:1313/blog/images/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Mar 2024 01:09:54 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install / Update PaperMod</title>
+      <link>http://localhost:1313/blog/posts/papermod/papermod-installation/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/papermod/papermod-installation/</guid>
+      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+    </item>
+    <item>
+      <title>Features / Mods</title>
+      <link>http://localhost:1313/blog/posts/papermod/papermod-features/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/papermod/papermod-features/</guid>
+      <description>Learn About All Features in PaperMod</description>
+    </item>
+    <item>
+      <title>Markdown Syntax Guide For L2</title>
+      <link>http://localhost:1313/blog/posts/guide/markdown-syntax.fr/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/guide/markdown-syntax.fr/</guid>
+      <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+    </item>
+    <item>
+      <title>FAQs / How To&#39;s Guide</title>
+      <link>http://localhost:1313/blog/posts/papermod/papermod-faq/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/papermod/papermod-faq/</guid>
+      <description>We&amp;rsquo;ll try to answer frequently asked qestions by users.</description>
+    </item>
+    <item>
+      <title>Social-Icons / Share-Icons</title>
+      <link>http://localhost:1313/blog/posts/papermod/papermod-icons/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/papermod/papermod-icons/</guid>
+      <description>List of all Icons supported by PaperMod</description>
+    </item>
+    <item>
+      <title>Variables | Front Matter</title>
+      <link>http://localhost:1313/blog/posts/papermod/papermod-variables/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/papermod/papermod-variables/</guid>
+      <description>List of Front Matter variables used by PaperMod</description>
+    </item>
+    <item>
+      <title>March 15</title>
+      <link>http://localhost:1313/blog/diary/march-15/</link>
+      <pubDate>Sat, 16 Mar 2024 01:09:54 +0800</pubDate>
+      <guid>http://localhost:1313/blog/diary/march-15/</guid>
+      <description>Tonight, I spent tw==e== precious hours for managing my blog website of Hugo. The reason Why the process is so much difficult is that I didn&amp;rsquo;t understand the meaning of the below code.
+So, the most important experience is that we must carefully treat any tips, warn==n==ings, and precurors.
+Error: command error: failed to load config: &amp;#34;D:\blog\hugo.yaml:226:1&amp;#34;: failed to unmarshal YAML: yaml: line 226: mapping values are not allowed in this context </description>
+    </item>
+    <item>
+      <title>March 14</title>
+      <link>http://localhost:1313/blog/posts/march-14/</link>
+      <pubDate>Thu, 14 Mar 2024 20:11:10 +0800</pubDate>
+      <guid>http://localhost:1313/blog/posts/march-14/</guid>
+      <description>Some function words need reading weakly. Reducing Conjuctions and /ænd/ -/ən/ or /ɔ:r/-/ər/ as /æz/-/əz/ Reducing Prepositions to /tu:/-/tə/ for /fɔ:(r)/-/fə(r)/ of /ʌv//ɒv/-/əv//ə/ Reducing Auxiliary Verbs have /hæv/-/əv//ə/ has /hæz/-/əz//ə/ can /kæn/-/kən/ Reducing Pronous he /hi/-/i/ you /jʊ/-/yə/ her /hə(r)/-/ə(r)/ his /hɪz/-/ɪz/ him /hɪm/-/ɪm//əm/ Reducing Verb + to want to——wanna going to——gonna have to——hafta has to——hasta had to——hada ought to——oudda Here are some note: 五种类型的弱读
+1.Reducing Conjunction 弱读连词
+and /ænd/→/ən/</description>
+    </item>
+    <item>
+      <title>Third</title>
+      <link>http://localhost:1313/blog/posts/third/</link>
+      <pubDate>Wed, 13 Mar 2024 21:53:51 +0800</pubDate>
+      <guid>http://localhost:1313/blog/posts/third/</guid>
+      <description>I changed the Front Matter to YAML.
+HeadLine some contents.
+Second Headline. also has some contents
+Third Headline There is a list of test:
+item one item two item three Examples Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\) Block math:
+$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$
+1 3 3 12 142 14 14 124 124 124 foot:</description>
+    </item>
+    <item>
+      <title>Second</title>
+      <link>http://localhost:1313/blog/posts/second/</link>
+      <pubDate>Wed, 13 Mar 2024 21:47:28 +0800</pubDate>
+      <guid>http://localhost:1313/blog/posts/second/</guid>
+      <description>This is the second test blog. I add some words to test the sync function. extra informations.</description>
+    </item>
+    <item>
+      <title>My 1st post</title>
+      <link>http://localhost:1313/blog/posts/test-template/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/test-template/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>http://localhost:1313/blog/posts/guide/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/guide/markdown-syntax/</guid>
+      <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+    </item>
+    <item>
+      <title>Code Syntax Guide</title>
+      <link>http://localhost:1313/blog/posts/guide/code_syntax/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/guide/code_syntax/</guid>
+      <description>Sample article showcasing basic code syntax and formatting for HTML elements.</description>
+    </item>
+    <item>
+      <title>Rich Content and Shortcodes</title>
+      <link>http://localhost:1313/blog/posts/guide/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/guide/rich-content/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    <item>
+      <title>Math Typesetting</title>
+      <link>http://localhost:1313/blog/posts/guide/math-typesetting/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/guide/math-typesetting/</guid>
+      <description>A brief guide to setup KaTeX</description>
+    </item>
+    <item>
+      <title>Emoji Support</title>
+      <link>http://localhost:1313/blog/posts/guide/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/guide/emoji-support/</guid>
+      <description>Guide to emoji usage in Hugo</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/about/</guid>
+      <description>About Me Something is just like that</description>
+    </item>
   </channel>
 </rss>
