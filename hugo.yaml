@@ -207,7 +207,7 @@ params:
       url: "https://bilibili.com"
       
   editPost:
-    URL: "https://dagwbl.gitee.io/blog/blob/main/content"
+    URL: "https://gitee.com/Dagwbl/blog/edit/main/content"
     Text: "Edit" # edit text
     appendFilePath: true # to append file path to Edit link
 
