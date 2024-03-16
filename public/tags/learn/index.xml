@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Learn on ZJeapo&#39;s Blog</title>
+    <link>http://localhost:1313/blog/tags/learn/</link>
+    <description>Recent content in Learn on ZJeapo&#39;s Blog</description>
+    <image>
+      <title>ZJeapo&#39;s Blog</title>
+      <url>http://localhost:1313/blog/images/papermod-cover.png</url>
+      <link>http://localhost:1313/blog/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Mar 2024 01:09:54 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/learn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>March 15</title>
+      <link>http://localhost:1313/blog/diary/march-15/</link>
+      <pubDate>Sat, 16 Mar 2024 01:09:54 +0800</pubDate>
+      <guid>http://localhost:1313/blog/diary/march-15/</guid>
+      <description>Tonight, I spent twe precious hours for managing my blog website of Hugo. The reason why the process is so much difficult is that I didn&amp;rsquo;t understand the meaning of the below code.
+So, the most important experience is that we must carefully treat any tips, warnnings, and precurors.
+Error: command error: failed to load config: &amp;#34;D:\blog\hugo.yaml:226:1&amp;#34;: failed to unmarshal YAML: yaml: line 226: mapping values are not allowed in this context </description>
+    </item>
+  </channel>
+</rss>
