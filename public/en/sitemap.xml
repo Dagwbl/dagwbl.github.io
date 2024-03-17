@@ -12,7 +12,7 @@
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2024-03-17T12:34:14+08:00</lastmod>
+    <lastmod>2024-03-17T23:53:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -30,7 +30,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/blog/categories/</loc>
-    <lastmod>2024-03-17T12:34:14+08:00</lastmod>
+    <lastmod>2024-03-17T23:53:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -40,6 +40,31 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/blog/categories/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/blog/song/im-yours/</loc>
+    <lastmod>2024-03-17T23:53:20+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/categories/song/</loc>
+    <lastmod>2024-03-17T23:53:20+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/song/</loc>
+    <lastmod>2024-03-17T23:53:20+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/speaking/</loc>
+    <lastmod>2024-03-17T23:53:20+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/</loc>
+    <lastmod>2024-03-17T23:53:20+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="http://localhost:1313/blog/cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/blog/tags/"
                 />
   </url><url>
     <loc>http://localhost:1313/blog/diary/</loc>
@@ -71,19 +96,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/blog/series/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/blog/tags/</loc>
-    <lastmod>2024-03-17T12:34:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://localhost:1313/blog/cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blog/tags/"
                 />
   </url><url>
     <loc>http://localhost:1313/blog/debug/emoji-cheat-sheet/</loc>
@@ -153,12 +165,6 @@
     <loc>http://localhost:1313/blog/tags/song/</loc>
     <lastmod>2024-03-16T15:03:55+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/categories/song/</loc>
-    <lastmod>2024-03-16T15:03:55+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/song/</loc>
-    <lastmod>2024-03-16T15:03:55+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/series/speaking/</loc>
     <lastmod>2024-03-16T15:03:55+08:00</lastmod>
   </url><url>
@@ -184,9 +190,6 @@
     <lastmod>2024-03-14T20:11:10+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/learn/reading-weakly/</loc>
-    <lastmod>2024-03-14T20:11:10+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/tags/speaking/</loc>
     <lastmod>2024-03-14T20:11:10+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/docs/</loc>
