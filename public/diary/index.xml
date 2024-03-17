@@ -11,25 +11,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Mar 2024 10:29:55 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2024 12:34:14 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/diary/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>March 16</title>
-      <link>http://localhost:1313/blog/diary/march-16/</link>
-      <pubDate>Sat, 16 Mar 2024 10:29:55 +0800</pubDate>
-      <guid>http://localhost:1313/blog/diary/march-16/</guid>
-      <description>Custom the website to fit the syntax of typora.
-==hahha==
-example</description>
-    </item>
-    <item>
-      <title>March 15</title>
-      <link>http://localhost:1313/blog/diary/march-15/</link>
-      <pubDate>Sat, 16 Mar 2024 01:09:54 +0800</pubDate>
-      <guid>http://localhost:1313/blog/diary/march-15/</guid>
-      <description>Tonight, I spent twe precious hours for managing my blog website of Hugo. The reason why the process is so much difficult is that I didn&amp;rsquo;t understand the meaning of the below code.
-So, the most important experience is that we must carefully treat any tips, warnnings, and precurors.
-Error: command error: failed to load config: &amp;#34;D:\blog\hugo.yaml:226:1&amp;#34;: failed to unmarshal YAML: yaml: line 226: mapping values are not allowed in this context </description>
+      <title>March 2024</title>
+      <link>http://localhost:1313/blog/diary/march-2024/</link>
+      <pubDate>Sun, 17 Mar 2024 12:34:14 +0800</pubDate>
+      <guid>http://localhost:1313/blog/diary/march-2024/</guid>
+      <description>Mar 17 Today&amp;rsquo;s emoji is &amp;#x1f643; , &amp;#x1f922; and &amp;#x1f627;
+My little cousin My little cousin is one of my best friends. Actually, we don&amp;rsquo;t have any blood relationships. We had known each other is when I was in junior high school.
+Though we had just been in contact for one year, we have built a very strong relationship. She named me little cousin(brother) when I named her little cousin(sister). We are frequently outspoken to each other without reservation.</description>
     </item>
   </channel>
 </rss>

@@ -11,20 +11,41 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Mar 2024 10:29:55 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2024 12:34:14 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo</title>
-      <link>http://localhost:1313/blog/series/hugo/</link>
-      <pubDate>Sat, 16 Mar 2024 10:29:55 +0800</pubDate>
-      <guid>http://localhost:1313/blog/series/hugo/</guid>
+      <title>Monthly</title>
+      <link>http://localhost:1313/blog/series/monthly/</link>
+      <pubDate>Sun, 17 Mar 2024 12:34:14 +0800</pubDate>
+      <guid>http://localhost:1313/blog/series/monthly/</guid>
       <description></description>
     </item>
     <item>
-      <title>Casual</title>
-      <link>http://localhost:1313/blog/series/casual/</link>
-      <pubDate>Sat, 16 Mar 2024 01:09:54 +0800</pubDate>
-      <guid>http://localhost:1313/blog/series/casual/</guid>
+      <title>Emoji</title>
+      <link>http://localhost:1313/blog/series/emoji/</link>
+      <pubDate>Sat, 16 Mar 2024 23:10:53 +0800</pubDate>
+      <guid>http://localhost:1313/blog/series/emoji/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Product</title>
+      <link>http://localhost:1313/blog/series/product/</link>
+      <pubDate>Sat, 16 Mar 2024 15:03:55 +0800</pubDate>
+      <guid>http://localhost:1313/blog/series/product/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Speaking</title>
+      <link>http://localhost:1313/blog/series/speaking/</link>
+      <pubDate>Sat, 16 Mar 2024 15:03:55 +0800</pubDate>
+      <guid>http://localhost:1313/blog/series/speaking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Literacy</title>
+      <link>http://localhost:1313/blog/series/literacy/</link>
+      <pubDate>Sat, 16 Mar 2024 14:03:55 +0800</pubDate>
+      <guid>http://localhost:1313/blog/series/literacy/</guid>
       <description></description>
     </item>
     <item>
