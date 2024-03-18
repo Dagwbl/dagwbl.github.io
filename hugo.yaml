@@ -209,7 +209,7 @@ params:
       
   editPost:
     # URL: "https://gitee.com/Dagwbl/blog/edit/main/content"
-    URL: "https://github.com/Dagwbl/dagwbl.github.io/tree/main/content"
+    URL: "https://github.com/Dagwbl/dagwbl.github.io/edit/main/content"
     Text: "Edit" # edit text
     appendFilePath: true # to append file path to Edit link
 
