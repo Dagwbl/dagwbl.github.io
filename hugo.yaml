@@ -162,7 +162,7 @@ params:
   ShowPageNums: true
   ShowToc: true
   comments: true
-  images: ["images/papermod-cover.png"]
+#  images: ["images/papermod-cover.png"]
 
   profileMode:
     enabled: true
