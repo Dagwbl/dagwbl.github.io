@@ -1,7 +1,7 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-# baseURL: "https://dagwbl.github.io/"
-baseURL: "/"
+baseURL: "https://dagwbl.github.io/"
+# baseURL: "/"
 title: ZJeapo's Blog
 paginate: 5
 theme: [PaperMod]
@@ -208,7 +208,8 @@ params:
       url: "https://bilibili.com"
       
   editPost:
-    URL: "https://gitee.com/Dagwbl/blog/edit/main/content"
+    # URL: "https://gitee.com/Dagwbl/blog/edit/main/content"
+    URL: "https://github.com/Dagwbl/dagwbl.github.io/tree/main/content"
     Text: "Edit" # edit text
     appendFilePath: true # to append file path to Edit link
 
