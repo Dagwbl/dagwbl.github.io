@@ -9,6 +9,16 @@ language: en
 math: false
 ---
 
+## Mar 18
+
+Today, I feel extremely tired. and I seldom learn to speak or listen all day. The only today's achievement is that I finished building my personal blog by Github. The most interesting thing is that I tried to use the workflow function of Github, and then I successfully dealt with a bug.
+
+And one more thing, I really don't want to listen these things Luo Huan talked about her ex-boyfriend. I felt uncomfortable and uncareful. Honestly, I just care about her situation, not other people about her. However, just these poo things resulted in her bad mood. And I want to use a comment to describe her.
+
+> I tried to walk out of the swamp that has trapped me for so long, but forgot why this swamp has held me for so long.
+
+
+
 ## Mar 17
 
 Today's emoji is :upside_down_face: , :nauseated_face: and :anguished:
