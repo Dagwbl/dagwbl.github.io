@@ -20,7 +20,7 @@ math: false
 - The **worse** the boss treats me, the more I want to retire.
 - I guess I shouldn't treat myself **so** badly.
 
-
+Today, I finished the function that compatible with both Github and Gitee simultaneously.
 
 
 
