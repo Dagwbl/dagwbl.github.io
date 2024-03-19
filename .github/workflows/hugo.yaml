@@ -56,11 +56,11 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo \
+          hugo --environment production\
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
-            --environment production
+            
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
