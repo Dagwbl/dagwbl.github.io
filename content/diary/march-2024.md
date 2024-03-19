@@ -9,6 +9,21 @@ language: en
 math: false
 ---
 
+## Mar 19
+
+> The more I worked for other people, the more I wanted to be my own boss.
+
+### Duolingo's sentences
+
+- Did you hear that the teacher had to suspend Kevin from school for **stealing**?
+- They **were** holding hands.
+- The **worse** the boss treats me, the more I want to retire.
+- I guess I shouldn't treat myself **so** badly.
+
+
+
+
+
 ## Mar 18
 
 Today, I feel extremely tired. and I seldom learn to speak or listen all day. The only today's achievement is that I finished building my personal blog by Github. The most interesting thing is that I tried to use the workflow function of Github, and then I successfully dealt with a bug.

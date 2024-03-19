@@ -1,6 +1,6 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://dagwbl.github.io/"
+baseURL: "https://dagwbl.gitee.io/blog"
 # baseURL: "/"
 title: ZJeapo's Blog
 paginate: 5
@@ -13,7 +13,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-mainsections: ["posts", "papermod"]
+mainsections: ["posts", "diary","song","poem"]
 # googleAnalytics: UA-123-45
 
 minify:
@@ -165,7 +165,7 @@ params:
 #  images: ["images/papermod-cover.png"]
 
   profileMode:
-    enabled: true
+    enabled: false
     title: Whew!
     imageUrl: "images/home-icon.jpg"
     imageTitle: my image
@@ -184,11 +184,8 @@ params:
     Content: >
       👋 Something just like this!
 
-      - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
-
       - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
 
-      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
 
   socialIcons:
     - name: github
@@ -208,16 +205,16 @@ params:
       url: "https://bilibili.com"
       
   editPost:
-    # URL: "https://gitee.com/Dagwbl/blog/edit/main/content"
-    URL: "https://github.com/Dagwbl/dagwbl.github.io/edit/main/content"
+    URL: "https://gitee.com/Dagwbl/blog/edit/main/content"
+    # URL: "https://github.com/Dagwbl/dagwbl.github.io/edit/main/content"
     Text: "Edit" # edit text
     appendFilePath: true # to append file path to Edit link
 
-  # label:
-  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
-  # text: "Home"
-  # icon: icon.png
-  # iconHeight: 35
+  label:
+  iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
+  text: "Home"
+  icon: icon.png
+  iconHeight: 35
 
   # analytics:
   #     google:

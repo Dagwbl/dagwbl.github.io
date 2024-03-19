@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Draft on ZJeapo&#39;s Blog</title>
+    <link>http://localhost:1313/blog/tags/draft/</link>
+    <description>Recent content in Draft on ZJeapo&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 Mar 2024 12:34:14 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/draft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>March 2024</title>
+      <link>http://localhost:1313/blog/diary/march-2024/</link>
+      <pubDate>Sun, 17 Mar 2024 12:34:14 +0800</pubDate>
+      <guid>http://localhost:1313/blog/diary/march-2024/</guid>
+      <description>Mar 19 The more I worked for other people, the more I wanted to be my own boss.
+Duolingo&amp;rsquo;s sentences Did you hear that the teacher had to suspend Kevin from school for stealing? They were holding hands. The worse the boss treats me, the more I want to retire. I guess I shouldn&amp;rsquo;t treat myself so badly. Mar 18 Today, I feel extremely tired. and I seldom learn to speak or listen all day.</description>
+    </item>
+  </channel>
+</rss>

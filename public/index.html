@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.123.8"><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ZJeapo&#39;s Blog</title>
+
+<meta name="description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod">
+<meta name="author" content="ZJeapo">
+<link rel="canonical" href="http://localhost:1313/blog/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.5ff2630c4d1b3e25bc21f0ecd96681dbcf58219e741fa627857820b5485cb770.css" integrity="sha256-X/JjDE0bPiW8IfDs2WaB289YIZ50H6YnhXggtUhct3A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/index.xml">
+<link rel="alternate" type="application/json" href="http://localhost:1313/blog/index.json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/">
+<link rel="alternate" hreflang="cn" href="http://localhost:1313/blog/cn/">
+<link rel="alternate" hreflang="fa" href="http://localhost:1313/blog/fa/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<meta property="og:title" content="" />
+<meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/blog/" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ZJeapo's Blog",
+  "url": "http://localhost:1313/blog/",
+  "description": "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod",
+  "thumbnailUrl": "http://localhost:1313/blog/favicon/favicon.ico",
+  "sameAs": [
+      "https://github.com/", "https://discord.gg/ahpmTvhVmp", "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.\u0026url=https://github.com/adityatelange/hugo-PaperMod\u0026hashtags=Hugo,PaperMod", "https://bilibili.com"
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/blog/" accesskey="h" title="ZJeapo&#39;s Blog (Alt + H)">ZJeapo&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="http://localhost:1313/blog/cn/" title="Chinese"
+                            aria-label="Chinese">Chinese</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:1313/blog/fa/" title="Farsi"
+                            aria-label="Farsi">Farsi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/blog/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/blog/series" title="Series">
+                    <span>Series</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/blog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/blog/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/adityatelange/hugo-PaperMod/wiki/" title="WiKi">
+                    <span>WiKi</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<div class="post-content"><blockquote>
+<p><em>O troupe of little vagrants of the world, leave your footprints in my words</em></p>
+</blockquote>
+
+
+</div>
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>ZJeapo&rsquo;s Blog</h1>
+    </header>
+    <div class="entry-content">
+        <p>👋 Something just like this!</p>
+<ul>
+<li>Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .</li>
+</ul>
+    </div>
+    <footer class="entry-footer">
+        <div class="social-icons" >
+    <a href="https://github.com/" target="_blank" rel="noopener noreferrer me"
+        title="View Source on Github">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+    </a>
+    <a href="https://discord.gg/ahpmTvhVmp" target="_blank" rel="noopener noreferrer me"
+        title="Join Discord Community">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" fill="currentColor" stroke="none" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
+</svg>
+    </a>
+    <a href="https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&amp;url=https://github.com/adityatelange/hugo-PaperMod&amp;hashtags=Hugo,PaperMod" target="_blank" rel="noopener noreferrer me"
+        title="Share PaperMod on X/Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path
+        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+    </path>
+</svg>
+    </a>
+    <a href="https://bilibili.com" target="_blank" rel="noopener noreferrer me"
+        title="Watch Some Interesting Videos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1.3333" y="6" width="21.333" height="15.333" rx="4" ry="4"/>
+    <path d="m8 12.4v1.2"/>
+    <path d="m16 12.4v1.2"/>
+    <path d="m5.8853 2.6667 2.6667 2.6667"/>
+    <path d="m18.115 2.6667-2.6667 2.6667"/>
+</svg>
+    </a>
+</div>
+
+    </footer>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Perter Pan Was Right
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>“Peter Pan Was Right” lyrics Anson Seabra Lyrics “Peter Pan Was Right”
+I guess Peter Pan was right
+Growing up’s waste of time
+So I think I’ll fly away
+Set a course for brighter days
+Find the second star, I’m soaring
+Then straight to the morning
+I know that I’ll be fine
+‘Cause I know Perter Pan was right
+Just a lost boy in a small town
+I’m the same kids but I grown now...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-03-19 00:00:00 +0000 UTC'>March 19, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;ZJeapo</footer>
+  <a class="entry-link" aria-label="post link to Perter Pan Was Right" href="http://localhost:1313/blog/song/peter-pan-was-right/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">I‘m Yours
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>“I’m Yours” lyrics Jason Mraz Lyrics “I’m Yours”
+Well, you done done me and you bet I felt it
+I tried to be chill, but you’re so hot that I melted
+I fell right through the cracks
+Now I’m trying to get back
+Before the cool done run out
+I’ll be giving it my bestest
+And nothing’s gonna stop me but divine intervention
+I reckon, it’s again my turn...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-03-17 23:53:20 +0800 CST'>March 17, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;ZJeapo</footer>
+  <a class="entry-link" aria-label="post link to I‘m Yours" href="http://localhost:1313/blog/song/im-yours/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">March 2024
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Mar 19 The more I worked for other people, the more I wanted to be my own boss.
+Duolingo’s sentences Did you hear that the teacher had to suspend Kevin from school for stealing? They were holding hands. The worse the boss treats me, the more I want to retire. I guess I shouldn’t treat myself so badly. Mar 18 Today, I feel extremely tired. and I seldom learn to speak or listen all day....</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-03-17 12:34:14 +0800 CST'>March 17, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;ZJeapo</footer>
+  <a class="entry-link" aria-label="post link to March 2024" href="http://localhost:1313/blog/diary/march-2024/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Emoji Sheet
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🎁 Emoji cheat sheet for GitHub, Basecamp, Slack &amp; more (webfx.com)
+Emoji Code Emoji Code Emoji Code Emoji Code 😀 :grinning_face: 🤦 :person_facepalming: 😹 :cat_with_tears_of_joy: 🧟 :zombie: 😃 :grinning_face_with_big_eyes: 🤦‍♂️ :man_facepalming: 😻 :smiling_cat_with_heart_eyes: 🧟‍♂️ :man_zombie: 😄 :grinning_face_with_smiling_eyes: 🤦‍♀️ :woman_facepalming: 😼 :cat_with_wry_smile: 🧟‍♀️ :woman_zombie: 😁 :beaming_face_with_smiling_eyes: 🤷 :person_shrugging: 😽 :kissing_cat: 🧌 :troll: 😆 :grinning_squinting_face: 🤷‍♂️ :man_shrugging: 🙀 :weary_cat: 💆 :person_getting_massage: 😅 :grinning_face_with_sweat: 🤷‍♀️ :woman_shrugging: 😿 :crying_cat: 💆‍♂️ :man_getting_massage: 🤣 :rolling_on_the_floor_laughing: 🧑‍⚕️ :health_worker: 😾 :pouting_cat: 💆‍♀️ :woman_getting_massage: 😂 :face_with_tears_of_joy: 👨‍⚕️ :man_health_worker: 🙈 :see_no_evil_monkey: 💇 :person_getting_haircut: 🙂 :slightly_smiling_face: 👩‍⚕️ :woman_health_worker: 🙉 :hear_no_evil_monkey: 💇‍♂️ :man_getting_haircut: 🙃 :upside_down_face: 🧑‍🎓 :student: 🙊 :speak_no_evil_monkey: 💇‍♀️ :woman_getting_haircut: 🫠 :melting_face: 👨‍🎓 :man_student: 💌 :love_letter: 🚶 :person_walking: 😉 :winking_face: 👩‍🎓 :woman_student: 💘 :heart_with_arrow: 🚶‍♂️ :man_walking: 😊 :smiling_face_with_smiling_eyes: 🧑‍🏫 :teacher: 💝 :heart_with_ribbon: 🚶‍♀️ :woman_walking: 😇 :smiling_face_with_halo: 👨‍🏫 :man_teacher: 💖 :sparkling_heart: 🧍 :person_standing: 🥰 :smiling_face_with_hearts: 👩‍🏫 :woman_teacher: 💗 :growing_heart: 🧍‍♂️ :man_standing: 😍 :smiling_face_with_heart_eyes: 🧑‍⚖️ :judge: 💓 :beating_heart: 🧍‍♀️ :woman_standing: 🤩 :star_struck: 👨‍⚖️ :man_judge: 💞 :revolving_hearts: 🧎 :person_kneeling: 😘 :face_blowing_a_kiss: 👩‍⚖️ :woman_judge: 💕 :two_hearts: 🧎‍♂️ :man_kneeling: 😗 :kissing_face: 🧑‍🌾 :farmer: 💟 :heart_decoration: 🧎‍♀️ :woman_kneeling: ☺ :smiling_face: 👨‍🌾 :man_farmer: ❣ :heart_exclamation: 🧑‍🦯 :person_with_white_cane: 😚 :kissing_face_with_closed_eyes: 👩‍🌾 :woman_farmer: 💔 :broken_heart: 👨‍🦯 :man_with_white_cane: 😙 :kissing_face_with_smiling_eyes: 🧑‍🍳 :cook: ❤️‍🔥 :heart_on_fire: 👩‍🦯 :woman_with_white_cane: 🥲 :smiling_face_with_tear: 👨‍🍳 :man_cook: ❤️‍🩹 :mending_heart: 🧑‍🦼 :person_in_motorized_wheelchair: 😋 :face_savoring_food: 👩‍🍳 :woman_cook: ❤ :⊛_pink_heart: 👨‍🦼 :man_in_motorized_wheelchair: 😛 :face_with_tongue: 🧑‍🔧 :mechanic: 🧡 :orange_heart: 👩‍🦼 :woman_in_motorized_wheelchair: 😜 :winking_face_with_tongue: 👨‍🔧 :man_mechanic: 💛 :yellow_heart: 🧑‍🦽 :person_in_manual_wheelchair: 🤪 :zany_face: 👩‍🔧 :woman_mechanic: 💚 :green_heart: 👨‍🦽 :man_in_manual_wheelchair: 😝 :squinting_face_with_tongue: 🧑‍🏭 :factory_worker: 💙 :blue_heart: 👩‍🦽 :woman_in_manual_wheelchair: 🤑 :money_mouth_face: 👨‍🏭 :man_factory_worker: 💜 :purple_heart: 🏃 :person_running: 🤗 :smiling_face_with_open_hands: 👩‍🏭 :woman_factory_worker: 🤎 :brown_heart: 🏃‍♂️ :man_running: 🤭 :face_with_hand_over_mouth: 🧑‍💼 :office_worker: 🖤 :⊛_grey_heart: 🏃‍♀️ :woman_running: 🫢 :face_with_open_eyes_and_hand_over_mouth: 👨‍💼 :man_office_worker: 🤍 :white_heart: 💃 :woman_dancing: 🫣 :face_with_peeking_eye: 👩‍💼 :woman_office_worker: 💋 :kiss_mark: 🕺 :man_dancing: 🤫 :shushing_face: 🧑‍🔬 :scientist: 💯 :hundred_points: 🕴 :person_in_suit_levitating: 🤔 :thinking_face: 👨‍🔬 :man_scientist: 💢 :anger_symbol: 👯 :people_with_bunny_ears: 🫡 :saluting_face: 👩‍🔬 :woman_scientist: 💥 :collision: 👯‍♂️ :men_with_bunny_ears: 🤐 :zipper_mouth_face: 🧑‍💻 :technologist: 💫 :dizzy: 👯‍♀️ :women_with_bunny_ears: 🤨 :face_with_raised_eyebrow: 👨‍💻 :man_technologist: 💦 :sweat_droplets: 🧖 :person_in_steamy_room: 😐 :neutral_face: 👩‍💻 :woman_technologist: 💨 :dashing_away: 🧖‍♂️ :man_in_steamy_room: 😑 :expressionless_face: 🧑‍🎤 :singer: 🕳 :hole: 🧖‍♀️ :woman_in_steamy_room: 😶 :face_without_mouth: 👨‍🎤 :man_singer: 💬 :speech_balloon: 🧗 :person_climbing: 🫥 :dotted_line_face: 👩‍🎤 :woman_singer: 👁️‍🗨️ :eye_in_speech_bubble: 🧗‍♂️ :man_climbing: 😶‍🌫️ :face_in_clouds: 🧑‍🎨 :artist: 🗨 :left_speech_bubble: 🧗‍♀️ :woman_climbing: 😏 :smirking_face: 👨‍🎨 :man_artist: 🗯 :right_anger_bubble: 🤺 :person_fencing: 😒 :unamused_face: 👩‍🎨 :woman_artist: 💭 :thought_balloon: 🏇 :horse_racing: 🙄 :face_with_rolling_eyes: 🧑‍✈️ :pilot: 💤 :ZZZ: ⛷ :skier: 😬 :grimacing_face: 👨‍✈️ :man_pilot: 👋 :waving_hand: 🏂 :snowboarder: 😮‍💨 :face_exhaling: 👩‍✈️ :woman_pilot: 🤚 :raised_back_of_hand: 🏌 :person_golfing: 🤥 :⊛_shaking_face: 🧑‍🚀 :astronaut: 🖐 :hand_with_fingers_splayed: 🏌️‍♂️ :man_golfing: 😌 :relieved_face: 👨‍🚀 :man_astronaut: ✋ :raised_hand: 🏌️‍♀️ :woman_golfing: 😔 :pensive_face: 👩‍🚀 :woman_astronaut: 🖖 :vulcan_salute: 🏄 :person_surfing: 😪 :sleepy_face: 🧑‍🚒 :firefighter: 🫱 :rightwards_hand: 🏄‍♂️ :man_surfing: 🤤 :drooling_face: 👨‍🚒 :man_firefighter: 🫲 :leftwards_hand: 🏄‍♀️ :woman_surfing: 😴 :sleeping_face: 👩‍🚒 :woman_firefighter: 🫳 :palm_down_hand: 🚣 :person_rowing_boat: 😷 :face_with_medical_mask: 👮 :police_officer: 🫴 :⊛_rightwards_pushing_hand: 🚣‍♂️ :man_rowing_boat: 🤒 :face_with_thermometer: 👮‍♂️ :man_police_officer: 👌 :OK_hand: 🚣‍♀️ :woman_rowing_boat: 🤕 :face_with_head_bandage: 👮‍♀️ :woman_police_officer: 🤌 :pinched_fingers: 🏊 :person_swimming: 🤢 :nauseated_face: 🕵 :detective: 🤏 :pinching_hand: 🏊‍♂️ :man_swimming: 🤮 :face_vomiting: 🕵️‍♂️ :man_detective: ✌ :victory_hand: 🏊‍♀️ :woman_swimming: 🤧 :sneezing_face: 🕵️‍♀️ :woman_detective: 🤞 :crossed_fingers: ⛹ :person_bouncing_ball: 🥵 :hot_face: 💂 :guard: 🫰 :hand_with_index_finger_and_thumb_crossed: ⛹️‍♂️ :man_bouncing_ball: 🥶 :cold_face: 💂‍♂️ :man_guard: 🤟 :love_you_gesture: ⛹️‍♀️ :woman_bouncing_ball: 🥴 :woozy_face: 💂‍♀️ :woman_guard: 🤘 :sign_of_the_horns: 🏋 :person_lifting_weights: 😵 :face_with_crossed_out_eyes: 🥷 :ninja: 🤙 :call_me_hand: 🏋️‍♂️ :man_lifting_weights: 😵‍💫 :face_with_spiral_eyes: 👷 :construction_worker: 👈 :backhand_index_pointing_left: 🏋️‍♀️ :woman_lifting_weights: 🤯 :exploding_head: 👷‍♂️ :man: 👉 :backhand_index_pointing_right: 🚴 :person_biking: 🤠 :cowboy_hat_face: 👷‍♀️ :woman_construction_worker: 👆 :backhand_index_pointing_up: 🚴‍♂️ :man_biking: 🥳 :partying_face: 🫅 :person_with_crown: 🖕 :middle_finger: 🚴‍♀️ :woman_biking: 🥸 :disguised_face: 🤴 :prince: 👇 :backhand_index_pointing_down: 🚵 :person_mountain_biking: 😎 :smiling_face_with_sunglasses: 👸 :princess: ☝ :index_pointing_up: 🚵‍♂️ :man_mountain_biking: 🤓 :nerd_face: 👳 :person_wearing_turban: 🫵 :index_pointing_at_the_viewer: 🚵‍♀️ :woman_mountain_biking: 🧐 :face_with_monocle: 👳‍♂️ :man_wearing_turban: 👍 :thumbs_up: 🤸 :person_cartwheeling: 😕 :confused_face: 👳‍♀️ :woman_wearing_turban: 👎 :thumbs_down: 🤸‍♂️ :man_cartwheeling: 🫤 :face_with_diagonal_mouth: 👲 :person_with_skullcap: ✊ :raised_fist: 🤸‍♀️ :woman_cartwheeling: 😟 :worried_face: 🧕 :woman_with_headscarf: 👊 :oncoming_fist: 🤼 :people_wrestling: 🙁 :slightly_frowning_face: 🤵 :person_in_tuxedo: 🤛 :left_facing_fist: 🤼‍♂️ :men_wrestling: ☹ :frowning_face: 🤵‍♂️ :man_in_tuxedo: 🤜 :right_facing_fist: 🤼‍♀️ :women_wrestling: 😮 :face_with_open_mouth: 🤵‍♀️ :woman_in_tuxedo: 👏 :clapping_hands: 🤽 :person_playing_water_polo: 😯 :hushed_face: 👰 :person_with_veil: 🙌 :raising_hands: 🤽‍♂️ :man_playing_water_polo: 😲 :astonished_face: 👰‍♂️ :man_with_veil: 🫶 :heart_hands: 🤽‍♀️ :woman_playing_water_polo: 😳 :flushed_face: 👰‍♀️ :woman_with_veil: 👐 :open_hands: 🤾 :person_playing_handball: 🥺 :pleading_face: 🤰 :pregnant_woman: 🤲 :palms_up_together: 🤾‍♂️ :man_playing_handball: 🥹 :face_holding_back_tears: 🫃 :pregnant_man: 🤝 :handshake: 🤾‍♀️ :woman: 😦 :frowning_face_with_open_mouth: 🫄 :pregnant_person: 🙏 :folded_hands: 🤹 :person_juggling: 😧 :anguished_face: 🤱 :breast_feeding: ✍ :writing_hand: 🤹‍♂️ :man_juggling: 😨 :fearful_face: 👩‍🍼 :woman_feeding_baby: 💅 :nail_polish: 🤹‍♀️ :woman_juggling: 😰 :anxious_face_with_sweat: 👨‍🍼 :man_feeding_baby: 🤳 :selfie: 🧘 :person_in_lotus_position: 😥 :sad_but_relieved_face: 🧑‍🍼 :person_feeding_baby: 💪 :flexed_biceps: 🧘‍♂️ :man_in_lotus_position: 😢 :crying_face: 👼 :baby_angel: 🦾 :mechanical_arm: 🧘‍♀️ :woman_in_lotus_position: 😭 :loudly_crying_face: 🎅 :Santa_Claus: 🦿 :mechanical_leg: 🛀 :person_taking_bath: 😱 :face_screaming_in_fear: 🤶 :Mrs....</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-03-16 23:10:53 +0800 CST'>March 16, 2024</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;ZJeapo</footer>
+  <a class="entry-link" aria-label="post link to Emoji Sheet" href="http://localhost:1313/blog/posts/emoji-sheet/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Shape of you
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Here is the tutorial
+《Shape Of You》全网最细2.0整首英文歌教唱
+Here is a MV
+【MV】黄老板新单-《Shape Of You》中英字幕
+[Verse 1] A club isn’t the best place to find a lover
+So the bar is where I go (Mm)
+Me and my friends at the table doin’ shots
+Drinkin’ fast and then we talk slow (Mm)
+And you come over and start up a conversation with just me
+And trust me, I’ll give it a chance now (Mm)...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-03-16 15:03:55 +0800 CST'>March 16, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Ed Sheeran</footer>
+  <a class="entry-link" aria-label="post link to Shape of you" href="http://localhost:1313/blog/song/shape-of-you/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="http://localhost:1313/blog/page/2/">Next&nbsp;2/2&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="http://localhost:1313/blog/">ZJeapo&#39;s Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
