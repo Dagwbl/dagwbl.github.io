@@ -1,3 +1,7 @@
-# About Me
+---
+showToc: false
+---
 
-Something is just like that
+# About
+
+*What you are you do not see, what you see is your shadow.*

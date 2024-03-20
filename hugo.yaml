@@ -46,8 +46,8 @@ languages:
         - name: About
           url: /about/
           weight: 10
-        - name: WiKi
-          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+        # - name: WiKi
+        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
   cn:
     languageName: "Chinese"
@@ -72,8 +72,8 @@ languages:
         - name: 标签
           url: tags
           weight: 10
-        - name: WiKi
-          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+        # - name: WiKi
+        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
       homeInfoParams:
@@ -93,25 +93,25 @@ languages:
             url: tags
           - name: Github
             url: "https://github.com/"
-  fa:
-    languageName: Farsi
-    languagedirection: rtl
-    weight: 4
-    title: PaperMod RTL
-    taxonomies:
-      category: FAcategories
-      tag: FAtags
-      series: FAseries
-    menu:
-      main:
-        - name: FATags
-          url: fatags
-          weight: 10
-    # custom params for each language should be under [langcode].parms - hugo v0.120.0
-    params:
-      homeInfoParams:
-        Title: "Hi there \U0001F44B"
-        Content: Welcome to RTL layout
+  # fa:
+  #   languageName: Farsi
+  #   languagedirection: rtl
+  #   weight: 4
+  #   title: PaperMod RTL
+  #   taxonomies:
+  #     category: FAcategories
+  #     tag: FAtags
+  #     series: FAseries
+  #   menu:
+  #     main:
+  #       - name: FATags
+  #         url: fatags
+  #         weight: 10
+  #   # custom params for each language should be under [langcode].parms - hugo v0.120.0
+  #   params:
+  #     homeInfoParams:
+  #       Title: "Hi there \U0001F44B"
+  #       Content: Welcome to RTL layout
 
   # fr:
   #   languageName: "French"
@@ -180,11 +180,9 @@ params:
         url: "https://nav.hiqq.com.cn/"
 
   homeInfoParams:
-    Title: "ZJeapo's Blog"
+    Title: "A fool who is waiting for"
     Content: >
-      👋 Something just like this!
-
-      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
+      *O troupe of little vagrants of the world, leave your footprints in my words*
 
 
   socialIcons:

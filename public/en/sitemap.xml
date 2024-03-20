@@ -11,17 +11,15 @@
     <loc>http://localhost:1313/blog/guide/markdown/markdown-syntax.fr/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/guide/markdown/markdown-syntax.fa/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2024-03-19T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-20T20:42:11+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
                 href="http://localhost:1313/blog/cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://localhost:1313/blog/fa/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -30,7 +28,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/blog/categories/</loc>
-    <lastmod>2024-03-19T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-20T20:42:11+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -41,6 +39,49 @@
                 hreflang="en"
                 href="http://localhost:1313/blog/categories/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/blog/categories/english-learning/</loc>
+    <lastmod>2024-03-20T20:42:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/learn/english-reading/</loc>
+    <lastmod>2024-03-20T20:42:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/learn/</loc>
+    <lastmod>2024-03-20T20:42:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/series/reading/</loc>
+    <lastmod>2024-03-20T20:42:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/series/</loc>
+    <lastmod>2024-03-20T20:42:11+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="http://localhost:1313/blog/cn/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/blog/series/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/blog/learn/english-listening/</loc>
+    <lastmod>2024-03-20T20:41:43+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/series/listening/</loc>
+    <lastmod>2024-03-20T20:41:43+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/learn/english-writing/</loc>
+    <lastmod>2024-03-20T20:41:20+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/series/writing/</loc>
+    <lastmod>2024-03-20T20:41:20+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/learn/english-speaking/</loc>
+    <lastmod>2024-03-20T20:37:03+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/series/speaking/</loc>
+    <lastmod>2024-03-20T20:37:03+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/song/peter-pan-was-right/</loc>
     <lastmod>2024-03-19T00:00:00+00:00</lastmod>
@@ -87,19 +128,6 @@
   </url><url>
     <loc>http://localhost:1313/blog/series/monthly/</loc>
     <lastmod>2024-03-17T12:34:14+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/series/</loc>
-    <lastmod>2024-03-17T12:34:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://localhost:1313/blog/cn/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blog/series/"
-                />
   </url><url>
     <loc>http://localhost:1313/blog/debug/emoji-cheat-sheet/</loc>
     <lastmod>2024-03-16T23:10:53+08:00</lastmod>
@@ -156,9 +184,6 @@
     <loc>http://localhost:1313/blog/tags/song/</loc>
     <lastmod>2024-03-16T15:03:55+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/series/speaking/</loc>
-    <lastmod>2024-03-16T15:03:55+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/series/literacy/</loc>
     <lastmod>2024-03-16T14:03:55+08:00</lastmod>
   </url><url>
@@ -177,9 +202,6 @@
     <loc>http://localhost:1313/blog/categories/english/</loc>
     <lastmod>2024-03-14T20:11:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/learn/</loc>
-    <lastmod>2024-03-14T20:11:10+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/learn/reading-weakly/</loc>
     <lastmod>2024-03-14T20:11:10+08:00</lastmod>
   </url><url>
@@ -192,11 +214,6 @@
                 rel="alternate"
                 hreflang="cn"
                 href="http://localhost:1313/blog/cn/guide/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://localhost:1313/blog/fa/guide/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -245,11 +262,6 @@
                 rel="alternate"
                 hreflang="cn"
                 href="http://localhost:1313/blog/cn/guide/markdown/markdown-syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://localhost:1313/blog/fa/guide/markdown/markdown-syntax/"
                 />
     <xhtml:link
                 rel="alternate"

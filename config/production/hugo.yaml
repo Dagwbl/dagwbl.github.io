@@ -1,6 +1,6 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://dagwbl.github.io/"
+baseURL: "https://dagwbl.github.io"
 # baseURL: "/"
 title: ZJeapo's Blog
 paginate: 5
@@ -46,8 +46,8 @@ languages:
         - name: About
           url: /about/
           weight: 10
-        - name: WiKi
-          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+        # - name: WiKi
+        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
   cn:
     languageName: "Chinese"
@@ -72,8 +72,8 @@ languages:
         - name: 标签
           url: tags
           weight: 10
-        - name: WiKi
-          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+        # - name: WiKi
+        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
       homeInfoParams:
@@ -93,25 +93,25 @@ languages:
             url: tags
           - name: Github
             url: "https://github.com/"
-  fa:
-    languageName: Farsi
-    languagedirection: rtl
-    weight: 4
-    title: PaperMod RTL
-    taxonomies:
-      category: FAcategories
-      tag: FAtags
-      series: FAseries
-    menu:
-      main:
-        - name: FATags
-          url: fatags
-          weight: 10
-    # custom params for each language should be under [langcode].parms - hugo v0.120.0
-    params:
-      homeInfoParams:
-        Title: "Hi there \U0001F44B"
-        Content: Welcome to RTL layout
+  # fa:
+  #   languageName: Farsi
+  #   languagedirection: rtl
+  #   weight: 4
+  #   title: PaperMod RTL
+  #   taxonomies:
+  #     category: FAcategories
+  #     tag: FAtags
+  #     series: FAseries
+  #   menu:
+  #     main:
+  #       - name: FATags
+  #         url: fatags
+  #         weight: 10
+  #   # custom params for each language should be under [langcode].parms - hugo v0.120.0
+  #   params:
+  #     homeInfoParams:
+  #       Title: "Hi there \U0001F44B"
+  #       Content: Welcome to RTL layout
 
   # fr:
   #   languageName: "French"
@@ -180,17 +180,10 @@ params:
         url: "https://nav.hiqq.com.cn/"
 
   homeInfoParams:
-    Title: "ZJeapo's Blog"
+    Title: "A fool who is waiting for"
     Content: >
-      👋 Something just like this!
+      *O troupe of little vagrants of the world, leave your footprints in my words*
 
-      - What language is thine, O sea?
-      
-      - The language of eternal question.
-      
-      - What language is the answer?
-      
-      - The language of the eternal silence.
 
   socialIcons:
     - name: github
@@ -210,16 +203,15 @@ params:
       url: "https://bilibili.com"
       
   editPost:
-    # URL: "https://gitee.com/Dagwbl/blog/edit/main/content"
     URL: "https://github.com/Dagwbl/dagwbl.github.io/edit/main/content"
     Text: "Edit" # edit text
     appendFilePath: true # to append file path to Edit link
 
-  # label:
-  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
-  # text: "Home"
-  # icon: icon.png
-  # iconHeight: 35
+  label:
+  iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
+  text: "Home"
+  icon: icon.png
+  iconHeight: 35
 
   # analytics:
   #     google:
