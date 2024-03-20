@@ -9,6 +9,12 @@ language: en
 math: false
 ---
 
+## Mar 20
+
+Last night, I cannot fallen asleep on time. Till a half past 3 A.M, I was awaking. There is a lot of thoughts in my mind. Especially some things like the passion or relationship.
+
+I think what I supposed to do is that make some changes.
+
 ## Mar 19
 
 > The more I worked for other people, the more I wanted to be my own boss.
@@ -21,8 +27,6 @@ math: false
 - I guess I shouldn't treat myself **so** badly.
 
 Today, I finished the function that compatible with both Github and Gitee simultaneously.
-
-
 
 ## Mar 18
 

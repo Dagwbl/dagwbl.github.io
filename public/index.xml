@@ -6,7 +6,7 @@
     <description>Recent content on ZJeapo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Mar 2024 00:23:26 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install / Update PaperMod</title>
@@ -28,6 +28,48 @@
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/guide/markdown/markdown-syntax.fr/</guid>
       <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+    </item>
+    <item>
+      <title>Markdown Syntax Guide For RTL</title>
+      <link>http://localhost:1313/blog/guide/markdown/markdown-syntax.fa/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/guide/markdown/markdown-syntax.fa/</guid>
+      <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+    </item>
+    <item>
+      <title>Conjunction</title>
+      <link>http://localhost:1313/blog/learn/conjunction/</link>
+      <pubDate>Thu, 21 Mar 2024 00:23:26 +0800</pubDate>
+      <guid>http://localhost:1313/blog/learn/conjunction/</guid>
+      <description>Conjunctions</description>
+    </item>
+    <item>
+      <title>English Reading</title>
+      <link>http://localhost:1313/blog/learn/english-reading/</link>
+      <pubDate>Wed, 20 Mar 2024 20:42:11 +0800</pubDate>
+      <guid>http://localhost:1313/blog/learn/english-reading/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>English Listening</title>
+      <link>http://localhost:1313/blog/learn/english-listening/</link>
+      <pubDate>Wed, 20 Mar 2024 20:41:43 +0800</pubDate>
+      <guid>http://localhost:1313/blog/learn/english-listening/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>English Writing</title>
+      <link>http://localhost:1313/blog/learn/english-writing/</link>
+      <pubDate>Wed, 20 Mar 2024 20:41:20 +0800</pubDate>
+      <guid>http://localhost:1313/blog/learn/english-writing/</guid>
+      <description>Some notes about English writing.</description>
+    </item>
+    <item>
+      <title>English Speaking</title>
+      <link>http://localhost:1313/blog/learn/english-speaking/</link>
+      <pubDate>Wed, 20 Mar 2024 20:37:03 +0800</pubDate>
+      <guid>http://localhost:1313/blog/learn/english-speaking/</guid>
+      <description>Desc Text.</description>
     </item>
     <item>
       <title>Perter Pan Was Right</title>
@@ -67,7 +109,7 @@ I reckon, it&amp;rsquo;s again my turn</description>
       <pubDate>Sun, 17 Mar 2024 12:34:14 +0800</pubDate>
       <guid>http://localhost:1313/blog/diary/march-2024/</guid>
       <description>Mar 19 The more I worked for other people, the more I wanted to be my own boss.
-Duolingo&amp;rsquo;s sentences Did you hear that the teacher had to suspend Kevin from school for stealing? They were holding hands. The worse the boss treats me, the more I want to retire. I guess I shouldn&amp;rsquo;t treat myself so badly. Mar 18 Today, I feel extremely tired. and I seldom learn to speak or listen all day.</description>
+Duolingo&amp;rsquo;s sentences Did you hear that the teacher had to suspend Kevin from school for stealing? They were holding hands. The worse the boss treats me, the more I want to retire. I guess I shouldn&amp;rsquo;t treat myself so badly. Today, I finished the function that compatible with both Github and Gitee simultaneously.</description>
     </item>
     <item>
       <title>[Debug] Emoji cheat sheet</title>
@@ -163,7 +205,7 @@ you and me</description>
       <link>http://localhost:1313/blog/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/about/</guid>
-      <description>About Me Something is just like that</description>
+      <description>About What you are you do not see, what you see is your shadow.</description>
     </item>
   </channel>
 </rss>
