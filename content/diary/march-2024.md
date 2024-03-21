@@ -9,6 +9,19 @@ language: en
 math: false
 ---
 
+## Mar 21
+
+Today, I will have a sweet dream, because I did an hour working out. Additionally, I didn't get sleep all day.
+
+When I got back to the dormitory after getting off work, I met Li Yujie on the first floor of the apartment.
+I had taken a delivery first. And then I took my delivery going upstairs by elevator. I saw Li Yujie standing outside of my dormitory when I got to my floor.
+
+There was a bag of **wolfberry** in her hand. I invited her to have dinner together after I accepted the wolfberry.
+
+Next, I boiled two bowls of noodles and a fennel egg cake to share with her. Last but not least, she shared a game with me. We played by ourselves for an hour.
+
+To end with, I went to our gym to play dynamic bike.
+
 ## Mar 20
 
 Last night, I cannot fallen asleep on time. Till a half past 3 A.M, I was awaking. There is a lot of thoughts in my mind. Especially some things like the passion or relationship.

@@ -6,7 +6,7 @@
     <description>Recent content on ZJeapo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 Mar 2024 00:23:26 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 Mar 2024 22:04:49 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install / Update PaperMod</title>
@@ -35,6 +35,13 @@
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/guide/markdown/markdown-syntax.fa/</guid>
       <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+    </item>
+    <item>
+      <title>Youth</title>
+      <link>http://localhost:1313/blog/poem/youth/</link>
+      <pubDate>Thu, 21 Mar 2024 22:04:49 +0800</pubDate>
+      <guid>http://localhost:1313/blog/poem/youth/</guid>
+      <description>Desc Text.</description>
     </item>
     <item>
       <title>Conjunction</title>
@@ -108,8 +115,10 @@ I reckon, it&amp;rsquo;s again my turn</description>
       <link>http://localhost:1313/blog/diary/march-2024/</link>
       <pubDate>Sun, 17 Mar 2024 12:34:14 +0800</pubDate>
       <guid>http://localhost:1313/blog/diary/march-2024/</guid>
-      <description>Mar 19 The more I worked for other people, the more I wanted to be my own boss.
-Duolingo&amp;rsquo;s sentences Did you hear that the teacher had to suspend Kevin from school for stealing? They were holding hands. The worse the boss treats me, the more I want to retire. I guess I shouldn&amp;rsquo;t treat myself so badly. Today, I finished the function that compatible with both Github and Gitee simultaneously.</description>
+      <description>Mar 21 Mar 20 Last night, I cannot fallen asleep on time. Till a half past 3 A.M, I was awaking. There is a lot of thoughts in my mind. Especially some things like the passion or relationship.
+I think what I supposed to do is that make some changes.
+Mar 19 The more I worked for other people, the more I wanted to be my own boss.
+Duolingo&amp;rsquo;s sentences Did you hear that the teacher had to suspend Kevin from school for stealing?</description>
     </item>
     <item>
       <title>[Debug] Emoji cheat sheet</title>

@@ -5,8 +5,8 @@ series: [writing]
 categories: ["English learning"]
 tags: []
 language: en
-showToc: false
-TocOpen: false
+showToc: true
+TocOpen: true
 draft: false
 math: false
 hidemeta: false
@@ -61,7 +61,6 @@ What are some uniques aspects of your hometown?
 Describe an occasion when you wanted a long time for a nice thing.
 > *Practice*
 
-
 ## Verb Tenses
 
 |          |     一般      |          进行           |           完成           |            完成进行            |
@@ -71,3 +70,18 @@ Describe an occasion when you wanted a long time for a nice thing.
 |   将来   | will eat  | will **be eating**  | will **have eaten**  | will **have been eating**  |
 | 过去将来 | would eat | would **be eating** | would **have eaten** | would **have been eating** |
 
+## Duolingo
+
+### Error Sentences
+
+1. I want to give you a piece of **advice** about taking care of your garden.
+2. I pretty much **told** my neighbors that they need to move their car off my driveway.
+3. Somehow we got locked in a closet. We tried to get out, but it was no use. The door wouldn't **open**!
+4. I had been exploring for a few minutes when I **felt** a weird sensation, as if eyes were everywhere!
+5. Honestly, we didn't think through the **consequences** of entering the house.
+6. If we'd known better, we never **would have hiked** across "Ghost Valley." It wasn't just a nickname!
+7. We don't think he's telling the truth. 我们认为他说的不是实话
+8. {{<audio "Who grabbed me by the arm?" "https://d1vq87e9lcf771.cloudfront.net/vikramen/7c5283155cd59d7289c1fc57026bb902">}}
+9. You are always getting carried away.
+10. I'll speak to her after she cools down.
+11. 
