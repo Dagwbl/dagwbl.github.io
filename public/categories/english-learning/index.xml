@@ -6,8 +6,15 @@
     <description>Recent content in English Learning on ZJeapo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Mar 2024 20:42:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 Mar 2024 00:23:26 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/categories/english-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conjunction</title>
+      <link>http://localhost:1313/blog/learn/conjunction/</link>
+      <pubDate>Thu, 21 Mar 2024 00:23:26 +0800</pubDate>
+      <guid>http://localhost:1313/blog/learn/conjunction/</guid>
+      <description>Conjunctions</description>
+    </item>
     <item>
       <title>English Reading</title>
       <link>http://localhost:1313/blog/learn/english-reading/</link>

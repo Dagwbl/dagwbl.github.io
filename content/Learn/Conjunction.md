@@ -6,7 +6,7 @@ categories: ["English learning"]
 tags: ["cheatsheet"]
 language: en
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 math: false
 hidemeta: false
