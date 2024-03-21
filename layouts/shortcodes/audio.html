@@ -1,0 +1,16 @@
+<script>
+    var audioElement = null;
+
+    function playAudio(audioUrl) {
+        if (audioElement && !audioElement.paused) {
+            audioElement.pause();
+            return;
+        }
+
+        audioElement = new Audio(audioUrl);
+        audioElement.play();
+    }
+
+</script>
+
+<span onclick="playAudio('{{ .Get 1 }}')" style="color: darkorange;">🫦{{ .Get 0 }}</span>
