@@ -49,11 +49,11 @@ languages:
         # - name: WiKi
         #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
-  cn:
+  zh:
     languageName: "Chinese"
     weight: 3
     taxonomies:
-      language: cn
+      language: zh
       tag: tags
       category: categories
       tag: tags
