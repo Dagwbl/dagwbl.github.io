@@ -1,21 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Debug on ZJeapo&#39;s Blog</title>
-    <link>http://localhost:1313/blog/series/debug/</link>
-    <description>Recent content in Debug on ZJeapo&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 16 Mar 2024 23:10:53 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/series/debug/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[Debug] Emoji cheat sheet</title>
-      <link>http://localhost:1313/blog/debug/emoji-cheat-sheet/</link>
-      <pubDate>Sat, 16 Mar 2024 23:10:53 +0800</pubDate>
-      <guid>http://localhost:1313/blog/debug/emoji-cheat-sheet/</guid>
-      <description>This front matter is not work
-title: &amp;#39;Emoji cheat sheet&amp;#39;date: 2024-03-16T23:39:55+08:00draft: falseseries: [emoji]categories: [cheatsheet]tags: [markdown, emoji]language: en This front matter is work
-title: &amp;#39;Emoji Sheet&amp;#39;date: 2024-03-16T23:10:53+08:00draft: falseseries: [emoji]categories: [cheatsheet]tags: [markdown, emoji]language: enmath: false </description>
-    </item>
-  </channel>
-</rss>
