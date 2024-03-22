@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Poems on ZJeapo&#39;s Blog</title>
+    <link>http://localhost:1313/blog/poem/</link>
+    <description>Recent content in Poems on ZJeapo&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 21 Mar 2024 22:04:49 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/poem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Youth</title>
+      <link>http://localhost:1313/blog/poem/youth/</link>
+      <pubDate>Thu, 21 Mar 2024 22:04:49 +0800</pubDate>
+      <guid>http://localhost:1313/blog/poem/youth/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>The stray birds</title>
+      <link>http://localhost:1313/blog/poem/the-stray-birds/</link>
+      <pubDate>Sat, 16 Mar 2024 14:03:55 +0800</pubDate>
+      <guid>http://localhost:1313/blog/poem/the-stray-birds/</guid>
+      <description>Stray birds of summer come to my window sing and fly away. And the leaves of autumn, which have no songs, flutter and fall there with a sigh.
+O troupe of little vagrants of the world, leave your footprints in my words.
+The worlds puts off its mask of vastness to its lover. It becomes small, as one song, as one kiss of the eternal.
+It is the tears of the earth that keep her smiles in bloom.</description>
+    </item>
+  </channel>
+</rss>
