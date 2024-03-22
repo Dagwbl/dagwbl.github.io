@@ -1,25 +1,3 @@
-/* Custom styles added to demo */
-
-.twitter-tweet {
-    margin: auto;
-}
-
-iframe {
-    border-radius: var(--radius) !important;
-}
-
-.home-info ul {
-    padding-inline-start: 20px;
-}
-
-.entry-cover img {
-    border: 1px solid var(--border);
-}
-
-.chroma {
-    background-color: unset;
-}
-
 .apeblog-styled.sm-width {
     max-width: 600px;
     margin: 0 auto 2rem;
@@ -43,7 +21,7 @@ iframe {
     margin-top: 5px;
     margin-bottom: .5rem;
     font-weight: 500;
-    color: rgba(0, 0, 0, .85);
+    color: rgba(0,0,0,.85);
     line-height: 1.5
 }
 
@@ -58,8 +36,7 @@ iframe {
     justify-content: center
 }
 
-.apeblog-styled .subtitle,
-.apeblog-styled .subtitle-with-bg {
+.apeblog-styled .subtitle,.apeblog-styled .subtitle-with-bg {
     height: 60px;
     text-align: center;
     position: relative;
@@ -93,9 +70,7 @@ iframe {
     border-radius: 5px
 }
 
-.apeblog-styled table,
-.apeblog-styled td,
-.apeblog-styled th {
+.apeblog-styled table,.apeblog-styled td,.apeblog-styled th {
     border: 1px solid #ddd;
     text-align: left
 }
@@ -105,8 +80,7 @@ iframe {
     width: 100%
 }
 
-.apeblog-styled td,
-.apeblog-styled th {
+.apeblog-styled td,.apeblog-styled th {
     padding: 15px
 }
 
@@ -128,7 +102,7 @@ iframe {
     font-size: 1.5rem;
     font-weight: 300;
     line-height: 2.5rem;
-    font-family: Helvetica, PingFang SC, Hiragino Sans GB, Segoe UI, Microsoft YaHei, Helvetica Neue, Arial, sans-serif, Chinese Quote, -apple-system, BlinkMacSystemFont
+    font-family: Helvetica,PingFang SC,Hiragino Sans GB,Segoe UI,Microsoft YaHei,Helvetica Neue,Arial,sans-serif,Chinese Quote,-apple-system,BlinkMacSystemFont
 }
 
 .apeblog-styled .ra-body .ra-loss {
@@ -139,8 +113,7 @@ iframe {
     color: #40bed5
 }
 
-.apeblog-styled .ra-body .ra-break,
-.apeblog-styled .ra-body .ra-stress {
+.apeblog-styled .ra-body .ra-break,.apeblog-styled .ra-body .ra-stress {
     color: #fb0307
 }
 

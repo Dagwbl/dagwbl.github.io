@@ -9,7 +9,7 @@ series: ["Themes Guide"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: true
-language: cn
+language: zh
 weight: 2
 ---
 

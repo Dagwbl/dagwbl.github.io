@@ -9,6 +9,14 @@ language: en
 math: false
 ---
 
+## Mar 22
+
+> It is through science that we prove,  
+> But through intuition that we discover.
+> *{{<right "-- Henrry Pangalary">}}*
+
+Pay attention to why you are using tools, rather than just focusing on the tools themselves.
+
 ## Mar 21
 
 Today, I will have a sweet dream, because I did an hour working out. Additionally, I didn't get sleep all day.
