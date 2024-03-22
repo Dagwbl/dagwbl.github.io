@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Listening on ZJeapo&#39;s Blog</title>
+    <link>http://localhost:1313/blog/series/listening/</link>
+    <description>Recent content in Listening on ZJeapo&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Mar 2024 20:41:43 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/series/listening/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>English Listening</title>
+      <link>http://localhost:1313/blog/learn/english-listening/</link>
+      <pubDate>Wed, 20 Mar 2024 20:41:43 +0800</pubDate>
+      <guid>http://localhost:1313/blog/learn/english-listening/</guid>
+      <description>Desc Text.</description>
+    </item>
+  </channel>
+</rss>
