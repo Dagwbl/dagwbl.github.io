@@ -53,7 +53,7 @@ languages:
     languageName: "Chinese"
     weight: 3
     taxonomies:
-      language: zh
+      language: cn
       tag: tags
       category: categories
       tag: tags
