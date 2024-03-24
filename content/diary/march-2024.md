@@ -1,10 +1,10 @@
 ---
-title: 'March 2024'
-date: 2024-03-31T12:34:14+08:00
+title: "March 2024"
+date: 2024-03-30
 draft: false
-series: [monthly]
-categories: [diary]
-tags: [draft,learn]
+series: ["diary"]
+categories: ["diary"]
+tags: [learn]
 language: en
 math: false
 ---
