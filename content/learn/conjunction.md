@@ -165,7 +165,7 @@ UseHugoToc: true
 | as well as | 同样 |
 | in the same way | 同样 |
 
-## 对照关系（不同点） 
+## 对照关系（不同点）
 
 | English | Chinese |
 |:---------|:----------------|
@@ -346,7 +346,7 @@ UseHugoToc: true
 | again | 又一次；再次 |
 | once again | 又一次；再次 |
 
-## 时间关系 
+## 时间关系
 
 | English | Chinese |
 |:---------|:----------------|

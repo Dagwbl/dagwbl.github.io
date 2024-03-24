@@ -3,7 +3,7 @@
 baseURL: "https://dagwbl.github.io"
 # baseURL: "/"
 title: ZJeapo's Blog
-paginate: 5
+paginate: 6
 theme: [PaperMod]
 
 enableInlineShortcodes: true

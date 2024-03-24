@@ -20,79 +20,7 @@ iframe {
     background-color: unset;
 }
 
-.apeblog-styled.sm-width {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    padding: 12px
-}
-
-.apeblog-styled h3 {
-    color: #666;
-    text-align: center;
-    margin-bottom: .5em;
-    margin-top: 0;
-    font-weight: 500;
-    font-size: 1.17em
-}
-
-.apeblog-styled h4 {
-    display: inline-block;
-    border-bottom: 1px solid #29d2bf;
-    padding-bottom: 5px;
-    font-size: 1.2rem;
-    margin-top: 5px;
-    margin-bottom: .5rem;
-    font-weight: 500;
-    color: rgba(0, 0, 0, .85);
-    line-height: 1.5
-}
-
-.apeblog-styled p {
-    margin-bottom: 8px;
-    line-height: 1.5rem;
-    margin-top: 0
-}
-
-.apeblog-styled .subtitle {
-    display: flex;
-    justify-content: center
-}
-
-.apeblog-styled .subtitle,
-.apeblog-styled .subtitle-with-bg {
-    height: 60px;
-    text-align: center;
-    position: relative;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.5
-}
-
-.apeblog-styled .subtitle-with-bg .bg {
-    font-weight: 700;
-    font-size: 50px;
-    opacity: .3;
-    color: #29d2bf
-}
-
-.apeblog-styled .subtitle-with-bg .txt {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    left: 0;
-    bottom: -2px
-}
-
-.apeblog-styled .img-div {
-    text-align: center;
-    margin: 1.5rem 0
-}
-
-.apeblog-styled .img-div img {
-    width: 100%;
-    border-radius: 5px
-}
-
+/* Stye for ape */
 .apeblog-styled table,
 .apeblog-styled td,
 .apeblog-styled th {
@@ -146,4 +74,14 @@ iframe {
 
 .apeblog-styled .ra-body .ra-weak {
     color: #bfbfbf
+}
+
+/* Custom the style for home page */
+.first-entry {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 230px;
+    margin: var(--gap)0 calc(var(--gap) * 1.2);
 }
