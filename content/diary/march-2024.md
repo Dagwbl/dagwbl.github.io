@@ -9,6 +9,18 @@ language: en
 math: false
 ---
 
+## Mar 24
+
+Recently, I always played with my cell phone for a few hours after waking up. I think this is a bad habit, and also wastes a lot of time.  
+At noon, I rode my bike to get to Saokun's to eat lunch with my friends. But there is an unpleasant thing we did, which is that we were too lazy to treat them.  
+So, they decided to leave after playing for a while. We didn't think our behaviors were truly considered enough.
+
+## Mar 23
+
+Today, my friends and I decided to climb **the** Yunwu mountain.
+
+Though It's so **tiring,** it is a precious and **specific** experience.
+
 ## Mar 22
 
 > It is through science that we prove,  
@@ -56,8 +68,6 @@ Today, I feel extremely tired. and I seldom learn to speak or listen all day. Th
 And one more thing, I really don't want to listen these things Luo Huan talked about her ex-boyfriend. I felt uncomfortable and uncareful. Honestly, I just care about her situation, not other people about her. However, just these poo things resulted in her bad mood. And I want to use a comment to describe her.
 
 > I tried to walk out of the swamp that has trapped me for so long, but forgot why this swamp has held me for so long.
-
-
 
 ## Mar 17
 
