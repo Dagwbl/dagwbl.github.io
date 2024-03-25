@@ -83,5 +83,5 @@ iframe {
     flex-direction: column;
     justify-content: center;
     min-height: 230px;
-    margin: var(--gap)0 calc(var(--gap) * 1.2);
+    margin: var(--gap)0 calc(var(--gap) * 1.5);
 }
