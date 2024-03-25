@@ -9,6 +9,12 @@ language: en
 math: false
 ---
 
+## Mar 25
+
+About how to improve writing ability, there are definitely many different perspectives and methods. In my opinion, the thing we need to do is just keep outputting, and then keep revising.
+Only by doing this can we achieve fluency.
+Additionally, there is one especially important thing: choose a better tool. Because, as a foreigner, a tool like a teacher is important. A bad teacher might not improve our ability.
+
 ## Mar 24
 
 Recently, I always played with my cell phone for a few hours after waking up. I think this is a bad habit, and also wastes a lot of time.  
