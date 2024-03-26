@@ -4,7 +4,7 @@ date: '2024-03-21T00:23:26+08:00'
 series: ["writing"]
 categories: ["English learning"]
 tags: ["cheatsheet"]
-language: en
+language: [en, zh]
 showToc: true
 TocOpen: true
 draft: false

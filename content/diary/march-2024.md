@@ -9,6 +9,17 @@ language: en
 math: false
 ---
 
+## Mar 26
+
+- [as much as](https://zhuanlan.zhihu.com/p/336693035)
+- I wondered if you might consider paying overtime **since** I've had to stay late so often.
+- I can tell you don't get out **much**
+- It's a realistic **expectation**.
+- She's the **governor** of Michigan
+- He's a friend of our neighbors
+
+
+
 ## Mar 25
 
 About how to improve writing ability, there are definitely many different perspectives and methods. In my opinion, the thing we need to do is just keep outputting, and then keep revising.
