@@ -1,7 +1,7 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://dagwbl.github.io"
-title: Timid Thoughts
+title: "ZJeapo's Blog"
 paginate: 6
 theme: [PaperMod]
 
@@ -180,9 +180,9 @@ params:
         url: "https://nav.hiqq.com.cn/"
 
   homeInfoParams:
-    Title: "ZJeapo's Blog"
+    Title: "Timid Thoughts  👾 "
     Content: >
-      👾 *O troupe of little vagrants of the world, leave your footprints in my words.* 
+     *O troupe of little vagrants of the world, leave your footprints in my words.* 
 
       - Do not linger to gather flowers to keep them, but walk on, for flowers will keep themselves blooming all your way.
 
