@@ -32,7 +32,16 @@ UseHugoToc: true
 #     hidden: true # only hide on current single page
 ---
 
-## Error
+## Listening
+
+1. {{<audio "They chased him, but he didn't get caught." "https://d1vq87e9lcf771.cloudfront.net/oscaren/f585b6d1f3071522840f899d26f775a8">}}
+2. Don't say a thing, I know how you feel.
+3. Admit that you **ripped** my poster on purpose!
+4. If I hadn't read the book, I would be so confused now.
+5. If you want to be fit, you can **get in shape** by going to the gym more.
+6. The product is **neither** expensive **nor** difficult to use!
+
+## Filled the blank
 
 ### Error Sentences
 

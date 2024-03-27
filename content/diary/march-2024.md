@@ -9,6 +9,12 @@ language: en
 math: false
 ---
 
+## Mar 27
+
+Today, I have been learned read aloud on Bilibili.[【飞凡PTE】Read Aloud全网最全, 满分技巧合集! 小白必看！_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Th41167z7/?spm_id_from=333.337.search-card.all.click&vd_source=e73763f897ab8c92fdc67c477da1e273)
+
+It was very effective and efficient.
+
 ## Mar 26
 
 - [as much as](https://zhuanlan.zhihu.com/p/336693035)

@@ -24,10 +24,8 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-# cover:
-#     image: "<image path/url>" # image path/url
-#     alt: "<alt text>" # alt text
-#     caption: "<text>" # display caption under cover
-#     relative: false # when using page bundles set this to true
-#     hidden: true # only hide on current single page
 ---
+
+## 单词
+
+[【飞凡PTE】Read Aloud全网最全, 满分技巧合集! 小白必看！_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Th41167z7/?spm_id_from=333.337.search-card.all.click&vd_source=e73763f897ab8c92fdc67c477da1e273)
