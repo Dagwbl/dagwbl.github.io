@@ -9,9 +9,28 @@ language: en
 math: false
 ---
 
+## Mar 28
+
+There are two assignments as following:
+
+> There are a number of tests available which can suggest if a person is telling the truth, but knowing
+> which ones are accurate is not easy. A newly created test is claimed to be the most accurate yet in
+> lie detection.However, questions have been raised about its accuracy and ethics.
+
+> Students who wish to take a break from their studies will need to put in an application for Leave of
+> Absence. If your application is successful, you will be notified via email. At the end of your Leave of
+> Absence, you must re -enroll at Student Services and in the subjects you intend to study.
+
+Requirement:
+
+1. Divide rhythm groups
+2. Linking rhythm groups
+3. Try read the full phrase.
+4. Compare with recording.
+
 ## Mar 27
 
-Today, I have been learned read aloud on Bilibili.[【飞凡PTE】Read Aloud全网最全, 满分技巧合集! 小白必看！_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Th41167z7/?spm_id_from=333.337.search-card.all.click&vd_source=e73763f897ab8c92fdc67c477da1e273)
+Today, I have been learning read aloud on Bilibili.[【飞凡PTE】Read Aloud全网最全, 满分技巧合集! 小白必看！_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Th41167z7/?spm_id_from=333.337.search-card.all.click&vd_source=e73763f897ab8c92fdc67c477da1e273)
 
 It was very effective and efficient.
 
