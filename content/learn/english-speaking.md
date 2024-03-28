@@ -24,12 +24,6 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-# cover:
-#     image: "<image path/url>" # image path/url
-#     alt: "<alt text>" # alt text
-#     caption: "<text>" # display caption under cover
-#     relative: false # when using page bundles set this to true
-#     hidden: true # only hide on current single page
 ---
 
 ## RA
@@ -103,4 +97,3 @@ Tesla, you don't understand our American humor.<span class="split" time="23.75">
 <div class="ra-body">
 <span class="split" time="0.27"></span><span class="ra-weak">The</span> bill calls<span class="ra-weak"> for </span><span class="ra-weak">the </span>establishment <span class="ra-break"> / </span><span class="split" time="2.63"></span><span class="ra-weak"> of</span><span class="ra-weak"> the</span> National Lan<span class="ra-loss">d</span>slide Hazards&nbsp;Redu<span class="ra-loss">c</span>tion Program <span class="ra-break"> / </span><span class="split" time="6.05"></span>within&nbsp;one&nbsp;year<span class="ra-weak"> of</span> becoming&nbsp;law.<span class="split" time="8.44"></span><span class="ra-weak"> The&nbsp;</span>program&nbsp;serves&nbsp;numerous fun<span class="ra-loss">c</span>tions,<span class="split" time="11.72"></span> including&nbsp;<span class="ra-weak">to</span> identify<span class="ra-break"> / </span><span class="split" time="13.50"></span><span class="ra-weak"> and</span> understand&nbsp;lan<span class="ra-loss">d</span>slide hazard<span class="ra-link">s_a</span><span class="ra-weak">nd</span> risks,<span class="split" time="16.61"></span> reduce&nbsp;losses<span class="ra-weak"> from</span> lan<span class="ra-loss">d</span>slides,<span class="split" time="18.97"></span> prote<span class="ra-loss">c</span>t communities <span class="ra-break"> / </span><span class="split" time="20.38"></span>a<span class="ra-loss">t</span> ris<span class="ra-link">k_o</span><span class="ra-weak">f</span>  lan<span class="ra-loss">d</span>slides  hazards,<span class="split" time="22.55"></span><span class="ra-weak"> a</span><span class="ra-link">nd_i</span>mprove communication <span class="ra-break"> / </span><span class="split" time="24.22"></span><span class="ra-weak">a</span><span class="ra-link">nd_e</span>mergency prepare<span class="ra-loss">d</span>ness.<span class="split" time="26.17"></span></div>
 </div>
-

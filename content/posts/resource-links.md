@@ -34,7 +34,7 @@ UseHugoToc: true
 - [APE practice](https://www.ptexj.com/zh-CN/practice)
 - [多邻国 - 好玩高效的英语学习途径 (duolingo.cn)](https://www.duolingo.cn/learn)
 - [Qwerty Learner — 为键盘工作者设计的单词与肌肉记忆锻炼软件 (gitee.io)](https://kaiyiwing.gitee.io/qwerty-learner/)
-- 
+- [Hello Algo (hello-algo.com)](https://www.hello-algo.com/en/)
 
 ## English sentences
 

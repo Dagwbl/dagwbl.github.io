@@ -1,9 +1,9 @@
 ---
 title: "Duolingo's correction"
 date: '2024-03-20T20:41:20+08:00'
-series: [duolingo]
-categories: ["English learning"]
-tags: []
+series: ["English learning"]
+categories: []
+tags: [duolingo]
 language: en
 showToc: true
 TocOpen: true
@@ -24,12 +24,7 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-# cover:
-#     image: "<image path/url>" # image path/url
-#     alt: "<alt text>" # alt text
-#     caption: "<text>" # display caption under cover
-#     relative: false # when using page bundles set this to true
-#     hidden: true # only hide on current single page
+
 ---
 
 ## Listening
@@ -43,9 +38,16 @@ UseHugoToc: true
 
 ## Filled the blank
 
-### Error Sentences
+### Mar 28
 
-#### Mar 24
+1. It was so thoughtful of you **clean my kitchen**. You didn't have to do that!
+2. It was **kind** of him to ask if I needed help with my packing.
+3. {{<audio "We haven't never argued." "https://d35aaqx5ub95lt.cloudfront.net/sounds/7abe057dc8446ad325229edd6d8fd250.mp3">}}
+4. If it's not too much to **ask**, could I stay at your house while you're away? I'll sleep on the sofa!
+5. {{<audio "Not only are our candies delicious, but they're also healthy." "https://d1vq87e9lcf771.cloudfront.net/eddyen/618dd859eb10ca01bc61f3642cf6ff2b">}}
+6. It's kind of ugly, but it's functional
+
+### Mar 24
 
 1. I'm **over** you and your drama . You can find somebody else to shout at.
 2. **You played a part in making this mess.** You should help to clean it up.
@@ -57,7 +59,7 @@ UseHugoToc: true
 8. Oh man I know how **badly** you need your phone.
 9.
 
-#### Mar 21
+### Mar 21
 
 1. I want to give you a piece of **advice** about taking care of your garden.
 2. I pretty much **told** my neighbors that they need to move their car off my driveway.
@@ -70,7 +72,7 @@ UseHugoToc: true
 9. You are always getting carried away.
 10. I'll speak to her after she cools down.
 
-#### Mar 22
+### Mar 22
 
 1. He's the one **whose** evil mother left him nothing in her will.
 2. My mom invited me to live at home so that I **would have** a chance to rest!  
