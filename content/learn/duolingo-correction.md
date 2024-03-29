@@ -27,7 +27,7 @@ UseHugoToc: true
 
 ---
 
-## Listening
+## Mar 29
 
 1. {{<audio "They chased him, but he didn't get caught." "https://d1vq87e9lcf771.cloudfront.net/oscaren/f585b6d1f3071522840f899d26f775a8">}}
 2. Don't say a thing, I know how you feel.
@@ -35,8 +35,10 @@ UseHugoToc: true
 4. If I hadn't read the book, I would be so confused now.
 5. If you want to be fit, you can **get in shape** by going to the gym more.
 6. The product is **neither** expensive **nor** difficult to use!
-
-## Filled the blank
+7. Next up, a chat with some local women running in the city marathon this year.
+8. Every day, these firefighters show us their **bravery and courage**.
+9. Local news is next, right after the commercial break.
+10. A surfer came across the puppy and brought it back to shore.
 
 ### Mar 28
 
@@ -57,7 +59,6 @@ UseHugoToc: true
 6. {{<audio "That juice stained my new shorts!" "https://d1vq87e9lcf771.cloudfront.net/linen/f188e781fd86403bfaac27ceb7be52c7">}}
 7. From time to time, we all fail.
 8. Oh man I know how **badly** you need your phone.
-9.
 
 ### Mar 21
 
@@ -80,4 +81,3 @@ UseHugoToc: true
 4. {{<audio "Do you mean the one who adopted a bunch of orphans?" "https://d1vq87e9lcf771.cloudfront.net/lilyen/6dbcf05b206861639139953b73311de6">}}
 5. {{<audio "He's capable of deceiving everyone" "https://d1vq87e9lcf771.cloudfront.net/falstaffen/0f6be4629ca21613b0fd0be373904690">}}
 6. {{<audio "Let's rewatch that one scene where everything gets revealed" "https://d1vq87e9lcf771.cloudfront.net/lucyen/3d5af81548750fd7d33086291b8b5722">}}
-7.

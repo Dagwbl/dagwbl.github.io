@@ -9,6 +9,14 @@ language: en
 math: false
 ---
 
+## Mar 29
+
+I have been considering the impact of communication tools on our lifestyle and ability to concentrate. No, all the things present by cell phone are consume our concentration.
+
+About recording my life on Blog, I don't think I should focus the rendering results and the impliment methods.
+
+Just focus the content itself. Time is the most precious thing in the word, so I must use my whole time to create, to think, to feel, and to love. rather than be attracted by others.
+
 ## Mar 28
 
 There are two assignments as following:
