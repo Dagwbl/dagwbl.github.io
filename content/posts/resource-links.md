@@ -10,7 +10,6 @@ TocOpen: true
 draft: false
 math: false
 hidemeta: false
-comments: false
 description: "Some resources links"
 canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
