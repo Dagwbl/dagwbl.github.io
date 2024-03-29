@@ -9,6 +9,12 @@ language: en
 math: false
 ---
 
+## Mar 30
+
+I found the Hugo blog deployed in GitHub is very convenient. I can use the **One diary** app for writing essays and copying to the Hugo via the GitHub app.
+
+I can completely finish the writing and the publishing function.
+
 ## Mar 29
 
 I have been considering the impact of communication tools on our lifestyle and ability to concentrate. No, all the things present by cell phone are consume our concentration.
