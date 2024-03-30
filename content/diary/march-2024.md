@@ -11,9 +11,9 @@ math: false
 
 ## Mar 30
 
-I found the Hugo blog deployed in GitHub is very convenient. I can use the **One diary** app for writing essays and copying to the Hugo via the GitHub app.
+I found the Hugo blog deployed in GitHub is very <mark>convenient</mark>. I can use the **One diary** app for writing essays and copying to the Hugo via the GitHub app.
 
-I can completely finish the writing and the publishing function.
+I can completely finish the writing and the publishing function by cell phone.
 
 ## Mar 29
 

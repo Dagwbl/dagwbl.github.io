@@ -26,6 +26,30 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 ---
 
+## Skill
+
+The functional words need next to behind, like this `is the`
+
+1. `How quickly` `is the world's population growing?` 
+
+### Divided 
+
+`People with active lifestyle` `are less likely` `to die early`  `or to have major illness.`
+
+1. People with active lifestyle.
+2. are less likely.
+3. to die early.
+4. or to have major illness.
+
+### Look for meaning group words
+
+1. It **seems** that language **appeared** from **nowhere** since no other **species** has **anything** resembling human **language**.
+2. **Certainly** one of the important values of **literature** is that it nourishes our emotional **lives**. An effective literary **work** may seem to speak directly to **us** especially if we are ripe for it.
+3. When we <mark>recycle</mark>, used <mark>materials</mark> are converted into new <mark>products</mark>, reducing the <mark>need</mark> to consume natural <mark>resources</mark>.
+4. Before European **explorers** had reached **Australia**, it was **believed** that all swans were **white**.
+5. A unique characteristic of online shopping **environments** is that they allow **vendors** to create retail **interfaces** with highly interactive **features**.
+6. **Yellow** is the most optimistic **colour**, yet **surprisingly**, people lose their tempers most **often** in yellow rooms and babies cry more in **them**.
+
 ## RA
 
 ### {{<audio "2 Shakespeare" "https://cdn.apeuni.com/public/admin/mini_tutorials/read_aloud/2_shakespeare/ra2demo_volume.mp3" >}}
@@ -86,6 +110,7 @@ Tesla, you don't understand our American humor.<span class="split" time="23.75">
 
 ### {{<audio "1024 Tutor" "https://cdn.apeuni.com/public/system/read_alouds/audios/1083/1024/ra_1024-1695884117_0335019.mp3">}}
 
+```html
 <div class="apeblog-styled">
 <div class="ra-body">
 <span class="split" time="0.38"></span><span class="ra-weak">Your </span>tutor helps <span class="ra-weak">you </span><span class="ra-break"> / </span><span class="split" time="1.76"></span>make <span class="ra-weak">the </span>mos<span class="ra-link">t_o</span><span class="ra-weak">f </span>your time <span class="ra-weak">at </span>university <span class="ra-break"> / </span><span class="split" time="4.36"></span><span class="ra-weak">by </span>giving <span class="ra-weak">you </span>guidance <span class="ra-weak">and </span>support <span class="ra-break"> / </span><span class="split" time="6.50"></span>along <span class="ra-weak">the </span>way. <span class="split" time="7.59"></span>All new students <span class="ra-break"> / </span><span class="split" time="9.85"></span><span class="ra-weak">are </span>allocate<span class="ra-link">d_a </span>personal tutor <span class="ra-break"> / </span><span class="split" time="11.94"></span>who wi<span class="ra-link">ll_en</span>courage you <span class="ra-break"> / </span><span class="split" time="13.30"></span><span class="ra-weak">to </span>ge<span class="ra-loss">t </span><span class="ra-weak">the </span>most ou<span class="ra-link">t_o</span><span class="ra-weak">f </span>your course, <span class="split" time="15.38"></span>dire<span class="ra-loss">c</span>t you <span class="ra-weak">to </span>other source<span class="ra-link">s_o</span><span class="ra-weak">f </span>support <span class="ra-break"> / </span><span class="split" time="18.03"></span><span class="ra-weak">and </span>help you achieve <span class="ra-weak">your </span>goals.<span class="split" time="19.98"></span></div>
