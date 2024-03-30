@@ -93,49 +93,7 @@ languages:
             url: tags
           - name: Github
             url: "https://github.com/"
-  # fa:
-  #   languageName: Farsi
-  #   languagedirection: rtl
-  #   weight: 4
-  #   title: PaperMod RTL
-  #   taxonomies:
-  #     category: FAcategories
-  #     tag: FAtags
-  #     series: FAseries
-  #   menu:
-  #     main:
-  #       - name: FATags
-  #         url: fatags
-  #         weight: 10
-  #   # custom params for each language should be under [langcode].parms - hugo v0.120.0
-  #   params:
-  #     homeInfoParams:
-  #       Title: "Hi there \U0001F44B"
-  #       Content: Welcome to RTL layout
 
-  # fr:
-  #   languageName: "French"
-  #   weight: 2
-  #   title: PaperModL2
-  #   taxonomies:
-  #     category: FRcategories
-  #     tag: FRtags
-  #     series: FRseries
-  #   menu:
-  #     main:
-  #       - name: Archive
-  #         url: archives/
-  #         weight: 5
-  #       - name: FRTags
-  #         url: frtags
-  #         weight: 10
-  #       - name: FRCategories
-  #         url: frcategories
-  #         weight: 10
-  #       - name: FRSeries
-  #         url: frseries
-  #         weight: 10
- 
 outputs:
   home:
     - HTML
@@ -162,7 +120,7 @@ params:
   ShowPageNums: true
   ShowToc: true
   comments: true
-#  images: ["images/papermod-cover.png"]
+  # images: ["/images/wallpaperflare.com_flower.jpg"]
 
   profileMode:
     enabled: false

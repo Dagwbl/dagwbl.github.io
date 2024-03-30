@@ -127,5 +127,9 @@ iframe {
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     max-width: calc(var(--main-width) + var(--gap) * 5);
     margin: auto;
-    padding: var(--gap)
+    padding: var(--gap);
+    text-align: justify;
+    hyphens: auto;
+    /* word-break: break-all; */
+
 }

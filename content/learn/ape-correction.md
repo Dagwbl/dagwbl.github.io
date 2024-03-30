@@ -11,10 +11,6 @@ draft: false
 math: false
 hidemeta: false
 description: "Some notes about English writing."
-canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
-disableShare: false
-disableHLJS: false
 hideSummary: false
 searchHidden: true
 ShowReadingTime: true
@@ -24,12 +20,14 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 # cover:
-#     image: "<image path/url>" # image path/url
+#     image: "/images/wallpaperflare.com_flower.jpg" # image path/url
 #     alt: "<alt text>" # alt text
 #     caption: "<text>" # display caption under cover
-#     relative: false # when using page bundles set this to true
-#     hidden: true # only hide on current single page
+#     relative: true # when using page bundles set this to true
+#     hidden: false # only hide on current single page
 ---
+
+
 
 ## Reading & Writing：Fill in the blanks (FIB)
 
