@@ -32,6 +32,27 @@ The functional words need next to behind, like this `is the`
 
 1. `How quickly` `is the world's population growing?` 
 
+## Breathe
+
+1. The strictest definitions define smoking as being the inhalation of any tobacco substance **while** the loosest define smoking as possessing any lit tobacco product.
+2. This trend began in the middle of the 20th century **and** is one of the major environmental concerns of scientists and governmental officials worldwide.
+3. There has been a decline in physical activity **because** more people work in offices rather than in manual jobs.
+4. You must re-enroll at Student Services **and** in the subjects you intend to study.
+5. Tidal energy is a renewable source of energy **and** a form of hydropower
+   used to generate electricity from the energy of the tides.
+6. The use of questionnaires and surveys is more suitable for quantitative research **whereas** interviews and focus groups are more often used for qualitative research purposes.
+7. Others see it as essential to civilized living **and** concern themselves with design **and** how the furniture will look in a room.
+8. Mitigation is common **and** calls for a reduction of emissions **and** less reliance on fossil fuels.
+9. Coal burning power plants are now replaced with hydraulic power plants **and** electrical cars are replacing some gasoline efficient cars.
+
+Students who wish to take a break from their studies **will** need to put in an application for Leave of Absence.
+
+The extent and structure of the government of the United States **make** it dependent on the will of the society.
+
+The child raised in an environment where there are many stimuli **will** experience greater intellectual development.
+
+
+
 ### Divided 
 
 `People with active lifestyle` `are less likely` `to die early`  `or to have major illness.`
