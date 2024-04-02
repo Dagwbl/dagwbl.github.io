@@ -1,9 +1,9 @@
 ---
 title: 'Social Chaos'
 date: '2024-03-31T12:51:19+08:00'
-series: []
-categories: []
-tags: []
+series: [thinking]
+categories: [post]
+tags: [product]
 language: en
 showToc: false
 TocOpen: false

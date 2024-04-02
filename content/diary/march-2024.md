@@ -2,7 +2,7 @@
 title: "March 2024"
 date: 2024-03-30
 draft: false
-series: ["diary"]
+series: ["2024"]
 categories: ["diary"]
 tags: [learn]
 language: en

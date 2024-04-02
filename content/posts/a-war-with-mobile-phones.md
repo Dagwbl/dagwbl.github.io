@@ -1,9 +1,9 @@
 ---
 title: 'A War With Mobile Phones'
 date: '2024-03-31T12:50:23+08:00'
-series: []
-categories: []
-tags: []
+series: [thinking]
+categories: [post]
+tags: [phone, war]
 language: en
 showToc: false
 TocOpen: false

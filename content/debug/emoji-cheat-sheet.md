@@ -2,7 +2,7 @@
 title: '[Debug] Emoji cheat sheet'
 date: 2024-03-16T23:10:53+08:00
 draft: false
-series: [debug]
+series: [hugo]
 categories: [debug]
 tags: [markdown, unsolved]
 language: en

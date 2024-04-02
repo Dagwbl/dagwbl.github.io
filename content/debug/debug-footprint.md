@@ -1,7 +1,8 @@
 ---
 title: 'Debug footprint'
 date: "2024-03-14"
-series: ["debug"]
+series: ["code"]
+categories: debug
 draft: false
 tags: ["bug", "code", "git"]
 math: true

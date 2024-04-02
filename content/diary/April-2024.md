@@ -1,11 +1,16 @@
 ---
 title: "April 2024"
 date: 2024-04-30
-series: ["diary"]
+series: ["2024"]
+categories: diary
 tags: [footprint]
 language: en
 math: false
 ---
+
+## Apr 2
+
+I spent an hour beautifying me blog. Now, it became more beautiful.
 
 ## Apr 1
 
