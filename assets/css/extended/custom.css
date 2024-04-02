@@ -28,7 +28,7 @@ iframe {
   Copyright (c) 2021-2024 adityatelange
 */
 :root {
-    --gap: 24px;
+    --gap: 24px; 
     --content-gap: 20px;
     --nav-width: 1024px;
     --main-width: 720px;
@@ -71,7 +71,8 @@ iframe {
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
-    padding: var(--gap);
+    /* padding: var(--gap); */
+    padding: 5px;
     text-align: justify;
     hyphens: auto;
     /* word-break: break-all; */
@@ -121,5 +122,10 @@ sup {
 
 .post-content blockquote {
     background-color: aliceblue;
+    border-radius: 3px;
+}
+
+.dark .post-content blockquote {
+    background-color: #3d4349;
     border-radius: 3px;
 }
