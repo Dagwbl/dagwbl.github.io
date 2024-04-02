@@ -5,8 +5,8 @@ series: [speaking]
 categories: ["English learning"]
 tags: []
 language: en
-showToc: false
-TocOpen: false
+showToc: true
+TocOpen: true
 draft: false
 math: false
 hidemeta: false
@@ -32,7 +32,42 @@ The functional words need next to behind, like this `is the`
 
 1. `How quickly` `is the world's population growing?` 
 
-## Breathe
+### Eye brain coordination
+
+> 心中淡定无语速  
+> 咬字清晰有连续  
+> 眼睛先到意群尾  
+> 拌嘴卡顿不重复
+
+Watching the flag before you read it
+
+1. Australians do speak English, 🚩however, 🚩for some tourists and travellers, 🚩it can be difficult to understand the slang.🚩
+2. The maximum yield of plants, 🚩determined by their genetic potential, 🚩is seldom achieved,🚩 because factors such as insufficient water or nutrients,🚩 adverse climate conditions, plant diseases.🚩
+3. They have no coach,🚩 no mechanic,🚩 no team.🚩 They have assembled their bikes single-handedly.🚩 Some say a prayer,🚩 others throw salt over their chains as a blessing before the race begins.🚩
+4. Akimbo,🚩 this must be one of the odder looking words in the language.🚩 It puzzles us🚩 in part because🚩 it doesn't seem to have any relatives.🚩
+5. You use to think being green🚩 was a luxury for your company,🚩 but climate change has made you realise🚩 that you can no longer ignore it.🚩
+6. You use to think being green was a luxury for your company, but climate change has made you realise that you can no longer ignore it.The buzz is about becoming carbon-neutral, but where do you start? Consider your drivers. Do you want to become carbon neutral for marketing reasons, for financial reasons, or just to save the planet.
+7. Public demand for education🚩 has remained strong,🚩 reflecting the importance of education🚩 as a means of social progress.🚩 Aware of the social value of education to the world of work.🚩
+8. Hundreds of millions of people🚩 eat fast food every day🚩 without giving it too much thought.🚩 They just unwrap their hamburgers and dig in.🚩 An hour or so later,🚩 when the burger's all gone and the wrapper's been tossed into the garbage,🚩 the whole meal has already been forgotten.🚩
+
+### Strong and Weak
+
+> 重读恰当字典音，  
+> 不喊不抬不怕轻，  
+> 弱读变音与连读，  
+> 节奏体现意思清。
+
+1. The **main difference** on this **occasion** was that the **colonists** were **not** just **fighting** **against a king**
+2. If your **application** is **successful**, you will be **notified** via **email**.
+3. There are a **number** of **tests available** which can **suggest** if a **person** is **telling** the **truth**.
+4. **Living** in the **host country**, **not** as a **tourist** or **guest** but as **a member** of the **community**.
+5. It is a move that could lead to a trade war and damage the economies of both nations.
+6. Employers mistreated the workers and paid them too little for the work they did.
+7. It is important to talk to your doctor before starting an exercise routine.
+8. And it's not just the caterpillars, of course, that are important.
+
+
+### Breathe
 
 1. The strictest definitions define smoking as being the inhalation of any tobacco substance **while** the loosest define smoking as possessing any lit tobacco product.
 2. This trend began in the middle of the 20th century **and** is one of the major environmental concerns of scientists and governmental officials worldwide.
@@ -131,7 +166,7 @@ Tesla, you don't understand our American humor.<span class="split" time="23.75">
 
 ### {{<audio "1024 Tutor" "https://cdn.apeuni.com/public/system/read_alouds/audios/1083/1024/ra_1024-1695884117_0335019.mp3">}}
 
-```html
+
 <div class="apeblog-styled">
 <div class="ra-body">
 <span class="split" time="0.38"></span><span class="ra-weak">Your </span>tutor helps <span class="ra-weak">you </span><span class="ra-break"> / </span><span class="split" time="1.76"></span>make <span class="ra-weak">the </span>mos<span class="ra-link">t_o</span><span class="ra-weak">f </span>your time <span class="ra-weak">at </span>university <span class="ra-break"> / </span><span class="split" time="4.36"></span><span class="ra-weak">by </span>giving <span class="ra-weak">you </span>guidance <span class="ra-weak">and </span>support <span class="ra-break"> / </span><span class="split" time="6.50"></span>along <span class="ra-weak">the </span>way. <span class="split" time="7.59"></span>All new students <span class="ra-break"> / </span><span class="split" time="9.85"></span><span class="ra-weak">are </span>allocate<span class="ra-link">d_a </span>personal tutor <span class="ra-break"> / </span><span class="split" time="11.94"></span>who wi<span class="ra-link">ll_en</span>courage you <span class="ra-break"> / </span><span class="split" time="13.30"></span><span class="ra-weak">to </span>ge<span class="ra-loss">t </span><span class="ra-weak">the </span>most ou<span class="ra-link">t_o</span><span class="ra-weak">f </span>your course, <span class="split" time="15.38"></span>dire<span class="ra-loss">c</span>t you <span class="ra-weak">to </span>other source<span class="ra-link">s_o</span><span class="ra-weak">f </span>support <span class="ra-break"> / </span><span class="split" time="18.03"></span><span class="ra-weak">and </span>help you achieve <span class="ra-weak">your </span>goals.<span class="split" time="19.98"></span></div>

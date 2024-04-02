@@ -1,0 +1,55 @@
+/* Style for ape */
+.apeblog-styled table,
+.apeblog-styled td,
+.apeblog-styled th {
+    border: 1px solid #ddd;
+    text-align: left
+}
+
+.apeblog-styled table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.apeblog-styled td,
+.apeblog-styled th {
+    padding: 15px
+}
+
+.apeblog-styled .start-practice {
+    text-align: center;
+    margin: 40px 0
+}
+
+.apeblog-styled .start-practice a {
+    padding: 10px 35px;
+    background-color: #29d2bf;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none
+}
+
+.apeblog-styled .ra-body {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    font-family: Helvetica, PingFang SC, Hiragino Sans GB, Segoe UI, Microsoft YaHei, Helvetica Neue, Arial, sans-serif, Chinese Quote, -apple-system, BlinkMacSystemFont
+}
+
+.apeblog-styled .ra-body .ra-loss {
+    color: #e5b700
+}
+
+.apeblog-styled .ra-body .ra-link {
+    color: #40bed5
+}
+
+.apeblog-styled .ra-body .ra-break,
+.apeblog-styled .ra-body .ra-stress {
+    color: #fb0307
+}
+
+.apeblog-styled .ra-body .ra-weak {
+    color: #bfbfbf
+}

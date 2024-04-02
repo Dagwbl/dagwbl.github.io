@@ -34,17 +34,20 @@ languages:
       main:
         - name: Archive
           url: archives
-          weight: 5
+          weight: 1
+        - name: Category
+          url: categories/
+          weight: 2
         - name: Series
           url: series
-          weight: 6
+          weight: 3
+        - name: Tag
+          url: tags/
+          weight: 4
         - name: Search
           url: search/
-          weight: 8
-        - name: Tags
-          url: tags/
-          weight: 6
-        - name: About
+          weight: 5
+        - name: Link
           url: /about/
           weight: 10
         # - name: WiKi

@@ -1,7 +1,7 @@
 ---
 title: 'Youth'
 date: '2024-03-21T22:04:49+08:00'
-series: [poem]
+series: [writing]
 categories: [poem]
 tags: [positive]
 language: en

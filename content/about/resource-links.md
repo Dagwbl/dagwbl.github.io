@@ -2,12 +2,12 @@
 title: 'Resource Links'
 date: '2024-04-27T20:54:09+08:00'
 series: ["English learning"]
-categories: []
+categories: [post]
 tags: [link]
 language: en
 showToc: true
 TocOpen: true
-draft: false
+draft: true
 math: false
 hidemeta: false
 description: "Some resources links"
