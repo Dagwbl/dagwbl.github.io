@@ -14,6 +14,8 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
+enableGitInfo: true
+
 mainsections: ["posts", "diary","song","poem","learn"]
 # googleAnalytics: UA-123-45
 
@@ -107,8 +109,9 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
   author: ZJeapo
+  dateFormat: "2006-01-02"
   # author: ["Me", "You"] # multiple authors
-
+  ShowFullTextinRSS: true
   defaultTheme: auto
   # disableThemeToggle: true
   ShowShareButtons: false
