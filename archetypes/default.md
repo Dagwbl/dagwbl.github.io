@@ -1,6 +1,7 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 date: '{{ .Date }}'
+lastmod: ''
 series: []
 categories: []
 tags: []
