@@ -84,3 +84,7 @@
 .toc li a:hover {
     color: var(--secondary);
 }
+
+.profile_inner .buttons {
+    max-width: 600px;
+}

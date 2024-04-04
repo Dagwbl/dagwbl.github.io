@@ -27,9 +27,14 @@ UseHugoToc: true
 
 ---
 
-## Mar 30
+## Apr 4
 
-
+1. All my favorite bands are from the eighties. **<u>What</u>** a great time for music!
+2. I'm jealous that you saw that band in the eighties. It must <u>have been</u> amazing!
+3. <u>Thousands of **hippies** attended a huge concert in 1969.</u>
+4. <u>If someone influences you. They affect how you think or act.</u>
+5. <u>We'd rarely seen such strange outfits on stage before.</u>
+6. <u>They had suddenly become the most famous band in the world.</u>
 
 ## Mar 29
 
