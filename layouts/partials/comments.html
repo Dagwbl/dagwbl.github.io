@@ -1,16 +1,47 @@
-<script src="https://giscus.app/client.js"
-        data-repo="dagwbl/dagwbl.github.io"
-        data-repo-id="R_kgDOLh_RxQ"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOLh_Rxc4CeUjM"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
+<script src="https://giscus.app/client.js" data-repo="dagwbl/dagwbl.github.io" data-repo-id="R_kgDOLh_RxQ"
+        data-category="Announcements" data-category-id="DIC_kwDOLh_Rxc4CeUjM" data-mapping="pathname" data-strict="0"
+        data-reactions-enabled="1" data-emit-metadata="1" data-input-position="top" data-theme="preferred_color_scheme"
+        data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+        </script>
+
+<script>
+        // Giscus 主题切换代码
+        function changeGiscusTheme() {
+                // var theme;
+                // if (localStorage.getItem("pref-theme") === "dark") {
+                //         theme = 'dark'
+                // } else if (localStorage.getItem("pref-theme") === "light") {
+                //         theme = 'light'
+                // } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                //         theme = 'dark'
+                // }
+                // 检查当前主题模式
+                const theme = document.body.classList.contains('dark') ? 'light' : 'dark';
+                console.log(theme);
+
+                // 发送消息到 Giscus iframe
+                function sendMessage(message) {
+                        const iframe = document.querySelector('iframe.giscus-frame');
+                        if (!iframe) return;
+                        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+                }
+
+                // 更新 Giscus 主题配置
+                sendMessage({
+                        setConfig: {
+                                theme: theme
+                        }
+                });
+        }
+
+        // 查找主题切换按钮
+        const modeToggle = document.getElementById("theme-toggle");
+
+        // 如果按钮存在，则添加点击事件监听器
+        if (modeToggle) {
+                modeToggle.addEventListener('click', changeGiscusTheme);
+                console.log("Giscus theme change button initialized.");
+        }
+
+        // changeGiscusTheme();
 </script>

@@ -16,7 +16,7 @@ enableEmoji: true
 pygmentsUseClasses: true
 enableGitInfo: true
 
-mainsections: ["posts", "diary","song","poem","learn"]
+mainsections: ["posts"]
 # googleAnalytics: UA-123-45
 
 minify:
@@ -25,7 +25,7 @@ minify:
 
 languages:
   en:
-    languageName: "English"
+    languageName: "EN"
     weight: 1
     taxonomies:
       category: categories
@@ -56,7 +56,7 @@ languages:
         #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
   zh:
-    languageName: "Chinese"
+    languageName: "ZH"
     weight: 3
     taxonomies:
       language: zh

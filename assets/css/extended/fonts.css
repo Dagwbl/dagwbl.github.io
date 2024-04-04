@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Apple Chancery';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Apple Chancery'), url('/fonts/Apple Chancery.woff') format('woff');
+}
