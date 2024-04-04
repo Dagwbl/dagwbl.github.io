@@ -49,11 +49,37 @@ languages:
         - name: Search
           url: search/
           weight: 5
-        - name: Link
+        - name: 🎉
           url: /about/
           weight: 10
-        # - name: WiKi
-        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+    params:
+      homeInfoParams:
+        Title: "Timid Thoughts  💫 "
+        Content: >
+          *O troupe of little vagrants of the world, leave your footprints in my words.* 
+
+          - Do not linger to gather flowers to keep them, but walk on, for flowers will keep themselves blooming all your way.
+
+          - Thoughts feeds itself with its own words and grows.
+
+          - We, the rustling leaves, have a voice that answers the storms, but who are you so silent?
+          
+      profileMode:
+        enabled: false
+        title: Huh, Still alive!
+        imageUrl: "images/home-icon.png"
+        imageTitle: ZJeapo
+        imageWidth: 90
+        imageHeight: 90
+        buttons:
+          - name: 📆Timeline
+            url: archives
+          - name: 🕸️Post
+            url: posts
+          - name: 🗃️Docs
+            url: guide
+          - name: 📒Cheatsheet
+            url: Cheatsheet
 
   zh:
     languageName: "ZH"
@@ -85,19 +111,21 @@ languages:
         Title: "呜呼~ \U0001F44B"
         Content: 还活着！还活着！这感觉真好！
       profileMode:
-        enabled: false
-        title: Profile
-        imageUrl: "images/home-icon.jpg"
-        imageTitle: my image
-        # imageWidth: 120
-        # imageHeight: 120
+        enabled: true
+        title: "呜呼~ \U0001F44B"
+        imageUrl: "images/home-icon.png"
+        imageTitle: ZJeapo
+        imageWidth: 90
+        imageHeight: 90
         buttons:
-          - name: 文章
+          - name: 📆时间轴
             url: archives
-          - name: 标签
-            url: tags
-          - name: Github
-            url: "https://github.com/"
+          - name: 🕸️文章
+            url: posts
+          - name: 🗃️教程
+            url: guide
+          - name: 📒小纸条
+            url: Cheatsheet
 
 outputs:
   home:
@@ -127,50 +155,28 @@ params:
   ShowToc: true
   comments: true
   # images: ["/images/wallpaperflare.com_flower.jpg"]
-
-  profileMode:
-    enabled: false
-    title: Whew!
-    imageUrl: "images/home-icon.jpg"
-    imageTitle: my image
-    # imageWidth: 120
-    # imageHeight: 120
-    buttons:
-      - name: Archives
-        url: archives
-      - name: Tags
-        url: tags
-      - name: HiQQ
-        url: "https://nav.hiqq.com.cn/"
-
-  homeInfoParams:
-    Title: "Timid Thoughts  💫 "
-    Content: >
-     *O troupe of little vagrants of the world, leave your footprints in my words.* 
-
-      - Do not linger to gather flowers to keep them, but walk on, for flowers will keep themselves blooming all your way.
-
-      - Thoughts feeds itself with its own words and grows.
-
-      - We, the rustling leaves, have a voice that answers the storms, but who are you so silent?
-
-
+  # ShowShareButtons: true
+  # ShareButtons: [qq,bilibili]
   socialIcons:
     - name: github
       title: View Source on Github
-      url: "https://github.com/"
+      url: "https://github.com/Dagebl/"
+    - name: googlescholar
+      title: Google scholar
+      url: "https://scholar.google.com"
+    - name: youtube
+      title: Watch some interesting videos
+      url: "https://youtube.com"
+    - name: bilibili
+      url: "https://bilibili.com"
+    - name: tiktok
+      url: "https://tiktok.com"
     - name: Discord
       title: Join discord community
-      url: "https://discord.gg/ahpmTvhVmp"
-    - name: X
-      title: Share PaperMod on X/Twitter
-      url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
-#    - name: KoFi
-#      title: Buy me a Ko-Fi :)
-#      url: "https://ko-fi.com/adityatelange"
-    - name: bilibili
-      title: Watch some interesting videos
-      url: "https://bilibili.com"
+      url: "https://discord.com/channels/@me"
+    - name: reddit
+      title: Take a rest for fun :)
+      url: "https://reddit.com"
       
   editPost:
     URL: "https://github.com/Dagwbl/dagwbl.github.io/edit/main/content"
@@ -189,7 +195,7 @@ params:
 
   assets:
     disableHLJS: true
-    favicon: "favicon/favicon.ico"
+    favicon: "favicon/favicon.svg"
     # favicon16x16: "<link / abs url>"
     # favicon32x32: "<link / abs url>"
     # apple_touch_icon: "<link / abs url>"
