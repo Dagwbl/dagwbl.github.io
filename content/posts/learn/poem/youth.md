@@ -10,12 +10,11 @@ TocOpen: false
 draft: false
 math: false
 hidemeta: false
-comments: false
+comments: true
 description: "Desc Text."
 canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
-disableHLJS: false
 hideSummary: false
 searchHidden: true
 ShowReadingTime: true

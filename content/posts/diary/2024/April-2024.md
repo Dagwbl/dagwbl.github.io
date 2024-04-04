@@ -5,8 +5,21 @@ series: ["2024"]
 categories: diary
 tags: [footprint]
 language: en
+tocOpen: true
 math: false
 ---
+
+## Apr 4
+
+There are many interesting things that attract me. It caused me **to** always spend a lot of time on it. Such as coding, playing with cell phone, playing with game and touching myself.
+
+ What are the common characteristics of these things? I can't find the answer right away, because they don't have almost  any similar characteristics.
+
+But what these things have in common, is that they all have the ability to attract my concentration. 
+
+A logical assumption is that all of these things accompany all kinds of information that **comes in**.
+
+
 
 ## Apr 3
 
