@@ -1,5 +1,5 @@
 ---
-title: 'Links'
+title: 'Links 🎉'
 date: '2023-04-01T20:54:09+08:00'
 series: ["English learning"]
 categories: [post]

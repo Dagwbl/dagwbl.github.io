@@ -1,5 +1,6 @@
 ---
 title: Cheatsheet
-# description: "asdf"
+description: "Cheatseet"
+summary: "Cheatseet"
 hidemeta: true
 ---
