@@ -1,5 +1,6 @@
 ---
 title: Song
-# description: "asdf"
+description: "Some songs"
+summary: "Some songs"
 hidemeta: true
 ---

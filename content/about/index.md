@@ -46,6 +46,12 @@ TocOpen: true
 - [ISO 2 Letter Language Codes — SitePoint](https://www.sitepoint.com/iso-2-letter-language-codes/)
 - [🍎 Emojis Wiki — All Emoji Meanings 💪🌎🏆😘](https://emojis.wiki/)
 
+## The Great Speeches
+
+- [Martin Luther King I Have a Dream Speech - American Rhetoric](https://www.americanrhetoric.com/speeches/mlkihaveadream.htm)
+- [We Choose To Go To The Moon | Rice University](https://www.rice.edu/jfk-speech)
+- [Top 100 Speeches of the 20th Century - American Rhetoric](https://www.americanrhetoric.com/newtop100speeches.htm)
+
 ## Friends
 
 <div class="friend">
@@ -86,6 +92,7 @@ TocOpen: true
 </a>
 
 <a target="_blank" href="https://wangyunzi.com/" title="长街短梦" class="friendurl">
+
 <div class="frienddiv">
     <div class="frienddivleft">
         <img class="myfriend" src="https://blog.wangyunzi.com/avatar.png">

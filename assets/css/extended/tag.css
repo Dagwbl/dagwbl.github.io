@@ -1,0 +1,75 @@
+/*标签*/
+.terms-tags {
+    text-align: center;
+}
+
+.terms-tags a:hover {
+    background: none;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.3);
+}
+
+.terms-tags a {
+    border-radius: 30px;
+    background: none;
+    transition: transform 0.5s;
+}
+
+.dark .terms-tags a {
+    background: none;
+}
+
+.dark .terms-tags a:hover {
+    background: none;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.3);
+}
+
+.terms-tags li {
+    margin: 5px;
+}
+
+/* Personal tags style */
+/* .terms-tags {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.terms-tags li {
+    font-weight: 500;
+    font-size: larger;
+    line-height: 5rem;
+    text-transform: capitalize;
+}
+
+.terms-tags a {
+    display: block;
+    padding: 8px 16px;
+    background-color: lightgoldenrodyellow;
+    color: rgb(48, 45, 45);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.terms-tags a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+sup {
+    color: #e5b700;
+} */

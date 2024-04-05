@@ -1,6 +1,7 @@
 ---
 title: "April 2024"
 date: 2024-04-30
+tags: [debate]
 series: ["2024"]
 categories: diary
 tags: [footprint]
@@ -8,6 +9,14 @@ language: en
 tocOpen: true
 math: false
 ---
+
+## Apr 5
+
+> Our body and our mind are in conflict. The body wants to be still, the mind wants to explore the world.
+
+Pride and prejudice are the most disgusting attitudes in the world. I just want to share my new experience with you. These are some ordinary and common things in my mind. But you thought I wanted to gain some superiority from what I want to share with you.
+
+When I thought about it, I felt the feeling of aversion more than you guessed my intention.
 
 ## Apr 4
 
@@ -18,8 +27,6 @@ There are many interesting things that attract me. It caused me **to** always sp
 But what these things have in common, is that they all have the ability to attract my concentration. 
 
 A logical assumption is that all of these things accompany all kinds of information that **comes in**.
-
-
 
 ## Apr 3
 
