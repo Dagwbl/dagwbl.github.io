@@ -2,8 +2,8 @@
 title: 'Emoji Sheet'
 date: 2024-03-16T23:10:53+08:00
 draft: false
-series: [cheatsheet]
-categories: [post]
+series: []
+categories: [cheatsheet]
 tags: [markdown, emoji]
 language: en
 math: false

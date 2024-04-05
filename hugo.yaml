@@ -79,7 +79,7 @@ languages:
           - name: 🗃️Docs
             url: guide
           - name: 📒Cheatsheet
-            url: Cheatsheet
+            url: cheatsheet
 
   zh:
     languageName: "ZH"
@@ -150,6 +150,9 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
+  searchHidden: true
+  ShowWordCount: true
+  UseHugoToc: true
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true
