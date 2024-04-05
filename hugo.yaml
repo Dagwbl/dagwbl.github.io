@@ -34,16 +34,16 @@ languages:
       language: en
     menu:
       main:
-        - name: Archive
+        - name: Archives
           url: archives
           weight: 1
-        - name: Category
-          url: categories/
-          weight: 2
+        # - name: Category
+          # url: categories/
+          # weight: 2
         - name: Series
           url: series
           weight: 3
-        - name: Tag
+        - name: Tags
           url: tags/
           weight: 4
         - name: Search
@@ -66,13 +66,13 @@ languages:
           
       profileMode:
         enabled: true
-        title: Huh, Still alive!
+        title: Huh, still alive!
         imageUrl: "images/home-icon.png"
         imageTitle: ZJeapo
         imageWidth: 90
         imageHeight: 90
         buttons:
-          - name: 📆Timeline
+          - name: ⏱️Timeline
             url: archives
           - name: 🕸️Post
             url: posts
@@ -160,13 +160,15 @@ params:
   socialIcons:
     - name: github
       title: View Source on Github
-      url: "https://github.com/Dagebl/"
+      url: "https://github.com/Dagwbl/"
     - name: googlescholar
       title: Google scholar
       url: "https://scholar.google.com"
     - name: youtube
       title: Watch some interesting videos
       url: "https://youtube.com"
+    - name: x
+      url: "https://twitter.com"
     - name: bilibili
       url: "https://bilibili.com"
     - name: tiktok

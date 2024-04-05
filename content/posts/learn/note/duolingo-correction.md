@@ -27,6 +27,19 @@ UseHugoToc: true
 
 ---
 
+## Apr 5
+
+1. Airline tickets have leveled off, which means that prices have <u>stopped increasing.</u>
+2. Wasn't Lucy in a union with other construction <u>workers</u> back in the eighties?
+3. **As opposed to** the blenders of the past, modern blenders are very quiet.
+4. Those arriving in the city were often very poor
+5. I can't believe we got the business up and <u>running</u> so quickly.
+6. [The first female doctor was very inspiring to those who followed in her footsteps. ](https://enpuz.com/The-first-female-doctor-was-very-inspiring-to-those-who-followed-in-her-footsteps.=)
+7. It's been **constantly** improving.
+8. It**'s been working** successfully so far
+9. There**'s been** a steady rise in online shopping.
+10. **In contrast with today**, many women used to be unemployed.
+
 ## Apr 4
 
 1. All my favorite bands are from the eighties. **<u>What</u>** a great time for music!

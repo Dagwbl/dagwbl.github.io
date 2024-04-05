@@ -3,7 +3,7 @@ title: 'Social Chaos'
 date: '2024-03-31T12:51:19+08:00'
 series: [thinking]
 categories: [post]
-tags: [product]
+tags: [todo]
 language: en
 showToc: false
 TocOpen: false
