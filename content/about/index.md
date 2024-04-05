@@ -1,5 +1,5 @@
 ---
-title: 'Links 🎉'
+title: 'About 🎉'
 date: '2023-04-01T20:54:09+08:00'
 series: ["English learning"]
 categories: [post]
@@ -9,12 +9,18 @@ showToc: true
 TocOpen: true
 ---
 
+> What you are you do not see, what you see is your shadow.
 
-> *What you are you do not see, what you see is your shadow.*
+|Nickname|ZJeapo|
+|---|---|
+|Occupation|Worker|
+|Location|Guiyang, China|
+|Motto|A man is not a vessel.|
+|Email|dagwbl@outlook.com|
+|Blog's source|https://github.com/Dagwbl/dagwbl.github.io|
 
 ## Daily learning
 
-- [Timid Thoughts 💫](https://dagwbl.github.io/)
 - [APE practice](https://www.ptexj.com/zh-CN/practice)
 - [多邻国 - 好玩高效的英语学习途径 (duolingo.cn)](https://www.duolingo.cn/learn)
 - [Qwerty Learner — 为键盘工作者设计的单词与肌肉记忆锻炼软件 (gitee.io)](https://kaiyiwing.gitee.io/qwerty-learner/)

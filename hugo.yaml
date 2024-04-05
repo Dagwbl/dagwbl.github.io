@@ -40,18 +40,21 @@ languages:
         # - name: Category
           # url: categories/
           # weight: 2
-        - name: Series
-          url: series
-          weight: 3
+        # - name: Series
+        #   url: series
+        #   weight: 3
         - name: Tags
           url: tags/
           weight: 4
         - name: Search
           url: search/
           weight: 5
-        - name: 🎉
+        - name: About
           url: /about/
-          weight: 10
+          weight: 6
+        - name: 🔍
+          url: https://nav.hiqq.com.cn/
+          weight: 7
     params:
       homeInfoParams:
         Title: "Timid Thoughts  💫 "
@@ -125,7 +128,7 @@ languages:
           - name: 🗃️教程
             url: guide
           - name: 📒小纸条
-            url: Cheatsheet
+            url: cheatsheet
 
 outputs:
   home:

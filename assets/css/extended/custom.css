@@ -77,3 +77,7 @@
 }
 
 
+/* 隐藏菜单中链接后面的 SVG 图标 */
+.nav #menu li a svg {
+    display: none;
+}
