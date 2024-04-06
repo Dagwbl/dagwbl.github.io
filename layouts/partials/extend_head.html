@@ -2,4 +2,10 @@
 {{ partial "math.html" . }}
 {{ end }}
 
-<link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="print" onload="this.media='all'">
+
+<!-- busuanzi -->
+{{- if .Site.Params.busuanzi.enable -}}
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!-- <script src="{{ "js/busuanzi.pure.mini.js" | relURL }}"></script> -->
+  <meta name="referrer" content="no-referrer-when-downgrade">
+{{- end -}}
