@@ -27,6 +27,16 @@ UseHugoToc: true
 
 ---
 
+## Apr 6
+
+1. Ms. Turner had her home broken into at approximately 2 a.m. on Saturday.
+2. The referee said that was a goal, but I don't buy it. It definitely wasn't.
+3. Here come the team mascots! I wonder how you become a mascot?
+4. It seemed odd that there were so few fans.
+5. If he stole the car on Saturday, it would not have been there the next day.
+6. The best part of the tournament was when our favorite team won the playoff game.
+7. There's no 没有 such thing as too many frogs!
+
 ## Apr 5
 
 1. Airline tickets have leveled off, which means that prices have <u>stopped increasing.</u>

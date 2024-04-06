@@ -10,6 +10,18 @@ tocOpen: true
 math: false
 ---
 
+## Apr 6
+
+Over time, my speech ability has been getting constantly progress.
+
+![RA-1023](https://dagwbl.oss-cn-chengdu.aliyuncs.com/picture/obsidian/image-20240406131231278.png)
+
+> Life is more or less a lie, but then again, that's extactly the way we want it to be.
+>
+> <right>–Bob Dylan</right>
+
+
+
 ## Apr 5
 
 > Our body and our mind are in conflict. The body wants to be still, the mind wants to explore the world.
