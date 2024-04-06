@@ -46,11 +46,11 @@ languages:
         - name: Tags
           url: tags/
           weight: 4
-        - name: Search
-          url: search/
-          weight: 5
         - name: About
           url: /about/
+          weight: 5
+        - name: Search
+          url: search/
           weight: 6
         - name: 🔍
           url: https://nav.hiqq.com.cn/
@@ -106,8 +106,6 @@ languages:
         - name: 标签
           url: tags
           weight: 10
-        # - name: WiKi
-        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
       homeInfoParams:

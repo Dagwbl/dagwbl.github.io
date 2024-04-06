@@ -55,14 +55,24 @@
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
-    /* padding: var(--gap); */
-    padding: 12px;
+    padding: calc(var(--gap)*0.5);
     
 }
 
+.logo, #menu {
+    /* display: flex; */
+    margin: auto calc(var(--gap)*0.5);
+}
+
+/* 隐藏菜单中链接后面的 SVG 图标 */
+.nav #menu li a svg {
+    display: none;
+}
+
+
 .post-content {
     /* font-family: 'Times New Roman', Times, serif,"LXGW WenKai Screen", Verdana, sans-serif; */
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
     text-align: justify;
     hyphens: auto;
@@ -77,7 +87,3 @@
 }
 
 
-/* 隐藏菜单中链接后面的 SVG 图标 */
-.nav #menu li a svg {
-    display: none;
-}

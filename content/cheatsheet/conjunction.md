@@ -11,7 +11,7 @@ draft: false
 math: false
 hidemeta: false
 comments: false
-description: "Conjunctions"
+description: "Conjunctions from AimWriting, URL: https://aimwriting.mtutor.engkoo.com"
 canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
