@@ -25,7 +25,7 @@ minify:
 
 languages:
   en:
-    languageName: "EN"
+    languageName: "English"
     weight: 1
     taxonomies:
       category: categories
@@ -85,7 +85,7 @@ languages:
             url: cheatsheet
 
   zh:
-    languageName: "ZH"
+    languageName: "Chinese"
     weight: 3
     taxonomies:
       language: zh
@@ -160,6 +160,8 @@ params:
   ShowPageNums: true
   ShowToc: true
   comments: true
+  busuanzi:
+    enable: true
   # images: ["/images/wallpaperflare.com_flower.jpg"]
   # ShowShareButtons: true
   # ShareButtons: [qq,bilibili]

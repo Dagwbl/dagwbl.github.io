@@ -32,7 +32,7 @@ UseHugoToc: true
 
 The background is that I occasionally have a debate with Luo Huan. We always would not control the center of the topic **eventually**. So we **have both been mad at** each other. So I have to learn some necessary  skills and principles  on how to debate. Not **to protect** my opinions, only **to seek** the truth.
 
-## Foundation of Principles 
+## Foundation of Principles
 
 For a valid debate and make sure the progress in orderly. There are a few principles that must be followed.
 
@@ -41,6 +41,3 @@ For a valid debate and make sure the progress in orderly. There are a few princi
 - Focus **on** the results of **the** debate, don't **away from** it.
 
 ## Methods
-
-
-

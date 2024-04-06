@@ -7,9 +7,10 @@ tags: [link]
 language: en
 showToc: true
 TocOpen: true
+hidemeta: true
 ---
 
-> What you are you do not see, what you see is your shadow.
+
 
 |Nickname|ZJeapo|
 |---|---|
@@ -18,6 +19,7 @@ TocOpen: true
 |Motto|A man is not a vessel.|
 |Email|dagwbl@outlook.com|
 |Blog's source|https://github.com/Dagwbl/dagwbl.github.io|
+
 
 ## Daily learning
 
