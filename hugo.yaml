@@ -79,9 +79,9 @@ languages:
             url: archives
           - name: 🕸️Post
             url: posts
-          - name: 🗃️Docs
+          - name: 🦉Docs
             url: guide
-          - name: 📒Cheatsheet
+          - name: 📎Collect
             url: cheatsheet
 
   zh:

@@ -10,6 +10,23 @@ tocOpen: true
 math: false
 ---
 
+## Apr 7
+
+Gradually realizing that forcing myself to produce will only result in reducing the desire to produce if I don't have the ability to express my thoughts skillfully. It will come up with a mood of anxiety difficult because I also don't know how to express what thoughts.
+
+
+Yesterday, a public account regularly posted an English article. I wanted to go to bed after reading, but I found a few minor mistakes in the reading progress; I turned to check the corrdinate Chinese translation, then discovered the words are very beautiful. I inevitably doubted that the author wrote the Chinese version first, and then translated it into the English version. Therefore, I left a message to the author for seeking the answer. The answer was as expected, which gave me great courage.
+
+
+Last but not least, mother tongue isn't the stumbling block for learning a foreign language. It will give us great help. The process of translating from Chinese to English is the best way to learn English.
+
+
+In the future, I will write the Chinese version first and then translate it into English, and I think this process will be reversed one day. 
+
+![image-20240407222514790](https://dagwbl.oss-cn-chengdu.aliyuncs.com/picture/obsidian/image-20240407222514790.png)
+
+
+
 ## Apr 6
 
 Over time, my speech ability has been getting constantly progress.

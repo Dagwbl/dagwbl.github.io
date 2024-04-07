@@ -25,6 +25,8 @@
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
     --blockquote-bg: aliceblue;
+    --font-size-base: 18px;
+    --font-size-add: 1px;
 }
 
 .dark {
@@ -87,3 +89,34 @@
 }
 
 
+.post-content h1 {
+    margin: 34px auto 28px;
+    font-size: calc(var(--font-size-base) + var(--font-size-add) * 16);
+    text-align: justify;
+    hyphens: auto;
+    word-break: break-all;
+}
+
+.post-content h2 {
+    margin: 28px auto 20px;
+    font-size: calc(var(--font-size-base) + var(--font-size-add) * 8);
+    text-align: justify;
+    hyphens: auto;
+    word-break: break-all;
+}
+
+.post-content h3 {
+    font-size: calc(var(--font-size-base) + var(--font-size-add) * 4)
+}
+
+.post-content h4 {
+    font-size: calc(var(--font-size-base))
+}
+
+.post-content h5 {
+    font-size: calc(var(--font-size-base) + var(--font-size-add) * -1)
+}
+
+.post-content h6 {
+    font-size: calc(var(--font-size-base) + var(--font-size-add) * -2)
+}
