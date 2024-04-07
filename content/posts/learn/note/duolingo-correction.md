@@ -27,6 +27,13 @@ UseHugoToc: true
 
 ---
 
+## Apr 7
+
+1. I can't believe you were desperate enough <u>to try</u> to steal from me. I thought we were friends.
+2. He **fell** for a scam.
+3. Don't let Angela choose the theme again.
+4. I was in shock and could hardly speek.
+
 ## Apr 6
 
 1. Ms. Turner had her home broken into at approximately 2 a.m. on Saturday.
