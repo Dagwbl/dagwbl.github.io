@@ -20,7 +20,6 @@ hidemeta: true
 |Email|dagwbl@outlook.com|
 |Blog's source|https://github.com/Dagwbl/dagwbl.github.io|
 
-
 ## Daily learning
 
 - [APE practice](https://www.ptexj.com/zh-CN/practice)
