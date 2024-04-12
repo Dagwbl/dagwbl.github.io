@@ -27,6 +27,10 @@ UseHugoToc: true
 
 ---
 
+## Apr 9
+
+What kind of **disguises** were they wearing.
+
 ## Apr 7
 
 1. I can't believe you were desperate enough <u>to try</u> to steal from me. I thought we were friends.
