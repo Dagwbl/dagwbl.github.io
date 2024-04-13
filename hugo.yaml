@@ -46,13 +46,13 @@ languages:
         - name: Tags
           url: tags/
           weight: 4
-        - name: About
-          url: /about/
-          weight: 5
         - name: Search
           url: search/
+          weight: 5
+        - name: About
+          url: /about
           weight: 6
-        - name: 🔍
+        - name: ♾️
           url: https://nav.hiqq.com.cn/
           weight: 7
     params:
