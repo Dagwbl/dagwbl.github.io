@@ -10,6 +10,12 @@ tocOpen: true
 math: false
 ---
 
+## Apr 13
+
+Today was another day where time slipped through my fingers and I woke up and studied for a while. Then the tablet I bought arrived and played with it for two hours, casing my eyes to hurt.
+
+Tossed around for another hour after my lunch break, then studied for a just while more, and suddenly I wanted to eat grilled fish, so I invited my friend to go out for grilled fish.
+
 ## Apr 12
 
 I backed Guiyang from Chengdu at noon, cost 18RMB to bought a box of soda cracker. The saleperson said that they can send me a box of cracker freely if I deposit 72 RMB in their shop. After much hesitation, I still top up. I just hope the sotre doesn't close down.

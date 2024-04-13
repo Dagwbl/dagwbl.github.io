@@ -52,7 +52,7 @@
 }
 
 .main {
-    font-family: 'Times New Roman', Times, serif,"LXGW WenKai Screen", Verdana, sans-serif;
+    font-family: 'Times New Roman',"LXGW WenKai", Verdana, sans-serif;
     position: relative;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     max-width: calc(var(--main-width) + var(--gap) * 2);
