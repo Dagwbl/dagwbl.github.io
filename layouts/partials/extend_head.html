@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.6.0/style.min.css" />
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css" />
 
+{{ with .Params.customcss }}<link rel="stylesheet" href="{{ . }}" />{{ end }}
+
 <!-- busuanzi -->
 {{- if .Site.Params.busuanzi.enable -}}
   <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->

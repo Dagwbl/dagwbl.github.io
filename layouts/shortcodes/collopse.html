@@ -3,6 +3,6 @@
 {{ warnf "missing value for param 'title': %s" .Position }}
 {{ end }}
 <p><details {{ if (eq (.Get "openByDefault") true) }} open=true {{ end }}>
-  <summary markdown="span" style="color: rgb(172, 190, 223);">{{ .Get "title" | markdownify }}</summary>
+  <summary markdown="span" style="color: gray;">{{ .Get "title" | markdownify }}</summary>
   {{ .Inner | markdownify }}
 </details></p>

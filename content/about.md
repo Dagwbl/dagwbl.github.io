@@ -8,6 +8,7 @@ language: en
 showToc: true
 TocOpen: true
 hidemeta: true
+customcss: "/css/no-decoration.css"
 ---
 
 
@@ -51,7 +52,7 @@ hidemeta: true
 ## 👾 Others
 
 - [ISO 2 Letter Language Codes — SitePoint](https://www.sitepoint.com/iso-2-letter-language-codes/)
-- [🍎 Emojis Wiki — All Emoji Meanings 💪🌎🏆😘](https://emojis.wiki/)
+- [Emojis Wiki — All Emoji Meanings 💪🌎🏆😘🍎](https://emojis.wiki/)
 
 ## 🎤 The Great Speeches
 
