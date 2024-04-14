@@ -25,6 +25,7 @@ customcss: "/css/no-decoration.css"
 
 - [APE practice](https://www.ptexj.com/zh-CN/practice)
 - [多邻国 - 好玩高效的英语学习途径 (duolingo.cn)](https://www.duolingo.cn/learn)
+- [WFD-萤火虫PTE/CCL培训学校 (fireflyau.com)](https://www.fireflyau.com/ptehome/subjectlists?title=Write From Dictation&questionType=LWFD)
 - [Qwerty Learner — 为键盘工作者设计的单词与肌肉记忆锻炼软件 (gitee.io)](https://kaiyiwing.gitee.io/qwerty-learner/)
 - [Hello Algo (hello-algo.com)](https://www.hello-algo.com/en/)
 
