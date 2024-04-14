@@ -10,6 +10,22 @@ tocOpen: true
 math: false
 ---
 
+## Apr 14
+
+[Bye, RStudio/Posit! - After writing all these "*down" packages for these years, here I am to announce "Yihui-down" - Yihui Xie | 谢益辉](https://yihui.org/en/2024/01/bye-rstudio/)
+
+I read this article early in this morning. It was very emotional and I left a comment.
+
+> You are just like a modern swordsman. I aspire to become someone like you.
+
+---
+
+It's already nine o'clock. I learned for seven hours today, but I still felt that I learned nothing. Every day, I feel just like drawing water with a bamboo basket. 
+
+In the evening, my eyes were really hard to see, and I wander to the Geely Park next to my dormitory to take a break. It turned out to be a good place to study, with a group of people dancing to loud music and adults and children playing there own games. I read out aloud in English without worrying about what other people thought, and no one would think I was strange.
+
+When I think about it, I am actually in the same category as aquare dancers. We are all unbearable by the tranquility of our bodies and the tranquility of our minds, and we seek excitement in life by torturing our bodies or our minds. This is essentially the same reason why monkeys seek electric shocks.
+
 ## Apr 13
 
 Today was another day where time slipped through my fingers and I woke up and studied for a while. Then the tablet I bought arrived and played with it for two hours, casing my eyes to hurt.

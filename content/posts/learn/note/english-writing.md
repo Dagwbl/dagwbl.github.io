@@ -32,6 +32,8 @@ UseHugoToc: true
 #     hidden: true # only hide on current single page
 ---
 
+## Perfect English Grammar
+
 It’s easy to lose sight of what is important. You focus on word count
 rather than results. You lose track of your good idea because you’re
 worried about margins or type size. You’re concerned about the
@@ -40,6 +42,25 @@ worried about your deadline it distracts you from doing the work. Many
 writers go through this! You are not alone. To focus on what is important,
 look at the finished, published writing around you and think, “If they did
 it, so can I.”
+
+### Parts of speech
+
+Adjectives modify or describe nouns. See section 11.0.
+■ Adverbs modify or describe adjectives, verbs, or other adverbs. See
+section 12.0.
+■ Articles are determiners that introduce nouns. See section 8.5.
+■ Conjunctions connect clauses or sentences together. See section
+14.0.
+■ Determiners are words that control the meaning of a noun or noun
+phrase. See section 7.0.
+■ Interjections are brief and abrupt insertions into speech, usually
+expressing emotion. See section 15.0.
+■ Nouns refer to people, places, or things. See section 8.0.
+■ Prepositions give context to nouns in relationship to other nouns or to
+pronouns. See section 13.0.
+■ Pronouns replace nouns or noun phrases. See section 10.0.
+■ Verbs (see section 6.0) show action or an ongoing condition, and are
+part of the predicate (see section 5.1).
 
 ## Sentence Pattern
 
