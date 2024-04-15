@@ -10,6 +10,10 @@ tocOpen: true
 math: false
 ---
 
+## Apr 15
+
+Worked, invited my colleague to eat dinner in my room, practiced speaking ability at the Geely Park, Learned Englsih at dormitory.
+
 ## Apr 14
 
 [Bye, RStudio/Posit! - After writing all these "*down" packages for these years, here I am to announce "Yihui-down" - Yihui Xie | 谢益辉](https://yihui.org/en/2024/01/bye-rstudio/)
