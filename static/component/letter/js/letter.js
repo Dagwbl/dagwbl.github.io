@@ -7,7 +7,7 @@ $("#open").click(function(){
 	{
 		var typed = new Typed('.letter', {
 			strings: ["^1000Dear&nbsp;&nbsp;Huan", 
-				"H^200uan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I hope this letter finds you well and I'm very glad to receive your letter. I also like to be able to communicate through paper letters, but for the moment it is a bit of a luxury to me, especially in terms of energy. I hope the Internet can maintain a little romance while bringing us convenience. <a href='/en/letter/to-huan/' title='CLICK HERE TO CHECK REPLAY.'>----------------------------\>\> Click here to check replay ^_^</a><br><p style='float:right; display:block; width:80px;'>^1000J^200eapo</p>"],
+				"H^200uan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I hope this letter finds you well and I'm very glad to receive your letter. I also like to be able to communicate through paper letters, but for the moment it is a bit of a luxury to me, especially in terms of energy. I hope the Internet can maintain a little romance while bringing us convenience. <a href='/en/letter/to-huan/' title='CLICK HERE TO CHECK REPLY.'>----------------------------\>\> Click here to check replay ^_^</a><br><p style='float:right; display:block; width:80px;'>^1000J^200eapo</p>"],
 			typeSpeed: 90,
 			backSpeed: 50
 		});
