@@ -10,6 +10,28 @@ tocOpen: true
 math: false
 ---
 
+## Apr 20
+
+One can only consider themselves awake after have washed up.
+
+Let not **bring up** the topic of her loud snoring.
+
+You asked me not to say anything, so I won't.
+
+It would be great if we could get along.
+
+Did you bother to fill up the tank?
+
+## Apr 19
+
+Yikes, somebody messed up the cheese tray.
+
+Come on, we didn't do all of this for nothing!
+
+It was supposed to be a short-term plan.
+
+More women have jobs these days Likewise they often own businesses
+
 ## Apr 15
 
 Worked, invited my colleague to eat dinner in my room, practiced speaking ability at the Geely Park, Learned Englsih at dormitory.
