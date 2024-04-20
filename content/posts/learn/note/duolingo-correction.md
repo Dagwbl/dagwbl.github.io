@@ -27,6 +27,26 @@ UseHugoToc: true
 
 ---
 
+
+
+## Apr 17
+
+I went to see a typical Broadway musical last night, and there was **singing and dancing** on stage.
+
+I haven't made it in London yet, but I might give it a chance and **stay another** month.
+
+Our community values *include* helping one another. That's what we believe in.
+
+It takes time to **adjust** to the city after living on a farm.
+
+**Is the guy she's seeing up to our standards?**
+
+**It was a small, but loving family.**
+
+**Everybody I knew worked in agriculture.**
+
+Interesting people hang out at laundromats.
+
 ## Apr 9
 
 What kind of **disguises** were they wearing.

@@ -25,14 +25,16 @@ customcss: "/css/no-decoration.css"
 
 - [APE practice](https://www.ptexj.com/zh-CN/practice)
 - [多邻国 - 好玩高效的英语学习途径 (duolingo.cn)](https://www.duolingo.cn/learn)
-- [WFD-萤火虫PTE/CCL培训学校 (fireflyau.com)](https://www.fireflyau.com/ptehome/subjectlists?title=Write From Dictation&questionType=LWFD)
+- [WFD-萤火虫PTE/CCL培训学校 (fireflyau.com)](https://www.fireflyau.com/ptehome/subjectlists?title=Write)
+- [Daily English Dictation bilibili](https://www.bilibili.com/video/BV1U7411a7xG/)
 - [Qwerty Learner — 为键盘工作者设计的单词与肌肉记忆锻炼软件 (gitee.io)](https://kaiyiwing.gitee.io/qwerty-learner/)
 - [Hello Algo (hello-algo.com)](https://www.hello-algo.com/en/)
 
-## 🗽 English sentences
+## 🗽 English learning
 
 - [83 句中考、高考作文范句、万能句子 - Enpuz](https://enpuz.com/article/sentence-list-comps)
-- [164 句适合英语初学者的口语句子 - Enpuz](https://enpuz.com/article/sentence-list-simple)
+- [英语连读及发音 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000021807407)
+- [99 Mindful Conversation Topics For Deeper Connections - The Good Trade](https://www.thegoodtrade.com/features/conversation-topics/)
 - [645 句高考难点、重点、核心句子句型语法解析 - Enpuz](https://enpuz.com/article/sentence-list-good)
 
 ## 💪 Useful dictionary
@@ -48,6 +50,7 @@ customcss: "/css/no-decoration.css"
 ## ⚒️ Tools
 
 - [Poe](https://poe.com/)
+- [HuggingChat](https://huggingface.co/chat/)
 - [ChatGPT](https://chat.openai.com/chat)
 
 ## 👾 Others
