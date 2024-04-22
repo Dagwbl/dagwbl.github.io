@@ -10,6 +10,32 @@ tocOpen: true
 math: false
 ---
 
+## Apr 22
+
+The posters are on display at the larger lecture theater.
+
+Graduates from this course generally find jobs in the insurance industry.
+
+Foods containing overabundant calories supply little or no nutritional value.
+
+The course involves a combination of pure and applied mathematics
+
+The year when the ship of artifacts was wrecked interested historians.
+
+![image-20240422223748061](https://dagwbl.oss-cn-chengdu.aliyuncs.com/picture/obsidian/image-20240422223748061.png)
+
+Social psychology has been considered by human behavior.
+
+The university has invested in the new technology designed for learning.
+
+Students should leave their bags `on the tables` `by the door`.
+
+The collapse of the housing market has triggered recessions throughout the world.
+
+Human beings compete with other living things for resources and space.
+
+
+
 ## Apr 20
 
 One can only consider themselves awake after have washed up.
