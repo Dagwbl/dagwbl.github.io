@@ -46,6 +46,7 @@ customcss: "/css/no-decoration.css"
 - [Etymonline - Online Etymology Dictionary](https://www.etymonline.com/)
 - [优词词典 - 英语词根词源字典 - 在线英语单词助记词典 (dictool.com)](https://www.dictool.com/)
 - [漢典 (zdic.net)](https://www.zdic.net/)
+- [Urban Dictionary](https://www.urbandictionary.com/)
 
 ## ⚒️ Tools
 
@@ -65,8 +66,6 @@ customcss: "/css/no-decoration.css"
 - [Top 100 Speeches of the 20th Century - American Rhetoric](https://www.americanrhetoric.com/newtop100speeches.htm)
 
 ## 🗺️ Friends
-
-<!-- {{<friend url="https://dagwbl.github.io/en" name="Jeapo's Blog" logo="https://dagwbl.github.io/favicon/favicon.svg" word="Myself">}} -->
 
 {{<friend url="https://hutusi.com/" name="糊涂说" logo="https://hutusi.com/assets/favicon-32x32.png" word="一个有自己思考的人">}}
 {{<friend url="https://limboy.me/" name="Limboy" logo="https://limboy.me/assets/favicon.png" word="在他的 About 页面介绍了很多有意思的人。">}}
