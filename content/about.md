@@ -21,6 +21,8 @@ customcss: "/css/no-decoration.css"
 |Email|dagwbl@outlook.com|
 |Blog's source|https://github.com/Dagwbl/dagwbl.github.io|
 
+[THE READING AND TO-DO LIST FOR 2024.](./posts/diary/2024-reading-list.md)
+
 ## 📚 Daily learning
 
 - [APE practice](https://www.ptexj.com/zh-CN/practice)
