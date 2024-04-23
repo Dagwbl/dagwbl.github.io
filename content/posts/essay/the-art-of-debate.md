@@ -41,3 +41,10 @@ For a valid debate and make sure the progress in orderly. There are a few princi
 - Focus **on** the results of **the** debate, don't **away from** it.
 
 ## Methods
+
+I don't have enough time to learn about the knowledge of debate, but I also get some summaries through my deeply thinking.
+
+- Keep truth
+- See what is you want to pursue
+- Distinguish the people who whether is your friend or your opponent
+- Make sure that you really understand the topic before debating

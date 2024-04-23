@@ -10,6 +10,46 @@ tocOpen: true
 math: false
 ---
 
+## Apr 24
+
+A few days ago, I left a message on Yihui's blog. He **replied** to my message on April 20th.
+
+![image-20240424003130069](https://dagwbl.oss-cn-chengdu.aliyuncs.com/picture/obsidian/image-20240424003130069.png)
+
+The time perhaps flies slowly when I don't playing games or cell phone.
+
+The chaos and mass message could easily kill the time in quiet.
+
+## Apr 23
+
+Radio is a popular form of entertainment throughout the world.
+
+How to divide this sentence by meaning group? **It may not mean that it is possible to solve the problem easily.**
+
+> Here's one way to divide the sentence into meaning groups:
+>
+> **Group 1:** "It may not mean"
+> 	* This group introduces a possibility or uncertainty
+>
+> **Group 2:** "that it is possible"
+>
+> ​	* This group expresses a potential outcome or situation
+>
+> **Group 3:** "to solve the problem easily"
+> 	* This group describes the specific action or task being referred to (solving a problem) and the desired outcome (easily)
+>
+> So, the sentence can be broken down into three meaning groups:
+>
+> 1. Introducing uncertainty
+> 2. Expressing a potential outcome
+> 3. Describing the specific action and desired outcome
+
+An architect is required of problem solving skills and an eye of design.
+
+Of these
+
+
+
 ## Apr 22
 
 The posters are on display at the larger lecture theater.
