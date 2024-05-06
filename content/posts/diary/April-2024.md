@@ -10,6 +10,16 @@ tocOpen: true
 math: false
 ---
 
+## Apr 25
+
+She's been practicing for days on end and may be **feeling** a bit stressed out.
+
+> It's a common that the original *verb* occurs behind the `be`.
+
+**None of your business!**
+
+
+
 ## Apr 24
 
 A few days ago, I left a message on Yihui's blog. He **replied** to my message on April 20th.

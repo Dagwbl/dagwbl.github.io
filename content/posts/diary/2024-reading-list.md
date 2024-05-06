@@ -24,15 +24,12 @@ math: false
 
 
 
-## 📽️ Film
+## 📽️ Film and Videos
 
-
+- [ ] [Daily English Dictation & Listening Comprehension_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1U7411a7xG/)
+- [ ] [Day2讲解：RS听不懂文本怎么办？_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Mf4y1A7wn/)
 
 ## 🎵 Music
-
-
-
-## 🤔 Communication
 
 
 
