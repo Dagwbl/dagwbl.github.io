@@ -4,6 +4,12 @@ date: 2024-4-20
 tocOpen: ture
 ---
 
+![image-20240504211025343](https://dagwbl.oss-cn-chengdu.aliyuncs.com/picture/obsidian/image-20240504211025343.png)
+
+![image-20240504211035326](https://dagwbl.oss-cn-chengdu.aliyuncs.com/picture/obsidian/image-20240504211035326.png)
+
+![image-20240504211127570](https://dagwbl.oss-cn-chengdu.aliyuncs.com/picture/obsidian/image-20240504211127570.png)
+
 ## Speaking
 
 ### Read aloud 15
@@ -22,7 +28,7 @@ tocOpen: ture
 
 > Look at the graph below. In 25 seconds, please speak into the microphone and describe in detail what the graph is showing. You will have 40 seconds to give your response.
 
-This graph gives information about…(标题)
+This interesting picture gives information about…(标题)
 
 The item includes XXX and XXX (两个图里一会儿用不到的单词数据)
 
@@ -66,13 +72,13 @@ In conclusion, this graph is very informative.
 
 > You will have 20 minutes to plan, write and revise an essay about the topic below. Your response will be judged on how well you develop a position, organize your ideas, present supporting details, and control the elements of standard written English. You should write 200-300 words.
 
-1. In comtemporary society, the controversial topic about (主题词) never fails to attract public attention.
+1. In contemporary society, the controversial topic about (主题词) never fails to attract public attention.
 
-   Some people bileve that (论点), while others are convinced of the opposite view.
+   Some people believe that (论点), while others are convinced of the opposite view.
 
    As far as I am concerned, I tend to be the advocate of the former/ latter opinion, and this essay will discuss the same.
 
-2. To commemce with, there are a lot of solid reasons accounting for why (改写论点).
+2. To commence with, there are a lot of solid reasons accounting for why (改写论点).
 
    The most important one is that (论据).
 
@@ -85,6 +91,38 @@ In conclusion, this graph is very informative.
    As Aristotle once said, "You cannot have all the good things at the same time. You always have to compromise one point or another."
 
 To sum up, taking into account all the above mentioned reasons, we may safely draw the conclusion that (再次改写你的论点或强调).
+
+### Bilibili Template
+
+In contemporary society, the controversial topic about ==future things== never fails to attract public attention.
+
+Some people believe that ==computers are the future==, while others are convinced of the opposite view. As far as I am concerned, I tend to be the advocate of the latter opinion, and this essay will discuss the same.
+
+To commence with, there are a lot of solid reasons accounting for why ==aerospace has a more promising future==. The most important one is that ==aerospace can extend our living space==. To be specific, ==we can get more areas through aerospace==. A recent survey, for instance, conducted by the National Bureau of Statistics in the first-tier cities in China shows that.
+
+Moving on to consider the opposing arguments of critics, they claim that. Well, this view seems reasonable on the surface, but they ignore the fact that ==computers or manufacturing industries have a more promising future==. As Aristotle once said, you cannot have all the good things at the same time. You always have to compromise one point or another.
+
+To sum up, taking into account all the above mentioned reasons, we may safely draw the conclusion that a==erospace has a more promising future==, and this is very important.
+
+### Ape Template
+
+Nowadays, ==the future of the computer industry== has attracted numerous controversies and drawn the public's attention. Some people believe that ==the computer industry is on a decline==, while others hold the view that ==it has a more promising future==. In my opinion, ==the computer industry has a more promising future== due to efficiency and economic reasons.
+
+Firstly, the efficiency reason is why I think ==the computer industry has a promising future==. Although potentially negative impacts of ==the computer industry== must be taken into account, I still reckon that ==the computer industry== has in many ways enormously enriched people's lives. For example, a well-known American scientist, Einstein, once said that ==computers are getting better at doing tasks and processes, making work more efficient==. It is thus clearly shown that ==the computer industry has a more promising future==.
+
+Moreover, another factor that should be considered is the ==economic== reason. As far as society is concerned, the ultimate aim of ==the computer industry is to drive progress and innovation==. For instance, a recent article published by Scientific American revealed that despite challenges, ==the tech industry== is expected to continue to grow and lead stock market gains. Undoubtedly, this is a clear indication that ==the computer industry has a more promising future.==
+
+In conclusion, I hold the view that ==the computer industry has a promising future== based on ==efficiency== and ==economic== reasons. To address this issue, the government and society should make a concerted effort to find solutions.
+
+
+
+Nowadays, whether hyper competition in our life has attracted numerous controversies and drawn the public's attention. Some people believe that competition improves the quality of our private and professional lives, while others hold the view that hyper competition is bad for individuals and for society in general. In my opinion, hypercompetition is really bad for individuals for social and cultural reasons.
+
+Firstly, the social reason is why I think hyper competition is harmful to our relationship. Although potentially positive impacts of competition must be taken into account, I still reckon that competition has in many ways enormously harmed people's lives. For example, a well-known American scientist, Einstein, once said that never trusting competition can change our lives. It is thus clearly shown that competition is bad for us.
+
+Moreover, another factor that should be considered is the cultural reason. As far as society is concerned, the ultimate aim of competition is to improve our lives. For instance, a recent article revealed that competition is bad for everyone. Undoubtedly, this is a clear indication that hyper competition is bad for individuals.
+
+In conclusion, I hold the view that hyper competition is bad for society in general based on the social and cultural reasons outlined above. To address this issue, the government and society should make a concerted effort to find solutions.
 
 ## Reading
 
