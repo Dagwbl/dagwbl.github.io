@@ -28,27 +28,39 @@ tocOpen: ture
 
 > Look at the graph below. In 25 seconds, please speak into the microphone and describe in detail what the graph is showing. You will have 40 seconds to give your response.
 
-This interesting picture gives information about…(标题)
+> This picture mainly talks about…(标题)
+>
+> According to the picture we can see,
+>
+> According to the picture, we can see left and right, top and bottom, highest value and lowest value, decrease and increase, largest and smallest, white and black.
+>
+> In conclusion, this picture is very practical.
 
-The item includes XXX and XXX (两个图里一会儿用不到的单词数据)
 
-As we can we from this graph that the largest figure can be found in (横轴上的一个item) which is around XXX (数据).
 
-As we can see from this graph that the smallest figure can be found in B which is around XXX.
+According to the picture we can see XXX and XXX (两个图里一会儿用不到的单词数据)
 
-As we can see from this graph that the figure of V is XXX which is lower than the figure of D.
+As you can see from this graph that the largest figure can be found in (横轴上的一个item) which is around XXX (数据).
 
-In conclusion, this graph is very informative.
+The smallest figure can be found in B which is around XXX.
+
+The figure of V is XXX which is lower than the figure of D.
+
+according to the picture , we can see left and right, top and bottom, highest value and lowest value , decrease and increase, largest and smallest, white and black.
+
+
+
+In conclusion, this picture is very practical.
 
 ### Re-tell lecture
 
 > You will hear a lecture. After listening to the lecture, in 10 seconds, please speak into the microphone and retell what you have just heard from the lecture in your own words. You will have 40 seconds to give your response.
 
-1. The lecture procides imformation about 1.
+1. This lecture provides imformation about 1.
 2. According to the lecture, the speaker mentioned something about 2, which is important to 3.
-3. He/she also mentioned something about 4, which is important to 5.
-4. He/she also mentioned something about 6, which is important to 7.
-5. In conclusion, the lecture is about1, which is very informative.
+3. The speaker also mentioned something about 4, which is important to 5.
+4. The speaker also mentioned something about 6, which is important to 7.
+5. In conclusion, the lecture is about 9, which is very informative.
 
 **Tips:** The nubmer in template needs to replace the words you listening, any words.
 
