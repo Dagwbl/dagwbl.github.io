@@ -46,11 +46,25 @@ The smallest figure can be found in B which is around XXX.
 
 The figure of V is XXX which is lower than the figure of D.
 
-according to the picture , we can see left and right, top and bottom, highest value and lowest value , decrease and increase, largest and smallest, white and black.
+according to the picture , we can see left and right, top and bottom, largest number and smallest element , decrease and increase,  white and black.
+
+In conclusion, this picture is very informative.
+
+---
+
+The following picture gives information about xxx.
+
+according to the picture, we can see xxx
+
+according to the picture, we can see xxx
+
+according to the picture, we can see xxx.
+
+and also we can see the left and right,top and bottom, increase and decrease trend, the largest number and the smallest element.
+
+In conclusion, this picture is very informative.
 
 
-
-In conclusion, this picture is very practical.
 
 ### Re-tell lecture
 
@@ -64,7 +78,17 @@ In conclusion, this picture is very practical.
 
 **Tips:** The nubmer in template needs to replace the words you listening, any words.
 
+---
 
+The lecture gives information about xxx.
+
+according to the lecture, the speaker mentioned something about xxx.
+
+according to the lecture, the speaker mentioned something  about xxx.
+
+according to the lecture, the speaker mentioned something  about xxx.
+
+In conclusion, this lecture is very informative.
 
 ### Answer short question 10
 
@@ -78,7 +102,7 @@ In conclusion, this picture is very practical.
 
 > Read the passage below and summarize it using one sentence. Type your response in the box at the bottom of the screen. You have 10 minutes to finish this task. Your response will be judged on the quality of your writing and on how well your response presents the key points in the passage.
 
-
+xxx, and xxx, which means that xxx, so xxx; xxx.
 
 ### Write essay
 
@@ -179,6 +203,12 @@ In conclusion, I hold the view that hyper competition is bad for society in gene
 3. In addition, he/she states (关键名词组3 as well as 关键名词组4)
 4. Furthermore, it is noteworthy to mention (关键名词组5 and 关键名词组6) and highlight (关键名词组7 along with 关键名词组8)
 5. In summary, the speaker suggests (关键名词组9 and 关键名词组10)
+
+
+
+The main topic is that xxx. Firstly, the speaker points out xxx and xxx. In addition, he states xxx as well as xxx. Furthermore, it is noteworthy to mention xxx and xxx. In summary, the speaker suggests xxx and xxx.
+
+
 
 
 
