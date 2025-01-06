@@ -72,7 +72,8 @@
 
 
 .post-content {
-    font-family: 'Times New Roman',"LXGW WenKai", Verdana, sans-serif;
+    font-family: '-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans','Helvetica Neue','Times New Roman',"LXGW WenKai", Verdana, sans-serif;
+    /* font-family: 'Helvetica Neue','Times New Roman',"LXGW WenKai", Verdana, sans-serif; */
     font-size: 18px;
     line-height: 1.5;
     text-align: justify;
