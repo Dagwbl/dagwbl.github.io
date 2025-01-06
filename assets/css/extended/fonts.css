@@ -7,3 +7,10 @@
 
 /* @import 'lxgw-wenkai-webfont/lxgwwenkai-regular.css';
 @import 'lxgw-wenkai-webfont/lxgwwenkai-bold.css'; */
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Helvetica Neue'), url('/fonts/HelveticaNeue-Regular.otf') format('otf');
+}
