@@ -1,6 +1,6 @@
 ---
-title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-date: {{ .Date }}
+title: 'February'
+date: 2025-01-07T22:41:57+08:00
 language: en
 math: false
 # weight: 1
