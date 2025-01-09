@@ -49,12 +49,15 @@ languages:
         - name: Search
           url: search/
           weight: 5
+        - name: Tools
+          url: ../component/txt2md/
+          weight: 6
         - name: About
           url: /about
-          weight: 6
-        - name: 🦠
-          url: https://nav.hiqq.com.cn/
           weight: 7
+        - name: 🦠
+          url: https://search.chongbuluo.com/
+          weight: 8
     params:
       homeInfoParams:
         Title: "Timid Thoughts  💫 "
