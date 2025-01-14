@@ -15,25 +15,32 @@ customcss: "/css/no-decoration.css"
 
 |Nickname|ZJeapo|
 |---|---|
-|Occupation|Worker|
+|Occupation|Freelancer|
 |Location|Guiyang, China|
 |Motto|A man is not a vessel.|
 |Email|dagwbl@outlook.com|
 |Blog's source|https://github.com/Dagwbl/dagwbl.github.io|
 
-[THE READING AND TO-DO LIST FOR 2024.](./posts/diary/2024-reading-list.md)
-
 ## 📚 Daily learning
+
+- [微信读书](https://weread.qq.com/web/shelf)
+- [Qwerty Learner — 为键盘工作者设计的单词与肌肉记忆锻炼软件](https://qwerty.kaiyi.cool/)
+- [Hello Algo (hello-algo.com)](https://www.hello-algo.com/en/)
+
+## 👾 Funny
+
+- [Word Search Puzzles](https://www.thewordfinder.com/word-search-puzzles/)
+- [Welcome to Method of Action](https://method.ac/)
+- [扫雷游戏网页版 - Minesweeper](https://www.minesweeper.cn/)
+
+{{<collopse title="Go ahead!">}}
+
+## 🗽 English learning
 
 - [APE practice](https://www.ptexj.com/zh-CN/practice)
 - [多邻国 - 好玩高效的英语学习途径 (duolingo.cn)](https://www.duolingo.cn/learn)
 - [萤火虫教育-萤火虫PTE官网-萤火虫PTE/CCL培训学校 (fireflyau.com)](https://www.fireflyau.com/home)
 - [Daily English Dictation bilibili](https://www.bilibili.com/video/BV1U7411a7xG/)
-- [Qwerty Learner — 为键盘工作者设计的单词与肌肉记忆锻炼软件 (gitee.io)](https://kaiyiwing.gitee.io/qwerty-learner/)
-- [Hello Algo (hello-algo.com)](https://www.hello-algo.com/en/)
-
-## 🗽 English learning
-
 - [83 句中考、高考作文范句、万能句子 - Enpuz](https://enpuz.com/article/sentence-list-comps)
 - [英语连读及发音 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000021807407)
 - [99 Mindful Conversation Topics For Deeper Connections - The Good Trade](https://www.thegoodtrade.com/features/conversation-topics/)
@@ -67,6 +74,8 @@ customcss: "/css/no-decoration.css"
 - [We Choose To Go To The Moon | Rice University](https://www.rice.edu/jfk-speech)
 - [Top 100 Speeches of the 20th Century - American Rhetoric](https://www.americanrhetoric.com/newtop100speeches.htm)
 
+{{</collopse>}}
+
 ## 🗺️ Friends
 
 {{<friend url="https://hutusi.com/" name="糊涂说" logo="https://hutusi.com/assets/favicon-32x32.png" word="一个有自己思考的人">}}
@@ -98,37 +107,25 @@ customcss: "/css/no-decoration.css"
 
 {{<friend url="https://onektas.top/" name="Onektas" logo="https://onektas.top/img/avatar.webp" word="花开如火，也如寂寞">}}
 
-
 {{<friend url="https://dvel.me" name="Dvel’s Blog" logo="https://dvel.me/dvel.jpg" word="Less is More">}}
-
 
 {{<friend url="https://www.bdmcom.cn" name="本当迷博客" logo="https://www.bdmcom.cn/usr/themes/handsome/assets/img/favicon.ico" word="人丑嘴不甜长得唠嗑还没钱的00后博客">}}
 
-
 {{<friend url="https://mclsk888.top" name="Mclsk888’s Blog" logo="https://picgo-1304285457.cos.ap-guangzhou.myqcloud.com/images/20220201152057.png" word="求知无坦途">}}
-
-
-
 
 {{<friend url="https://kyxie.github.io/zh" name="Kyxie’s Blog" logo="https://kyxie.github.io/Avatar.png" word="Hello World Printer">}}
 
-
 {{<friend url="https://luckyu.com.cn" name="Luck Dog" logo="https://luckyu.com.cn/img/avatar.jpeg" word="客官请随意">}}
 
-
 {{<friend url="https://blog.gmcj0816.top/" name="七鳄の学习格" logo="https://blog.gmcj0816.top/img/SeriousWission_TouXiangPic.jpg" word="如果世界多了精彩，每一位都是创造者，大家都是你的观众">}}
-
 
 {{<friend url="https://nanwish.love" name="墨点白" logo="https://nanormal.oss-cn-hangzhou.aliyuncs.com/blogFile/49705984.jpg" word="不吃罐头的猫咪">}}
 
 {{<friend url="https://coffeelize.top" name="Cheeph’s Blog" logo="https://coffeelize.top/images/cat-avatar.jpg" word="道阻且长，行则将至">}}
 
-
 {{<friend url="https://zsyyblog.com" name="竹山一叶" logo="https://img.zsyyblog.com/favicon.jpg" word="来了就不想走的小家">}}
 
 {{<friend url="https://blog.hjroyal.top" name="有意栽花花满枝" logo="https://blog.hjroyal.top/img/profile.webp" word="心中有光、点亮生活">}}
-
-
 
 {{<friend url="https://ikuns.netlify.app" name="ikun’s blog" logo="https://ikuns.netlify.app/img/logo.png" word="一个日常记录和技术分享博客">}}
 {{<friend url="https://blog.fleyx.com" name="FleyX’s Blog" logo="https://blog.fleyx.com/img/icon.jpg" word="热爱技术，热爱生活">}}
