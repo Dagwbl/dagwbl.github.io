@@ -1,5 +1,5 @@
 ---
-title: "The Reading List for 2024"
+title: "The Reading List for 2025"
 date: 2024-12-30
 tags: [reading, todo]
 series: ["2024"]
@@ -17,7 +17,7 @@ math: false
 
 ## 📖 Book
 
-- [ ] PERFECT ENGLISH GRAMMAR
+- [x] PERFECT ENGLISH GRAMMAR
 - [ ] WHY GROW UP?
 - [x] THE STRAY BIRDS
 - [x] THE ALMANACK OF NAVAL RAVIKANT
@@ -26,8 +26,8 @@ math: false
 
 ## 📽️ Film and Videos
 
-- [ ] [Daily English Dictation & Listening Comprehension_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1U7411a7xG/)
-- [ ] [Day2讲解：RS听不懂文本怎么办？_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Mf4y1A7wn/)
+- [x] [Daily English Dictation & Listening Comprehension_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1U7411a7xG/)
+- [x] [Day2讲解：RS听不懂文本怎么办？_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Mf4y1A7wn/)
 
 ## 🎵 Music
 
