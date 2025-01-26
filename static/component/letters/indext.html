@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .letters-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .timeline {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .timeline {
+                display: block;
+            }
+        }
+
+        .timeline-item {
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            background: #f0f0f0;
+        }
+
+        .timeline-item.active {
+            background: #e0e0e0;
+        }
+
+        .letter {
+            display: flex;
+            margin-bottom: 20px;
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .letter.right {
+            flex-direction: row-reverse;
+            margin-left: auto;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin: 0 10px;
+        }
+
+        .letter-content {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 15px;
+            position: relative;
+            max-width: 80%;
+            cursor: pointer;
+        }
+
+        .letter.right .letter-content {
+            background: #e3f2fd;
+        }
+
+        .letter-date {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .letter-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .letter-text {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .letter-text.collapsed {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .letter-content {
+                max-width: 75%;
+            }
+            
+            .letters-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="letters-container">
+        <div id="letters"></div>
+    </div>
+    <div class="timeline" id="timeline"></div>
+
+    <script>
+        // 示例数据 - 实际使用时可以通过Ajax加载或直接嵌入数据
+        const letters = [
+            {
+                id: 1,
+                date: "2024-01-15",
+                title: "想你的第一天",
+                content: "亲爱的，今天是我们分开的第一天。城市的风似乎变得更冷了，走在街上总是不自觉地想起你的笑容。记得我们第一次见面时...",
+                from: "小明",
+                to: "小红",
+                avatar: "😊"
+            },
+            {
+                id: 2,
+                date: "2024-01-16",
+                title: "收到你的来信",
+                content: "亲爱的小明：收到你的信了！这里的天气很好，阳光明媚，让我想起了我们一起散步的日子。我也很想你，每当夜深人静的时候...",
+                from: "小红",
+                to: "小明",
+                avatar: "🥰"
+            }
+            // 可以添加更多信件
+        ];
+
+        function createLetterElement(letter, index) {
+            const isRight = letter.from === "小明"; // 判断是否显示在右边
+            const letterDiv = document.createElement('div');
+            letterDiv.className = `letter ${isRight ? 'right' : ''}`;
+            letterDiv.id = `letter-${letter.id}`;
+            letterDiv.innerHTML = `
+                <div class="avatar">${letter.avatar}</div>
+                <div class="letter-content">
+                    <div class="letter-date">${letter.date}</div>
+                    <div class="letter-title">${letter.title}</div>
+                    <div class="letter-text collapsed">${letter.content}</div>
+                </div>
+            `;
+
+            letterDiv.querySelector('.letter-content').addEventListener('click', function() {
+                const textElement = this.querySelector('.letter-text');
+                textElement.classList.toggle('collapsed');
+            });
+
+            return letterDiv;
+        }
+
+        function createTimeline() {
+            const timeline = document.getElementById('timeline');
+            letters.forEach(letter => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'timeline-item';
+                timelineItem.textContent = letter.date;
+                timelineItem.addEventListener('click', () => {
+                    const letterElement = document.getElementById(`letter-${letter.id}`);
+                    letterElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // 更新活动状态
+                    document.querySelectorAll('.timeline-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    timelineItem.classList.add('active');
+                });
+                timeline.appendChild(timelineItem);
+            });
+        }
+
+        function initialize() {
+            const lettersContainer = document.getElementById('letters');
+            letters.forEach((letter, index) => {
+                lettersContainer.appendChild(createLetterElement(letter, index));
+            });
+            createTimeline();
+        }
+
+        // 初始化页面
+        initialize();
+    </script>
+</body>
+</html>

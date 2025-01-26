@@ -2,7 +2,8 @@
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://dagwbl.github.io"
 title: "ZJeapo's Blog"
-paginate: 6
+pagination:
+  pageSize: 10
 theme: [PaperMod]
 
 defaultContentLanguage: en
