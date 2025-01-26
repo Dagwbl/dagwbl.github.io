@@ -21,6 +21,8 @@ customcss: "/css/no-decoration.css"
 |Email|dagwbl@outlook.com|
 |Blog's source|https://github.com/Dagwbl/dagwbl.github.io|
 
+{{<aplayer 726854551>}}
+
 ## 📚 Daily learning
 
 - [微信读书](https://weread.qq.com/web/shelf)
@@ -135,3 +137,5 @@ customcss: "/css/no-decoration.css"
 {{<friend url="https://evex.one" name="Eval EXEC’s Blog" logo="https://avatars.githubusercontent.com/u/46400566?v=4" word="🐺嗷呜～～～">}}
 
 {{</collopse>}}
+
+

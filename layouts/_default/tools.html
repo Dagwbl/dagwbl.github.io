@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="zh">
+{{- define "main" }}
+
+<main class="{{ if .Params.fullWidth }}full-width{{ end }}">
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon/favicon.svg" />
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="../../favicon/favicon.svg" /> -->
     <link rel="stylesheet" href="stylesheets/style.css" />
     <title>段落空行转换工具</title>
     <style>
@@ -208,4 +210,5 @@
     </script>
 </body>
 
-</html>
+</main>
+{{- end }}{{/* end main */}}
