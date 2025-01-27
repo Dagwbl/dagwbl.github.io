@@ -16,7 +16,7 @@
 
 - category: bookmarks
   items:
-    - name: "chongbuluo"
+    - name: "ChongBuLuo"
       icon: "🐛"
       weight: 2
       link: "https://search.chongbuluo.com/"

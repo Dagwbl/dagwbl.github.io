@@ -1,10 +1,8 @@
 ---
 title: "Integrated Search"
-# layout: tools
 category: "local"
 icon: "🔍"
 customcss: "css/extended/tools.css"
-# customjs: 
 showToc: false
 tools: true
 weight: 1
@@ -29,88 +27,118 @@ weight: 1
         font-size: 24px;
         color: #333;
         margin-bottom: 20px;
-        align: center;
+        text-align: center;
     }
 
     /* 搜索容器 */
     .search-container {
+        display: flex;
+        align-items: center;
         background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+        border-radius: 50px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         width: 100%;
         max-width: 600px;
-        text-align: center;
     }
 
     /* 搜索框 */
     .search-input {
-        width: 100%;
-        padding: 10px;
+        flex: 1;
         font-size: 16px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        margin-bottom: 10px;
+        border: none;
         outline: none;
-        transition: border-color 0.3s ease;
+        padding: 10px;
+        border-radius: 50px;
+        background-color: #f5f5f5;
+        transition: background-color 0.3s ease;
     }
 
     .search-input:focus {
-        border-color: #fff;
-        outline: none;
+        background-color: #e9ecef;
     }
 
-    /* 搜索引擎按钮 */
+    /* 搜索图标按钮 */
+    .search-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        background-color: #7c608b;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .search-icon:hover {
+        background-color: #005a9e;
+    }
+
+    .search-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: #fff;
+    }
+
+    /* 搜索引擎按钮容器 */
     .search-buttons {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
+    /* 搜索引擎按钮 */
     .search-button {
         padding: 10px 20px;
         font-size: 14px;
-        color:rgba(114, 114, 114, 0.42);
-        background-color:rgb(255, 255, 255);
+        color: #fff;
+        background-color: #607d8b;
         border: none;
-        border-radius: 4px;
+        border-radius: 50px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .search-button:hover {
-        /* background-color:rgb(158, 188, 221); */
-        color: rgba(0, 0, 0, 0.84);
-        /* transition: color 0.3s ease; */
+        background-color: #005a9e;
+        transform: translateY(-2px);
     }
 
     .search-button:active {
-        background-color:rgba(154, 162, 170, 0.74);
+        background-color: #004a86;
     }
-
 </style>
-
 
 <center><h1>Polymer</h1></center>
 <div class="search-container">
     <input type="text" id="searchInput" class="search-input" placeholder="Please input a keyword...">
-    <div class="search-buttons">
-        <button class="search-button" data-engine="https://www.bing.com/search?q=">Bing</button>
-        <button class="search-button" data-engine="https://www.google.com/search?q=">Google</button>
-        <button class="search-button" data-engine="https://github.com/search?type=repositories&q=">Github</button>
-        <button class="search-button" data-engine="https://duckduckgo.com/?q=">DuckDuckGo</button>
-        <button class="search-button" data-engine="https://www.baidu.com/s?wd=">Baidu</button>
-        <button class="search-button" data-engine="https://search.brave.com/search?q=">Brave</button>
-        <button class="search-button" data-engine="https://www.youtube.com/results?search_query=">YouTube</button>
-    </div>
+    <button class="search-icon" id="defaultSearch">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+        </svg>
+    </button>
+</div>
+<div class="search-buttons">
+    <button class="search-button" data-engine="https://www.bing.com/search?q=">Bing</button>
+    <button class="search-button" data-engine="https://www.google.com/search?q=">Google</button>
+    <button class="search-button" data-engine="https://github.com/search?type=repositories&q=">Github</button>
+    <button class="search-button" data-engine="https://duckduckgo.com/?q=">DuckDuckGo</button>
+    <button class="search-button" data-engine="https://www.baidu.com/s?wd=">Baidu</button>
+    <button class="search-button" data-engine="https://search.brave.com/search?q=">Brave</button>
+    <button class="search-button" data-engine="https://www.youtube.com/results?search_query=">YouTube</button>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const searchInput = document.getElementById('searchInput');
         const searchButtons = document.querySelectorAll('.search-button');
+        const defaultSearchButton = document.getElementById('defaultSearch');
 
         // 点击搜索引擎按钮
         searchButtons.forEach(button => {
@@ -119,21 +147,33 @@ weight: 1
                 if (query) {
                     const engineUrl = button.getAttribute('data-engine');
                     const searchUrl = engineUrl + encodeURIComponent(query);
-                    window.open(searchUrl, '_blank'); // 在新标签页中打开搜索结果
+                    window.open(searchUrl, '_blank');
                 } else {
                     alert('请输入搜索关键词！');
                 }
             });
         });
 
-        // 支持按回车键搜索
+        // 点击默认搜索图标
+        defaultSearchButton.addEventListener('click', () => {
+            const query = searchInput.value.trim();
+            if (query) {
+                const defaultEngine = 'https://www.bing.com/search?q=';
+                const searchUrl = defaultEngine + encodeURIComponent(query);
+                window.open(searchUrl, '_blank');
+            } else {
+                alert('请输入搜索关键词！');
+            }
+        });
+
+        // 按回车键搜索
         searchInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 const query = searchInput.value.trim();
                 if (query) {
-                    const defaultEngine = 'https://www.google.com/search?q='; // 默认搜索引擎
+                    const defaultEngine = 'https://www.bing.com/search?q=';
                     const searchUrl = defaultEngine + encodeURIComponent(query);
-                    window.open(searchUrl, '_blank'); // 在新标签页中打开搜索结果
+                    window.open(searchUrl, '_blank');
                 } else {
                     alert('请输入搜索关键词！');
                 }
@@ -141,5 +181,3 @@ weight: 1
         });
     });
 </script>
-
-

@@ -1,7 +1,3 @@
-
-
-
-
 {{ define "main" }}
 
 {{ range .Params.customjscssraw }}
@@ -18,7 +14,7 @@
         html body {
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
             background: #f5f5f5;
             height: 100%;
         }
@@ -31,10 +27,11 @@
         /* 左侧导航 */
         .left-nav {
             width: 210px;
-            background: #f5f5f5;
-            border-right: 1px solid #e8e8e8;
+            background: #f8f9fa;
+            border-right: 1px solid #e8e8e8b3;
             overflow-y: auto;
-            padding: 10px 0px;
+            padding: 0px 0px 0px 0px;
+            border-radius: 4px;
         }
 
         .nav-group {
@@ -85,6 +82,12 @@
 
         .nav-item:hover {
             background: #f0f0f0;
+        }
+
+        .nav-item.active {
+            font-weight: bold;
+            border-right: 5px solid #607D8B;
+            background: linear-gradient(45deg, transparent, #60708b3d);
         }
 
         .external-link {
