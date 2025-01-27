@@ -51,7 +51,7 @@ languages:
           url: search/
           weight: 5
         - name: Tools
-          url: ../component/txt2md/
+          url: /tools
           weight: 6
         - name: About
           url: /about

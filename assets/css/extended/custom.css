@@ -121,8 +121,3 @@
     font-size: calc(var(--font-size-base) + var(--font-size-add) * -2)
 }
 
-.full-width {
-    max-width: none;
-    margin: 0 5px;
-    padding: 0;
-}

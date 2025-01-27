@@ -1,6 +1,8 @@
 {{- define "main" }}
 
 <article class="post-single">
+  {{- if not .Params.tools }} <!-- 如果 tools 不为 true，则加载头部 -->
+
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
     <h1 class="post-title entry-hint-parent">
@@ -28,12 +30,14 @@
     </div>
     {{- end }}
   </header>
-  
+
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}
   {{- end }}
+
+  {{- end }}<!-- 如果 tools 不为 true，则加载头部 -->
 
   {{- if .Content }}
   <div class="post-content">
@@ -43,7 +47,7 @@
   </div>
   {{- end }}
 
-
+  {{- if not .Params.tools }} <!-- 如果 tools 不为 true，则加载尾部 -->
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
@@ -63,6 +67,8 @@
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
   {{- end }}
+
+  {{- end }}<!-- 如果 tools 不为 true，则加载尾部 -->
 </article>
 
 {{- end }}{{/* end main */}}

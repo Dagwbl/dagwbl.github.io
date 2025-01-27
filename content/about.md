@@ -21,7 +21,6 @@ customcss: "/css/no-decoration.css"
 |Email|dagwbl@outlook.com|
 |Blog's source|https://github.com/Dagwbl/dagwbl.github.io|
 
-{{<aplayer 726854551>}}
 
 ## 📚 Daily learning
 

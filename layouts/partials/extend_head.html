@@ -2,7 +2,7 @@
 {{ partial "math.html" . }}
 {{ end }}
 
-<!-- {{ range .Site.Params.customcss }}
+{{ range .Site.Params.customcss }}
     <link rel="stylesheet" href="{{ . | absURL }}">
 {{- end }}
 
@@ -12,7 +12,7 @@
 
 {{ range $elem := .Site.Params.customjscssraw }}
     {{ $elem | safeHTML }}
-{{- end }} -->
+{{- end }}
 
 
 <!-- example of mirror cdn.bootcdn.net-->
