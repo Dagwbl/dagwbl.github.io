@@ -1,0 +1,41 @@
+
+- category: online
+  items:
+    - name: "JSON Formatter"
+      icon: "📄"
+      weight: 1
+      link: "https://jsonformatter.org"
+    - name: "Markdown Live"
+      icon: "📝"
+      weight: 2
+      link: "https://markdownlivepreview.com"
+    - name: "DeepSeek"
+      icon: "🐳"
+      weight: 3
+      link: "https://chat.deepseek.com/"
+
+- category: bookmarks
+  items:
+    - name: "chongbuluo"
+      icon: "🐛"
+      weight: 2
+      link: "https://search.chongbuluo.com/"
+    - name: "V2EX"
+      icon: "✌️"
+      weight: 1
+      link: "https://www.v2ex.com/"
+    - name: "Wexin Read"
+      icon: "📖"
+      weight: 3
+      link: "https://weread.qq.com/"
+
+- category: personal
+  items:
+    - name: "One Diary"
+      icon: "📅"
+      weight: 1
+      link: "https://web.xianfengtech.cn/web2/#/record"
+    - name: "Wexin Read"
+      icon: "📖"
+      weight: 2
+      link: "https://weread.qq.com/"

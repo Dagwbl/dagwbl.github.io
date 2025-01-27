@@ -1,214 +1,221 @@
-{{- define "main" }}
 
-<main class="{{ if .Params.fullWidth }}full-width{{ end }}">
 
+
+
+{{ define "main" }}
+
+{{ range .Params.customjscssraw }}
+{{ . | safeHTML }}
+{{ end }}
+
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="../../favicon/favicon.svg" /> -->
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <title>段落空行转换工具</title>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
     <style>
-        * {
+        html body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f5f5f5;
+            height: 100%;
         }
 
         .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .text-area-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .text-area-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .text-area-wrapper {
             display: flex;
-            flex-direction: column;
+            height: 100vh;
         }
 
-        .text-area-label {
+        /* 左侧导航 */
+        .left-nav {
+            width: 210px;
+            background: #f5f5f5;
+            border-right: 1px solid #e8e8e8;
+            overflow-y: auto;
+            padding: 10px 0px;
+        }
+
+        .nav-group {
+            margin-bottom: 10px;
+        }
+
+        .nav-title {
+            padding: 10px 5px;
+            color: #666;
+            font-size: 12px;
             font-weight: bold;
-            margin-bottom: 5px;
-            color: #444;
+            text-transform: uppercase;
+            background-color: aliceblue;
+            border-radius: 4px;
         }
 
-        textarea {
-            width: 100%;
-            height: 500px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            resize: vertical;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        .button-group {
+        .nav-item-wrapper {
             display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        button {
-            padding: 10px 20px;
+        .nav-item {
+            padding: 5px 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            flex: 1;
+        }
+
+        .nav-item img {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            border-radius: 3px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .nav-item span.icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            text-align: center;
             font-size: 16px;
+        }
+
+        .nav-item:hover {
+            background: #f0f0f0;
+        }
+
+        .external-link {
+            font-size: 12px;
+            text-decoration: none;
+            color: #1890ff;
+            padding-left: 10px;
+        }
+
+        .external-link:hover {
+            color: #0056b3;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .content-frame {
+            width: 100%;
+            height: 100%;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            background: #fff;
+            border-radius: 4px;
         }
 
-        button:hover {
-            opacity: 0.9;
-        }
-
-        #convertBtn {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        #copyBtn {
-            background-color: #2196F3;
-            color: white;
-        }
-
-        #clearBtn {
-            background-color: #f44336;
-            color: white;
-        }
-
-        #jumpBtn {
-            background-color: #9C27B0;
-            color: white;
-        }
-
-        #jsonBtn {
-            background-color: #FF9800;
-            color: white;
-        }
-
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+        #fallbackMessage {
             display: none;
-            z-index: 1000;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            color: #333;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>段落空行转换工具</h1>
-        <div class="text-area-container">
-            <div class="text-area-wrapper">
-                <div class="text-area-label">原始文本:</div>
-                <textarea id="inputText" placeholder="请输入需要转换的文本..."></textarea>
+        <div class="left-nav">
+            <!-- 本地工具 -->
+            <div class="nav-group">
+                <div class="nav-title">LOCAL TOOLS</div>
+                <div class="nav-items">
+                    {{ $localTools := where (where .Site.RegularPages "Section" "tools") "Params.category" "local" }}
+                    {{ range sort $localTools "Params.weight" "asc" }}
+                    <div class="nav-item-wrapper">
+                        <a href="#{{ .File.ContentBaseName }}" class="nav-item" data-tool="{{ .File.ContentBaseName }}">
+                            {{ if .Params.icon }}
+                            <span class="icon">{{ .Params.icon }}</span>
+                            {{ end }}
+                            {{ .Title }}
+                        </a>
+                    </div>
+                    {{ end }}
+                </div>
             </div>
-            <div class="text-area-wrapper">
-                <div class="text-area-label">转换结果:</div>
-                <textarea id="outputText" placeholder="转换后的文本将显示在这里..." readonly></textarea>
+
+            {{ range .Site.Data.navigation }}
+            <div class="nav-group">
+                <div class="nav-title">{{ .category | upper }}</div>
+                <div class="nav-items">
+                    {{ range sort .items "weight" "asc" }}
+                    <div class="nav-item-wrapper">
+                        <a href="#{{ .name | urlize }}" class="nav-item" data-tool="{{ .link }}"
+                            data-category="{{ .category }}">
+                            {{ if .icon }}
+                            {{ if (strings.HasPrefix .icon "http") }}
+                            <img src="{{ .icon }}" alt="icon" onerror="this.src='/default-favicon.png';">
+                            {{ else }}
+                            <span class="icon">{{ .icon }}</span> <!-- 显示 Emoji -->
+                            {{ end }}
+                            {{ else }}
+                            <img src="/default-favicon.png" alt="default-icon"> <!-- 默认图标 -->
+                            {{ end }}
+                            {{ .name }}
+                        </a>
+                        <a href="{{ .link }}" target="_blank" class="external-link">🔗</a>
+                    </div>
+                    {{ end }}
+                </div>
             </div>
+            {{ end }}
         </div>
-        <div class="button-group">
-            <button id="convertBtn">转换回车</button>
-            <button id="copyBtn">复制结果</button>
-            <button id="clearBtn">全部清空</button>
-            <button id="jumpBtn">一本日记</button>
-            <button id="jsonBtn">转换Json</button> <!-- 新增按钮 -->
+
+        <div class="main-content">
+            <iframe id="toolFrame" class="content-frame" src=""></iframe>
         </div>
     </div>
-    <div id="toast" class="toast"></div>
 
     <script>
-        document.getElementById('convertBtn').addEventListener('click', function () {
-            const inputText = document.getElementById('inputText').value;
-            const outputText = inputText
-                .split('\n')
-                .map(line => line.trim())
-                .filter(line => line.length > 0)
-                .join('\n\n')
-                .replace(/\n{3,}/g, '\n\n'); // 确保最多只有一个空行
-            document.getElementById('outputText').value = outputText;
-        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const navItems = document.querySelectorAll('.nav-item[data-tool]');
+            const toolFrame = document.getElementById('toolFrame');
 
-        document.getElementById('copyBtn').addEventListener('click', function () {
-            const outputText = document.getElementById('outputText');
-            outputText.select();
-            document.execCommand('copy');
-            showToast('已复制到剪贴板');
-        });
+            // 默认加载 weight 最小的工具
+            const defaultTool = navItems[0]; // 第一个工具是 weight 最小的
+            if (defaultTool) {
+                const toolLink = defaultTool.getAttribute('data-tool');
+                toolFrame.src = `/en/tools/${toolLink}/`; // 加载默认工具
+                defaultTool.classList.add('active'); // 设置默认工具为激活状态
+            }
 
-        document.getElementById('clearBtn').addEventListener('click', function () {
-            document.getElementById('inputText').value = '';
-            document.getElementById('outputText').value = '';
-        });
+            navItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
 
-        document.getElementById('jumpBtn').addEventListener('click', function () {
-            window.open('https://web.xianfengtech.cn/web2/#/record', '_blank');
-        });
+                    // 移除其他激活状态
+                    navItems.forEach(i => i.classList.remove('active'));
+                    // 添加当前激活状态
+                    item.classList.add('active');
 
-        document.getElementById('jsonBtn').addEventListener('click', function () {
-            const inputText = document.getElementById('inputText').value;
-            const jsonObject = {
-                id: 1,
-                date: new Date().toISOString().split('T')[0],
-                title: "想你的第一天",
-                content: inputText,
-                from: "朱朱",
-                to: "欢欢",
-                avatar: "/images/avatar-ZZ.jpg"
-            };
-            const jsonString = JSON.stringify(jsonObject, null, 4);
-            document.getElementById('outputText').value = jsonString;
-        });
+                    // 加载工具内容
+                    const toolLink = item.getAttribute('data-tool');
+                    toolFrame.src = toolLink; // 将在线工具的链接加载到 iframe 中
 
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.style.display = 'block';
-            setTimeout(() => {
-                toast.style.display = 'none';
-            }, 2000);
-        }
+                    // 更新 URL hash
+                    window.location.hash = item.getAttribute('href').slice(1);
+                });
+            });
+
+            // 处理 URL hash
+            if (window.location.hash) {
+                const tool = window.location.hash.slice(1);
+                const toolItem = document.querySelector(`.nav-item[href="#${tool}"]`);
+                if (toolItem) {
+                    toolItem.click();
+                }
+            }
+        });
     </script>
 </body>
 
-</main>
-{{- end }}{{/* end main */}}
+</html>
+{{ end }}

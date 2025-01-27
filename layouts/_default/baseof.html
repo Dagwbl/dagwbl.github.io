@@ -1,0 +1,37 @@
+{{- if lt hugo.Version "0.112.4" }}
+{{- errorf "=> hugo v0.112.4 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+
+{{- if not .Params.tools }} <!-- 如果 tools 不为 true，则加载头部和尾部 -->
+<head>
+    {{- partial "head.html" . }}
+</head>
+{{- end }}
+
+
+
+<body class="
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+{{- print "list" -}}
+{{- end -}}
+{{- if eq site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end -}}
+" id="top">
+    {{- if not .Params.tools }} <!-- 如果 tools 不为 true，则加载头部和尾部 -->
+        {{- partialCached "header.html" . .Page -}}
+    {{- end }}
+
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    </main>
+
+    {{- if not .Params.tools }} <!-- 如果 tools 不为 true，则加载尾部 -->
+        {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+    {{- end }}
+</body>
+
+</html>
