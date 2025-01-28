@@ -10,7 +10,7 @@ weight: 1
 
 <style>
     /* 全局样式 */
-    body {
+    /* body {
         font-family: Arial, sans-serif;
         background-color: #f8f9fa;
         margin: 0;
@@ -20,8 +20,15 @@ weight: 1
         align-items: center;
         justify-content: center;
         height: 70vh;
-    }
+    } */
 
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 100px 10px;
+    }
     /* 标题 */
     h1 {
         font-size: 24px;
@@ -90,6 +97,7 @@ weight: 1
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 20px;
+        max-width: 650px;
     }
 
     /* 搜索引擎按钮 */
@@ -114,24 +122,30 @@ weight: 1
         background-color: #004a86;
     }
 </style>
-
-<center><h1>Polymer</h1></center>
-<div class="search-container">
-    <input type="text" id="searchInput" class="search-input" placeholder="Please input a keyword...">
-    <button class="search-icon" id="defaultSearch">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
-        </svg>
-    </button>
-</div>
-<div class="search-buttons">
-    <button class="search-button" data-engine="https://www.bing.com/search?q=">Bing</button>
-    <button class="search-button" data-engine="https://www.google.com/search?q=">Google</button>
-    <button class="search-button" data-engine="https://github.com/search?type=repositories&q=">Github</button>
-    <button class="search-button" data-engine="https://duckduckgo.com/?q=">DuckDuckGo</button>
-    <button class="search-button" data-engine="https://www.baidu.com/s?wd=">Baidu</button>
-    <button class="search-button" data-engine="https://search.brave.com/search?q=">Brave</button>
-    <button class="search-button" data-engine="https://www.youtube.com/results?search_query=">YouTube</button>
+<div class="main-container">
+    <h1>HUAN</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Please input a keyword...">
+        <button class="search-icon" id="defaultSearch">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+            </svg>
+        </button>
+    </div>
+    <div class="search-buttons">
+        <button class="search-button" data-engine="https://www.bing.com/search?q=">Bing</button>
+        <button class="search-button" data-engine="https://www.google.com/search?q=">Google</button>
+        <button class="search-button" data-engine="https://www.baidu.com/s?wd=">Baidu</button>
+        <button class="search-button" data-engine="https://github.com/search?type=repositories&q=">Github</button>
+        <button class="search-button" data-engine="https://duckduckgo.com/?q=">DuckDuckGo</button>
+        <button class="search-button" data-engine="https://search.brave.com/search?q=">Brave</button>
+        <button class="search-button" data-engine="https://www.youtube.com/results?search_query=">YouTube</button>
+        <button class="search-button" data-engine="https://www.xiaohongshu.com/search_result?keyword=">Rednote</button>
+        <button class="search-button" data-engine="https://www.zhihu.com/search?type=content&q=">ZhiHu</button>
+        <button class="search-button" data-engine="https://search.bilibili.com/all?keyword=">Bilibili</button>
+        <button class="search-button" data-engine="https://weixin.sogou.com/weixin?type=2&query=">WeXin</button>
+        <button class="search-button" data-engine="https://www.douban.com/search?q=">DouBan</button>
+    </div>
 </div>
 
 <script>
