@@ -1,0 +1,78 @@
+<div class="bookmark-grid">
+    <div class="bookmark-item">
+      <a href="{{ .Get 1 }}" target="_blank" rel="noopener">
+        <div class="bookmark-icon">
+          <img 
+            src="https://www.google.com/s2/favicons?domain={{ .Get 1 }}&sz=64" 
+            alt="favicon"
+          >
+        </div>
+        <div class="bookmark-info">
+          <h3>{{ .Get 0 }}</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+  <style>
+    /* 网格容器 */
+    .bookmark-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* 设置最小宽度 180px */
+      gap: 15px;
+      padding: 10px 0;
+    }
+  
+    /* 单个书签 */
+    .bookmark-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s ease-in-out, transform 0.2s;
+      text-align: center;
+    }
+  
+    .bookmark-item:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+  
+    .bookmark-item a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* 图标样式 */
+    .bookmark-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 10px;
+    }
+  
+    .bookmark-icon img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px; /* 使图标略带圆角 */
+    }
+  
+    /* 标题样式 */
+    .bookmark-info h3 {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #333;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+  

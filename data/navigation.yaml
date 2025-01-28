@@ -1,31 +1,27 @@
 
 - category: online
   items:
-    - name: "JSON Formatter"
-      icon: "📄"
+    - name: "Toolbox"
+      # icon: "🧰"
       weight: 1
-      link: "https://jsonformatter.org"
+      link: "https://tool.lvtao.net/"
     - name: "Markdown Live"
-      icon: "📝"
+      # icon: "📝"
       weight: 2
       link: "https://markdownlivepreview.com"
     - name: "DeepSeek"
-      icon: "🐳"
-      weight: 3
+      # icon: "🐳"
+      weight: 0
       link: "https://chat.deepseek.com/"
+    - name: "Tool frog"
+      # icon: "🐸"
+      weight: 4
+      link: "https://toolwa.com/"
 
 - category: bookmarks
   items:
-    - name: "ChongBuLuo"
-      icon: "🐛"
-      weight: 2
-      link: "https://search.chongbuluo.com/"
-    - name: "V2EX"
-      icon: "✌️"
-      weight: 1
-      link: "https://www.v2ex.com/"
     - name: "Wexin Read"
-      icon: "📖"
+      # icon: "📖"
       weight: 3
       link: "https://weread.qq.com/"
 
