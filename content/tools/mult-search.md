@@ -10,17 +10,20 @@ weight: 1
 
 <style>
     /* 全局样式 */
-    /* body {
+    body {
         font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
+        /* background-color: #f8f9fa; */
+        background: url("/images/four-hand.png");
+        background-size:100% 100%;
+        background-attachment:fixed;
         margin: 0;
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 70vh;
-    } */
+        /* height: 70vh; */
+    }
 
     .main-container {
         display: flex;
