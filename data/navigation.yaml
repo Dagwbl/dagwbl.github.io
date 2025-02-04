@@ -10,7 +10,7 @@
       weight: 2
       link: "https://markdownlivepreview.com"
     - name: "DeepSeek"
-      # icon: "🐳"
+      icon: "🐳"
       weight: 0
       link: "https://chat.deepseek.com/"
     - name: "Tool frog"
