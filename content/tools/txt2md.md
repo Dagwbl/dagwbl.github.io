@@ -1,5 +1,5 @@
 ---
-title: "TXT to MD"
+title: "TXT to Markdown"
 category: "local"
 icon: "📑"
 customcss: "css/extended/tools.css"
