@@ -13,7 +13,7 @@ weight: 1
     body {
         font-family: Arial, sans-serif;
         /* background-color: #f8f9fa; */
-        background: url("/images/four-hand.png");
+        background: url("/images/four-hand-horizonal.png");
         background-size:100% 100%;
         background-attachment:fixed;
         margin: 0;

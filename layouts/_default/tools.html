@@ -21,7 +21,7 @@
 
         .container {
             display: flex;
-            height: 100vh;
+            height: calc(100vh - var(--header-height));
         }
 
         /* 左侧导航 */
@@ -103,10 +103,11 @@
             background: #f0f0f0;
         }
 
-        .nav-item-wrapper.active {
+        .nav-item.active {
             font-weight: bold;
-            border-left: 5px solid #cf8c8d;
+            border-left: 5px solid #666666;
             background: linear-gradient(to left, transparent, #60708b3d);
+            border-radius: 4px;
         }
 
         .nav-item-wrapper a {
@@ -146,7 +147,7 @@
 
         .main-content {
             flex: 1;
-            padding: 0 10px;
+            /* padding: 0 10px; */
         }
 
         .content-frame {
@@ -203,7 +204,12 @@
                             <span class="icon">{{ .icon }}</span> <!-- 显示 Emoji -->
                             {{ end }}
                             {{ else }}
-                            <img src="https://www.google.com/s2/favicons?domain={{ .link }}&sz=64" alt="default-icon">
+                            {{ $url := .link }}
+                            {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
+                            {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }}
+                            <img src="{{ $iconUrl }}" alt="{{ $domain }} icon">
+                            <!-- <img src="https://www.google.com/s2/favicons?domain={{ .link }}&sz=64" alt="default-icon"> -->
+                            <!-- <img src="https://icons.duckduckgo.com/ip3/<domain>.ico" alt="default-icon"> -->
                             <!-- 默认图标 -->
                             {{ end }}
                             {{ .name }}

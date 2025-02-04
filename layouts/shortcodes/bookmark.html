@@ -2,10 +2,14 @@
     <div class="bookmark-item">
       <a href="{{ .Get 1 }}" target="_blank" rel="noopener">
         <div class="bookmark-icon">
-          <img 
+          <!-- <img 
             src="https://www.google.com/s2/favicons?domain={{ .Get 1 }}&sz=64" 
             alt="favicon"
-          >
+          > -->
+          {{ $url := .Get 1 }}
+          {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
+          {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }} 
+          <img src="{{ $iconUrl }}" alt="{{ $domain }} icon"> <!--使用 DuckDuckGo 的图标服务-->
         </div>
         <div class="bookmark-info">
           <h3>{{ .Get 0 }}</h3>
