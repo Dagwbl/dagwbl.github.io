@@ -1,6 +1,6 @@
 ---
 title: "Integrated Search"
-category: "local"
+# category: "local" 注释以不显示
 icon: "🔍"
 customcss: "css/extended/tools.css"
 showToc: false
