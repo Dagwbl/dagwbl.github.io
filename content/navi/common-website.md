@@ -14,4 +14,5 @@ weight: 3
 | {{< bookmark "Stack Overflow" "https://stackoverflow.com" >}}  |                                                          |                                                               |
 | {{<bookmark "Follow" "https://app.follow.is/feeds">}}          |                                                          |                                                               |
 
-{{<aplayer 726854551>}}
+<!-- {{<aplayer tencent 5348146338 true>}} -->
+{{<aplayer netease 726854551 true>}}
