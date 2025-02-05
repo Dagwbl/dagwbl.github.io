@@ -13,3 +13,5 @@ weight: 3
 | {{< bookmark "V2EX" "https://www.v2ex.com/" >}}                | {{< bookmark "Hugo" "https://gohugo.io" >}}              | {{<bookmark "Toolbox of programmer" "https://tool.ur1.fun">}} |
 | {{< bookmark "Stack Overflow" "https://stackoverflow.com" >}}  |                                                          |                                                               |
 | {{<bookmark "Follow" "https://app.follow.is/feeds">}}          |                                                          |                                                               |
+
+{{<aplayer 726854551>}}

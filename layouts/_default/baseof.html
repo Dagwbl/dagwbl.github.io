@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
 
-{{- if not .Params.tools }} <!-- 如果 tools 不为 true，则加载头部和尾部 -->
+{{- if not .Params.tools }} <!-- 如果 tools 不为 true，则加载头部 -->
 <head>
     {{- partial "head.html" . }}
 </head>
@@ -21,7 +21,7 @@
 {{- print " dark" }}
 {{- end -}}
 " id="top">
-    {{- if not .Params.tools }} <!-- 如果 tools 不为 true，则加载头部和尾部 -->
+    {{- if not .Params.tools }} <!-- 如果 tools 不为 true，则加载头部 -->
         {{- partialCached "header.html" . .Page -}}
     {{- end }}
 

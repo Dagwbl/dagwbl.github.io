@@ -35,17 +35,20 @@
         }
 
         .nav-group {
-            margin-bottom: 10px;
+            margin-bottom: 2px;
         }
 
         .nav-title {
-            padding: 10px 5px;
+            padding: 2px 4px 0px 4px;
             color: #666;
             font-size: 12px;
             font-weight: bold;
             text-transform: uppercase;
-            background-color: aliceblue;
+            /* background-color: aliceblue; */
             border-radius: 4px;
+            /* border-bottom: 5px solid #60708b3d; */
+            /* display: contents; */
+            /* text-decoration: underline; */
         }
 
         .nav-item {
@@ -72,8 +75,10 @@
         }
 
         .nav-item-wrapper:hover {
-            background-color: #f5f5f5;
-            /* 鼠标悬停背景 */
+            /* padding: 50px 10px; */
+            /* border-left: 5px solid #666666; */
+            background: linear-gradient(to left, transparent, #60708b3d);
+            border-radius: 4px;
         }
 
         .nav-item-wrapper img {
@@ -95,19 +100,13 @@
             display: inline-block;
             width: 16px;
             margin-right: 10px;
-            margin-left: 5px;
+            margin-left: 4px;
             text-align: center;
-        }
-
-        .nav-item:hover {
-            background: #f0f0f0;
         }
 
         .nav-item.active {
             font-weight: bold;
-            border-left: 5px solid #666666;
-            background: linear-gradient(to left, transparent, #60708b3d);
-            border-radius: 4px;
+
         }
 
         .nav-item-wrapper a {
@@ -135,8 +134,13 @@
 
         .nav-item-wrapper:hover .external-link {
             visibility: visible;
-            background-color: #f0f0f0;
             opacity: 1;
+        }
+
+        .nav-item.active {
+            border-left: 5px solid #666666;
+            background: linear-gradient(to left, transparent, #60708b3d);
+            border-radius: 4px;
         }
 
         .nav-item-wrapper:hover {
@@ -171,11 +175,47 @@
 <body>
     <div class="container">
         <div class="left-nav">
+
+            {{ range .Site.Data.navigation }}
+            <div class="nav-group">
+                <div class="nav-title">{{ .category | upper }}</div>
+                <div class="nav-items">
+                    {{ range sort .items "weight" "asc" }}
+                    <div class="nav-item-wrapper">
+                        {{ if .refused }}
+                        <!-- 如果设置了 refused，创建直接跳转的链接 -->
+                        <a href="{{ .link }}" class="nav-item" target="_blank" title="{{ .name }}">
+                        {{ else }}
+                        <!-- 否则保持原来的内嵌加载行为 -->
+                        <a href="#{{ .name | urlize }}" class="nav-item" data-tool="{{ .link }}"
+                            data-category="{{ .category }}" title="{{ .name }}">
+                        {{ end }}
+                            {{ if .icon }}
+                            {{ if (strings.HasPrefix .icon "http") }}
+                            <img src="{{ .icon }}" alt="icon" onerror="this.src='/default-favicon.png';">
+                            {{ else }}
+                            <span class="icon">{{ .icon }}</span>
+                            {{ end }}
+                            {{ else }}
+                            {{ $url := .link }}
+                            {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
+                            {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }}
+                            <img src="{{ $iconUrl }}" alt="{{ $domain }} icon">
+                            {{ end }}
+                            {{ .name }}
+                        </a>
+                        <a href="{{ .link }}" target="_blank" class="external-link">🔗</a>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+
             <!-- 本地工具 -->
             <div class="nav-group">
-                <div class="nav-title">LOCAL TOOLS</div>
+                <div class="nav-title">LOCAL Document</div>
                 <div class="nav-items">
-                    {{ $localTools := where (where .Site.RegularPages "Section" "tools") "Params.category" "local" }}
+                    {{ $localTools := where (where .Site.RegularPages "Section" "navi") "Params.category" "local" }}
                     {{ range sort $localTools "Params.weight" "asc" }}
                     <div class="nav-item-wrapper">
                         <a href="#{{ .File.ContentBaseName }}" class="nav-item" data-tool="{{ .File.ContentBaseName }}">
@@ -189,37 +229,6 @@
                 </div>
             </div>
 
-            {{ range .Site.Data.navigation }}
-            <div class="nav-group">
-                <div class="nav-title">{{ .category | upper }}</div>
-                <div class="nav-items">
-                    {{ range sort .items "weight" "asc" }}
-                    <div class="nav-item-wrapper">
-                        <a href="#{{ .name | urlize }}" class="nav-item" data-tool="{{ .link }}"
-                            data-category="{{ .category }}">
-                            {{ if .icon }}
-                            {{ if (strings.HasPrefix .icon "http") }}
-                            <img src="{{ .icon }}" alt="icon" onerror="this.src='/default-favicon.png';">
-                            {{ else }}
-                            <span class="icon">{{ .icon }}</span> <!-- 显示 Emoji -->
-                            {{ end }}
-                            {{ else }}
-                            {{ $url := .link }}
-                            {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
-                            {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }}
-                            <img src="{{ $iconUrl }}" alt="{{ $domain }} icon">
-                            <!-- <img src="https://www.google.com/s2/favicons?domain={{ .link }}&sz=64" alt="default-icon"> -->
-                            <!-- <img src="https://icons.duckduckgo.com/ip3/<domain>.ico" alt="default-icon"> -->
-                            <!-- 默认图标 -->
-                            {{ end }}
-                            {{ .name }}
-                        </a>
-                        <a href="{{ .link }}" target="_blank" class="external-link">🔗</a>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
-            {{ end }}
         </div>
 
         <div class="main-content">
@@ -236,7 +245,8 @@
             const defaultTool = navItems[0]; // 第一个工具是 weight 最小的
             if (defaultTool) {
                 const toolLink = defaultTool.getAttribute('data-tool');
-                toolFrame.src = `/en/tools/${toolLink}/`; // 加载默认工具
+                // toolFrame.src = `/en/${toolLink}/`; // 加载默认工具
+                toolFrame.src = `${toolLink}/`; // 加载默认工具
                 defaultTool.classList.add('active'); // 设置默认工具为激活状态
             }
 

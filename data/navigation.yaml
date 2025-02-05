@@ -1,37 +1,94 @@
-
-- category: online
-  items:
-    - name: "Toolbox"
-      # icon: "🧰"
-      weight: 1
-      link: "https://tool.lvtao.net/"
-    - name: "Markdown Live"
-      # icon: "📝"
-      weight: 2
-      link: "https://markdownlivepreview.com"
-    - name: "DeepSeek"
-      icon: "🐳"
-      weight: 0
-      link: "https://chat.deepseek.com/"
-    - name: "Tool frog"
-      # icon: "🐸"
-      weight: 4
-      link: "https://toolwa.com/"
-
-- category: bookmarks
-  items:
-    - name: "Wexin Read"
-      # icon: "📖"
-      weight: 3
-      link: "https://weread.qq.com/"
-
 - category: personal
   items:
     - name: "One Diary"
       icon: "📅"
       weight: 1
       link: "https://web.xianfengtech.cn/web2/#/record"
+    - name: "Txt to Markdown"
+      icon: "📑"
+      weight: 4
+      link: "/component/txt2md/"
+    - name: "Multiple Search"
+      icon: "🔍"
+      weight: 0
+      link: "/component/multiple-search/"
+    - name: "Pomodoro"
+      icon: "🍅"
+      weight: 1
+      link: "/component/tomodoro/"
     - name: "Wexin Read"
-      icon: "📖"
-      weight: 2
+      # icon: "📖"
+      weight: 99
       link: "https://weread.qq.com/"
+
+
+- category: Artificial Intelligence
+  items:
+    - name: "DeepSeek"
+      icon: "🐳"
+      weight: 10
+      link: "https://chat.deepseek.com/"
+    - name: "Claude 3.5 Sonnet"
+      weight: 11
+      link: "https://poe.com/Claude-3.5-Sonnet"
+      refused: true
+    - name: "ChatGPT"
+      weight: 12
+      link: "https://chatgpt.com/"
+      refused: true
+
+- category: Social
+  items:
+    - name: "V2EX"
+      weight: 4
+      link: "https://www.v2ex.com/"
+      refused: true
+    - name: "Chongbuluo"
+      weight: 3
+      link: "https://chongbuluo.com/"
+      refused: true
+    - name: "Follow"
+      weight: 2
+      link: "https://app.follow.is/feeds/"
+      refused: true
+
+- category: Tool
+  items:
+    - name: "MathDF"
+      weight: 5
+      link: "https://mathdf.com/cn/"
+      refused: true
+    - name: "Tool frog"
+      weight: 97
+      link: "https://toolwa.com/"
+    - name: "Calculator"
+      weight: 96
+      link: "https://www.lddgo.net/math/calculator"
+    - name: "Toolbox"
+      weight: 98
+      link: "https://tool.lvtao.net/json"
+    - name: "Markdown Live"
+      weight: 99
+      link: "https://markdownlivepreview.com"
+
+- category: Relax
+  items:
+    - name: Qwerty Learner
+      weight: 1
+      link: "https://qwerty.kaiyi.cool/"
+    - name: Method.action
+      weight: 2
+      link: "https://method.ac/"
+    - name: SoDu
+      weight: 16
+      link: "https://www.thewordfinder.com/games/sudoku.php"
+    - name: "Word Search"
+      weight: 14
+      link: "https://www.thewordfinder.com/word-search-puzzles/"
+    - name: "Daily Anagram"
+      weight: 15
+      link: "https://www.thewordfinder.com/daily-anagram/"
+    - name: mineSweeper
+      weight: 3
+      link: "https://www.minesweeper.cn/"
+    

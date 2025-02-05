@@ -50,15 +50,15 @@ languages:
         - name: Search
           url: search/
           weight: 5
-        - name: Tools
-          url: /tools
-          weight: 6
+        - name: 🧭
+          url: /navi/
+          weight: 99
         - name: About
           url: /about
           weight: 7
-        - name: 🦠
-          url: https://search.chongbuluo.com/
-          weight: 8
+        # - name: 🦠
+        #   url: https://search.chongbuluo.com/
+        #   weight: 8
     params:
       homeInfoParams:
         Title: "Timid Thoughts  💫 "
@@ -163,7 +163,8 @@ params:
   ShowToc: true
   comments: true
   busuanzi:
-    enable: true
+    enable: false
+    # 配置是否显示访问量
   # images: ["/images/wallpaperflare.com_flower.jpg"]
   # ShowShareButtons: true
   # ShareButtons: [qq,bilibili]
