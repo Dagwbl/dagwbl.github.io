@@ -26,11 +26,11 @@
 
         /* 左侧导航 */
         .left-nav {
-            width: 210px;
+            width: 180px;
             background: #f8f9fa;
             border-right: 1px solid #e8e8e8b3;
             overflow-y: auto;
-            padding: 0px 0px 0px 0px;
+            padding: 0px;
             border-radius: 4px;
         }
 
@@ -60,13 +60,14 @@
             /* 禁止文字换行 */
             text-overflow: ellipsis;
             /* 文字超出时显示省略号 */
+            padding: 2px 6px;
         }
 
         .nav-item-wrapper {
             display: flex;
             align-items: center;
             /* 垂直居中对齐 */
-            padding: 5px 10px;
+            /* padding: 5px 10px; */
             color: #333;
             text-decoration: none;
             font-size: 14px;
@@ -93,7 +94,8 @@
             max-width: 100%;
             max-height: 100%;
             border-radius: 25%;
-            object-fit: contain; /* 确保图片不会拉伸 */
+            object-fit: contain;
+            /* 确保图片不会拉伸 */
         }
 
         .nav-item span.icon {
@@ -104,10 +106,10 @@
             text-align: center;
         }
 
-        .nav-item.active {
+        /* .nav-item.active {
             font-weight: bold;
 
-        }
+        } */
 
         .nav-item-wrapper a {
             text-decoration: none;
@@ -122,7 +124,7 @@
             font-size: 12px;
             text-decoration: none;
             /* color: #1890ff; */
-            padding-left: 10px;
+            padding: 0 4px;
             visibility: hidden;
             opacity: 0;
             transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -137,9 +139,10 @@
             opacity: 1;
         }
 
-        .nav-item.active {
-            border-left: 5px solid #666666;
-            background: linear-gradient(to left, transparent, #60708b3d);
+
+        .nav-item-wrapper.active {
+            border-left: 5px solid #607D8B;
+            background: linear-gradient(to left, transparent, #75d4fc7d);
             border-radius: 4px;
         }
 
@@ -185,26 +188,26 @@
                         {{ if .refused }}
                         <!-- 如果设置了 refused，创建直接跳转的链接 -->
                         <a href="{{ .link }}" class="nav-item" target="_blank" title="{{ .name }}">
-                        {{ else }}
-                        <!-- 否则保持原来的内嵌加载行为 -->
-                        <a href="#{{ .name | urlize }}" class="nav-item" data-tool="{{ .link }}"
-                            data-category="{{ .category }}" title="{{ .name }}">
-                        {{ end }}
-                            {{ if .icon }}
-                            {{ if (strings.HasPrefix .icon "http") }}
-                            <img src="{{ .icon }}" alt="icon" onerror="this.src='/default-favicon.png';">
                             {{ else }}
-                            <span class="icon">{{ .icon }}</span>
-                            {{ end }}
-                            {{ else }}
-                            {{ $url := .link }}
-                            {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
-                            {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }}
-                            <img src="{{ $iconUrl }}" alt="{{ $domain }} icon">
-                            {{ end }}
-                            {{ .name }}
-                        </a>
-                        <a href="{{ .link }}" target="_blank" class="external-link">↗️</a>
+                            <!-- 否则保持原来的内嵌加载行为 -->
+                            <a href="#{{ .name | urlize }}" class="nav-item" data-tool="{{ .link }}"
+                                data-category="{{ .category }}" title="{{ .name }}">
+                                {{ end }}
+                                {{ if .icon }}
+                                {{ if (strings.HasPrefix .icon "http") }}
+                                <img src="{{ .icon }}" alt="icon" onerror="this.src='/default-favicon.png';">
+                                {{ else }}
+                                <span class="icon">{{ .icon }}</span>
+                                {{ end }}
+                                {{ else }}
+                                {{ $url := .link }}
+                                {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
+                                {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }}
+                                <img src="{{ $iconUrl }}" alt="{{ $domain }} icon">
+                                {{ end }}
+                                {{ .name }}
+                            </a>
+                            <a href="{{ .link }}" target="_blank" class="external-link">↗️</a>
                     </div>
                     {{ end }}
                 </div>
@@ -233,13 +236,19 @@
         </div>
 
         <div class="main-content">
-            <iframe id="toolFrame" class="content-frame" src=""></iframe>
+            <!-- <iframe id="toolFrame" class="content-frame" src=""></iframe> -->
+            <iframe src="" id="toolFrame" class="content-frame"
+                sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-downloads allow-presentation allow-top-navigation allow-top-navigation-by-user-activation"
+                allow="fullscreen; geolocation; microphone; camera; midi; clipboard-write; picture-in-picture">
+            </iframe>
+
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const navItems = document.querySelectorAll('.nav-item[data-tool]');
+            const navItemWrappers = document.querySelectorAll('.nav-item-wrapper')
             const toolFrame = document.getElementById('toolFrame');
 
             // 默认加载 weight 最小的工具
@@ -249,6 +258,7 @@
                 // toolFrame.src = `/en/${toolLink}/`; // 加载默认工具
                 toolFrame.src = `${toolLink}/`; // 加载默认工具
                 defaultTool.classList.add('active'); // 设置默认工具为激活状态
+                // defaultTool.parentElement.add('active'); // 设置默认工具为激活状态
             }
 
             navItems.forEach(item => {
@@ -257,8 +267,11 @@
 
                     // 移除其他激活状态
                     navItems.forEach(i => i.classList.remove('active'));
+                    navItemWrappers.forEach(i => i.classList.remove('active')); // 更改为激活wrapper
                     // 添加当前激活状态
-                    item.classList.add('active');
+                    // item.classList.add('active');
+                    item.parentElement.classList.add('active');
+                    // console.log(item.parentElement)
 
                     // 加载工具内容
                     const toolLink = item.getAttribute('data-tool');

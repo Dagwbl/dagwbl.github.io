@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../favicon/favicon.svg" />
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <title>段落空行转换工具</title>
+    <title>格式处理工具</title>
     <style>
         * {
             margin: 0;
@@ -22,7 +21,19 @@
             margin: 0 auto;
             background-color: #f5f5f5;
         }
-
+        
+        #toast {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
         .container {
             background-color: white;
             padding: 20px;
@@ -133,7 +144,7 @@
 
 <body>
     <div class="container">
-        <h1>段落空行转换工具</h1>
+        <h1>文本格式处理工具</h1>
         <div class="text-area-container">
             <div class="text-area-wrapper">
                 <div class="text-area-label">原始文本:</div>
@@ -166,11 +177,15 @@
             document.getElementById('outputText').value = outputText;
         });
 
-        document.getElementById('copyBtn').addEventListener('click', function () {
-            const outputText = document.getElementById('outputText');
-            outputText.select();
-            document.execCommand('copy');
-            showToast('已复制到剪贴板');
+        document.getElementById('copyBtn').addEventListener('click', async function () {
+            const outputText = document.getElementById('outputText').value;
+            try {
+                await navigator.clipboard.writeText(outputText);
+                showToast('已复制到剪贴板');
+            } catch (err) {
+                console.error('复制失败:', err);
+                showToast('复制失败，请手动复制');
+            }
         });
 
         document.getElementById('clearBtn').addEventListener('click', function () {
