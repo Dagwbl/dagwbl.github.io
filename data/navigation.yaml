@@ -71,16 +71,16 @@
     - name: "Toolbox"
       weight: 98
       link: "https://tool.lvtao.net/json"
-    - name: "Markdown Live"
+    - name: "Visual Studio Code"
       weight: 99
-      link: "https://markdownlivepreview.com"
+      link: "https://vscode.dev/github/Dagwbl/dagwbl.github.io"
 
 - category: Relax
   items:
     - name: Qwerty Learner
       weight: 1
       link: "https://qwerty.kaiyi.cool/"
-    - name: Method.action
+    - name: Method of Action
       weight: 2
       link: "https://method.ac/"
     - name: SoDu
@@ -92,7 +92,7 @@
     - name: "Daily Anagram"
       weight: 15
       link: "https://www.thewordfinder.com/daily-anagram/"
-    - name: mineSweeper
+    - name: MineSweeper
       weight: 3
-      link: "https://www.minesweeper.cn/"
+      link: "https://seucseweb.github.io/Minesweeper/"
     

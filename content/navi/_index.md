@@ -1,7 +1,7 @@
 ---
 title: "Navigation"
-description: "实用工具和导航链接集合"
-layout: "tools"
+description: "Personal useful colloection of tools"
+layout: "navi"
 customjscssraw: 
   - >
     <style>
