@@ -5,6 +5,13 @@ category: "local"
 icon: "🖱️"
 tools: true
 weight: 3
+customjscssraw: 
+  - >
+    <style>
+        .post-content {
+            padding: 0 20px !important; 
+        }
+    </style>
 ---
 
 ## 📚 Learning
@@ -20,7 +27,7 @@ weight: 3
 {{< bookmark "Stack Overflow" "https://stackoverflow.com" >}}
 {{< bookmark "Follow" "https://app.follow.is/feeds" >}}
 
-## 🗽 English learning
+## 🗽 English Learning
 
 {{< bookmark "APE practice" "https://www.ptexj.com/zh-CN/practice" >}}
 {{< bookmark "多邻国" "https://www.duolingo.cn/learn" >}}
