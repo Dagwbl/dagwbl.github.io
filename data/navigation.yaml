@@ -7,7 +7,7 @@
     - name: "Txt to Markdown"
       icon: "📑"
       weight: 4
-      link: "/component/txt2md/"
+      link: "/component/txt-to-md/"
     - name: "Multiple Search"
       icon: "🔍"
       weight: 0
@@ -87,5 +87,5 @@
     - name: MineSweeper
       weight: 3
       icon: "💣"
-      link: "https://seucseweb.github.io/Minesweeper/"
+      link: "/component/Minesweeper/build"
     
