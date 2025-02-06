@@ -73,6 +73,8 @@
       link: "https://tool.lvtao.net/json"
     - name: "Visual Studio Code"
       weight: 99
+      icon: "👨🏻‍💻"
+      refused: true
       link: "https://vscode.dev/github/Dagwbl/dagwbl.github.io"
 
 - category: Relax
@@ -94,5 +96,6 @@
       link: "https://www.thewordfinder.com/daily-anagram/"
     - name: MineSweeper
       weight: 3
+      icon: "💣"
       link: "https://seucseweb.github.io/Minesweeper/"
     
