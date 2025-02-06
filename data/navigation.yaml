@@ -36,6 +36,10 @@
       weight: 12
       link: "https://chatgpt.com/"
       refused: true
+    - name: Chatbox
+      weight: 99
+      link: "https://web.chatboxai.app/"
+      
 
 - category: Social
   items:
