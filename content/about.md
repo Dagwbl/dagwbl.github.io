@@ -21,61 +21,7 @@ customcss: "/css/no-decoration.css"
 |Email|dagwbl@outlook.com|
 |Blog's source|https://github.com/Dagwbl/dagwbl.github.io|
 
-
-## 📚 Daily learning
-
-- [微信读书](https://weread.qq.com/web/shelf)
-- [Qwerty Learner — 为键盘工作者设计的单词与肌肉记忆锻炼软件](https://qwerty.kaiyi.cool/)
-- [Hello Algo (hello-algo.com)](https://www.hello-algo.com/en/)
-
-## 👾 Funny
-
-- [Word Search Puzzles](https://www.thewordfinder.com/word-search-puzzles/)
-- [Welcome to Method of Action](https://method.ac/)
-- [扫雷游戏网页版 - Minesweeper](https://www.minesweeper.cn/)
-
-{{<collopse title="Go ahead!">}}
-
-## 🗽 English learning
-
-- [APE practice](https://www.ptexj.com/zh-CN/practice)
-- [多邻国 - 好玩高效的英语学习途径 (duolingo.cn)](https://www.duolingo.cn/learn)
-- [萤火虫教育-萤火虫PTE官网-萤火虫PTE/CCL培训学校 (fireflyau.com)](https://www.fireflyau.com/home)
-- [Daily English Dictation bilibili](https://www.bilibili.com/video/BV1U7411a7xG/)
-- [83 句中考、高考作文范句、万能句子 - Enpuz](https://enpuz.com/article/sentence-list-comps)
-- [英语连读及发音 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000021807407)
-- [99 Mindful Conversation Topics For Deeper Connections - The Good Trade](https://www.thegoodtrade.com/features/conversation-topics/)
-- [645 句高考难点、重点、核心句子句型语法解析 - Enpuz](https://enpuz.com/article/sentence-list-good)
-
-## 💪 Useful dictionary
-
-- [Collins English](https://www.collinsdictionary.com/dictionary/english/)
-- [Merriam-Webster: America's Most Trusted Dictionary](https://www.merriam-webster.com/)
-- [Oxford English Dictionary (oed.com)](https://www.oed.com/?tl=true)
-- [Vocabulary.com - Learn Words - English Dictionary](https://www.vocabulary.com/)
-- [Etymonline - Online Etymology Dictionary](https://www.etymonline.com/)
-- [优词词典 - 英语词根词源字典 - 在线英语单词助记词典 (dictool.com)](https://www.dictool.com/)
-- [漢典 (zdic.net)](https://www.zdic.net/)
-- [Urban Dictionary](https://www.urbandictionary.com/)
-
-## ⚒️ Tools
-
-- [Poe](https://poe.com/)
-- [HuggingChat](https://huggingface.co/chat/)
-- [ChatGPT](https://chat.openai.com/chat)
-
-## 👾 Others
-
-- [ISO 2 Letter Language Codes — SitePoint](https://www.sitepoint.com/iso-2-letter-language-codes/)
-- [Emojis Wiki — All Emoji Meanings 💪🌎🏆😘🍎](https://emojis.wiki/)
-
-## 🎤 The Great Speeches
-
-- [Martin Luther King I Have a Dream Speech - American Rhetoric](https://www.americanrhetoric.com/speeches/mlkihaveadream.htm)
-- [We Choose To Go To The Moon | Rice University](https://www.rice.edu/jfk-speech)
-- [Top 100 Speeches of the 20th Century - American Rhetoric](https://www.americanrhetoric.com/newtop100speeches.htm)
-
-{{</collopse>}}
+The world puts off its mask of vastness to its lover. It becomes small as one song, as one kiss of the eternal.
 
 ## 🗺️ Friends
 

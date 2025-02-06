@@ -16,10 +16,6 @@
       icon: "🍅"
       weight: 1
       link: "/component/tomodoro/"
-    - name: "Wexin Read"
-      # icon: "📖"
-      weight: 99
-      link: "https://weread.qq.com/"
 
 
 - category: Artificial Intelligence
@@ -62,9 +58,6 @@
       weight: 5
       link: "https://mathdf.com/cn/"
       refused: true
-    - name: "Tool frog"
-      weight: 97
-      link: "https://toolwa.com/"
     - name: "Calculator"
       weight: 96
       link: "https://www.lddgo.net/math/calculator"
@@ -79,9 +72,6 @@
 
 - category: Relax
   items:
-    - name: Qwerty Learner
-      weight: 1
-      link: "https://qwerty.kaiyi.cool/"
     - name: Method of Action
       weight: 2
       link: "https://method.ac/"
