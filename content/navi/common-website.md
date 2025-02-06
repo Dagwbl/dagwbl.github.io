@@ -19,13 +19,7 @@ customjscssraw:
 {{< bookmark "微信读书" "https://weread.qq.com/web/shelf" >}}
 {{< bookmark "Qwerty Learner" "https://qwerty.kaiyi.cool/" >}}
 {{< bookmark "Hello Algo" "https://www.hello-algo.com/en/" >}}
-
-## 🗨 Forum
-
-{{< bookmark "ChongBuLuo" "https://search.chongbuluo.com/" >}}
-{{< bookmark "V2EX" "https://www.v2ex.com/" >}}
-{{< bookmark "Stack Overflow" "https://stackoverflow.com" >}}
-{{< bookmark "Follow" "https://app.follow.is/feeds" >}}
+{{< bookmark "Wikipedia" "https://www.wikipedia.org" >}}
 
 ## 🗽 English Learning
 
@@ -39,7 +33,6 @@ customjscssraw:
 
 ## 💪 Library
 
-{{< bookmark "Wikipedia" "https://www.wikipedia.org" >}}
 {{< bookmark "Hugo" "https://gohugo.io" >}}
 {{< bookmark "EmojiAll" "https://www.emojiall.com/zh-hans">}}
 {{< bookmark "Collins English" "https://www.collinsdictionary.com/dictionary/english/" >}}
@@ -61,6 +54,10 @@ customjscssraw:
 
 ## Other
 
+{{< bookmark "ChongBuLuo" "https://search.chongbuluo.com/" >}}
+{{< bookmark "V2EX" "https://www.v2ex.com/" >}}
+{{< bookmark "Stack Overflow" "https://stackoverflow.com" >}}
+{{< bookmark "Follow" "https://app.follow.is/feeds" >}}
 {{< bookmark "中考、高考作文范句" "https://enpuz.com/article/sentence-list-comps" >}}
 {{< bookmark "英语连读及发音" "https://segmentfault.com/a/1190000021807407" >}}
 
