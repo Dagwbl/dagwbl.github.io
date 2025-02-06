@@ -87,5 +87,5 @@
     - name: MineSweeper
       weight: 3
       icon: "💣"
-      link: "/component/Minesweeper/build"
+      link: "/component/minesweeper/build"
     
