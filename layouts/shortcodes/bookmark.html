@@ -1,82 +1,85 @@
 <div class="bookmark-grid">
-    <div class="bookmark-item">
-      <a href="{{ .Get 1 }}" target="_blank" rel="noopener">
-        <div class="bookmark-icon">
-          <!-- <img 
-            src="https://www.google.com/s2/favicons?domain={{ .Get 1 }}&sz=64" 
-            alt="favicon"
-          > -->
-          {{ $url := .Get 1 }}
-          {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
-          {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }} 
-          <img src="{{ $iconUrl }}" alt="{{ $domain }} icon"> <!--使用 DuckDuckGo 的图标服务-->
-        </div>
-        <div class="bookmark-info">
-          <h3>{{ .Get 0 }}</h3>
-        </div>
-      </a>
-    </div>
+  <div class="bookmark-item">
+    <a href="{{ .Get 1 }}" target="_blank" rel="noopener">
+      <div class="bookmark-icon">
+        {{ $url := .Get 1 }}
+        {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
+        {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }}
+        <img src="{{ $iconUrl }}" alt="{{ $domain }} icon">
+      </div>
+      <div class="bookmark-info">
+        <h3>{{ .Get 0 }}</h3>
+      </div>
+    </a>
   </div>
-  
-  <style>
-    /* 网格容器 */
-    .bookmark-grid {
-      display: inline-block;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* 设置最小宽度 180px */
-      gap: 15px;
-      padding: 10px 0;
-    }
-  
-    /* 单个书签 */
-    .bookmark-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.2s ease-in-out, transform 0.2s;
-      text-align: center;
-    }
-  
-    .bookmark-item:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transform: translateY(-2px);
-    }
-  
-    .bookmark-item a {
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    /* 图标样式 */
-    .bookmark-icon {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 10px;
-    }
-  
-    .bookmark-icon img {
-      width: 100%;
-      height: 100%;
-      border-radius: 8px; /* 使图标略带圆角 */
-    }
-  
-    /* 标题样式 */
-    .bookmark-info h3 {
-      margin: 0;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #333;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-  </style>
-  
+</div>
+
+<style>
+  /* 网格容器 */
+  .bookmark-grid {
+    display: inline-block;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* 设置最小宽度 180px */
+    padding: 0px 16px 0px 0px;
+  }
+
+  /* 单个书签 */
+  .bookmark-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s;
+    text-align: center;
+    min-width: 80px;
+    max-width: 180px; /* 限制最大宽度 */
+  }
+
+  .bookmark-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .bookmark-item a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* 确保链接占满整个容器 */
+  }
+
+  /* 图标样式 */
+  .bookmark-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+
+  .bookmark-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; /* 使图标略带圆角 */
+  }
+
+  /* 标题样式 */
+  .bookmark-info {
+    width: 100%; /* 确保标题容器占满宽度 */
+    overflow: hidden; /* 防止溢出 */
+  }
+
+  .bookmark-info h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap; /* 禁止换行 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    text-overflow: ellipsis; /* 显示省略号 */
+    max-width: 100%; /* 限制最大宽度 */
+  }
+</style>
