@@ -1,3 +1,5 @@
 public/
 resources/
-
+static/component/minesweeper/node_modules/
+*css.map
+*.js.map
