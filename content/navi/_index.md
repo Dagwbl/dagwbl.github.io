@@ -1,5 +1,5 @@
 ---
-title: "Navigation"
+title: "Navi"
 description: "Personal useful colloection of tools"
 layout: "navi"
 customjscssraw: 

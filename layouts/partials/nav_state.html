@@ -1,0 +1,62 @@
+{{ $script := `
+    document.addEventListener('DOMContentLoaded', function() {
+        const navCollapsed = localStorage.getItem('navCollapsed') === 'true';
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        const toggleButton = document.getElementById('navToggle');
+    
+        function hideWithAnimation() {
+            header.classList.add('hidden');
+            footer.classList.add('hidden');
+            
+            // 过渡动画结束后再真正隐藏
+            setTimeout(() => {
+                header.style.display = 'none';
+                footer.style.display = 'none';
+            }, 300); // 这里的300ms要和CSS transition时间保持一致
+        }
+    
+        function showWithAnimation() {
+            header.style.display = ''; // 先让元素恢复 display
+            footer.style.display = ''; // 先让元素恢复 display
+            setTimeout(() => {
+                header.classList.remove('hidden');
+                footer.classList.remove('hidden');
+            }, 10); // 需要一个短暂的延迟以触发动画
+        }
+    
+        if (navCollapsed) {
+            hideWithAnimation();
+        } else {
+            showWithAnimation();
+        }
+    
+        toggleButton.addEventListener('click', function() {
+            const currentState = localStorage.getItem('navCollapsed') === 'true';
+            localStorage.setItem('navCollapsed', !currentState);
+            
+            if (!currentState) {
+                hideWithAnimation();
+            } else {
+                showWithAnimation();
+            }
+        });
+    });
+    `}}
+    
+    <script>{{ $script | safeJS }}</script>
+    
+    <style>
+.hidden {
+    opacity: 0;
+    transform: translateY(-60px); /* 让 header 上移消失，footer 下移消失 */
+    pointer-events: none; /* 禁止交互 */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+header, footer {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+    </style>

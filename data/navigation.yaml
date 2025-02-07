@@ -1,4 +1,4 @@
-- category: personal
+- category: FOR ME
   items:
     - name: "One Diary"
       icon: "📅"
@@ -14,19 +14,20 @@
       link: "/component/multiple-search/"
     - name: "Pomodoro"
       icon: "🍅"
-      weight: 2
+      weight: 3
       link: "/component/tomodoro/"
     - name: "Sharpening Life"
       # icon: "🔪"
-      weight: 99
+      weight: 2
       link: "https://www.yuque.com/dagwbl/rhcp4m?#%20%E3%80%8ASharpening%E3%80%8B"
 
 
-- category: Artificial Intelligence
+- category: AI
   items:
     - name: "DeepSeek"
       icon: "🐳"
       weight: 10
+      refused: true
       link: "https://chat.deepseek.com/"
     - name: "Claude 3.5 Sonnet"
       weight: 11
