@@ -1,0 +1,5 @@
+{
+  "folder": "content/diary",
+  "template": "archetypes/diary-ob",
+  "autorun": true
+}
