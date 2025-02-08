@@ -2,20 +2,20 @@
   "choices": [
     {
       "id": "17cec890-c92e-4764-ace3-e7e040396a52",
-      "name": "New Article",
+      "name": "New Article with Hugo",
       "type": "Macro",
       "command": true,
       "macroId": "713d21d5-2930-4f6b-9e07-0563a4d88ffb"
     },
     {
       "id": "128e8c21-5bf6-4b10-a49b-fc3b5014eb84",
-      "name": "New Article (Without Hugo)",
+      "name": "New Article",
       "type": "Template",
       "command": true,
-      "templatePath": "archetypes/article.md",
+      "templatePath": "archetypes/article-ob.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "{{date:YYYYMMDD}}{{time:HHmmss}}"
+        "format": "article_{{date:YYYYMMDD}}{{time:HHmmss}}"
       },
       "folder": {
         "enabled": true,
@@ -39,17 +39,109 @@
     },
     {
       "id": "58322bd0-beff-4da9-b6da-bdf75b8230da",
-      "name": "Publish Article",
+      "name": "Push",
       "type": "Macro",
       "command": true,
       "macroId": "bc6100bc-b8cb-4788-ac22-428c1565f74d"
     },
     {
       "id": "539d71b4-41c7-46c3-8a7e-2ca99b1ecc6c",
-      "name": "Pull Blog",
+      "name": "Pull",
       "type": "Macro",
       "command": true,
       "macroId": "ede12b66-9728-4fa3-bbfb-71447ecbf43d"
+    },
+    {
+      "id": "b6b0934c-ce57-45ab-bc85-1a0b905d8663",
+      "name": "New Note",
+      "type": "Template",
+      "command": true,
+      "templatePath": "archetypes/article.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "note_{{date:YYYYMMDD}}{{time:HHmmss}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "content/posts/learn/note",
+          "content/posts/learn",
+          "content/posts/learn/poetry"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": true
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "8c9a6b62-732c-40b0-9271-3bf0157b991f",
+      "name": "New Diary",
+      "type": "Template",
+      "command": true,
+      "templatePath": "archetypes/diary-ob.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "diary_{{date:YYYYMMDD}}{{time:HHmmss}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "content/diary"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "6cfea944-a9cf-4682-bba6-120ce9c1fe79",
+      "name": "New Letter",
+      "type": "Template",
+      "command": true,
+      "templatePath": "archetypes/diary-ob.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "letter_{{date:YYYYMMDD}}{{time:HHmmss}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "content/letter"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
     }
   ],
   "macros": [
@@ -90,6 +182,12 @@
       "name": "Publish Article",
       "id": "bc6100bc-b8cb-4788-ac22-428c1565f74d",
       "commands": [
+        {
+          "name": "Git: Commit all changes with specific message",
+          "type": "Obsidian",
+          "id": "f5970cf4-795a-4d8a-851f-f5b46f8c712e",
+          "commandId": "obsidian-git:commit-specified-message"
+        },
         {
           "name": "Git: Push",
           "type": "Obsidian",
