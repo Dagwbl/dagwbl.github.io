@@ -91,7 +91,7 @@
       "templatePath": "archetypes/diary-ob.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "diary_{{date:YYYYMMDD}}{{time:HHmmss}}"
+        "format": "{{date}}"
       },
       "folder": {
         "enabled": true,
@@ -110,8 +110,8 @@
       },
       "openFile": true,
       "openFileInMode": "default",
-      "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
+      "fileExistsMode": "Append to the bottom of the file",
+      "setFileExistsBehavior": true
     },
     {
       "id": "6cfea944-a9cf-4682-bba6-120ce9c1fe79",

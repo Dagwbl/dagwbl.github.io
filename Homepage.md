@@ -1,25 +1,31 @@
-> No root, no fruit.
-### **New**
-
-`button-new-article`  `button-new-note`   `button-new-diary`    `button-new-letter`
+```dataview
+task
+from "content"
+where !completed
+limit 10
+```
+ 
+ `button-new-article`  `button-new-note`   `button-new-diary`    `button-new-letter`
 
 **Sync to GitHub**: `button-push`     `button-pull`
 
-### **Draft Box**
+### 📝 **Draft Box**
 ```dataview
 table title AS "Title",date AS "Time"
 from "content"
 where draft=true
 sort date desc
+limit 10
 ```
 
 
-### **Article Box**
+### **📁 Article Box**
 ```dataview
 table title AS "Title",date AS "Time"
 from "content"
 where draft=false
 sort date desc
+limit 10
 ```
 
 
@@ -85,7 +91,7 @@ customTextColor #000
 ```button
 name 🆙 Push
 type command
-action QuickAdd: Publish Article
+action QuickAdd: Push
 color purple
 ```
 ^button-push
@@ -93,7 +99,7 @@ color purple
 ```button
 name 🔃 Pull
 type command
-action QuickAdd: Pull Blog
+action QuickAdd: Pull
 color yellow
 ```
 ^button-pull
