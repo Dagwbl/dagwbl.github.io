@@ -2,5 +2,6 @@
   "textFontFamily": "Helvetica,Arial,SimSun",
   "enabledCssSnippets": [
     "buttons"
-  ]
+  ],
+  "cssTheme": "Minimal"
 }
