@@ -1,0 +1,5 @@
+/* 强制 Emoji 显示为彩色 */
+.emoji-toolbar .emoji {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI Symbol", sans-serif;
+    font-style: normal !important;
+}
