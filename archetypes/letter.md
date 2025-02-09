@@ -2,11 +2,9 @@
 title: "{{date}}"
 date: "{{date}}T{{time:HH:mm:ss}}"
 categories:
-  - diary
+  - letter
 series: 
 tags: 
 draft: true
-mood: 
-weather: 
-location:
+author:
 ---

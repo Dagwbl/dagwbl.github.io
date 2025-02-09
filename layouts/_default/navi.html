@@ -1,6 +1,6 @@
-{{- partial "nav_state.html" . }}
-{{ define "main" }}
 
+{{ define "main" }}
+{{- partial "nav_state.html" . }}
 {{ range .Params.customjscssraw }}
 {{ . | safeHTML }}
 {{ end }}
@@ -14,6 +14,11 @@
     <title>{{ .Title }}</title>
 
     <style>
+        :root {
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+
         html body {
             margin: 0;
             padding: 0;
@@ -23,13 +28,14 @@
             overflow-x: auto;
             overflow-y: hidden;
         }
-
+    
         .container {
             display: flex;
-            /* height: calc(100vh - var(--header-height)); */
             height: 100vh;
+            overflow-x: auto;
+            overflow-y: hidden;
         }
-
+    
         /* 左侧导航 */
         .left-nav {
             width: 180px;
@@ -40,40 +46,33 @@
             transition: width 0.3s ease-in-out;
             position: relative;
         }
-
+    
         .left-nav.collapsed {
             width: 50px;
         }
-
+    
         .nav-toggle {
-            /* position: absolute;
-            right: 10px;
-            bottom: 10px; */
             width: 24px;
             height: 24px;
-            /* background: #fff;
-            border: 1px solid #e8e8e8; */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             z-index: 1000;
-            /* margin-left: 150px; */
             transform: translateX(155px);
             opacity: 0.8;
             transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
         }
         
         .collapsed .nav-toggle {
-            /* margin-left: 0px; */
             transform: translateX(0);
         }
-
+    
         .nav-group {
             margin-bottom: 2px;
         }
-
+    
         .nav-title {
             padding: 2px 4px 0px 4px;
             color: #666;
@@ -85,12 +84,12 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
+    
         .collapsed .nav-title {
             text-align: center;
             font-size: 10px;
         }
-
+    
         .nav-item {
             flex: 1;
             overflow: hidden;
@@ -99,7 +98,7 @@
             padding: 3px 6px;
             font-size: 14px;
         }
-
+    
         .nav-item-wrapper {
             display: flex;
             align-items: center;
@@ -110,13 +109,12 @@
             min-height: 30px;
             padding: 1px 2px;
         }
-
+    
         .nav-item-wrapper:hover {
             background: linear-gradient(to left, transparent, #60708b3d);
             border-radius: 4px;
         }
-
-
+    
         .nav-item span.icon,
         .nav-item-wrapper img {
             width: 16px;
@@ -127,22 +125,20 @@
             margin-right: 8px;
             margin-left: 5px;
         }
-
-
+    
         .nav-item span.icon {
             font-size: 16px;
             line-height: 16px;
             text-align: center;
         }
-
-
+    
         .collapsed .nav-item-wrapper img,
         .collapsed .nav-item span.icon {
             margin-left: 10px;
             width: 16px;
             height: 16px;
         }
-
+    
         .nav-item-wrapper a {
             text-decoration: none;
             color: inherit;
@@ -150,7 +146,7 @@
             flex-direction: row;
             align-items: center;
         }
-
+    
         .external-link {
             font-size: 12px;
             text-decoration: none;
@@ -159,30 +155,29 @@
             opacity: 0;
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
-
+    
         .collapsed .external-link {
             display: none;
         }
-
+    
         .collapsed .nav-item span:not(.icon) {
             display: none;
         }
-
+    
         .nav-item-wrapper:hover .external-link {
             visibility: visible;
             opacity: 0.5;
         }
-
+    
         .nav-item-wrapper.active {
-            /* border-left: 5px solid #607D8B; */
             background: linear-gradient(to left, transparent, #75d4fc7d);
             border-radius: 4px;
         }
-
+    
         .main-content {
             flex: 1;
         }
-
+    
         .content-frame {
             width: 100%;
             height: 100%;
@@ -190,30 +185,40 @@
             background: #fff;
             border-radius: 4px;
         }
-
+    
         /* 移动端样式 */
         @media (max-width: 768px) {
             .left-nav {
                 position: fixed;
                 height: 100%;
                 z-index: 1000;
-                transform: translateX(0);
+                transform: translateX(0) translateY(0%); /* 默认隐藏 */
                 transition: transform 0.3s ease;
             }
-
+    
             .left-nav.collapsed {
-                transform: translateX(-130px);
+                transform: translateX(0); /* 展开 */
+                transform: translateY(97%); /* 隐藏 */
+                background: none;
             }
-
+    
             .main-content {
-                margin-left: 50px;
+                margin-left: 0;
             }
-
-            .nav-toggle {
-                right: -10px;
-            }
+    
+            /* .nav-toggle {
+                position: fixed;
+                left: 30px;
+                top: 10px;
+                z-index: 1001;
+                background: #fff;
+                border: 1px solid #e8e8e8;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transform: translateX(0);
+            } */
         }
     </style>
+    
 </head>
 
 <body>
@@ -278,8 +283,7 @@
         <div class="main-content">
             <iframe src="" id="toolFrame" class="content-frame"
                 sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-downloads allow-presentation allow-top-navigation allow-top-navigation-by-user-activation"
-                allow="fullscreen; geolocation; microphone; camera; midi; clipboard-write; picture-in-picture"
-                scrolling="auto">
+                allow="fullscreen; geolocation; microphone; camera; midi; clipboard-write; picture-in-picture">
             </iframe>
         </div>
     </div>
@@ -335,7 +339,7 @@
                     // 在移动端点击导航项时自动收起侧边栏
                     if (window.innerWidth <= 768) {
                         leftNav.classList.add('collapsed');
-                        navToggle.querySelector('span').textContent = '⟩';
+                        navToggle.querySelector('span').textContent = '▶';
                         localStorage.setItem('navCollapsed', 'true');
                     }
 
