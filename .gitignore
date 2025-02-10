@@ -3,4 +3,4 @@ resources/
 static/component/minesweeper/node_modules/
 *css.map
 *.js.map
-/workspace.json
+.obsidian/workspace.json
