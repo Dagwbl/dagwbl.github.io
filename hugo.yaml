@@ -19,6 +19,11 @@ pygmentsUseClasses: true
 enableGitInfo: true
 
 mainsections: ["posts"]
+ignoreFiles:
+  - \.ignore$  # 忽略所有以 `.ignore` 结尾的文件
+  - ^.obsidian/     # 忽略 `temp` 文件夹及其内容
+  - ^assets/images/old/  # 忽略 `assets/images/old` 文件夹及其内容
+
 # googleAnalytics: UA-123-45
 
 minify:

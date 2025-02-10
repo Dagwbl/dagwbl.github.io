@@ -16,10 +16,10 @@
       icon: "🍅"
       weight: 3
       link: "/component/tomodoro/"
-    - name: "Sharpening Life"
-      # icon: "🔪"
-      weight: 2
-      link: "https://www.yuque.com/dagwbl/rhcp4m?#%20%E3%80%8ASharpening%E3%80%8B"
+#    - name: "Sharpening Life"
+#       icon: "🔪"
+#      weight: 2
+#      link: "https://www.yuque.com/dagwbl/rhcp4m?#%20%E3%80%8ASharpening%E3%80%8B"
 
 
 - category: AI
