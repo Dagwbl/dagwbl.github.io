@@ -142,6 +142,13 @@
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
       "setFileExistsBehavior": false
+    },
+    {
+      "id": "6e96e824-a16d-40ff-92f1-79352dc9701b",
+      "name": "Jump 1note",
+      "type": "Macro",
+      "command": true,
+      "macroId": "ff85fcae-b0bd-4d13-bd17-465507a26588"
     }
   ],
   "macros": [
@@ -206,6 +213,20 @@
           "type": "Obsidian",
           "id": "4425a1ce-b8fe-428f-9c04-e37ebee1c514",
           "commandId": "obsidian-git:pull"
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Jump 1note",
+      "id": "ff85fcae-b0bd-4d13-bd17-465507a26588",
+      "commands": [
+        {
+          "name": "open1note",
+          "type": "UserScript",
+          "id": "6d256e87-52fc-47d4-b80c-2fe2dc23aa69",
+          "path": "assets/code/open1note.js",
+          "settings": {}
         }
       ],
       "runOnStartup": false

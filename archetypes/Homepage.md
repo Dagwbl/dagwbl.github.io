@@ -1,8 +1,12 @@
 ### **✔️ Diary & To-do**
+
 ```dataview
-CALENDAR file.ctime
-from "content/diary"
+CALENDAR date
+FROM "content/diary" 
+WHERE date OR categories = "diary"
 ```
+
+
 ```dataview
 task
 from "content"

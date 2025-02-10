@@ -1,4 +1,7 @@
 {
   "showUnsupportedFiles": true,
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "attachmentFolderPath": "/",
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": true
 }
