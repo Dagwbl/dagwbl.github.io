@@ -1,10 +1,10 @@
 [
-  "dataview",
   "homepage",
   "buttons",
   "OA-file-hider",
   "quickadd",
   "obsidian-minimal-settings",
   "obsidian-emoji-toolbar",
-  "obsidian-git"
+  "obsidian-git",
+  "dataview"
 ]

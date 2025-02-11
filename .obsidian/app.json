@@ -9,6 +9,11 @@
     "i18n/",
     "public/",
     "static/component/",
-    "resources/"
+    "resources/",
+    "layouts/",
+    "*.js",
+    "*.html",
+    "*.css",
+    "/.index\\.md/"
   ]
 }

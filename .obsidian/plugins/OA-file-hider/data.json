@@ -8,6 +8,7 @@
     "layouts",
     "i18n",
     "data",
-    "assets"
+    "assets",
+    "content/_index.md"
   ]
 }
