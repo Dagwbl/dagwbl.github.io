@@ -1,8 +1,14 @@
 {
-  "showUnsupportedFiles": true,
+  "showUnsupportedFiles": false,
   "strictLineBreaks": true,
   "attachmentFolderPath": "static/images",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "i18n/",
+    "public/",
+    "static/component/",
+    "resources/"
+  ]
 }

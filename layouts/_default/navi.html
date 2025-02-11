@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{- partial "nav_state.html" . }}
 {{ range .Params.customjscssraw }}
 {{ . | safeHTML }}
 {{ end }}
@@ -13,6 +12,22 @@
     <title>{{ .Title }}</title>
 
     <style>
+        .hidden {
+            opacity: 0;
+            transform: translateY(-60px);
+            /* 让 header 上移消失，footer 下移消失 */
+            pointer-events: none;
+            /* 禁止交互 */
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        header,
+        footer {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
         :root {
             overflow-x: auto;
             overflow-y: auto;
@@ -193,17 +208,16 @@
                 height: 100%;
                 z-index: 1000;
                 transform: translateX(15) translateY(0%);
-                /* 默认隐藏 */
+                overflow-y: auto;
                 transition: transform 0.3s ease;
             }
-
+            
             .left-nav.collapsed {
-                transform: translateX(0);
-                /* 展开 */
-                transform: translateY(97%);
-                /* 隐藏 */
+                transform: translateX(0) translateY(96%);
                 background: none;
+                width: 23px;
             }
+
 
             .main-content {
                 margin-left: 0;
@@ -289,45 +303,71 @@
             const leftNav = document.querySelector('.left-nav');
             const navToggle = document.getElementById('navToggle');
             const container = document.querySelector('.container');
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
 
-            // 从localStorage获取侧边栏状态，默认为收缩状态
-            const isNavCollapsed = localStorage.getItem('navCollapsed') !== 'false';
+            // 检查是否是首次访问
+            // const isFirstVisit = localStorage.getItem('hasVisited') === null;
+
+            // 获取导航栏状态，首次访问默认展开
+            let isNavCollapsed;
+            if (localStorage.getItem('navCollapsed') === null) {
+                isNavCollapsed = false;
+                localStorage.setItem('navCollapsed', false);
+            } else {
+                isNavCollapsed = localStorage.getItem('navCollapsed');
+                console.log('isNavCollapsed', isNavCollapsed);
+            }
+
+            function hideWithAnimation() {
+                header.classList.add('hidden');
+                footer.classList.add('hidden');
+                setTimeout(() => {
+                    header.style.display = 'none';
+                    footer.style.display = 'none';
+                }, 300);
+            }
+
+            function showWithAnimation() {
+                header.style.display = '';
+                footer.style.display = '';
+                setTimeout(() => {
+                    header.classList.remove('hidden');
+                    footer.classList.remove('hidden');
+                }, 10);
+            }
 
             // 设置初始状态
-            if (isNavCollapsed) {
-                leftNav.classList.add('collapsed');
-                navToggle.querySelector('span').textContent = '▶';
-                container.style.height = '100vh'; // 初始状态为收缩
-            } else {
+            if (isNavCollapsed === false) {
                 leftNav.classList.remove('collapsed');
                 navToggle.querySelector('span').textContent = '◀';
-                container.style.height = 'calc(100vh - var(--header-height))'; // 初始状态为展开
+                container.style.height = '100vh';
+                showWithAnimation();
+                console.log('isNavCollapsed === false' + (isNavCollapsed === false)+' hide');
+            } else if (isNavCollapsed === true) {
+                leftNav.classList.add('collapsed');
+                navToggle.querySelector('span').textContent = '▶';
+                container.style.height = 'calc(100vh - var(--header-height))';
+                hideWithAnimation();
             }
 
             // 侧边栏切换
             navToggle.addEventListener('click', () => {
                 leftNav.classList.toggle('collapsed');
-                const isCollapsed = leftNav.classList.contains('collapsed');
-                navToggle.querySelector('span').textContent = isCollapsed ? '▶' : '◀';
-                // 保存状态到localStorage
-                localStorage.setItem('navCollapsed', isCollapsed);
-
-                // 根据导航栏状态调整 .container 的高度
-                if (isCollapsed) {
+                if (leftNav.classList.contains('collapsed')) {
+                    navToggle.querySelector('span').textContent = '▶';
+                    localStorage.setItem('navCollapsed', true);
                     container.style.height = '100vh';
+                    hideWithAnimation();
                 } else {
+                    navToggle.querySelector('span').textContent = '◀';
+                    localStorage.setItem('navCollapsed', false);
                     container.style.height = 'calc(100vh - var(--header-height))';
+                    showWithAnimation();
                 }
             });
 
-            // 默认加载 weight 最小的工具
-            const defaultTool = navItems[0];
-            if (defaultTool) {
-                const toolLink = defaultTool.getAttribute('data-tool');
-                toolFrame.src = `${toolLink}/`;
-                defaultTool.parentElement.classList.add('active');
-            }
-
+            // 导航项点击处理
             navItems.forEach(item => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -338,15 +378,6 @@
 
                     const toolLink = item.getAttribute('data-tool');
                     toolFrame.src = toolLink;
-
-                    // 在移动端点击导航项时自动收起侧边栏
-                    if (window.innerWidth <= 768) {
-                        leftNav.classList.add('collapsed');
-                        navToggle.querySelector('span').textContent = '▶';
-                        localStorage.setItem('navCollapsed', 'true');
-                        container.style.height = 'calc(100vh - var(--header-height))';
-                    }
-
                     window.location.hash = item.getAttribute('href').slice(1);
                 });
             });
