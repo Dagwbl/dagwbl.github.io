@@ -2,19 +2,12 @@
   "hidden": true,
   "hiddenList": [
     "themes",
-    "layouts",
-    "data",
-    "hugo.yaml",
-    "assets",
     "static",
-    "content/navi",
-    "content/posts/_index.md",
-    "content/_index.md",
-    "content/about.md",
-    "content/archives.md",
-    "content/archives.zh.md",
-    "content/letters.md",
-    "content/search.md",
-    "content/search.zh.md"
+    "resources",
+    "public",
+    "layouts",
+    "i18n",
+    "data",
+    "assets"
   ]
 }
