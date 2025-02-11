@@ -56,7 +56,7 @@
       "name": "New Note",
       "type": "Template",
       "command": true,
-      "templatePath": "archetypes/article.md",
+      "templatePath": "archetypes/article-ob.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "note_{{date:YYYYMMDD}}{{time:HHmmss}}"
