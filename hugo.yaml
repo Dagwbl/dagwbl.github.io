@@ -17,6 +17,8 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 enableGitInfo: true
+publishDir: "../hugo_public"
+resourceDir: "../hugo_resources"
 
 mainsections: ["posts"]
 ignoreFiles:
