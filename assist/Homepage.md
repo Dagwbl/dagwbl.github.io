@@ -5,13 +5,11 @@ CALENDAR date
 FROM "content/diary" 
 WHERE date OR categories = "diary"
 ```
-
-
-```dataview
-task
-from "content"
-where !completed
-limit 10
+```tasks
+short mode
+hide task count
+not done
+path includes assist
 ```
 
 **New:** `button-new-article` `button-new-note`  `button-new-letter`
@@ -154,4 +152,4 @@ type command
 action QuickAdd: Jump 1note
 ```
 ^button-jump-1note
-- 🍅 (pomodoro::WORK) (duration:: 25m) (begin:: 2025-02-12 15:34) - (end:: 2025-02-12 16:00)
+

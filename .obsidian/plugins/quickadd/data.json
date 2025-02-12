@@ -156,26 +156,26 @@
       "type": "Capture",
       "command": true,
       "appendLink": false,
-      "captureTo": "content/diary/{{date}}",
+      "captureTo": "assist/To-do.md",
       "captureToActiveFile": false,
       "createFileIfItDoesntExist": {
         "enabled": true,
-        "createWithTemplate": true,
+        "createWithTemplate": false,
         "template": "archetypes/diary-ob.md"
       },
       "format": {
-        "enabled": false,
-        "format": ""
+        "enabled": true,
+        "format": "{{mvalue}} [🍅:: 5]"
       },
       "insertAfter": {
-        "enabled": true,
+        "enabled": false,
         "after": "### To-do",
         "insertAtEnd": true,
         "considerSubsections": false,
         "createIfNotFound": true,
         "createIfNotFoundLocation": "bottom"
       },
-      "prepend": false,
+      "prepend": true,
       "task": true,
       "openFileInNewTab": {
         "enabled": false,
@@ -310,7 +310,7 @@
   ],
   "inputPrompt": "single-line",
   "devMode": false,
-  "templateFolderPath": "",
+  "templateFolderPath": "archetypes",
   "announceUpdates": true,
   "version": "1.11.5",
   "disableOnlineFeatures": true,
