@@ -306,8 +306,6 @@
             const header = document.querySelector('header');
             const footer = document.querySelector('footer');
 
-            // 检查是否是首次访问
-            // const isFirstVisit = localStorage.getItem('hasVisited') === null;
 
             // 获取导航栏状态，首次访问默认展开
             let isNavCollapsed;
@@ -366,6 +364,14 @@
                     showWithAnimation();
                 }
             });
+
+            // 默认加载 weight 最小的工具
+            const defaultTool = navItems[0];
+            if (defaultTool) {
+                const toolLink = defaultTool.getAttribute('data-tool');
+                toolFrame.src = `${toolLink}/`;
+                defaultTool.parentElement.classList.add('active');
+            }
 
             // 导航项点击处理
             navItems.forEach(item => {
