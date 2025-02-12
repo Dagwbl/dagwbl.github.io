@@ -1,7 +1,6 @@
 {
   "hidden": true,
   "hiddenList": [
-    "themes",
     "static",
     "resources",
     "public",
@@ -9,6 +8,6 @@
     "i18n",
     "data",
     "assets",
-    "content/_index.md"
+    "themes"
   ]
 }
