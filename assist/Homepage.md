@@ -14,7 +14,10 @@ where !completed
 limit 10
 ```
 
-**New:** `button-new-article`  `button-new-note`   `button-new-diary`    `button-new-letter`
+**New:** `button-new-article` `button-new-note`  `button-new-letter`
+ `button-new-diary`  
+ 
+**Record:** `button-record-now` `button-new-todo` `button-jump-1note`
 
 **Sync to GitHub:** `button-push`     `button-pull`
 
@@ -93,7 +96,6 @@ dv.paragraph(result);
 name 📃Article
 type command
 action QuickAdd: New Article (Without Hugo)
-color blue
 ```
 ^button-new-article
 
@@ -101,7 +103,6 @@ color blue
 name 📓 Diary
 type command
 action QuickAdd: New Diary
-color green
 ```
 ^button-new-diary
 
@@ -109,7 +110,6 @@ color green
 name 🗒️ Note
 type command
 action QuickAdd: New Note
-color AliceBlue
 ```
 ^button-new-note
 
@@ -117,8 +117,6 @@ color AliceBlue
 name 💌 Letter
 type command
 action QuickAdd: New Letter
-customColor #F54545
-customTextColor #000
 ```
 ^button-new-letter
 
@@ -126,7 +124,6 @@ customTextColor #000
 name 🆙 Push
 type command
 action QuickAdd: Push
-color purple
 ```
 ^button-push
 
@@ -134,6 +131,27 @@ color purple
 name 🔃 Pull
 type command
 action QuickAdd: Pull
-color yellow
 ```
 ^button-pull
+
+```button
+name 🕣 Now
+type command
+action QuickAdd: Add a Record to Diary
+```
+^button-record-now
+
+```button
+name ☑️ To-do
+type command
+action QuickAdd: Add a To-do to Diary
+```
+^button-new-todo
+
+```button
+name 📤 Jump 1note
+type command
+action QuickAdd: Jump 1note
+```
+^button-jump-1note
+- 🍅 (pomodoro::WORK) (duration:: 25m) (begin:: 2025-02-12 15:34) - (end:: 2025-02-12 16:00)

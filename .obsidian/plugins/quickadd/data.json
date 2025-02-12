@@ -149,6 +149,76 @@
       "type": "Macro",
       "command": true,
       "macroId": "ff85fcae-b0bd-4d13-bd17-465507a26588"
+    },
+    {
+      "id": "61c74998-e37b-4e52-856c-81106139e211",
+      "name": "Add a To-do to Diary",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "content/diary/{{date}}",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "archetypes/diary-ob.md"
+      },
+      "format": {
+        "enabled": false,
+        "format": ""
+      },
+      "insertAfter": {
+        "enabled": true,
+        "after": "### To-do",
+        "insertAtEnd": true,
+        "considerSubsections": false,
+        "createIfNotFound": true,
+        "createIfNotFoundLocation": "bottom"
+      },
+      "prepend": false,
+      "task": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "8e81d692-d0a5-4fe4-924f-9158c6aa33a7",
+      "name": "Add a Record to Diary",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "content/diary/{{date}}",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "archetypes/diary-ob.md"
+      },
+      "format": {
+        "enabled": true,
+        "format": "### {{time}} {{mvalue}}\n{{selected}}\n"
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": true,
+        "considerSubsections": false,
+        "createIfNotFound": true,
+        "createIfNotFoundLocation": "bottom"
+      },
+      "prepend": true,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default"
     }
   ],
   "macros": [
@@ -189,6 +259,12 @@
       "name": "Publish Article",
       "id": "bc6100bc-b8cb-4788-ac22-428c1565f74d",
       "commands": [
+        {
+          "name": "Git: Pull",
+          "type": "Obsidian",
+          "id": "1ac45fa7-c5c4-4c31-87b1-9493671dbf4d",
+          "commandId": "obsidian-git:pull"
+        },
         {
           "name": "Git: Commit all changes with specific message",
           "type": "Obsidian",

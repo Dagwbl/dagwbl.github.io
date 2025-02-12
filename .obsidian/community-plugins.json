@@ -1,10 +1,13 @@
 [
+  "obsidian-git",
+  "quickadd",
+  "obsidian-emoji-toolbar",
+  "dataview",
   "homepage",
   "buttons",
   "OA-file-hider",
-  "quickadd",
   "obsidian-minimal-settings",
-  "obsidian-emoji-toolbar",
-  "obsidian-git",
-  "dataview"
+  "obsidian-export-image",
+  "pomodoro-timer",
+  "obsidian-tasks-plugin"
 ]
