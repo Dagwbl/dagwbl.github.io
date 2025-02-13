@@ -8,6 +8,12 @@
     "i18n",
     "data",
     "assets",
-    "themes"
+    "themes",
+    "content/search.zh.md",
+    "content/search.md",
+    "content/letters.md",
+    "content/archives.zh.md",
+    "content/archives.md",
+    "content/about.md"
   ]
 }
