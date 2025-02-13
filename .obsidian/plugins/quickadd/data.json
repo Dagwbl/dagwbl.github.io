@@ -156,7 +156,7 @@
       "type": "Capture",
       "command": true,
       "appendLink": false,
-      "captureTo": "content/diary/{{date}}",
+      "captureTo": "assist/To-do.md",
       "captureToActiveFile": false,
       "createFileIfItDoesntExist": {
         "enabled": true,
@@ -168,14 +168,14 @@
         "format": ""
       },
       "insertAfter": {
-        "enabled": true,
+        "enabled": false,
         "after": "### To-do",
         "insertAtEnd": true,
         "considerSubsections": false,
         "createIfNotFound": true,
         "createIfNotFoundLocation": "bottom"
       },
-      "prepend": false,
+      "prepend": true,
       "task": true,
       "openFileInNewTab": {
         "enabled": false,
@@ -200,7 +200,7 @@
       },
       "format": {
         "enabled": true,
-        "format": "### {{time}} {{mvalue}}\n{{selected}} <% tp.file.cursor(1) %>\n"
+        "format": "### {{time}} {{VALUE: Now}}\n{{selected}} \\n{{VALUE: What I want to say}}\\n\n"
       },
       "insertAfter": {
         "enabled": false,
@@ -217,7 +217,7 @@
         "direction": "vertical",
         "focus": true
       },
-      "openFile": true,
+      "openFile": false,
       "openFileInMode": "default"
     }
   ],
