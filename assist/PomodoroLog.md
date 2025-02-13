@@ -1,0 +1,8 @@
+- 🍅 (pomodoro::WORK) (duration:: 25m) (begin:: 2025-02-13 08:54) - (end:: 2025-02-13 09:19)
+- 🥤 (pomodoro::BREAK) (duration:: 5m) (begin:: 2025-02-13 09:19) - (end:: 2025-02-13 09:24)
+- 🍅 (pomodoro::WORK) (duration:: 25m) (begin:: 2025-02-13 09:24) - (end:: 2025-02-13 09:49)
+- 🥤 (pomodoro::BREAK) (duration:: 5m) (begin:: 2025-02-13 09:49) - (end:: 2025-02-13 10:28)
+- 🍅 (pomodoro::WORK) (duration:: 25m) (begin:: 2025-02-13 10:28) - (end:: 2025-02-13 10:53)
+- 🥤 (pomodoro::BREAK) (duration:: 5m) (begin:: 2025-02-13 10:53) - (end:: 2025-02-13 10:58)
+- 🍅 (pomodoro::WORK) (duration:: 25m) (begin:: 2025-02-13 10:58) - (end:: 2025-02-13 11:23)
+- 🥤 (pomodoro::BREAK) (duration:: 5m) (begin:: 2025-02-13 11:23) - (end:: 2025-02-13 11:28)

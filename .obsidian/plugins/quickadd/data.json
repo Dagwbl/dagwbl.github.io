@@ -156,26 +156,26 @@
       "type": "Capture",
       "command": true,
       "appendLink": false,
-      "captureTo": "assist/To-do.md",
+      "captureTo": "content/diary/{{date}}",
       "captureToActiveFile": false,
       "createFileIfItDoesntExist": {
         "enabled": true,
-        "createWithTemplate": false,
+        "createWithTemplate": true,
         "template": "archetypes/diary-ob.md"
       },
       "format": {
-        "enabled": true,
-        "format": "{{mvalue}} [🍅:: 5]"
+        "enabled": false,
+        "format": ""
       },
       "insertAfter": {
-        "enabled": false,
+        "enabled": true,
         "after": "### To-do",
         "insertAtEnd": true,
         "considerSubsections": false,
         "createIfNotFound": true,
         "createIfNotFoundLocation": "bottom"
       },
-      "prepend": true,
+      "prepend": false,
       "task": true,
       "openFileInNewTab": {
         "enabled": false,
@@ -200,7 +200,7 @@
       },
       "format": {
         "enabled": true,
-        "format": "### {{time}} {{mvalue}}\n{{selected}}\n"
+        "format": "### {{time}} {{mvalue}}\n{{selected}} <% tp.file.cursor(1) %>\n"
       },
       "insertAfter": {
         "enabled": false,
