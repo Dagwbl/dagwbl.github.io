@@ -70,23 +70,17 @@ da[7] = noteDraftNum;
 da[8] = diaryDraftNum;
 da[9] = letterDraftNum;
 
-// 对应打印la和da
 let result = "";
-result += "| Type | Published | Draft |\n";
-result += "| --- | --- | --- |\n";
-result += `| ${la[0]} | ${da[0]} | ${da[1]} |\n`;
-result += `| ${la[2]} | ${da[2]} | ${da[6]} |\n`;
-result += `| ${la[3]} | ${da[3]} | ${da[7]} |\n`;
-result += `| ${la[4]} | ${da[4]} | ${da[8]} |\n`;
-result += `| ${la[5]} | ${da[5]} | ${da[9]} |\n`;
+result += "| Type  | " + la[0] + " | " + la[2] + " | " + la[3] + " | " + la[4] + " | " + la[5] + " |\n";
+result += "| --- | :-: | :-: | :-: | :-: | :-: |\n";
+result += `| Published | ${da[0]} | ${da[2]} | ${da[3]} | ${da[4]} | ${da[5]} |\n`;
+result += `| Draft | ${da[1]} | ${da[6]} | ${da[7]} | ${da[8]} | ${da[9]} |\n`;
 
 // 展示信息
 dv.paragraph(result);
 
 
 ```
-
-
 
 ### 🅰️ Shortcuts
 
@@ -152,4 +146,8 @@ type command
 action QuickAdd: Jump 1note
 ```
 ^button-jump-1note
+
+
+
+
 

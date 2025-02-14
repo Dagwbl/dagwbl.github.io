@@ -200,7 +200,7 @@
       },
       "format": {
         "enabled": true,
-        "format": "### {{time}} {{VALUE: Now}}\n{{VALUE: What I want to say}}\n"
+        "format": "### {{time}} {{VALUE: Now}}\n\n{{VALUE: What I want to say}}\n"
       },
       "insertAfter": {
         "enabled": false,
