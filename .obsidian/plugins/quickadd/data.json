@@ -96,7 +96,7 @@
       "folder": {
         "enabled": true,
         "folders": [
-          "content/posts/diary"
+          "content/diary"
         ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false,
@@ -249,6 +249,13 @@
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
       "setFileExistsBehavior": false
+    },
+    {
+      "id": "c735786c-5285-4dfc-9e9f-a5ac1309e8d1",
+      "name": "Hugo Server",
+      "type": "Macro",
+      "command": true,
+      "macroId": "028773fe-2036-4415-aab6-0aca67c4bc6d"
     }
   ],
   "macros": [
@@ -332,6 +339,20 @@
           "type": "UserScript",
           "id": "6d256e87-52fc-47d4-b80c-2fe2dc23aa69",
           "path": "assets/code/open1note.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Hugo Server",
+      "id": "028773fe-2036-4415-aab6-0aca67c4bc6d",
+      "commands": [
+        {
+          "name": "hugo_server",
+          "type": "UserScript",
+          "id": "9b851f32-8aaf-40c9-ac55-ad05efb0f672",
+          "path": "assets/code/hugo_server.js",
           "settings": {}
         }
       ],

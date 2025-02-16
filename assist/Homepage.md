@@ -11,13 +11,13 @@ hide task count
 not done
 path includes assist
 ```
-
-**New:** `button-new-article` `button-new-note`  `button-new-letter`
- `button-new-diary`  
  
 **Record:** `button-record-now` `button-new-todo` `button-jump-1note`
 
-**Sync to GitHub:** `button-push`     `button-pull`
+**New:** `button-new-article` `button-new-note`  `button-new-letter`
+ `button-new-diary`  
+
+**Sync to GitHub:** `button-push`  `button-pull` `button-hugo-server`
 
 ### 📝 **Draft Box**
 ```dataview
@@ -106,7 +106,7 @@ action QuickAdd: New Note
 ^button-new-note
 
 ```button
-name 💌 Letter
+name ✉️ Letter
 type command
 action QuickAdd: New Letter
 ```
@@ -136,7 +136,7 @@ action QuickAdd: Add a Record to Diary
 ```button
 name ☑️ To-do
 type command
-action QuickAdd: Add a To-do to Diary
+action QuickAdd: Add a To-do
 ```
 ^button-new-todo
 
@@ -146,6 +146,13 @@ type command
 action QuickAdd: Jump 1note
 ```
 ^button-jump-1note
+
+```button
+name 💻 Hugo Server
+type command
+action QuickAdd: Hugo Server
+```
+^button-hugo-server
 
 
 

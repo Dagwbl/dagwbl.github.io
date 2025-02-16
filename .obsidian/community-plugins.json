@@ -9,5 +9,6 @@
   "obsidian-minimal-settings",
   "obsidian-export-image",
   "obsidian-tasks-plugin",
-  "templater-obsidian"
+  "templater-obsidian",
+  "highlightr-plugin"
 ]

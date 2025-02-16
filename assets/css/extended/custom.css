@@ -24,7 +24,7 @@
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
-    --blockquote-bg: aliceblue;
+    --blockquote-bg: rgba(220, 228, 228, 0.148);
     --font-size-base: 18px;
     --font-size-add: 1px;
 }
@@ -42,14 +42,10 @@
     --blockquote-bg: #3d4349;
 }
 
-.first-entry {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 250px;
-    margin: var(--gap)0 calc(var(--gap) * 1.6);
-}
+/* 修复列表项不显示符号的问题 */
+.home-info ul {
+    padding-inline-start:20px}
+
 
 .main {
     position: relative;
@@ -85,7 +81,6 @@
 
 .post-content blockquote {
     background-color: var(--blockquote-bg);
-    border-radius: 3px;
 }
 
 
