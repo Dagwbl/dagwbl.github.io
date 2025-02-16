@@ -1,8 +1,9 @@
 :root {
-    --nav-width: 1380px;
+    /* --nav-width: 1024px; */
     --article-width: 650px;
     --toc-width: 300px;
 }
+
 
 .toc {
     margin: 0 2px 40px 2px;
@@ -59,13 +60,11 @@
     padding: 0px 15px 15px 20px;
     font-size: 16px;
 
-    /*目录显示高度*/
     max-height: 83vh;
     overflow-y: auto;
 }
 
-.toc .inner::-webkit-scrollbar-thumb {  /*滚动条*/
-    background: var(--border);
+.toc .inner::-webkit-scrollbar-thumb {
     border: 7px solid var(--theme);
     border-radius: var(--radius);
 }
@@ -87,4 +86,4 @@
 
 .profile_inner .buttons {
     max-width: 600px;
-}
+} 

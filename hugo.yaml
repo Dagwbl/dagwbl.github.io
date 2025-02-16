@@ -70,16 +70,16 @@ languages:
           weight: 7
     params:
       homeInfoParams:
-        Title: "Timid Thoughts  💫 "
-        Content: >
-          *O troupe of little vagrants of the world, leave your footprints in my words.* 
-
-          - Do not linger to gather flowers to keep them, but walk on, for flowers will keep themselves blooming all your way.
+        Title: "Timid Thoughts 🌿"
+        Content: |
+          👋 **O troupe of little vagrants of the world, leave your footprints in my words.** 
 
           - Thoughts feeds itself with its own words and grows.
 
+          - Do not linger to gather flowers to keep them, but walk on, for flowers will keep themselves blooming all your way.
+
           - We, the rustling leaves, have a voice that answers the storms, but who are you so silent?
-          
+
       profileMode:
         enabled: false
         title: Huh, still alive!
@@ -96,50 +96,50 @@ languages:
             url: guide
           - name: 📎Collect
             url: cheatsheet
-
-  zh:
-    languageName: "Chinese"
-    weight: 3
-    taxonomies:
-      language: zh
-      tag: tags
-      category: categories
-      series: series
-    menu:
-      main:
-        - name: 文章
-          url: archives
-          weight: 5
-        - name: 系列
-          url: series
-          weight: 6
-        - name: 搜索
-          url: search/
-          weight: 10
-        - name: 标签
-          url: tags
-          weight: 10
-    # custom params for each language should be under [langcode].parms - hugo v0.120.0
-    params:
-      homeInfoParams:
-        Title: "呜呼~ \U0001F44B"
-        Content: 还活着！还活着！这感觉真好！
-      profileMode:
-        enabled: true
-        title: "呜呼~ \U0001F44B"
-        imageUrl: "images/home-icon.png"
-        imageTitle: ZJeapo
-        imageWidth: 90
-        imageHeight: 90
-        buttons:
-          - name: 📆时间轴
-            url: archives
-          - name: 🕸️文章
-            url: posts
-          - name: 🗃️教程
-            url: guide
-          - name: 📒小纸条
-            url: cheatsheet
+  # disable multi-language support
+  # zh:
+  #   languageName: "Chinese"
+  #   weight: 3
+  #   taxonomies:
+  #     language: zh
+  #     tag: tags
+  #     category: categories
+  #     series: series
+  #   menu:
+  #     main:
+  #       - name: 文章
+  #         url: archives
+  #         weight: 5
+  #       - name: 系列
+  #         url: series
+  #         weight: 6
+  #       - name: 搜索
+  #         url: search/
+  #         weight: 10
+  #       - name: 标签
+  #         url: tags
+  #         weight: 10
+  #   # custom params for each language should be under [langcode].parms - hugo v0.120.0
+  #   params:
+  #     homeInfoParams:
+  #       Title: "呜呼~ \U0001F44B"
+  #       Content: 还活着！还活着！这感觉真好！
+  #     profileMode:
+  #       enabled: false
+  #       title: "呜呼~ \U0001F44B"
+  #       imageUrl: "images/home-icon.png"
+  #       imageTitle: ZJeapo
+  #       imageWidth: 90
+  #       imageHeight: 90
+  #       buttons:
+  #         - name: 📆时间轴
+  #           url: archives
+  #         - name: 🕸️文章
+  #           url: posts
+  #         - name: 🗃️教程
+  #           url: guide
+  #         - name: 📒小纸条
+  #           url: cheatsheet
 
 outputs:
   home:
@@ -149,7 +149,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  description: "A blog about technology, programming, and life."
   author: ZJeapo
   dateFormat: "2006-01-02"
   # author: ["Me", "You"] # multiple authors
