@@ -1,16 +1,20 @@
 ---
-title: "Ape's correction"
+title: Ape's correction
 date: 2024-03-25
-series: ["ape","English learning"]
-categories: ["English learning"]
-tags: [reading, writing]
+series:
+  - pte
+categories:
+  - english
+tags:
+  - reading
+  - writing
 language: en
 showToc: true
 TocOpen: true
 draft: false
 math: false
 hidemeta: false
-description: "Some notes about English writing."
+description: Some notes about English writing.
 hideSummary: false
 searchHidden: true
 ShowReadingTime: true
@@ -19,12 +23,6 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-# cover:
-#     image: "/images/wallpaperflare.com_flower.jpg" # image path/url
-#     alt: "<alt text>" # alt text
-#     caption: "<text>" # display caption under cover
-#     relative: true # when using page bundles set this to true
-#     hidden: false # only hide on current single pageL'ch
 ---
 
 

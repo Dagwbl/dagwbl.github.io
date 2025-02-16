@@ -1,10 +1,11 @@
 ---
-title: "April 2024"
+title: April 2024
 date: 2024-04-30
-tags: [debate]
-series: ["2024"]
-categories: diary
-tags: [footprint]
+tags:
+  - footprint
+series: []
+categories:
+  - diary
 language: zh
 tocOpen: true
 math: false

@@ -1,9 +1,12 @@
 ---
-title: "Duolingo's correction"
-date: '2024-03-20T20:41:20+08:00'
-series: ["English learning"]
-categories: []
-tags: [duolingo]
+title: Duolingo's correction
+date: 2024-03-20T20:41:20+08:00
+series:
+  - duolingo
+categories:
+  - english
+tags:
+  - duolingo
 language: en
 showToc: true
 TocOpen: true
@@ -11,11 +14,10 @@ draft: false
 math: false
 hidemeta: false
 comments: false
-description: "Some notes about English writing."
-canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
-disableShare: false
+description: Some notes about English writing.
+canonicalURL: https://canonical.url/to/page
 disableHLJS: false
+disableShare: false
 hideSummary: false
 searchHidden: true
 ShowReadingTime: true
@@ -24,7 +26,6 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-
 ---
 
 

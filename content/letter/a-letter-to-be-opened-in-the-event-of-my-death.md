@@ -1,3 +1,14 @@
+---
+title: Dearest Clare,
+date: 1997-02-08T23:58:14
+categories:
+  - letter
+series: 
+tags: 
+draft: false
+author: Henry
+---
+
 December 10, 2006
 
 Dearest Clare, 
