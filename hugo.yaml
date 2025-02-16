@@ -20,7 +20,11 @@ enableGitInfo: true
 publishDir: "../hugo_public"
 resourceDir: "../hugo_resources"
 
-mainsections: ["posts"]
+mainsections: 
+  - posts
+  # - diary
+  # - letter
+  # - navi
 ignoreFiles:
   - \.ignore$  # 忽略所有以 `.ignore` 结尾的文件
   - ^.obsidian/     # 忽略 `temp` 文件夹及其内容
@@ -46,15 +50,15 @@ languages:
         - name: Archives
           url: archives
           weight: 1
-        # - name: Category
-          # url: categories/
-          # weight: 2
-        # - name: Series
-        #   url: series
-        #   weight: 3
-        - name: Tags
-          url: tags/
-          weight: 4
+        - name: Categories
+          url: categories/
+          weight: 2
+        - name: Series
+          url: series
+          weight: 3
+        # - name: Tag
+        #   url: tags/
+        #   weight: 4
         - name: Search
           url: search/
           weight: 5
@@ -64,9 +68,6 @@ languages:
         - name: About
           url: /about
           weight: 7
-        # - name: 🦠
-        #   url: https://search.chongbuluo.com/
-        #   weight: 8
     params:
       homeInfoParams:
         Title: "Timid Thoughts  💫 "
@@ -80,7 +81,7 @@ languages:
           - We, the rustling leaves, have a voice that answers the storms, but who are you so silent?
           
       profileMode:
-        enabled: true
+        enabled: false
         title: Huh, still alive!
         imageUrl: "images/home-icon.png"
         imageTitle: ZJeapo
@@ -158,6 +159,7 @@ params:
   ShowShareButtons: false
   ShowReadingTime: true
   # disableSpecial1stPost: true
+  disableScrollToTop: false
   displayFullLangName: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
@@ -169,6 +171,7 @@ params:
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true
+  TocOpen: true
   comments: true
   busuanzi:
     enable: false
@@ -217,7 +220,7 @@ params:
   assets:
     disableHLJS: true
     favicon: "favicon/favicon.svg"
-    # favicon16x16: "<link / abs url>"
+    favicon16x16: "favicon/favicon.svg"
     # favicon32x32: "<link / abs url>"
     # apple_touch_icon: "<link / abs url>"
     # safari_pinned_tab: "<link / abs url>"
@@ -227,14 +230,14 @@ params:
   #     hiddenInList: true # hide on list pages and home
   #     hiddenInSingle: true # hide on single page
 
-  # fuseOpts:
-  #     isCaseSensitive: false
-  #     shouldSort: true
-  #     location: 0
-  #     distance: 1000
-  #     threshold: 0.4
-  #     minMatchCharLength: 0
-  #     keys: ["title", "permalink", "summary", "content"]
+  fuseOpts:
+      isCaseSensitive: false
+      shouldSort: true
+      location: 0
+      distance: 1000
+      threshold: 0.4
+      minMatchCharLength: 0
+      keys: ["title", "permalink", "summary", "content"]
 
 markup:
   dfaultMarkdownHandler: goldmark
@@ -257,10 +260,10 @@ markup:
       xHTML: false
   highlight:
     codeFences: true
-    guessSyntax: false
+    guessSyntax: true
     hl_Lines: ""
     lineNoStart: 1
-    lineNos: false
+    lineNos: true
     lineNumbersInTable: true
     noClasses: true
     style: monokai

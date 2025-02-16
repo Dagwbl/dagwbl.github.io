@@ -64,9 +64,9 @@
       "folder": {
         "enabled": true,
         "folders": [
-          "content/posts/learn/note",
-          "content/posts/learn",
-          "content/posts/learn/poetry"
+          "content/posts/note",
+          "content/posts/note/learn",
+          "content/posts/note/colloection"
         ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false,
@@ -96,7 +96,7 @@
       "folder": {
         "enabled": true,
         "folders": [
-          "content/diary"
+          "content/posts/diary"
         ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false,
@@ -152,7 +152,7 @@
     },
     {
       "id": "61c74998-e37b-4e52-856c-81106139e211",
-      "name": "Add a To-do to Diary",
+      "name": "Add a To-do",
       "type": "Capture",
       "command": true,
       "appendLink": false,
@@ -219,6 +219,36 @@
       },
       "openFile": false,
       "openFileInMode": "default"
+    },
+    {
+      "id": "fd4b2076-bf91-41fe-ada1-8d01e81fb5af",
+      "name": "New Note (long)",
+      "type": "Template",
+      "command": true,
+      "templatePath": "archetypes/article-ob.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "content/posts/note/{{date:YYYYMMDD}}{{time:HHmmss}}/index"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "content/posts/note"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": true
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
     }
   ],
   "macros": [

@@ -1,11 +1,15 @@
 ---
-title: 'The stray birds'
+title: The stray birds
 date: 2024-03-16T14:03:55+08:00
 draft: false
-series: [product, literacy]
-categories: [poem]
-tags: [poem]
-comments: ["So beautiful."]
+series:
+  - poem
+categories:
+  - collection
+tags:
+  - poem
+comments:
+  - So beautiful.
 language: en
 math: false
 ---

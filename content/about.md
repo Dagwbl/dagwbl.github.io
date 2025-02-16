@@ -1,14 +1,18 @@
 ---
-title: 'About 🎉'
-date: '2023-04-01T20:54:09+08:00'
-series: ["English learning"]
-categories: [post]
-tags: [link]
+title: About 🎉
+date: 2023-04-01T20:54:09+08:00
+series:
+  - hugo
+categories:
+  - post
+tags:
+  - link
 language: en
-showToc: true
+showToc: false
 TocOpen: true
 hidemeta: true
-customcss: "/css/no-decoration.css"
+customcss:
+  - /css/no-decoration.css
 ---
 
 
@@ -22,6 +26,9 @@ customcss: "/css/no-decoration.css"
 |Blog's source|https://github.com/Dagwbl/dagwbl.github.io|
 
 The world puts off its mask of vastness to its lover. It becomes small as one song, as one kiss of the eternal.
+
+
+{{<collopse title="Friends">}}
 
 ## 🗺️ Friends
 
@@ -42,7 +49,7 @@ The world puts off its mask of vastness to its lover. It becomes small as one so
 
 {{<friend url="https://wangyunzi.com/" name="长街短梦" logo="https://wangyunzi.com/usr/themes/beargallery/assets/images/icp.png" word="此行山高路远，我只剩口袋玫瑰一片">}}
 
-{{<collopse title="Other friends">}}
+
 
 {{<friend url="https://www.sulvblog.cn" name="Sulv's Blog" logo="https://www.sulvblog.cn/img/Q.gif" word="一个记录技术、阅读、生活的博客">}}
 

@@ -1,8 +1,7 @@
 ---
 title: To Huan
 date: 2024-04-16
-searchHiden: true
-hidden: true
+categories: letter
 ---
 
 ## May 1st

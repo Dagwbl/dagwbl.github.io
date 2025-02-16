@@ -1,13 +1,19 @@
 ---
-title: 'Debug footprint'
-date: "2024-03-14"
+title: Debug footprint
+date: 2024-03-14
 mdate: 2025-02-05
-series: ["code"]
-categories: debug
+series:
+  - debug
+categories:
+  - develop
 draft: false
-tags: ["bug", "hugo", "git", todo]
+tags:
+  - bug
+  - hugo
+  - git
+  - todo
 math: true
-language: "en"
+language: en
 ---
 
 
