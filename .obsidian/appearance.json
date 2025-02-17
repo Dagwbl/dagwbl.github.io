@@ -1,10 +1,12 @@
 {
-  "textFontFamily": "Helvetica,Noto Color Emoji",
+  "textFontFamily": "Helvetica,Noto Color Emoji,SimSun",
   "enabledCssSnippets": [
     "buttons",
     "emoji"
   ],
   "cssTheme": "Minimal",
   "interfaceFontFamily": "Helvetica,Noto Color Emoji",
-  "showViewHeader": true
+  "showViewHeader": true,
+  "baseFontSizeAction": true,
+  "baseFontSize": 19
 }

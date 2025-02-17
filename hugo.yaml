@@ -53,9 +53,9 @@ languages:
         - name: Categories
           url: categories/
           weight: 2
-        - name: Series
-          url: series
-          weight: 3
+        # - name: Series
+        #   url: series
+        #   weight: 3
         # - name: Tag
         #   url: tags/
         #   weight: 4
@@ -65,9 +65,9 @@ languages:
         - name: 🧭
           url: /navi/
           weight: 99
-        - name: About
-          url: /about
-          weight: 7
+        # - name: About
+        #   url: /about
+        #   weight: 7
     params:
       homeInfoParams:
         Title: "Timid Thoughts 🌿"
@@ -193,8 +193,8 @@ params:
       url: "https://twitter.com"
     - name: bilibili
       url: "https://bilibili.com"
-    - name: tiktok
-      url: "https://tiktok.com"
+    # - name: tiktok
+    #   url: "https://tiktok.com"
     - name: Discord
       title: Join discord community
       url: "https://discord.com/channels/@me"
