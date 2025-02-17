@@ -87,7 +87,7 @@ dv.paragraph(result);
 ```button
 name 📃Article
 type command
-action QuickAdd: New Article (Without Hugo)
+action QuickAdd: New Article
 ```
 ^button-new-article
 
