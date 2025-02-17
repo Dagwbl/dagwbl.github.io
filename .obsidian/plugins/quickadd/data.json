@@ -8,6 +8,27 @@
       "macroId": "713d21d5-2930-4f6b-9e07-0563a4d88ffb"
     },
     {
+      "id": "c735786c-5285-4dfc-9e9f-a5ac1309e8d1",
+      "name": "Hugo Server",
+      "type": "Macro",
+      "command": true,
+      "macroId": "028773fe-2036-4415-aab6-0aca67c4bc6d"
+    },
+    {
+      "id": "58322bd0-beff-4da9-b6da-bdf75b8230da",
+      "name": "Push",
+      "type": "Macro",
+      "command": true,
+      "macroId": "bc6100bc-b8cb-4788-ac22-428c1565f74d"
+    },
+    {
+      "id": "539d71b4-41c7-46c3-8a7e-2ca99b1ecc6c",
+      "name": "Pull",
+      "type": "Macro",
+      "command": true,
+      "macroId": "ede12b66-9728-4fa3-bbfb-71447ecbf43d"
+    },
+    {
       "id": "128e8c21-5bf6-4b10-a49b-fc3b5014eb84",
       "name": "New Article",
       "type": "Template",
@@ -32,24 +53,10 @@
         "direction": "vertical",
         "focus": true
       },
-      "openFile": false,
+      "openFile": true,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
       "setFileExistsBehavior": false
-    },
-    {
-      "id": "58322bd0-beff-4da9-b6da-bdf75b8230da",
-      "name": "Push",
-      "type": "Macro",
-      "command": true,
-      "macroId": "bc6100bc-b8cb-4788-ac22-428c1565f74d"
-    },
-    {
-      "id": "539d71b4-41c7-46c3-8a7e-2ca99b1ecc6c",
-      "name": "Pull",
-      "type": "Macro",
-      "command": true,
-      "macroId": "ede12b66-9728-4fa3-bbfb-71447ecbf43d"
     },
     {
       "id": "b6b0934c-ce57-45ab-bc85-1a0b905d8663",
@@ -67,6 +74,36 @@
           "content/posts/note",
           "content/posts/note/learn",
           "content/posts/note/colloection"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": true
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "fd4b2076-bf91-41fe-ada1-8d01e81fb5af",
+      "name": "New Note (long)",
+      "type": "Template",
+      "command": false,
+      "templatePath": "archetypes/article-ob.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "content/posts/note/{{date:YYYYMMDD}}{{time:HHmmss}}/index"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "content/posts/note"
         ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false,
@@ -221,41 +258,11 @@
       "openFileInMode": "default"
     },
     {
-      "id": "fd4b2076-bf91-41fe-ada1-8d01e81fb5af",
-      "name": "New Note (long)",
-      "type": "Template",
-      "command": true,
-      "templatePath": "archetypes/article-ob.md",
-      "fileNameFormat": {
-        "enabled": true,
-        "format": "content/posts/note/{{date:YYYYMMDD}}{{time:HHmmss}}/index"
-      },
-      "folder": {
-        "enabled": true,
-        "folders": [
-          "content/posts/note"
-        ],
-        "chooseWhenCreatingNote": false,
-        "createInSameFolderAsActiveFile": false,
-        "chooseFromSubfolders": true
-      },
-      "appendLink": false,
-      "openFileInNewTab": {
-        "enabled": false,
-        "direction": "vertical",
-        "focus": true
-      },
-      "openFile": true,
-      "openFileInMode": "default",
-      "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
-    },
-    {
-      "id": "c735786c-5285-4dfc-9e9f-a5ac1309e8d1",
-      "name": "Hugo Server",
+      "id": "b1f5b185-eb42-4806-9597-a5a328939ade",
+      "name": "File to Folder",
       "type": "Macro",
       "command": true,
-      "macroId": "028773fe-2036-4415-aab6-0aca67c4bc6d"
+      "macroId": "8f58bd60-c4b3-4c2b-af9f-028f5d6e678c"
     }
   ],
   "macros": [
@@ -353,6 +360,20 @@
           "type": "UserScript",
           "id": "9b851f32-8aaf-40c9-ac55-ad05efb0f672",
           "path": "assets/code/hugo_server.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "File to Folder",
+      "id": "8f58bd60-c4b3-4c2b-af9f-028f5d6e678c",
+      "commands": [
+        {
+          "name": "file2folder",
+          "type": "UserScript",
+          "id": "29d5b5d2-2803-46d3-ad8f-5b93604a3251",
+          "path": "assets/code/file2folder.js",
           "settings": {}
         }
       ],
