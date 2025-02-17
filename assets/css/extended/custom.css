@@ -45,16 +45,18 @@
 /* 修复列表项不显示符号的问题 */
 .home-info ul {
     padding-inline-start:20px}
-
-
 .main {
+    font-family: Helvetica,'Helvetica Neue','Times New Roman',"LXGW WenKai",'-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
+}
+
+/* .main {
     position: relative;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
     padding: calc(var(--gap)*0.5);
     
-}
+} */
 
 .logo, #menu {
     /* display: flex; */
@@ -68,8 +70,7 @@
 
 
 .post-content {
-    font-family: '-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans','Helvetica Neue','Times New Roman',"LXGW WenKai", Verdana, sans-serif;
-    /* font-family: 'Helvetica Neue','Times New Roman',"LXGW WenKai", Verdana, sans-serif; */
+    font-family: Helvetica,'Helvetica Neue','Times New Roman',"LXGW WenKai",'-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
     font-size: 18px;
     line-height: 1.5;
     text-align: justify;
@@ -78,13 +79,67 @@
 }
 
 
-
-.post-content blockquote {
-    background-color: var(--blockquote-bg);
+/* The following styles are from https://css-tricks.com/examples/Blockquotes/, also very beautiful */
+/* .post-content blockquote {
+    font: 14px/20px italic Times, serif;
+    padding: 8px !important;
+    background-color: #faebbc;
+    border-top: 1px solid #e1cc89;
+    border-bottom: 1px solid #e1cc89;
+    margin: 5px !important;
+    background-image: url(/images/openquote1.gif);
+    background-position: top left;
+    background-repeat: no-repeat;
+    text-indent: 2rem;
+    border-left: none !important;
 }
 
 
-.post-content h1 {
+.post-content blockquote p:last-of-type {
+    display: block;
+    background-image: url(/images/closequote1.gif);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    margin-bottom: 0;
+    padding-bottom: calc(var(--gap)*.5);
+} */
+
+/* The following styles are from https://devsnap.me/css-quote-styles */
+.post-content blockquote {
+  margin:var(--gap) auto !important;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #666666;
+  padding:1.1em 30px 1.1em 55px !important;
+  border-left:8px solid #3e5a72 !important;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+.post-content blockquote::before {
+    font-family:Arial;
+    content: "\201C";
+    color:#3e5a72;
+    font-size:4em;
+    position: absolute;
+    left: 10px;
+    top:-10px;
+}
+
+.post-content blockquote::after {
+    content: '';
+}
+
+.post-content blockquote span {
+    display:block;
+    color:#333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top:1em;}
+
+
+
+/* .post-content h1 {
     margin: 34px auto 28px;
     font-size: calc(var(--font-size-base) + var(--font-size-add) * 16);
     text-align: justify;
@@ -114,5 +169,5 @@
 
 .post-content h6 {
     font-size: calc(var(--font-size-base) + var(--font-size-add) * -2)
-}
+} */
 
