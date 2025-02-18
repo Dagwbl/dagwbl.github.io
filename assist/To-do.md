@@ -14,3 +14,17 @@
 - [x] Left收起时不显示滚动条  [due:: 2025-02-13]  [completion:: 2025-02-13]
 - [x] 打电话给山西和浙江省教育厅咨询CSC申请  [completion:: 2025-02-17]
 - [ ] 学习微观经济学
+- [ ] 隐藏滚动条但仍可滚动 
+```css
+.container {
+  overflow: auto;
+  width: 300px;
+  height: 200px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 和 Edge */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+```
