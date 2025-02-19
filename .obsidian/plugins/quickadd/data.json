@@ -304,12 +304,6 @@
       "id": "bc6100bc-b8cb-4788-ac22-428c1565f74d",
       "commands": [
         {
-          "name": "Git: Pull",
-          "type": "Obsidian",
-          "id": "1ac45fa7-c5c4-4c31-87b1-9493671dbf4d",
-          "commandId": "obsidian-git:pull"
-        },
-        {
           "name": "Git: Commit all changes with specific message",
           "type": "Obsidian",
           "id": "f5970cf4-795a-4d8a-851f-f5b46f8c712e",

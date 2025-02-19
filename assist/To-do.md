@@ -1,7 +1,8 @@
 ## Done
 - [x] 接入https://aistudio.google.com/prompts/new_chat  [completion:: 2025-02-12] ^otx3
 ## Long term
-- [ ] 刷题  [repeat:: every day]  [created:: 2025-02-18]
+- [ ] 刷题  [repeat:: every day]  [created:: 2025-02-19]
+- [x] 刷题  [repeat:: every day]  [created:: 2025-02-18]  [completion:: 2025-02-19]
 - [x] 刷题  [repeat:: every day]  [created:: 2025-02-18]  [completion:: 2025-02-18]
 - [x] 刷题  [repeat:: every day]  [created:: 2025-02-16]  [completion:: 2025-02-18]
 - [x] 刷题  [repeat:: every day]  [created:: 2025-02-14]  [due:: 2025-03-25]  [completion:: 2025-02-16]
