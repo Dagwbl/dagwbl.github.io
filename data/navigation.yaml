@@ -43,6 +43,7 @@
       link: "https://aistudio.google.com/prompts/new_chat"
       refused: true
     - name: "LMArena"
+      icon: "🏟️"
       weight: 13
       link: "https://lmarena.ai/?model=grok-3"
       refused: true
