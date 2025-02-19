@@ -38,8 +38,13 @@
       link: "https://chatgpt.com/"
       refused: true
     - name: "Gemini 2"
+      icon: "🦋"
       weight: 12
       link: "https://aistudio.google.com/prompts/new_chat"
+      refused: true
+    - name: "LMArena"
+      weight: 13
+      link: "https://lmarena.ai/?model=grok-3"
       refused: true
     - name: Chatbox
       weight: 99

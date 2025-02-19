@@ -32,9 +32,12 @@
             overflow-x: auto;
             overflow-y: auto;
             overflow: auto;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE 和 Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 和 Edge */
         }
+
         :root::-webkit-scrollbar {
             display: none;
         }
@@ -57,13 +60,16 @@
             width: 180px;
             background: #f8f9fa;
             overflow: auto;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE 和 Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 和 Edge */
             padding: 0px;
             border-radius: 4px;
             transition: width 0.3s ease-in-out;
             position: relative;
         }
+
         .left-nav::-webkit-scrollbar {
             display: none;
         }
@@ -211,21 +217,35 @@
         @media (max-width: 768px) {
             .left-nav {
                 position: fixed;
-                height: 100%;
+                height: calc(100% - var(--header-height));
                 z-index: 1000;
                 transform: translateX(15) translateY(0%);
                 overflow-y: auto;
+                scrollbar-width: none;
+                /* Firefox */
+                -ms-overflow-style: none;
+                /* IE 和 Edge */
                 transition: transform 0.3s ease;
             }
-            
+
             .left-nav.collapsed {
-                transform: translateX(0) translateY(96%);
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
                 background: none;
                 width: 23px;
-                overflow-y: hidden;
-                overflow-x: hidden;
+                height: 23px;
+                overflow: hidden;
             }
 
+            .left-nav.collapsed .nav-group {
+                display: none;
+            }
+
+            .left-nav.collapsed .nav-toggle {
+                display: block;
+                transform: translateX(0);
+            }
 
             .main-content {
                 margin-left: 0;
@@ -349,7 +369,7 @@
                 navToggle.querySelector('span').textContent = '◀';
                 container.style.height = '100vh';
                 showWithAnimation();
-                console.log('isNavCollapsed === false' + (isNavCollapsed === false)+' hide');
+                console.log('isNavCollapsed === false' + (isNavCollapsed === false) + ' hide');
             } else if (isNavCollapsed === true) {
                 leftNav.classList.add('collapsed');
                 navToggle.querySelector('span').textContent = '▶';
