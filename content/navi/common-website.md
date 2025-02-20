@@ -40,11 +40,11 @@ customjscssraw:
 
 {{< bookmark "ToolWa" "https://toolwa.com" >}}
 {{< bookmark "Toolbox of programmer" "https://tool.ur1.fun">}}
-- [SiliconCloud](https://cloud.siliconflow.cn/models)
-- [火山方舟管理控制台](https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW)
+{{< bookmark "火山方舟" "https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW">}}
+{{< bookmark "SiliconCloud" "https://cloud.siliconflow.cn/models">}}
 
 
-### Other
+### 🍿 Other
 
 {{< bookmark "HuggingChat" "https://huggingface.co/chat/" >}}
 {{< bookmark "Stack Overflow" "https://stackoverflow.com" >}}
