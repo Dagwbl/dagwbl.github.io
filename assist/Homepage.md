@@ -11,7 +11,7 @@ hide task count
 not done
 path includes assist
 ```
- 
+
 **Record:** `button-record-now` `button-new-todo` `button-jump-1note`
 
 **New:** `button-new-article` `button-new-note`  `button-new-letter`

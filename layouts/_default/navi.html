@@ -215,11 +215,22 @@
 
         /* 移动端样式 */
         @media (max-width: 768px) {
+            .nav {
+                position: relative;
+            }
+
             .left-nav {
-                position: fixed;
-                height: calc(100% - var(--header-height));
+                position: absolute;
+                /* 改为绝对定位 */
+                top: 0;
+                /* 粘附于顶部 */
+                left: 0;
+                /* 粘附于左边 */
+                /* height: calc(100% - var(--header-height)); */
+                height: 100%;
                 z-index: 1000;
-                transform: translateX(15) translateY(0%);
+                transform: translateX(0px) translateY(0%);
+                /* 保持偏移量 */
                 overflow-y: auto;
                 scrollbar-width: none;
                 /* Firefox */
@@ -245,6 +256,8 @@
             .left-nav.collapsed .nav-toggle {
                 display: block;
                 transform: translateX(0);
+                font: 100   1em/1 'Material Icons';
+                font-size: 1.5em;
             }
 
             .main-content {
@@ -334,15 +347,13 @@
             const header = document.querySelector('header');
             const footer = document.querySelector('footer');
 
-
             // 获取导航栏状态，首次访问默认展开
             let isNavCollapsed;
             if (localStorage.getItem('navCollapsed') === null) {
                 isNavCollapsed = false;
-                localStorage.setItem('navCollapsed', false);
+                localStorage.setItem('navCollapsed', JSON.stringify(false));
             } else {
-                isNavCollapsed = localStorage.getItem('navCollapsed');
-                console.log('isNavCollapsed', isNavCollapsed);
+                isNavCollapsed = JSON.parse(localStorage.getItem('navCollapsed'));
             }
 
             function hideWithAnimation() {
@@ -364,17 +375,16 @@
             }
 
             // 设置初始状态
-            if (isNavCollapsed === false) {
-                leftNav.classList.remove('collapsed');
-                navToggle.querySelector('span').textContent = '◀';
-                container.style.height = '100vh';
-                showWithAnimation();
-                console.log('isNavCollapsed === false' + (isNavCollapsed === false) + ' hide');
-            } else if (isNavCollapsed === true) {
+            if (isNavCollapsed) {
                 leftNav.classList.add('collapsed');
                 navToggle.querySelector('span').textContent = '▶';
-                container.style.height = 'calc(100vh - var(--header-height))';
+                container.style.height = '100vh';
                 hideWithAnimation();
+            } else {
+                leftNav.classList.remove('collapsed');
+                navToggle.querySelector('span').textContent = '◀';
+                container.style.height = 'calc(100vh - var(--header-height))';
+                showWithAnimation();
             }
 
             // 侧边栏切换
@@ -382,12 +392,12 @@
                 leftNav.classList.toggle('collapsed');
                 if (leftNav.classList.contains('collapsed')) {
                     navToggle.querySelector('span').textContent = '▶';
-                    localStorage.setItem('navCollapsed', true);
+                    localStorage.setItem('navCollapsed', JSON.stringify(true));
                     container.style.height = '100vh';
                     hideWithAnimation();
                 } else {
                     navToggle.querySelector('span').textContent = '◀';
-                    localStorage.setItem('navCollapsed', false);
+                    localStorage.setItem('navCollapsed', JSON.stringify(false));
                     container.style.height = 'calc(100vh - var(--header-height))';
                     showWithAnimation();
                 }
