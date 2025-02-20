@@ -205,14 +205,14 @@
         "format": ""
       },
       "insertAfter": {
-        "enabled": false,
-        "after": "### To-do",
-        "insertAtEnd": true,
+        "enabled": true,
+        "after": "## To-do",
+        "insertAtEnd": false,
         "considerSubsections": false,
         "createIfNotFound": true,
         "createIfNotFoundLocation": "bottom"
       },
-      "prepend": true,
+      "prepend": false,
       "task": true,
       "openFileInNewTab": {
         "enabled": false,
