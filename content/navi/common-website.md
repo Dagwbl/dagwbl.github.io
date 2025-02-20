@@ -14,7 +14,7 @@ customjscssraw:
     </style>
 ---
 
-## 📚 Learning
+### 📚 Learning
 
 {{< bookmark "微信读书" "https://weread.qq.com/web/shelf" >}}
 {{< bookmark "Qwerty Learner" "https://qwerty.kaiyi.cool/" >}}
@@ -25,7 +25,7 @@ customjscssraw:
 {{< bookmark "萤火虫" "https://www.fireflyau.com/home" >}}
 {{< bookmark "Hugo" "https://gohugo.io" >}}
 
-## 💪 Library
+### 💪 Library
 
 {{< bookmark "EmojiAll" "https://www.emojiall.com/zh-hans">}}
 {{< bookmark "Emojis Wiki" "https://emojis.wiki/" >}}
@@ -36,12 +36,15 @@ customjscssraw:
 {{< bookmark "漢典" "https://www.zdic.net/" >}}
 {{< bookmark "Urban Dictionary" "https://www.urbandictionary.com/" >}}
 
-## ⚒️ Tool
+### ⚒️ Tool
 
 {{< bookmark "ToolWa" "https://toolwa.com" >}}
 {{< bookmark "Toolbox of programmer" "https://tool.ur1.fun">}}
+- [SiliconCloud](https://cloud.siliconflow.cn/models)
+- [火山方舟管理控制台](https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW)
 
-## Other
+
+### Other
 
 {{< bookmark "HuggingChat" "https://huggingface.co/chat/" >}}
 {{< bookmark "Stack Overflow" "https://stackoverflow.com" >}}
