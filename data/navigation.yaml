@@ -64,7 +64,7 @@
       refused: true
     - name: "Follow"
       weight: 2
-      link: "https://app.follow.is/feeds/"
+      link: "https://app.follow.is/timeline/view-0/all/pending"
       refused: true
 
 - category: Tool

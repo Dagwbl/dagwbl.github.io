@@ -10,5 +10,6 @@
   "obsidian-export-image",
   "obsidian-tasks-plugin",
   "templater-obsidian",
-  "highlightr-plugin"
+  "highlightr-plugin",
+  "copilot"
 ]
