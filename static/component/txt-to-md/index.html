@@ -160,7 +160,8 @@
             <button id="copyBtn">复制结果</button>
             <button id="clearBtn">全部清空</button>
             <button id="jumpBtn">一本日记</button>
-            <button id="jsonBtn">转换Json</button> <!-- 新增按钮 -->
+            <button id="jsonBtn">转换Json</button>
+            <button id="mdToTextBtn">Markdown转文本</button> <!-- 新增按钮 -->
         </div>
     </div>
     <div id="toast" class="toast"></div>
@@ -210,6 +211,20 @@
             };
             const jsonString = JSON.stringify(jsonObject, null, 4);
             document.getElementById('outputText').value = jsonString;
+        });
+
+        document.getElementById('mdToTextBtn').addEventListener('click', function () {
+            const outputText = document.getElementById('outputText').value;
+            const plainText = outputText
+                .replace(/#{1,6}\s*/g, '') // 移除标题
+                .replace(/\*\*(.*?)\*\*/g, '$1') // 移除加粗
+                .replace(/\*(.*?)\*/g, '$1') // 移除斜体
+                .replace(/!\[.*?\]\(.*?\)/g, '') // 移除图片
+                .replace(/\[(.*?)\]\(.*?\)/g, '$1') // 移除链接
+                .replace(/`{3}.*?\n[\s\S]*?\n`{3}/g, '') // 移除代码块
+                .replace(/`(.*?)`/g, '$1') // 移除行内代码
+                .replace(/\n{2,}/g, '\n\n'); // 规范化换行
+            document.getElementById('inputText').value = plainText;
         });
 
         function showToast(message) {
