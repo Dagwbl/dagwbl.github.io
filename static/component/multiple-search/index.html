@@ -35,7 +35,16 @@
         margin-bottom: 20px;
         text-align: center;
     }
-
+    /* 在原有样式之后添加 */
+    @keyframes float {
+        0%, 100% { 
+            transform: translateY(0) rotate(3deg); /* 合并垂直位移和旋转 */
+        }
+        50% { 
+            transform: translateY(-10px) rotate(-10deg); /* 同时应用两个效果 */
+        }
+    }
+    
     /* 搜索容器 */
     .search-container {
         display: flex;
@@ -124,7 +133,7 @@
 <body>
 
     <div class="main-container">
-        <h1>HUAN</h1>
+        <h1 style="animation: float 3s ease-in-out infinite;">🛸</h1>
         <div class="search-container">
             <input type="text" id="searchInput" class="search-input" placeholder="Please input a keyword...">
             <button class="search-icon" id="defaultSearch">

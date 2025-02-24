@@ -4,7 +4,7 @@ baseURL: "https://dagwbl.github.io"
 title: "ZJeapo's Blog"
 pagination:
   pageSize: 10
-theme: [PaperMod]
+theme: [ "hugo-notice","PaperMod"]
 
 defaultContentLanguage: en
 hasCJKLanguage: true # enable for reconginizing and counting CJK languages

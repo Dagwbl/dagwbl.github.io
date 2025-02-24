@@ -9,54 +9,21 @@
 
 :root {
     --gap: 24px; 
-    --content-gap: 20px;
-    --nav-width: 1024px;
-    --main-width: 720px;
-    --header-height: 60px;
-    --footer-height: 60px;
-    --radius: 8px;
-    --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
-    --primary: rgb(30, 30, 30);
-    --secondary: rgb(108, 108, 108);
-    --tertiary: rgb(214, 214, 214);
-    --content: rgb(31, 31, 31);
-    --code-block-bg: rgb(28, 29, 33);
-    --code-bg: rgb(245, 245, 245);
-    --border: rgb(238, 238, 238);
-    --blockquote-bg: rgba(220, 228, 228, 0.148);
-    --font-size-base: 18px;
-    --font-size-add: 1px;
 }
 
-.dark {
-    --theme: rgb(29, 30, 32);
-    --entry: rgb(46, 46, 51);
-    --primary: rgb(218, 218, 219);
-    --secondary: rgb(155, 156, 157);
-    --tertiary: rgb(65, 66, 68);
-    --content: rgb(196, 196, 197);
-    --code-block-bg: rgb(46, 46, 51);
-    --code-bg: rgb(55, 56, 62);
-    --border: rgb(51, 51, 51);
-    --blockquote-bg: #3d4349;
-}
 
 /* 修复列表项不显示符号的问题 */
 .home-info ul {
-    padding-inline-start:20px}
-.main {
-    font-family: Helvetica,'Helvetica Neue','Times New Roman',"LXGW WenKai",'-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
+    padding-inline-start:20px
 }
 
-/* .main {
-    position: relative;
-    min-height: calc(100vh - var(--header-height) - var(--footer-height));
-    max-width: calc(var(--main-width) + var(--gap) * 2);
-    margin: auto;
-    padding: calc(var(--gap)*0.5);
-    
-} */
+.main {
+    font-family: Helvetica,'Helvetica Neue','Times New Roman',"LXGW WenKai",'-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
+    /* background-image: radial-gradient(rgba(50, 0, 0, 0.05) 1px, transparent 0) !important;
+    background-size: 10px 10px;
+    background-color: #fefefe42; */
+}
+
 
 .logo, #menu {
     /* display: flex; */
