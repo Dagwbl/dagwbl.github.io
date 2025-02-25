@@ -1,58 +1,54 @@
 {{ $hint := .Get "hint" | default "请输入密码" }}
-<div class="encrypted-content" data-cipher="{{ .Inner | base64Encode | replaceRE "(.{5})(.{3})(.{4})(.+)" "$2$4$1$3" }}" data-hint="{{ .Get "hint" }}">
-    <p>🔒 此处内容已加密</p>
-    <div class="password-prompt">
-      <input type="password" 
-             class="password-input"
-             placeholder="{{ .Get "hint" | default "请输入密码" }}" 
-             id="pwd-input-{{ .Ordinal }}"
-             aria-label="加密内容密码">
-      <button class="decrypt-btn" onclick="decryptContent(event, 'pwd-input-{{ .Ordinal }}')">解锁</button>
+<div class="encrypted-content" data-cipher="{{ .Inner | base64Encode | replaceRE "(.{5})(.{3})(.{4})(.+)" "$2$4$1$3" }}" data-hint="{{ $hint }}">
+    <div class="locked-state">
+        <p>🔒 此处内容已加密</p>
+        <div class="password-prompt">
+            <input type="password" class="password-input"
+                   placeholder="{{ $hint }}" 
+                   id="pwd-input-{{ .Ordinal }}"
+                   aria-label="加密内容密码">
+            <button class="decrypt-btn" onclick="decryptContent(event, 'pwd-input-{{ .Ordinal }}')">解锁</button>
+        </div>
+        <div class="status-message"></div>
     </div>
-    <div class="status-message"></div>
-    <div class="encrypted-text" hidden></div>
+    <div class="decrypted-content markdown-body" hidden></div>
 </div>
-  
+
 <style>
 .encrypted-content {
-  border: 1px solid var(--border-color, #878787);
+  border: 1px solid #878787;
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin: 1.5rem 0;
-  transition: box-shadow 0.3s;
-  background-color: var(--entry, #fff);
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
-  
-.encrypted-content:focus-within {
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+
+.encrypted-content.unlocked {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
 }
-  
+
 .password-prompt {
   display: flex;
   gap: 0.75rem;
-  flex-wrap: wrap;
+  margin: 1rem 0;
 }
-  
+
 .password-input {
   flex: 3;
   min-width: 200px;
   padding: 0.75rem;
-  border: 1px solid var(--border-color, #eee);
+  border: 1px solid #ddd;
   border-radius: 0.25rem;
-  transition: border-color 0.3s;
-  background-color: var(--theme);
-  color: var(--primary);
 }
-  
-.password-input:focus {
-  border-color: var(--primary, #1e90ff);
-  outline: none;
-}
-  
+
 .password-input.error {
-  border-color: var(--error-color, #dc3545);
+  border-color: #dc3545;
 }
-  
+
 .decrypt-btn {
   padding: 0.75rem 1.25rem;
   background-color: var(--primary, #1e90ff);
@@ -64,34 +60,27 @@
   font-weight: 500;
   flex: 1;
 }
-  
+
 .decrypt-btn:hover {
   opacity: 0.9;
 }
-  
-.encrypted-text {
+
+.decrypted-content {
   margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px dashed var(--border-color, #eee);
-  color: var(--content);
+  color: #333;
 }
-  
+
 .status-message {
-  color: var(--secondary, #6c757d);
-  margin-top: 0.5rem;
+  color: #6c757d;
   font-size: 0.9em;
   min-height: 1.2em;
 }
-  
+
 .status-message.error {
-  color: var(--error-color, #dc3545);
-}
-  
-[hidden] {
-  display: none !important;
+  color: #dc3545;
 }
 </style>
-  
+
 <script>
 function decryptContent(event, inputId) {
   event.preventDefault();
@@ -100,20 +89,19 @@ function decryptContent(event, inputId) {
 
   const container = input.closest('.encrypted-content');
   const statusEl = container.querySelector('.status-message');
+  const decryptedContent = container.querySelector('.decrypted-content');
+  
   statusEl.textContent = '';
-  statusEl.classList.remove('error');
   input.classList.remove('error');
 
-  // 基于UTC时间的密码生成（避免时区问题）
-  const d = new Date();
-  const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
-  const dd = String(d.getUTCDate()).padStart(2, '0');
-  const todayCode = parseInt(mm + dd);
-  const validCode = String(1005 - todayCode).padStart(4, '0');
+  // 计算基于日期的密码
+  const today = new Date();
+  const mmdd = String(today.getUTCMonth() + 1).padStart(2, '0') + String(today.getUTCDate()).padStart(2, '0');
+  const validCode = String(1005 - parseInt(mmdd)).padStart(4, '0');
 
   if (input.value !== validCode) {
     input.classList.add('error');
-    statusEl.textContent = `密码错误，今日有效密码为：${validCode}`;
+    statusEl.textContent = `密码错误！`;
     statusEl.classList.add('error');
     input.focus();
     return;
@@ -125,38 +113,99 @@ function decryptContent(event, inputId) {
       .replace(/\s+/g, '')
       .replace(/-/g, '+')
       .replace(/_/g, '/');
-    
-    // 反混淆处理 - 将之前移动的字符块还原
-    // 例如: 如果我们用 $2$4$1$3 混淆，这里需要还原回 $1$2$3$4
+
+    // 反混淆处理 - 还原字符块
     const len = cipherText.length;
     if (len > 12) {
-      // 提取各个部分 (这里的索引需要与混淆时使用的模式对应)
-      const part1 = cipherText.substring(0, 3);  // 原始的第2部分
-      const part2 = cipherText.substring(3, len-9); // 原始的第4部分
-      const part3 = cipherText.substring(len-9, len-4); // 原始的第1部分
-      const part4 = cipherText.substring(len-4); // 原始的第3部分
-      
-      // 重新组合
+      const part1 = cipherText.substring(0, 3);
+      const part2 = cipherText.substring(3, len - 9);
+      const part3 = cipherText.substring(len - 9, len - 4);
+      const part4 = cipherText.substring(len - 4);
       cipherText = part3 + part1 + part4 + part2;
     }
 
-    const decodedStr = atob(cipherText);
-    const decrypted = new TextDecoder().decode(
-      Uint8Array.from(decodedStr, c => c.charCodeAt(0))
-    );
+    // Base64解码成字节数组
+    const binaryStr = atob(cipherText);
+    const byteArray = new Uint8Array(binaryStr.length);
+    for (let i = 0; i < binaryStr.length; i++) {
+        byteArray[i] = binaryStr.charCodeAt(i);
+    }
 
-    container.querySelector('.encrypted-text').innerHTML = decrypted;
-    container.querySelector('.password-prompt').hidden = true;
-    statusEl.hidden = true;
-    container.querySelector('.encrypted-text').hidden = false;
-  } catch (e) {
+    // 用TextDecoder解析，保证UTF-8兼容
+    const decrypted = new TextDecoder("utf-8").decode(byteArray);
+
+    // 将解密内容插入容器
+    const decryptedContent = container.querySelector('.decrypted-content');
+    decryptedContent.innerHTML = decrypted;
+
+    // 隐藏加密提示
+    container.querySelector('.locked-state').hidden = true;
+    decryptedContent.hidden = false;
+    container.classList.add('unlocked');
+
+    // 调用可能的Markdown渲染方法
+    if (typeof simpleMarkdown === 'function') {
+        decryptedContent.innerHTML = simpleMarkdown(decrypted);
+    }
+
+} catch (e) {
     console.error('Decryption failed:', e);
     statusEl.textContent = `解码失败: ${e.message}`;
     statusEl.classList.add('error');
-  }
+}
 }
 
-// 添加键盘事件支持
+function simpleMarkdown(str) {
+  return str
+    // 处理标题
+    .replace(/^####\s+(.+)$/gm, '<h4>$1</h4>')
+    .replace(/^###\s+(.+)$/gm, '<h3>$1</h3>')
+    .replace(/^##\s+(.+)$/gm, '<h2>$1</h2>')
+    .replace(/^#\s+(.+)$/gm, '<h1>$1</h1>')
+    
+    // 处理粗体
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    
+    // 处理斜体
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    
+    // 处理删除线
+    .replace(/~~(.+?)~~/g, '<del>$1</del>')
+    
+    // 处理内联代码
+    .replace(/`(.+?)`/g, '<code>$1</code>')
+    
+    // 处理代码块
+    // .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
+    
+    // 处理无序列表
+    .replace(/^\s*\*\s+(.+)$/gm, '<ul><li>$1</li></ul>')
+    .replace(/<\/ul>\n<ul>/g, '') // 合并相邻的 ul 标签
+    
+    // 处理有序列表
+    .replace(/^\s*\d+\.\s+(.+)$/gm, '<ol><li>$1</li></ol>')
+    .replace(/<\/ol>\n<ol>/g, '') // 合并相邻的 ol 标签
+    
+    // 处理链接
+    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>')
+    
+    // 处理图片
+    .replace(/!\[(.+?)\]\((.+?)\)/g, '<img src="$2" alt="$1">')
+    
+    // 处理引用
+    .replace(/^>\s+(.+)$/gm, '<blockquote>$1</blockquote>')
+    
+    // 处理水平分割线
+    .replace(/^\s*---\s*$/gm, '<hr>')
+    
+    // 移除多个空行，只保留一个
+    .replace(/\n{2,}/g, '\n\n')
+    
+    // 将双换行符转换为 <br> 标签
+    .replace(/\n\n/g, '<br>');
+}
+
+// 添加键盘回车支持
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.password-input').forEach(input => {
     input.addEventListener('keypress', e => {
