@@ -48,13 +48,13 @@ const notDraftPage = dv.pages('"content"').filter(p => !p.draft).length;
 // 计算草稿数量
 const draftPage = dv.pages('"content"').filter(p => p.draft).length;
 const articleNum = dv.pages('"content/posts"').filter(p => !p.draft).length;
-const noteNum = dv.pages('"content/posts/learn"').filter(p => !p.draft).length;
+const noteNum = dv.pages('"content/posts/note"').filter(p => !p.draft).length;
 const diaryNum = dv.pages('"content/diary"').filter(p => !p.draft).length;
 const letterNum = dv.pages('"content/letter"').filter(p => !p.draft).length;
 
 // 计算草稿数量
 const articleDraftNum = dv.pages('"content/posts"').filter(p => p.draft).length;
-const noteDraftNum = dv.pages('"content/posts/learn"').filter(p => p.draft).length;
+const noteDraftNum = dv.pages('"content/posts/note"').filter(p => p.draft).length;
 const diaryDraftNum = dv.pages('"content/diary"').filter(p => p.draft).length;
 const letterDraftNum = dv.pages('"content/letter"').filter(p => p.draft).length;
 
