@@ -3,16 +3,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiple Search</title>
+    <link rel="stylesheet" href="./../../css/theme-vars.css">
 </head>
 <style>
     /* 全局样式 */
     body {
         font-family: Arial, sans-serif;
-        /* background-color: #f8f9fa; */
         /* 12background-image: url("/images/four-hand-line.png"); */
-        background-color: rgba(123, 123, 123, 0.1);
+        background-color: var(--theme);
+        color: var(--primary);
         background-size:100% 100%;
-        /* background-attachment:fixed; */
         margin: 0;
         padding: 0;
         display: flex;
@@ -206,6 +206,32 @@
             }
         });
     });
-</script>
 
+    
+    
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    }
+
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
 </html>
