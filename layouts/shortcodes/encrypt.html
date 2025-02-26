@@ -20,7 +20,6 @@
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin: 1.5rem 0;
-  background-color: #fff;
   transition: all 0.3s ease;
 }
 
@@ -28,7 +27,10 @@
   border: none;
   padding: 0;
   margin: 0;
-  background: transparent;
+  /* background: transparent; */
+  background-image: radial-gradient(rgba(50, 0, 0, 0.1) 1px, transparent 0) !important;
+  background-size: 10px 10px;
+  background-color: #fefefe42;
 }
 
 .password-prompt {
@@ -65,10 +67,6 @@
   opacity: 0.9;
 }
 
-.decrypted-content {
-  margin-top: 1rem;
-  color: #333;
-}
 
 .status-message {
   color: #6c757d;
@@ -156,7 +154,9 @@ function decryptContent(event, inputId) {
 }
 
 function simpleMarkdown(str) {
+  const blockTags = ['</h1>', '</h2>', '</h3>', '</h4>', '</h5>', '</h6>', '</ul>', '</ol>', '</blockquote>', '<hr>'];
   return str
+    .replace(new RegExp(`(${blockTags.join('|')})`, 'g'), '$1\u0001')
     // 处理标题
     .replace(/^####\s+(.+)$/gm, '<h4>$1</h4>')
     .replace(/^###\s+(.+)$/gm, '<h3>$1</h3>')
@@ -197,12 +197,31 @@ function simpleMarkdown(str) {
     
     // 处理水平分割线
     .replace(/^\s*---\s*$/gm, '<hr>')
-    
-    // 移除多个空行，只保留一个
-    .replace(/\n{2,}/g, '\n\n')
-    
-    // 将双换行符转换为 <br> 标签
-    .replace(/\n\n/g, '<br>');
+        // 处理段落和换行的新逻辑
+        .replace(/\n{2,}/g, '\u0000')      // 将双换行转换为临时分隔符
+    .replace(/(?<!\u0001)\n/g, '<br>') // 单换行转<br>（排除块级元素后的换行）
+    .split(/\u0000|\u0001/)            // 分割段落和块级元素
+    .map(chunk => {
+      // 包裹纯文本段落
+      if (!chunk.startsWith('<') && chunk.trim()) {
+        // 清理多余的<br>并包裹
+        return `<p>${chunk.replace(/^(<br>)+|(<br>)+$/g, '')}</p>`;
+      }
+      return chunk;
+    })
+    .join('')
+    // 后处理：合并相邻段落标签并清理
+    // .replace(/<\/p><p>/g, '\n')
+    // .replace(/(<p>.*?)<p>/gs, '$1')
+    // .replace(/(<\/p>.*?)<\/p>/gs, '$1')
+    // .replace(/(<p>[^<]*?)(<br>\s*){2,}([^<]*?<\/p>)/g, '</p><p>')
+    // 清理空段落
+    // .replace(/<p><\/p>/g, '');
+
+  // 确保最后一个段落被正确包裹
+  // if (!processed.endsWith('</p>') && !/<p>[^<]*?$/.test(processed)) {
+  //   processed = processed.replace(/([^<])(?!<p>)(?=[^<]*$)/, '$1</p>');
+  // }
 }
 
 // 添加键盘回车支持
