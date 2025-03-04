@@ -73,6 +73,10 @@
       weight: 5
       link: "https://mathdf.com/cn/"
       refused: true
+    - name: "Scholar"
+      weight: 1
+      icon: "📚"
+      link: "https://ac.scmor.com/"
     - name: "Calculator"
       weight: 96
       link: "https://www.lddgo.net/math/calculator"

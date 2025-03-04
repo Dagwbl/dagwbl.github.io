@@ -438,6 +438,15 @@
                 }
             }
         });
+        window.addEventListener('message', function (event) {
+            if (event.data.action === 'openUrl') {
+                if (event.data.target === '_blank') {
+                    window.open(event.data.url, '_blank');
+                } else {
+                    window.location.href = event.data.url;
+                }
+            }
+        });
     </script>
 </body>
 
