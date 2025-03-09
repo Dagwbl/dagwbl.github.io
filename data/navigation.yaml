@@ -29,9 +29,9 @@
       weight: 10
       refused: true
       link: "https://chat.deepseek.com/"
-    - name: "Claude 3.5 Sonnet"
+    - name: "Claude 3.7"
       weight: 11
-      link: "https://poe.com/Claude-3.5-Sonnet"
+      link: "https://poe.com/Claude-3.7-Sonnet"
       refused: true
     - name: "ChatGPT"
       weight: 12

@@ -1,9 +1,6 @@
 {
   "textFontFamily": "Helvetica,Noto Color Emoji,SimSun",
-  "enabledCssSnippets": [
-    "buttons",
-    "emoji"
-  ],
+  "enabledCssSnippets": [],
   "cssTheme": "Minimal",
   "interfaceFontFamily": "Helvetica,Noto Color Emoji",
   "showViewHeader": true,

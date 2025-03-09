@@ -77,8 +77,16 @@
 
         .left-nav.collapsed {
             width: 50px;
+            opacity: 0.6;
+            transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+            backdrop-filter: blur(1000px);
         }
 
+        .left-nav.collapsed:hover {
+            opacity: 0.9;
+        }
+        
         .nav-toggle {
             width: 24px;
             height: 24px;
