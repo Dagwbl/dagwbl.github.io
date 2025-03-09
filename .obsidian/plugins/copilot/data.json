@@ -14,7 +14,7 @@
   "googleApiKey": "",
   "openRouterAiApiKey": "",
   "defaultChainType": "llm_chain",
-  "defaultModelKey": "copilot-plus-flash|copilot-plus",
+  "defaultModelKey": "ep-20250220124851-x9dtd|3rd party (openai-format)",
   "embeddingModelKey": "BAAI/bge-m3|3rd party (openai-format)",
   "temperature": 0.1,
   "maxTokens": 1000,
@@ -163,8 +163,8 @@
       "isEmbeddingModel": false,
       "capabilities": [
         "reasoning",
-        "websearch",
-        "vision"
+        "vision",
+        "websearch"
       ],
       "stream": true,
       "enableCors": true,
@@ -178,11 +178,7 @@
       "baseUrl": "https://ark.cn-beijing.volces.com/api/v3",
       "apiKey": "4b0df5af-76b2-49cc-8d40-d85019ba064e",
       "isEmbeddingModel": false,
-      "capabilities": [
-        "reasoning",
-        "vision",
-        "websearch"
-      ],
+      "capabilities": [],
       "stream": true,
       "enableCors": true,
       "displayName": " DeepSeek-R1-Distill-Qwen-32B"
@@ -273,7 +269,7 @@
   "embeddingBatchSize": 16,
   "disableIndexOnMobile": true,
   "showSuggestedPrompts": true,
-  "showRelevantNotes": true,
+  "showRelevantNotes": false,
   "numPartitions": 1,
   "enabledCommands": {},
   "promptUsageTimestamps": {},
