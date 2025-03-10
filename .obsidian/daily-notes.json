@@ -1,5 +1,6 @@
 {
   "folder": "content/diary",
   "template": "archetypes/diary-ob",
-  "autorun": false
+  "autorun": false,
+  "format": "YYYY-MM-DD.\\z\\h"
 }
