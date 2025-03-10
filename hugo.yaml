@@ -38,7 +38,7 @@ minify:
 
 languages:
   en:
-    languageName: "English"
+    languageName: "EN"
     weight: 1
     taxonomies:
       category: categories
@@ -97,49 +97,52 @@ languages:
           - name: 📎Collect
             url: cheatsheet
   # disable multi-language support
-  # zh:
-  #   languageName: "Chinese"
-  #   weight: 3
-  #   taxonomies:
-  #     language: zh
-  #     tag: tags
-  #     category: categories
-  #     series: series
-  #   menu:
-  #     main:
-  #       - name: 文章
-  #         url: archives
-  #         weight: 5
-  #       - name: 系列
-  #         url: series
-  #         weight: 6
-  #       - name: 搜索
-  #         url: search/
-  #         weight: 10
-  #       - name: 标签
-  #         url: tags
-  #         weight: 10
-  #   # custom params for each language should be under [langcode].parms - hugo v0.120.0
-  #   params:
-  #     homeInfoParams:
-  #       Title: "呜呼~ \U0001F44B"
-  #       Content: 还活着！还活着！这感觉真好！
-  #     profileMode:
-  #       enabled: false
-  #       title: "呜呼~ \U0001F44B"
-  #       imageUrl: "images/home-icon.png"
-  #       imageTitle: ZJeapo
-  #       imageWidth: 90
-  #       imageHeight: 90
-  #       buttons:
-  #         - name: 📆时间轴
-  #           url: archives
-  #         - name: 🕸️文章
-  #           url: posts
-  #         - name: 🗃️教程
-  #           url: guide
-  #         - name: 📒小纸条
-  #           url: cheatsheet
+  zh:
+    languageName: "CN"
+    weight: 3
+    taxonomies:
+      language: zh
+      tag: tags
+      category: categories
+      series: series
+    menu:
+      main:
+        - name: 归 档
+          url: archives
+          weight: 5
+        - name: 分 类
+          url: categories
+          weight: 6
+        - name: 搜 索
+          url: search/
+          weight: 10
+        # - name: 标签
+        #   url: tags
+        #   weight: 10
+        - name: 🪶
+          url: /navi/
+          weight: 99
+    # custom params for each language should be under [langcode].parms - hugo v0.120.0
+    params:
+      homeInfoParams:
+        Title: "呜呼~ \U0001F44B"
+        Content: 还活着！还活着！这感觉真好！
+      profileMode:
+        enabled: false
+        title: "呜呼~ \U0001F44B"
+        imageUrl: "images/home-icon.png"
+        imageTitle: ZJeapo
+        imageWidth: 90
+        imageHeight: 90
+        buttons:
+          - name: 📆时间轴
+            url: archives
+          - name: 🕸️信件
+            url: posts/letter
+          - name: 🗃️笔记
+            url: posts/note
+          - name: 📒日记
+            url: posts/diary
 
 outputs:
   home:

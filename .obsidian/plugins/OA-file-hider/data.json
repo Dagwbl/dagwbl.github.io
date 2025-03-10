@@ -13,6 +13,7 @@
     "content/archives.md",
     "content/about.md",
     "themes",
-    "i18n"
+    "i18n",
+    "content/_index.md"
   ]
 }

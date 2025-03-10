@@ -69,6 +69,7 @@ module.exports = async function (params) {
         // 打开指定网站
         const url = "https://dagwbl.github.io/en/navi/#one-diary";
         await openUrl(url);
+        new Notice("The content of the diary has been copied to the clipboard and the website has been opened.");
 
     } catch (error) {
         console.error(`Error: ${error.message}`);

@@ -128,7 +128,7 @@
       "templatePath": "archetypes/diary-ob.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "{{date}}"
+        "format": "{{date}}.zh"
       },
       "folder": {
         "enabled": true,
@@ -228,7 +228,7 @@
       "type": "Capture",
       "command": true,
       "appendLink": false,
-      "captureTo": "content/diary/{{date}}",
+      "captureTo": "content/diary/{{date}}.zh",
       "captureToActiveFile": false,
       "createFileIfItDoesntExist": {
         "enabled": true,
@@ -263,6 +263,13 @@
       "type": "Macro",
       "command": true,
       "macroId": "8f58bd60-c4b3-4c2b-af9f-028f5d6e678c"
+    },
+    {
+      "id": "d1e8a242-ad51-4eea-812f-77c2db81cda6",
+      "name": "Translate into English",
+      "type": "Macro",
+      "command": true,
+      "macroId": "81492148-02ad-4481-aa40-75a7b356ce9c"
     }
   ],
   "macros": [
@@ -368,6 +375,20 @@
           "type": "UserScript",
           "id": "29d5b5d2-2803-46d3-ad8f-5b93604a3251",
           "path": "assets/code/file2folder.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Translate into English",
+      "id": "81492148-02ad-4481-aa40-75a7b356ce9c",
+      "commands": [
+        {
+          "name": "hugo_translate",
+          "type": "UserScript",
+          "id": "dcbe49f0-d411-40cc-918c-9845e78d4781",
+          "path": "assets/code/hugo_translate.js",
           "settings": {}
         }
       ],
