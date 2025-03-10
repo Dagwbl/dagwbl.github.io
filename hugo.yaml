@@ -125,8 +125,16 @@ languages:
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
       homeInfoParams:
-        Title: "呜呼~ \U0001F44B"
-        Content: 还活着！还活着！这感觉真好！
+        Title: "胆怯的想法 🌿"
+        Content: |
+          👋 世界上的小流浪者们啊，请在我的文字中留下你们的足迹。
+
+          - 思想以自己的言语为食，并因此成长。
+
+          - 不要逗留采集花朵以保存它们，继续前行吧，因为花朵会一路为你绽放。
+
+          - 我们，这些沙沙作响的树叶，有回应风暴的声音，而你为何如此沉默？
+          
       profileMode:
         enabled: false
         title: "呜呼~ \U0001F44B"
