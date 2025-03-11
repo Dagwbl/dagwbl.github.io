@@ -6,13 +6,21 @@
   Copyright (c) 2020 nanxiaobei and adityatelange
   Copyright (c) 2021-2024 adityatelange
 */
+@font-face {
+    font-family: 'LXGW WenKai';
+    src: url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/fonts/lxgw-wenkai.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/fonts/lxgw-wenkai.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
 :root {
     --gap: 24px; 
 }
 
 body {
-    font-family: Helvetica,'Helvetica Neue','Times New Roman','LXGW WenKai','-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
+    font-family: 'Helvetica Neue','Times New Roman','LXGW WenKai','Helvetica','-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
 }
 
 /* 修复列表项不显示符号的问题 */
@@ -46,13 +54,6 @@ body {
     -moz-hyphens: auto; /* Firefox 兼容 */
 }
 
-/* 响应式调整 */
-@media screen and (max-width: 480px) {
-    .post-content {
-        font-size: 16px; /* 最小字号保障可读性 */
-        line-height: 1.5;
-    }
-}
 
 
 /* The following styles are from https://css-tricks.com/examples/Blockquotes/, also very beautiful */
