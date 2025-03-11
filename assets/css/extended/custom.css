@@ -10,6 +10,7 @@
 :root {
     --gap: 24px; 
 }
+
 body {
     font-family: Helvetica,'Helvetica Neue','Times New Roman','LXGW WenKai','-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
 }
