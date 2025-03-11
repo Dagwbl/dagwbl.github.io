@@ -20,12 +20,12 @@ body {
     padding-inline-start:20px
 }
 
-.main {
+/* .main {
     font-family: Helvetica,'Helvetica Neue','Times New Roman','LXGW WenKai','-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
-    /* background-image: radial-gradient(rgba(50, 0, 0, 0.05) 1px, transparent 0) !important;
+    background-image: radial-gradient(rgba(50, 0, 0, 0.05) 1px, transparent 0) !important;
     background-size: 10px 10px;
-    background-color: #fefefe42; */
-}
+    background-color: #fefefe42; 
+} */
 
 
 .logo, #menu {
