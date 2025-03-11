@@ -169,13 +169,28 @@ module.exports = async (params) => {
   }
   
   async function translateText(text, llmType, config) {
-    let totalLength = text.length;
     let translatedText = "";
-    
-    // 分段翻译以显示进度
-    let chunkSize = 1000;
-    for (let i = 0; i < totalLength; i += chunkSize) {
-      let chunk = text.slice(i, i + chunkSize);
+    const chunkSize = 1000;
+    const maxLookback = 200;
+    let i = 0;
+
+    while (i < text.length) {
+      let end = Math.min(i + chunkSize, text.length);
+      
+      // 查找句子结束符（包含中文标点和换行符）
+      const punctuationIndex = text.lastIndexOf('\n', end - 1);    // 优先换行符
+      const fallbackPunctuation = text.lastIndexOf(/[。！？]/g, end - 1); // 次要中文标点
+      
+      let foundIndex = Math.max(
+        punctuationIndex,
+        fallbackPunctuation
+      );
+
+      if (foundIndex > i && (end - foundIndex) < maxLookback) {
+        end = foundIndex + 1; // 包含分隔符
+      }
+
+      let chunk = text.slice(i, end);
       let translatedChunk = await getTranslation(llmType, [
         {"role": "system", "content": "Translate the following Chinese blog post into English while keeping the original meaning."},
         {"role": "user", "content": chunk}
