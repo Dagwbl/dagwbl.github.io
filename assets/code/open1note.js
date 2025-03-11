@@ -11,7 +11,7 @@ module.exports = async function (params) {
     const diaryDir = path.join(app.vault.adapter.basePath, 'content/diary');
     
     // 定义日记文件名的正则表达式（假设格式为 YYYY-MM-DD.md 或类似格式）
-    const diaryFilePattern = /^\d{4}-\d{2}-\d{2}\.md$/;
+    const diaryFilePattern = /^\d{4}-\d{2}-\d{2}(\.(zh|en))?\.md$/;
 
     try {
         // 检查日记目录是否存在

@@ -40,7 +40,6 @@ body {
 
 
 .post-content {
-    text-align: justify;
     hyphens:auto;
     word-break: break-word;
     -webkit-hyphens: auto; /* Safari 兼容 */

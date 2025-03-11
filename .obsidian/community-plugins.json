@@ -1,7 +1,6 @@
 [
   "obsidian-git",
   "quickadd",
-  "obsidian-emoji-toolbar",
   "dataview",
   "homepage",
   "buttons",
@@ -12,5 +11,9 @@
   "templater-obsidian",
   "highlightr-plugin",
   "copilot",
-  "calendar"
+  "calendar",
+  "obsidian-icon-folder",
+  "easy-typing-obsidian",
+  "dynamic-outline",
+  "obsidian-style-settings"
 ]

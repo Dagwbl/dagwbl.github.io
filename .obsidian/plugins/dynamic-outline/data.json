@@ -1,0 +1,11 @@
+{
+  "autofocusSearchOnOpen": true,
+  "dynamicHeadingIndentation": true,
+  "highlightCurrentHeading": true,
+  "minimumHeadings": 2,
+  "resetSearchFieldOnHeadingClick": true,
+  "toggleAutomatically": false,
+  "contentOverlap": "allow",
+  "toggleOnHover": true,
+  "windowLocation": "right"
+}

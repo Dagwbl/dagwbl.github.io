@@ -35,7 +35,7 @@ table title AS "Title",date AS "Time"
 from "content"
 where draft=false
 sort date desc
-limit 10
+limit 15
 ```
 
 ### **📈 Statistics**

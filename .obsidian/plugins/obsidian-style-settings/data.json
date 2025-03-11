@@ -1,0 +1,8 @@
+{
+  "obsidian-dynamic-outline@@dynamic-outline-h1-font-weight": "var(--font-normal)",
+  "obsidian-dynamic-outline@@dynamic-outline-font-size": "var(--font-smallest)",
+  "obsidian-dynamic-outline@@dynamic-outline-active-heading-pill-color": "var(--text-normal)",
+  "obsidian-dynamic-outline@@dynamic-outline-h1-text-color": "var(--h1-color)",
+  "obsidian-dynamic-outline@@dynamic-outline-tab-size": 12,
+  "obsidian-dynamic-outline@@dynamic-outline-h1-font-variant": "normal"
+}
