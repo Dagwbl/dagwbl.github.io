@@ -39,14 +39,21 @@ body {
 }
 
 
-/* .post-content {
-    font-family: Helvetica,'Helvetica Neue','Times New Roman','LXGW WenKai','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
+.post-content {
     text-align: justify;
-    hyphens: auto;
-    word-break: break-all;
-} */
+    hyphens:auto;
+    word-break: break-word;
+    -webkit-hyphens: auto; /* Safari 兼容 */
+    -moz-hyphens: auto; /* Firefox 兼容 */
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 480px) {
+    .post-content {
+        font-size: 16px; /* 最小字号保障可读性 */
+        line-height: 1.5;
+    }
+}
 
 
 /* The following styles are from https://css-tricks.com/examples/Blockquotes/, also very beautiful */
