@@ -194,7 +194,7 @@ module.exports = async (params) => {
 
       let chunk = text.slice(i, end);
       let translatedChunk = await getTranslation(llmType, [
-        { "role": "system", "content": "Translate the following Chinese blog post into English while keeping the original meaning." },
+        { "role": "system", "content": "Translate the following Chinese blog post into English while keeping the original meaning and the original markdown format." },
         { "role": "user", "content": chunk }
       ], config);
 
