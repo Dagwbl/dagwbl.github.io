@@ -1,26 +1,21 @@
 ---
-title: 'Jealous and Comparison'
-date: '2024-12-11T21:08:55+08:00'
-series: []
-categories: []
-tags: []
+title: 嫉妒与比较
+date: 2024-12-11T21:08:55+08:00
+series:
+  - noise
+categories:
+  - original
+tags:
+  - thought
 language: en
 showToc: false
 TocOpen: false
 draft: false
 math: false
 hidemeta: false
-description: "Desc Text."
+description: Desc Text.
 hideSummary: false
-# cover:
-#     image: "<image path/url>" # image path/url
-#     alt: "<alt text>" # alt text
-#     caption: "<text>" # display caption under cover
-#     relative: false # when using page bundles set this to true
-#     hidden: true # only hide on current single page
 ---
-
-
 
 我很嫉妒一些东西，倒不是些财富权利之类什么奢侈的东西，而是一些才华之类的东西。比如说朱自清、史铁生、鲁迅之类的人，之所以不能列举更多是因为我了解的也有限。
 

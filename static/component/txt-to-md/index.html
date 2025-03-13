@@ -4,9 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon/favicon.svg" />
-    <title>格式处理工具</title>
+    <meta name="description" content="文本格式处理工具 - 方便快捷地转换和处理文本格式">
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon/favicon.svg">
+    <title>文本格式处理工具</title>
     <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #5c5d5f;
+            --danger-color: #f44336;
+            --purple-color: #9C27B0;
+            --teal-color: #009688;
+            --text-color: #333;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --border-color: #ddd;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -19,32 +32,37 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            background-color: #f5f5f5;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
-        
+
         #toast {
             display: none;
             position: fixed;
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.9);
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s ease;
         }
+
         .container {
-            background-color: white;
+            background-color: var(--card-bg);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
             text-align: center;
-            color: #333;
+            color: var(--text-color);
             margin-bottom: 20px;
+            font-size: 1.8rem;
         }
 
         .text-area-container {
@@ -58,6 +76,20 @@
             .text-area-container {
                 grid-template-columns: 1fr;
             }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            button {
+                margin-bottom: 8px;
+                width: 100%;
+            }
         }
 
         .text-area-wrapper {
@@ -67,19 +99,26 @@
 
         .text-area-label {
             font-weight: bold;
-            margin-bottom: 5px;
-            color: #444;
+            margin-bottom: 8px;
+            color: var(--text-color);
         }
 
         textarea {
             width: 100%;
-            height: 500px;
-            padding: 10px;
-            border: 1px solid #ddd;
+            height: 65vh;
+            padding: 12px;
+            border: 1px solid var(--border-color);
             border-radius: 5px;
             resize: vertical;
             font-size: 16px;
             line-height: 1.5;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
         }
 
         .button-group {
@@ -87,6 +126,7 @@
             gap: 10px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 15px;
         }
 
         button {
@@ -95,49 +135,62 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.2s ease;
+            font-weight: 500;
         }
 
         button:hover {
-            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:active {
+            transform: translateY(0);
         }
 
         #convertBtn {
-            background-color: #4CAF50;
+            background-color: var(--primary-color);
             color: white;
         }
 
-        #copyBtn {
-            background-color: #2196F3;
+        #copyLeftBtn,
+        #copyRightBtn {
+            background-color: var(--secondary-color);
             color: white;
         }
 
         #clearBtn {
-            background-color: #f44336;
+            background-color: var(--danger-color);
             color: white;
         }
 
         #jumpBtn {
-            background-color: #9C27B0;
+            background-color: var(--purple-color);
             color: white;
         }
 
-        #jsonBtn {
-            background-color: #FF9800;
+        #mdToTextBtn {
+            background-color: var(--teal-color);
             color: white;
         }
 
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #333;
+        #textToMdBtn {
+            background-color: #795548;
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: none;
-            z-index: 1000;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #f0f0f0;
+                --bg-color: #121212;
+                --card-bg: #1e1e1e;
+                --border-color: #444;
+            }
+
+            textarea {
+                background-color: #2a2a2a;
+                color: #f0f0f0;
+            }
         }
     </style>
 </head>
@@ -147,94 +200,217 @@
         <h1>文本格式处理工具</h1>
         <div class="text-area-container">
             <div class="text-area-wrapper">
-                <div class="text-area-label">原始文本:</div>
-                <textarea id="inputText" placeholder="请输入需要转换的文本..."></textarea>
+                <label for="leftText" class="text-area-label">纯文本:</label>
+                <textarea id="leftText" placeholder="请输入纯文本..." aria-label="纯文本输入框"></textarea>
+                <button id="copyLeftBtn" aria-label="复制左侧">复制</button>
             </div>
             <div class="text-area-wrapper">
-                <div class="text-area-label">转换结果:</div>
-                <textarea id="outputText" placeholder="转换后的文本将显示在这里..." readonly></textarea>
+                <label for="rightText" class="text-area-label">Markdown:</label>
+                <textarea id="rightText" placeholder="请输入Markdown文本..." aria-label="Markdown文本输入框"></textarea>
+                <button id="copyRightBtn" aria-label="复制右侧">复制</button>
             </div>
         </div>
         <div class="button-group">
-            <button id="convertBtn">转换回车</button>
-            <button id="copyBtn">复制结果</button>
-            <button id="clearBtn">全部清空</button>
-            <button id="jumpBtn">一本日记</button>
-            <button id="jsonBtn">转换Json</button>
-            <button id="mdToTextBtn">Markdown转文本</button> <!-- 新增按钮 -->
+            <button id="convertBtn" aria-label="转换回车">转换回车</button>
+            <button id="clearBtn" aria-label="全部清空">全部清空</button>
+            <button id="jumpBtn" aria-label="跳转到一本日记">一本日记</button>
+            <button id="mdToTextBtn" aria-label="Markdown转文本">Markdown转文本</button>
         </div>
     </div>
-    <div id="toast" class="toast"></div>
+    <div id="toast" role="alert" aria-live="polite"></div>
 
     <script>
-        document.getElementById('convertBtn').addEventListener('click', function () {
-            const inputText = document.getElementById('inputText').value;
-            const outputText = inputText
-                .split('\n')
-                .map(line => line.trim())
-                .filter(line => line.length > 0)
-                .join('\n\n')
-                .replace(/\n{3,}/g, '\n\n'); // 确保最多只有一个空行
-            document.getElementById('outputText').value = outputText;
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = {
+                leftText: document.getElementById('leftText'),
+                rightText: document.getElementById('rightText'),
+                convertBtn: document.getElementById('convertBtn'),
+                copyLeftBtn: document.getElementById('copyLeftBtn'),
+                copyRightBtn: document.getElementById('copyRightBtn'),
+                clearBtn: document.getElementById('clearBtn'),
+                jumpBtn: document.getElementById('jumpBtn'),
+                mdToTextBtn: document.getElementById('mdToTextBtn'),
+                textToMdBtn: document.getElementById('textToMdBtn'),
+                toast: document.getElementById('toast')
+            };
 
-        document.getElementById('copyBtn').addEventListener('click', async function () {
-            const outputText = document.getElementById('outputText').value;
-            try {
-                await navigator.clipboard.writeText(outputText);
-                showToast('已复制到剪贴板');
-            } catch (err) {
-                console.error('复制失败:', err);
-                showToast('复制失败，请手动复制');
+            // 检查是否有保存的文本并恢复
+            const savedLeftText = localStorage.getItem('textFormatterLeftText');
+            const savedRightText = localStorage.getItem('textFormatterRightText');
+
+            if (savedLeftText) {
+                elements.leftText.value = savedLeftText;
+            }
+
+            if (savedRightText) {
+                elements.rightText.value = savedRightText;
+            }
+
+            // 自动保存输入文本
+            elements.leftText.addEventListener('input', () => {
+                localStorage.setItem('textFormatterLeftText', elements.leftText.value);
+            });
+
+            elements.rightText.addEventListener('input', () => {
+                localStorage.setItem('textFormatterRightText', elements.rightText.value);
+            });
+
+            // 转换回车
+            elements.convertBtn.addEventListener('click', () => {
+                const inputText = elements.leftText.value;
+                if (!inputText.trim()) {
+                    showToast('请输入文本内容');
+                    return;
+                }
+
+                const outputText = inputText
+                    .split('\n')
+                    .map(line => line.trim())
+                    .filter(line => line.length > 0)
+                    .join('\n\n')
+                    .replace(/\n{3,}/g, '\n\n'); // 确保最多只有一个空行
+
+                elements.leftText.value = outputText;
+                localStorage.setItem('textFormatterLeftText', outputText);
+                showToast('转换完成');
+            });
+
+            // 复制左侧
+            elements.copyLeftBtn.addEventListener('click', async () => {
+                await copyTextArea(elements.leftText, '左侧');
+            });
+
+            // 复制右侧
+            elements.copyRightBtn.addEventListener('click', async () => {
+                await copyTextArea(elements.rightText, '右侧');
+            });
+
+            // 复制文本区域内容的公共函数
+            async function copyTextArea(textArea, areaName) {
+                const text = textArea.value;
+                if (!text.trim()) {
+                    showToast(`${areaName}区域没有可复制的内容`);
+                    return;
+                }
+
+                try {
+                    await navigator.clipboard.writeText(text);
+                    showToast(`已复制${areaName}内容到剪贴板`);
+                } catch (err) {
+                    console.error('复制失败:', err);
+
+                    // 备用复制方法
+                    try {
+                        textArea.select();
+                        document.execCommand('copy');
+                        showToast(`已复制${areaName}内容到剪贴板`);
+                    } catch (fallbackErr) {
+                        showToast('复制失败，请手动复制');
+                    }
+                }
+            }
+
+            // 清空
+            elements.clearBtn.addEventListener('click', () => {
+                if (!elements.leftText.value && !elements.rightText.value) {
+                    showToast('内容已为空');
+                    return;
+                }
+
+                if (confirm('确定要清空所有内容吗？')) {
+                    elements.leftText.value = '';
+                    elements.rightText.value = '';
+                    localStorage.removeItem('textFormatterLeftText');
+                    localStorage.removeItem('textFormatterRightText');
+                    showToast('已清空所有内容');
+                }
+            });
+
+            // 跳转到日记
+            elements.jumpBtn.addEventListener('click', () => {
+                window.open('https://web.xianfengtech.cn/web2/#/record', '_blank');
+            });
+
+            // Markdown转文本
+            elements.mdToTextBtn.addEventListener('click', () => {
+                const mdText = elements.rightText.value;
+                if (!mdText.trim()) {
+                    showToast('请先在右侧输入Markdown文本');
+                    return;
+                }
+
+                try {
+                    const plainText = mdText
+                        .replace(/#{1,6}\s*/g, '') // 移除标题
+                        .replace(/\*\*(.*?)\*\*/g, '$1') // 移除加粗
+                        .replace(/\*(.*?)\*/g, '$1') // 移除斜体
+                        .replace(/!\[.*?\]\(.*?\)/g, '') // 移除图片
+                        .replace(/\[(.*?)\]\(.*?\)/g, '$1') // 移除链接
+                        .replace(/`{3}.*?\n[\s\S]*?\n`{3}/g, '') // 移除代码块
+                        .replace(/`(.*?)`/g, '$1') // 移除行内代码
+                        .replace(/>\s*(.*?)\n/g, '$1\n'); // 移除引用符号
+
+                    elements.leftText.value = plainText;
+                    localStorage.setItem('textFormatterLeftText', plainText);
+                    showToast('Markdown转换为纯文本完成');
+                } catch (err) {
+                    console.error('Markdown转换失败:', err);
+                    showToast('Markdown转换失败');
+                }
+            });
+
+            // 添加键盘快捷键
+            document.addEventListener('keydown', (e) => {
+                // Ctrl+Enter 执行转换
+                if (e.ctrlKey && e.key === 'Enter') {
+                    e.preventDefault();
+                    elements.convertBtn.click();
+                }
+
+                // Ctrl+Shift+L 复制左侧
+                if (e.ctrlKey && e.shiftKey && e.key === 'L') {
+                    e.preventDefault();
+                    elements.copyLeftBtn.click();
+                }
+
+                // Ctrl+Shift+R 复制右侧
+                if (e.ctrlKey && e.shiftKey && e.key === 'R') {
+                    e.preventDefault();
+                    elements.copyRightBtn.click();
+                }
+
+                // Ctrl+Shift+M 执行Markdown转文本
+                if (e.ctrlKey && e.shiftKey && e.key === 'M') {
+                    e.preventDefault();
+                    elements.mdToTextBtn.click();
+                }
+
+                // Ctrl+Shift+T 执行文本转Markdown
+                if (e.ctrlKey && e.shiftKey && e.key === 'T') {
+                    e.preventDefault();
+                    elements.textToMdBtn.click();
+                }
+            });
+
+            function showToast(message) {
+                elements.toast.textContent = message;
+                elements.toast.style.display = 'block';
+
+                // 清除任何现有的超时
+                if (elements.toast.timeout) {
+                    clearTimeout(elements.toast.timeout);
+                }
+
+                // 设置新的超时
+                elements.toast.timeout = setTimeout(() => {
+                    elements.toast.style.opacity = '0';
+                    setTimeout(() => {
+                        elements.toast.style.display = 'none';
+                        elements.toast.style.opacity = '1';
+                    }, 300);
+                }, 2000);
             }
         });
-
-        document.getElementById('clearBtn').addEventListener('click', function () {
-            document.getElementById('inputText').value = '';
-            document.getElementById('outputText').value = '';
-        });
-
-        document.getElementById('jumpBtn').addEventListener('click', function () {
-            window.open('https://web.xianfengtech.cn/web2/#/record', '_blank');
-        });
-
-        document.getElementById('jsonBtn').addEventListener('click', function () {
-            const inputText = document.getElementById('inputText').value;
-            const jsonObject = {
-                id: 1,
-                date: new Date().toISOString().split('T')[0],
-                title: "想你的第一天",
-                content: inputText,
-                from: "朱朱",
-                to: "欢欢",
-                avatar: "/images/avatar-ZZ.jpg"
-            };
-            const jsonString = JSON.stringify(jsonObject, null, 4);
-            document.getElementById('outputText').value = jsonString;
-        });
-
-        document.getElementById('mdToTextBtn').addEventListener('click', function () {
-            const outputText = document.getElementById('outputText').value;
-            const plainText = outputText
-                .replace(/#{1,6}\s*/g, '') // 移除标题
-                .replace(/\*\*(.*?)\*\*/g, '$1') // 移除加粗
-                .replace(/\*(.*?)\*/g, '$1') // 移除斜体
-                .replace(/!\[.*?\]\(.*?\)/g, '') // 移除图片
-                .replace(/\[(.*?)\]\(.*?\)/g, '$1') // 移除链接
-                .replace(/`{3}.*?\n[\s\S]*?\n`{3}/g, '') // 移除代码块
-                .replace(/`(.*?)`/g, '$1') // 移除行内代码
-                .replace(/\n{2,}/g, '\n\n'); // 规范化换行
-            document.getElementById('inputText').value = plainText;
-        });
-
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.style.display = 'block';
-            setTimeout(() => {
-                toast.style.display = 'none';
-            }, 2000);
-        }
     </script>
 </body>
 

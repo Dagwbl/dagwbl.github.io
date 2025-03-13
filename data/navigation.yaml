@@ -4,10 +4,10 @@
       icon: "📅"
       weight: 1
       link: "https://web.xianfengtech.cn/web2/#/record"
-    - name: "Txt to Markdown"
-      icon: "📑"
-      weight: 4
-      link: "/component/txt-to-md/"
+    # - name: "Txt to Markdown"
+    #   icon: "📑"
+    #   weight: 4
+    #   link: "/component/txt-to-md/"
     - name: "Multiple Search"
       icon: "🔍"
       weight: 0
