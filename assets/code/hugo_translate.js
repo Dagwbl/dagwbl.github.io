@@ -56,7 +56,17 @@ module.exports = async (params) => {
 
       // 使用yaml解析frontmatter
       try {
-        post = yaml.load(frontmatterContent);
+        post = yaml.load(frontmatterContent, {
+          schema: yaml.DEFAULT_SCHEMA.extend({ // 修复1/2：在解析时也排除日期转换
+            implicit: [
+              yaml.types.merge,
+              yaml.types.binary,
+              yaml.types.omap,
+              yaml.types.pairs,
+              yaml.types.set
+            ].filter(type => type.tag !== 'tag:yaml.org,2002:timestamp')
+          })
+        });
       } catch (e) {
         new Notice("Frontmatter解析失败：" + e.message);
         return;
@@ -105,7 +115,19 @@ module.exports = async (params) => {
 
     // 生成带格式的YAML
     newFrontmatter = "---\n" +
-      yaml.dump(translatedPost, { lineWidth: -1 }) +
+      yaml.dump(translatedPost, { 
+        lineWidth: -1,
+        schema: yaml.DEFAULT_SCHEMA.extend({ // 修复2/2：保持生成配置
+          implicit: [
+            yaml.types.merge,
+            yaml.types.binary,
+            yaml.types.omap,
+            yaml.types.pairs,
+            yaml.types.set
+          ].filter(type => type.tag !== 'tag:yaml.org,2002:timestamp')
+        }),
+        noCompatMode: true
+      }) +
       "---\n\n";
   }
 
@@ -194,7 +216,7 @@ module.exports = async (params) => {
 
       let chunk = text.slice(i, end);
       let translatedChunk = await getTranslation(llmType, [
-        { "role": "system", "content": "Translate the following Chinese blog post into English while keeping the original meaning and the original markdown format." },
+        { "role": "system", "content": "Translate the following Chinese blog post into English while keeping the original meaning and the original Markdown format accurately (include line break and space)." },
         { "role": "user", "content": chunk }
       ], config);
 

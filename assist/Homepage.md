@@ -33,7 +33,7 @@ limit 10
 ```dataview
 table title AS "Title",date AS "Time"
 from "content"
-where draft=false
+where draft=false AND contains(file.name, ".en")
 sort date desc
 limit 15
 ```
