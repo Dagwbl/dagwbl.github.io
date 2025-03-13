@@ -6,21 +6,13 @@
   Copyright (c) 2020 nanxiaobei and adityatelange
   Copyright (c) 2021-2024 adityatelange
 */
-@font-face {
-    font-family: 'Helvetica-EN';
-    src: local("Helvetica Neue"),  /* macOS优先 */
-         local("Helvetica"),       /* 旧版macOS */
-         local("Arial");           /* Windows回退 */
-    unicode-range: U+0000-007F, U+0080-00FF; /* 覆盖所有拉丁字符 */
-    font-display: swap;
-  }
 
 :root {
     --gap: 24px; 
 }
 
 body {
-    font-family: 'Helvetica-EN','Times New Roman','LXGW WenKai','-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
+    font-family: 'Helvetica-EN','Times New Roman','LXGW WenKai Screen','-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
 }
 
 /* 修复列表项不显示符号的问题 */
