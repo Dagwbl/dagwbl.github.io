@@ -1,6 +1,6 @@
 ---
 title: "{{date}}"
-date: "{{date}}T{{time:HH:mm:ss}}"
+date: "{{date}}T{{time:HH:mm:ss}}+08:00"
 categories:
   - diary
 series: 

@@ -1,21 +1,21 @@
 :root {
-  --background-primary: #ffffff;
-  --background-primary-alt: #f0f0f0;
+  --mark-background-primary: #ffffff;
+  --mark-background-primary-alt: #f0f0f0;
 }
 
 /* 保留原有基础样式 */
 .post-content mark {
   margin: 0 -0.05em;
-  padding: 0.1em 0.4em;
+  padding: 0.15em 0.25em;
   border-radius: 0.8em 0.3em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  text-shadow: 0 0 0.75em var(--background-primary-alt);
+  text-shadow: 0 0 0.75em var(--mark-background-primary-alt);
 }
 
 /* 整合lowlight效果 */
 .main mark.lowlight {
-  --lowlight-background: var(--background-primary);
+  --lowlight-background: var(--mark-background-primary);
   background-image: linear-gradient(
     360deg,
     rgba(255, 255, 255, 0) 40%,
@@ -25,7 +25,7 @@
 
 /* 整合floating效果 */
 .main mark.floating {
-  --floating-background: var(--background-primary);
+  --floating-background: var(--mark-background-primary);
   padding-bottom: 5px;
   background-image: linear-gradient(
     360deg,
