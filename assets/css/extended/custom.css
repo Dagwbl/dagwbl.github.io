@@ -6,7 +6,11 @@
   Copyright (c) 2020 nanxiaobei and adityatelange
   Copyright (c) 2021-2024 adityatelange
 */
-
+@import url("highlight.css");
+@import url("fonts.css");
+@import url("friend.css");
+@import url("tag.css");
+@import url("toc.css");
 :root {
     --gap: 24px; 
 }

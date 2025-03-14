@@ -181,7 +181,7 @@ module.exports = async (params) => {
 
       // 查找句子结束符（包含中文标点和换行符）
       const punctuationIndex = text.lastIndexOf('\n', end - 1);    // 优先换行符
-      const fallbackPunctuation = text.lastIndexOf(/[。！？]/g, end - 1); // 次要中文标点
+      const fallbackPunctuation = text.lastIndexOf(/[。！？…]/g, end - 1); // 次要中文标点
 
       let foundIndex = Math.max(
         punctuationIndex,

@@ -1,0 +1,50 @@
+:root {
+  --background-primary: #ffffff;
+  --background-primary-alt: #f0f0f0;
+}
+
+/* 保留原有基础样式 */
+.post-content mark {
+  margin: 0 -0.05em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-shadow: 0 0 0.75em var(--background-primary-alt);
+}
+
+/* 整合lowlight效果 */
+.main mark.lowlight {
+  --lowlight-background: var(--background-primary);
+  background-image: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 40%,
+    var(--lowlight-background) 40%
+  ) !important;
+}
+
+/* 整合floating效果 */
+.main mark.floating {
+  --floating-background: var(--background-primary);
+  padding-bottom: 5px;
+  background-image: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 28%,
+    var(--floating-background) 28%
+  ) !important;
+}
+
+/* 整合rounded效果 */
+.main mark.rounded {
+  margin: 0 -0.05em;
+  padding: 0.125em 0.15em;
+  border-radius: 0.2em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* 整合realistic效果 */
+.main mark.realistic {
+  padding: 0.15em 0.25em;
+  border-radius: 0.8em 0.3em;
+}

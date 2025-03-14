@@ -229,6 +229,9 @@ params:
   #         SiteVerificationTag: "XYZabc"
 
   assets:
+    assets:
+      css:
+        - extended/custom.css
     disableHLJS: true
     favicon: "favicon/favicon.svg"
     favicon16x16: "favicon/favicon.svg"
