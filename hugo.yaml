@@ -70,7 +70,7 @@ languages:
         #   weight: 7
     params:
       homeInfoParams:
-        Title: "Timid Thoughts 🌿"
+        Title: "Timid Thoughts 🌱"
         Content: |
           👋 **O troupe of little vagrants of the world, leave your footprints in my words.** 
 
@@ -125,7 +125,7 @@ languages:
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
       homeInfoParams:
-        Title: "胆怯的想法 🌿"
+        Title: "胆怯的想法 🌱"
         Content: |
           👋 世界上的小流浪者们啊，请在我的文字中留下你们的足迹。
 
