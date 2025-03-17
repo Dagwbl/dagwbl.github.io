@@ -105,25 +105,53 @@ module.exports = async (params) => {
 
     // 生成带格式的YAML
     newFrontmatter = "---\n" +
-    yaml.dump(translatedPost, { lineWidth: -1 }) +
-    "---\n\n";
+      yaml.dump(translatedPost, { lineWidth: -1 }) +
+      "---\n\n";
   }
 
   // 生成新文件
   let newFileContent = newFrontmatter + translatedContent;
-  let enFilePath = filePath.replace(".zh.", ".en.");
-
   // 创建或更新英文版文件
-  let adapter = app.vault.adapter;
+  let enFilePath = filePath.replace(".zh.", ".en.");
   let enFile = app.vault.getAbstractFileByPath(enFilePath);
 
   if (enFile) {
     await app.vault.modify(enFile, newFileContent);
   } else {
     await app.vault.create(enFilePath, newFileContent);
+    // 创建后重新获取文件引用
+    enFile = app.vault.getAbstractFileByPath(enFilePath);
+    if (!enFile) {
+      new Notice("❌ Failed to create English file");
+      return;
+    }
   }
 
   new Notice(`✅ Translation completed: ${filePath} -> ${enFilePath}`);
+  // 在右侧分栏打开文件（修正后的代码）
+  try {
+    // 先检查文件是否存在
+    if (!enFile) {
+      new Notice(`❌ File not found: ${enFilePath}`);
+      return;
+    }
+
+    // 创建新的叶子并在其中打开文件
+    let leaf = app.workspace.getLeaf('split', 'vertical');
+    if (!leaf) {
+      new Notice("❌ Failed to create new leaf");
+      return;
+    }
+
+    // 在新叶子中打开文件
+    await leaf.openFile(enFile, { active: true });
+
+    new Notice(`✅ Translation completed and file opened`);
+  } catch (e) {
+    new Notice(`❌ Failed to open file: ${e.message}`);
+    console.error(e);
+  }
+
 
   // 函数定义
   async function loadConfig() {
@@ -198,15 +226,14 @@ module.exports = async (params) => {
         // { "role": "system", "content": "Translate the following Chinese blog post into English while keeping the original meaning and the original Markdown format accurately (include line break and space)." },
         { "role": "user", "content": chunk }
       ], config);
-      if (punctuationIndex >fallbackPunctuation) {
-        translatedText += translatedChunk+"\n\n";
-        // new Notice(fallbackPunctuation," ",punctuationIndex,"添加换行符",translatedChunk);
-      }else{
-        translatedText += translatedChunk+" "; 
+      if (punctuationIndex > fallbackPunctuation) {
+        translatedText += translatedChunk + "\n\n";
+      } else {
+        translatedText += translatedChunk + " ";
       }
 
       // 修复进度计算
-      let progress = (end / totalLength * 100).toFixed(2); 
+      let progress = (end / totalLength * 100).toFixed(2);
       new Notice(`Text translation progress: ${progress}%`);
       i = end;
     }
