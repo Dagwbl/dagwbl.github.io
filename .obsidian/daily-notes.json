@@ -2,5 +2,5 @@
   "folder": "content/diary",
   "template": "archetypes/diary-ob",
   "autorun": false,
-  "format": "YYYY-MM-DD.\\z\\h"
+  "format": "YYYY-MM-DD\\.\\z\\h"
 }
