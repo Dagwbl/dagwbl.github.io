@@ -1,5 +1,5 @@
 ---
-title: "{{date}}"
+title: "{{date:YYYY-MM-DD}}"
 author: 
 to: 
 date: "{{date:YYYY-MM-DD}}T{{time:HH:mm:ss}}+08:00"
