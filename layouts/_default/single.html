@@ -39,6 +39,11 @@
 
   {{- end }}<!-- 如果 tools 不为 true，则加载头部 -->
 
+  <!-- 在这里添加日记信息显示代码 -->
+  {{ if in .Params.categories "diary" }}
+  {{ partial "diary_info.html" . }}
+  {{ end }}
+
   {{- if .Content }}
   <div class="post-content">
     {{- if not (.Param "disableAnchoredHeadings") }}
@@ -46,7 +51,7 @@
     {{- else }}{{ .Content }}{{ end }}
   </div>
   {{- end }}
-  
+
   {{- if not .Params.tools }} <!-- 如果 tools 不为 true，则加载尾部 -->
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
@@ -55,7 +60,7 @@
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
-    
+
     {{ partial "original_notice.html" . }} <!-- 放置原创性申明 -->
 
     {{- if (.Param "ShowPostNavLinks") }}
