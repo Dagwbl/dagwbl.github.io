@@ -142,12 +142,16 @@
             cursor: not-allowed;
             transform: none;
         }
+        
+        h1 {
+            animation: float 3s ease-in-out infinite; 
+        }
     </style>
 </head>
 
 <body>
     <div class="main-container">
-        <h1 style="animation: float 3s ease-in-out infinite;">🛸</h1>
+        <h1>🛸</h1>
         <form id="search-form" class="search-container">
             <input type="text" id="searchInput" class="search-input" placeholder="Please input a keyword..." required>
             <button type="submit" class="search-icon" id="defaultSearch">

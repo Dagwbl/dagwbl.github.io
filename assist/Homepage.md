@@ -21,7 +21,10 @@ path includes assist
 
 ### 📝 **Draft Box**
 ```dataview
-table title AS "Title",date AS "Time"
+table without id
+	link(file.path, replace(file.name, ".en", "")) AS "File",
+	truncate(title,30) AS "Title",
+	dateformat(date, "yyyy-MM-dd") AS "Date"
 from "content"
 where draft=true
 sort date desc
@@ -31,7 +34,10 @@ limit 10
 
 ### **📁 Article Box**
 ```dataview
-table title AS "Title",date AS "Time"
+table without id
+	link(file.path, replace(file.name, ".en", "")) AS "File",
+	truncate(title,30) AS "Title",
+	dateformat(date, "yyyy-MM-dd") AS "Date"
 from "content"
 where draft=false AND contains(file.name, ".en")
 sort date desc
