@@ -44,10 +44,13 @@ customjscssraw:
 {{< bookmark "火山方舟" "https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW">}}
 {{< bookmark "SiliconCloud" "https://cloud.siliconflow.cn/models">}}
 {{< bookmark "WebCache" "https://www.webcache.cn/" >}}
+{{< bookmark "CodePen" "https://codepen.io/wodniack/pens/popular">}}
 
 ### ⚒️ Tools & Other
 
 {{< bookmark "Character Counter" "https://charactercalculator.com/">}}
+{{< bookmark "GeoGebra" "https://www.geogebra.org/">}}
+{{< bookmark "Symbolab" "https://www.symbolab.com/">}}
 {{< bookmark "ToolWa" "https://toolwa.com" >}}
 {{< bookmark "HuggingChat" "https://huggingface.co/chat/" >}}
 {{< bookmark "Stack Overflow" "https://stackoverflow.com" >}}
