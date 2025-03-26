@@ -24,8 +24,9 @@ customjscssraw:
 {{< bookmark "多邻国" "https://www.duolingo.cn/learn" >}}
 {{< bookmark "萤火虫" "https://www.fireflyau.com/home" >}}
 {{< bookmark "Hugo" "https://gohugo.io" >}}
+{{< bookmark "渐构" "https://www.modevol.com/" >}}
 
-### 💪 Library
+### 💪 Library & Dictionary
 
 {{< bookmark "EmojiAll" "https://www.emojiall.com/zh-hans">}}
 {{< bookmark "Emojis Wiki" "https://emojis.wiki/" >}}
@@ -36,18 +37,20 @@ customjscssraw:
 {{< bookmark "漢典" "https://www.zdic.net/" >}}
 {{< bookmark "Urban Dictionary" "https://www.urbandictionary.com/" >}}
 
-### ⚒️ Tool
+### 🎨 Design & Development
 
-{{< bookmark "ToolWa" "https://toolwa.com" >}}
+{{< bookmark "AppIconForge" "https://zhangyu1818.github.io/appicon-forge/" >}}
 {{< bookmark "Toolbox of programmer" "https://tool.ur1.fun">}}
 {{< bookmark "火山方舟" "https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW">}}
 {{< bookmark "SiliconCloud" "https://cloud.siliconflow.cn/models">}}
+{{< bookmark "WebCache" "https://www.webcache.cn/" >}}
 
-### 🍿 Other
+### ⚒️ Tools & Other
 
+{{< bookmark "Character Counter" "https://charactercalculator.com/">}}
+{{< bookmark "ToolWa" "https://toolwa.com" >}}
 {{< bookmark "HuggingChat" "https://huggingface.co/chat/" >}}
 {{< bookmark "Stack Overflow" "https://stackoverflow.com" >}}
-{{< bookmark "WebCache" "https://www.webcache.cn/" >}}
 
 <!-- {{<aplayer tencent 5348146338 true>}} -->
 {{<aplayer netease 726854551 true>}}

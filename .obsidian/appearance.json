@@ -6,5 +6,6 @@
   "showViewHeader": true,
   "baseFontSizeAction": true,
   "baseFontSize": 19,
-  "showRibbon": true
+  "showRibbon": true,
+  "accentColor": ""
 }
