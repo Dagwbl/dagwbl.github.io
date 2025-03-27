@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立方体展开图展示</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .thumbnail {
+            width: 90px;
+            height: 90px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            background-color: #f9f9f9;
+        }
+
+        .thumbnail.active {
+            border-color: #4CAF50;
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .thumbnail-title {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .thumbnail-net {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .thumbnail-face {
+            position: absolute;
+            border: 1px solid #333;
+            transform-origin: center;
+            box-sizing: border-box;
+        }
+
+        .main-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .selected-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .net-scene {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            perspective: 1200px;
+            perspective-origin: 50% 50%;
+        }
+
+        .net-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 1.5s ease;
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 1.5s ease;
+            transform-style: preserve-3d;
+            backface-visibility: visible;
+            box-sizing: border-box;
+            transform-origin: 40px 40px;
+            border: 2px solid #333;
+        }
+
+        .cube-face .face-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* 定义六个面的颜色 */
+        .face-1 {
+            background-color: rgba(255, 0, 0, 0.8);
+            /* 红色 - 底面 */
+        }
+
+        .face-2 {
+            background-color: rgba(0, 255, 0, 0.8);
+            /* 绿色 - 前面 */
+        }
+
+        .face-3 {
+            background-color: rgba(0, 0, 255, 0.8);
+            /* 蓝色 - 后面 */
+        }
+
+        .face-4 {
+            background-color: rgba(255, 255, 0, 0.8);
+            /* 黄色 - 左面 */
+        }
+
+        .face-5 {
+            background-color: rgba(255, 0, 255, 0.8);
+            /* 品红 - 右面 */
+        }
+
+        .face-6 {
+            background-color: rgba(0, 255, 255, 0.8);
+            /* 青色 - 顶面 */
+        }
+
+        .folding .cube-face {
+            border-color: transparent;
+        }
+
+        .edge {
+            position: absolute;
+            background-color: #333;
+            z-index: 10;
+        }
+
+        .hidden-edge {
+            position: absolute;
+            background-color: transparent;
+            border: 1px dashed #333;
+            opacity: 0.7;
+            z-index: 1;
+            display: none;
+        }
+
+        .color-legend {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #333;
+        }
+
+        .slider-container {
+            margin: 20px 0;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .slider-label {
+            display: block;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .rotation-slider {
+            width: 100%;
+        }
+
+        .explanation {
+            margin-top: 30px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .net-scene {
+                width: 300px;
+                height: 300px;
+            }
+
+            .cube-face {
+                width: 60px;
+                height: 60px;
+            }
+
+            .thumbnail {
+                width: 70px;
+                height: 70px;
+            }
+
+            .color-legend {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>立方体的11种展开图</h1>
+
+    <div class="thumbnail-container" id="thumbnailContainer">
+        <!-- 缩略图将通过JavaScript生成 -->
+    </div>
+
+    <div class="main-display">
+        <div class="selected-title" id="selectedTitle">请从上方选择一个展开图</div>
+
+        <div class="controls">
+            <button id="unfoldBtn">展开</button>
+            <button id="foldBtn">折叠</button>
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label" for="rotationSlider">旋转视角 (仅在折叠状态下有效)</label>
+            <input type="range" id="rotationSlider" class="rotation-slider" min="0" max="360" value="30">
+        </div>
+
+        <div class="net-scene">
+            <div class="net-container" id="netContainer">
+                <!-- 立方体面将在这里渲染 -->
+            </div>
+        </div>
+
+        <div class="color-legend">
+            <div class="legend-item">
+                <div class="legend-color face-1"></div>
+                <span>底面 (1)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color face-2"></div>
+                <span>前面 (2)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color face-3"></div>
+                <span>后面 (3)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color face-4"></div>
+                <span>左面 (4)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color face-5"></div>
+                <span>右面 (5)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color face-6"></div>
+                <span>顶面 (6)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="explanation">
+        <h2>什么是立方体展开图？</h2>
+        <p>立方体展开图是将立方体的6个面展开到平面上的二维表示，各面通过共同边相连。正如折纸模型一样，展开图可以沿着这些共享边折叠成一个完整的立方体。</p>
+        <p>立方体有11种不同的展开方式，每种展开图都可以通过沿着边缘折叠重新形成一个立方体。</p>
+        <p><strong>使用说明：</strong></p>
+        <ul>
+            <li>点击上方缩略图选择要查看的展开图</li>
+            <li>使用"展开"和"折叠"按钮观察立方体的变化过程</li>
+            <li>每个面用不同颜色标记，方便区分位置</li>
+            <li>在折叠状态下，可使用滑块调整观察角度</li>
+            <li>虚线表示被遮挡的边缘</li>
+        </ul>
+    </div>
+
+    <script>
+        // 11种正确的立方体展开图配置
+        const netConfigurations = [
+            {
+                name: "1",
+                faces: [
+                    { id: 1, x: 80, y: 80, tx: -80, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [2, 5] },
+                    { id: 2, x: 160, y: 80, tx: 0, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [1, 3] },
+                    { id: 3, x: 240, y: 80, tx: 80, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [2, 4] },
+                    { id: 4, x: 240, y: 160, tx: 80, ty: 0, tz: 40, rx: 0, ry: 90, rz: 0, connections: [3, 6] },
+                    { id: 5, x: 80, y: 160, tx: -80, ty: 0, tz: 40, rx: 0, ry: -90, rz: 0, connections: [1, 6] },
+                    { id: 6, x: 160, y: 240, tx: 0, ty: 80, tz: 40, rx: 90, ry: 0, rz: 0, connections: [4, 5] }
+                ]
+            },
+            {
+                name: "2",
+                faces: [
+                    { id: 1, x: 80, y: 80, tx: -80, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [2, 5] },
+                    { id: 2, x: 160, y: 80, tx: 0, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [1, 3] },
+                    { id: 3, x: 240, y: 80, tx: 80, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [2, 4] },
+                    { id: 4, x: 240, y: 160, tx: 80, ty: 0, tz: 40, rx: 0, ry: 90, rz: 0, connections: [3, 6] },
+                    { id: 5, x: 80, y: 160, tx: -80, ty: 0, tz: 40, rx: 0, ry: -90, rz: 0, connections: [1, 6] },
+                    { id: 6, x: 160, y: 240, tx: 0, ty: 80, tz: 40, rx: 90, ry: 0, rz: 0, connections: [4, 5] }
+                ]
+            },
+            {
+                name: "3",
+                faces: [
+                    { id: 1, x: 80, y: 80, tx: -80, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [2, 5] },
+                    { id: 2, x: 160, y: 80, tx: 0, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [1, 3] },
+                    { id: 3, x: 240, y: 80, tx: 80, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [2, 4] },
+                    { id: 4, x: 240, y: 160, tx: 80, ty: 0, tz: 40, rx: 0, ry: 90, rz: 0, connections: [3, 6] },
+                    { id: 5, x: 80, y: 160, tx: -80, ty: 0, tz: 40, rx: 0, ry: -90, rz: 0, connections: [1, 6] },
+                    { id: 6, x: 160, y: 240, tx: 0, ty: 80, tz: 40, rx: 90, ry: 0, rz: 0, connections: [4, 5] }
+                ]
+            },
+            {
+                name: "4",
+                faces: [
+                    { id: 1, x: 80, y: 80, tx: -80, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [2, 5] },
+                    { id: 2, x: 160, y: 80, tx: 0, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [1, 3] },
+                    { id: 3, x: 240, y: 80, tx: 80, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [2, 4] },
+                    { id: 4, x: 240, y: 160, tx: 80, ty: 0, tz: 40, rx: 0, ry: 90, rz: 0, connections: [3, 6] },
+                    { id: 5, x: 80, y: 160, tx: -80, ty: 0, tz: 40, rx: 0, ry: -90, rz: 0, connections: [1, 6] },
+                    { id: 6, x: 160, y: 240, tx: 0, ty: 80, tz: 40, rx: 90, ry: 0, rz: 0, connections: [4, 5] }
+                ]
+            },
+            {
+                name: "5",
+                faces: [
+                    { id: 1, x: 80, y: 80, tx: -80, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [2, 5] },
+                    { id: 2, x: 160, y: 80, tx: 0, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [1, 3] },
+                    { id: 3, x: 240, y: 80, tx: 80, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [2, 4] },
+                    { id: 4, x: 240, y: 160, tx: 80, ty: 0, tz: 40, rx: 0, ry: 90, rz: 0, connections: [3, 6] },
+                    { id: 5, x: 80, y: 160, tx: -80, ty: 0, tz: 40, rx: 0, ry: -90, rz: 0, connections: [1, 6] },
+                    { id: 6, x: 160, y: 240, tx: 0, ty: 80, tz: 40, rx: 90, ry: 0, rz: 0, connections: [4, 5] }
+                ]
+            },
+            {
+                name: "右T形展开图",
+                faces: [
+                    { id: 1, x: 160, y: 160, tx: 0, ty: 0, tz: 0, rx: 0, ry: 0, rz: 0, connections: [2, 3, 4] }, // 底面-中心
+                    { id: 2, x: 160, y: 80, tx: 0, ty: -80, tz: 40, rx: -90, ry: 0, rz: 0, connections: [1] }, // 前面-上
+                    { id: 3, x: 160, y: 240, tx: 0, ty: 80, tz: 40, rx: 90, ry: 0, rz: 0, connections: [1, 5, 6] }, // 后面-下
+                    { id: 4, x: 80, y: 160, tx: -80, ty: 0, tz: 40, rx: 0, ry: -90, rz: 0, connections: [1] }, // 左面-左
+                    { id: 5, x: 240, y: 240, tx: 80, ty: 80, tz: 0, rx: 90, ry: 90, rz: 0, connections: [3] }, // 右面-下右
+                    { id: 6, x: 80, y: 240, tx: -80, ty: 80, tz: 0, rx: 90, ry: -90, rz: 0, connections: [3] } // 顶面-下左
+                ]
+            }
+        ];
+
+        // 当前选中的展开图索引
+        let selectedNetIndex = null;
+        let isFolded = false;
+        let currentRotation = 30;
+
+        // 初始化缩略图
+        function initThumbnails() {
+            const container = document.getElementById('thumbnailContainer');
+            container.innerHTML = '';
+
+            netConfigurations.forEach((config, index) => {
+                const thumbnail = document.createElement('div');
+                thumbnail.className = 'thumbnail';
+                thumbnail.id = `thumbnail-${index}`;
+                thumbnail.innerHTML = `
+                    <div class="thumbnail-net" id="thumbnail-net-${index}"></div>
+                    <div class="thumbnail-title">${index + 1}. ${config.name}</div>
+                `;
+                thumbnail.addEventListener('click', () => selectNet(index));
+                container.appendChild(thumbnail);
+
+                const netElement = document.getElementById(`thumbnail-net-${index}`);
+                const scale = 0.3; // 缩放比例
+
+                // 绘制缩略图中的立方体面
+                config.faces.forEach(face => {
+                    const faceElement = document.createElement('div');
+                    faceElement.className = `thumbnail-face face-${face.id}`;
+                    faceElement.style.width = `${80 * scale}px`;
+                    faceElement.style.height = `${80 * scale}px`;
+                    faceElement.style.left = `${(face.x - 40) * scale + 45 - 12}px`;
+                    faceElement.style.top = `${(face.y - 40) * scale + 45 - 12}px`;
+                    netElement.appendChild(faceElement);
+                });
+            });
+        }
+
+        // 选择展开图
+        function selectNet(index) {
+            // 清除之前的选中状态
+            if (selectedNetIndex !== null) {
+                document.getElementById(`thumbnail-${selectedNetIndex}`).classList.remove('active');
+            }
+
+            selectedNetIndex = index;
+            document.getElementById(`thumbnail-${index}`).classList.add('active');
+            document.getElementById('selectedTitle').textContent = `${index + 1}. ${netConfigurations[index].name}`;
+
+            // 重置折叠状态
+            isFolded = false;
+            renderSelectedNet();
+            updateRotationControls();
+        }
+
+        // 渲染选中的展开图
+        function renderSelectedNet() {
+            if (selectedNetIndex === null) return;
+
+            const netContainer = document.getElementById('netContainer');
+            netContainer.innerHTML = '';
+            netContainer.style.transform = `rotateX(20deg) rotateY(${currentRotation}deg)`;
+
+            const config = netConfigurations[selectedNetIndex];
+
+            // 添加立方体面
+            config.faces.forEach(face => {
+                const faceElement = document.createElement('div');
+                faceElement.className = `cube-face face-${face.id}`;
+                faceElement.id = `face-${face.id}`;
+                faceElement.style.left = `${face.x - 40}px`;
+                faceElement.style.top = `${face.y - 40}px`;
+                faceElement.innerHTML = `<div class="face-content">${face.id}</div>`;
+                netContainer.appendChild(faceElement);
+            });
+
+            // 添加边缘连接线和隐藏边
+            config.faces.forEach(face => {
+                face.connections.forEach(connectedId => {
+                    // 获取连接的面
+                    const connectedFace = config.faces.find(f => f.id === connectedId);
+                    if (!connectedFace) return;
+
+                    // 确定两个面之间的共享边
+                    let edge;
+                    if (face.x === connectedFace.x) {
+                        // 垂直相邻
+                        const isTop = face.y < connectedFace.y;
+                        edge = document.createElement('div');
+                        edge.className = 'edge';
+                        edge.style.width = '2px';
+                        edge.style.height = '4px';
+                        edge.style.left = `${face.x - 1}px`;
+                        edge.style.top = `${isTop ? face.y + 40 - 2 : face.y - 2}px`;
+                    } else if (face.y === connectedFace.y) {
+                        // 水平相邻
+                        const isLeft = face.x < connectedFace.x;
+                        edge = document.createElement('div');
+                        edge.className = 'edge';
+                        edge.style.width = '4px';
+                        edge.style.height = '2px';
+                        edge.style.left = `${isLeft ? face.x + 40 - 2 : face.x - 2}px`;
+                        edge.style.top = `${face.y - 1}px`;
+                    } else {
+                        // 对角线相邻 (对于某些特殊展开图)
+                        // 这里需要更复杂的逻辑来处理对角线折叠
+                        return;
+                    }
+
+                    netContainer.appendChild(edge);
+                });
+            });
+
+            if (isFolded) {
+                foldCube();
+            } else {
+                unfoldCube();
+            }
+        }
+
+        // 展开立方体
+        function unfoldCube() {
+            if (selectedNetIndex === null) return;
+
+            document.getElementById('netContainer').classList.remove('folding');
+            isFolded = false;
+            updateRotationControls();
+
+            const config = netConfigurations[selectedNetIndex];
+            config.faces.forEach(face => {
+                const faceElement = document.getElementById(`face-${face.id}`);
+                if (!faceElement) return;
+
+                faceElement.style.transform = `translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+                faceElement.style.left = `${face.x - 40}px`;
+                faceElement.style.top = `${face.y - 40}px`;
+            });
+
+            // 隐藏所有虚线边缘
+            document.querySelectorAll('.hidden-edge').forEach(edge => {
+                edge.style.display = 'none';
+            });
+        }
+
+        // 折叠立方体
+        function foldCube() {
+            if (selectedNetIndex === null) return;
+
+            document.getElementById('netContainer').classList.add('folding');
+            isFolded = true;
+            updateRotationControls();
+
+            const config = netConfigurations[selectedNetIndex];
+
+            // 从底面开始递归折叠所有面
+            config.faces.forEach(face => {
+                const faceElement = document.getElementById(`face-${face.id}`);
+                if (!faceElement) return;
+
+                // 所有面都从中心面的位置开始变换
+                const baseFace = config.faces[0];
+                faceElement.style.left = `${baseFace.x - 40}px`;
+                faceElement.style.top = `${baseFace.y - 40}px`;
+
+                // 应用3D变换
+                faceElement.style.transform = `
+                    translate3d(${face.tx}px, ${face.ty}px, ${face.tz}px)
+                    rotateX(${face.rx}deg)
+                    rotateY(${face.ry}deg)
+                    rotateZ(${face.rz}deg)
+                `;
+            });
+
+            // 显示虚线边缘
+            const hiddenEdges = document.querySelectorAll('.hidden-edge');
+            hiddenEdges.forEach(edge => {
+                edge.style.display = 'block';
+            });
+        }
+
+        // 更新旋转控制
+        function updateRotationControls() {
+            const slider = document.getElementById('rotationSlider');
+            slider.disabled = !isFolded;
+
+            if (isFolded) {
+                // 应用当前旋转角度
+                document.getElementById('netContainer').style.transform =
+                    `rotateX(20deg) rotateY(${currentRotation}deg)`;
+            } else {
+                // 平面状态下重置旋转
+                document.getElementById('netContainer').style.transform =
+                    'rotateX(0deg) rotateY(0deg)';
+            }
+        }
+
+        // 处理旋转滑块变化
+        function handleRotationChange() {
+            if (!isFolded) return;
+
+            currentRotation = document.getElementById('rotationSlider').value;
+            document.getElementById('netContainer').style.transform =
+                `rotateX(20deg) rotateY(${currentRotation}deg)`;
+        }
+
+        // 初始化页面
+        document.addEventListener('DOMContentLoaded', () => {
+            initThumbnails();
+
+            // 按钮事件监听
+            document.getElementById('unfoldBtn').addEventListener('click', unfoldCube);
+            document.getElementById('foldBtn').addEventListener('click', foldCube);
+            document.getElementById('rotationSlider').addEventListener('input', handleRotationChange);
+
+            // 默认选择第一个展开图
+            selectNet(0);
+        });
+    </script>
+</body>
+
+</html>

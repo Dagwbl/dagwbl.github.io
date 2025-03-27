@@ -1,4 +1,3 @@
-
 /* Custom the style for home page */
 /*
   PaperMod v7
@@ -11,17 +10,18 @@
 @import url("friend.css");
 @import url("tag.css");
 @import url("toc.css");
+
 :root {
-    --gap: 24px; 
+    --gap: 24px;
 }
 
 body {
-    font-family: 'Helvetica-EN','Times New Roman','LXGW WenKai Screen','-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
+    font-family: 'Helvetica-EN', 'Times New Roman', 'LXGW WenKai Screen', '-apple-system', 'BlinkMacSystemFont', 'segoe ui', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'open sans', Verdana, sans-serif;
 }
 
 /* 修复列表项不显示符号的问题 */
 .home-info ul {
-    padding-inline-start:20px
+    padding-inline-start: 20px
 }
 
 /* .main {
@@ -32,7 +32,8 @@ body {
 } */
 
 
-.logo, #menu {
+.logo,
+#menu {
     /* display: flex; */
     margin: auto calc(var(--gap)*0.5);
 }
@@ -44,10 +45,13 @@ body {
 
 
 .post-content {
-    hyphens:auto;
+    -webkit-hyphens: auto;
+    /* Safari 兼容 */
+    -moz-hyphens: auto;
+    /* Firefox 兼容 */
+    hyphens: auto;
+    /* 标准属性 */
     word-break: break-word;
-    -webkit-hyphens: auto; /* Safari 兼容 */
-    -moz-hyphens: auto; /* Firefox 兼容 */
 }
 
 
@@ -79,24 +83,25 @@ body {
 
 /* The following styles are from https://devsnap.me/css-quote-styles */
 .post-content blockquote {
-  margin:var(--gap) auto !important;
-  font-family:Open Sans;
-  font-style:italic;
-  color: #666666;
-  padding:1.1em 30px 1.1em 55px !important;
-  border-left:8px solid #3e5a72 !important;
-  line-height:1.6;
-  position: relative;
-  background:#EDEDED;
+    margin: var(--gap) auto calc(var(--gap)*.6) auto !important;
+    /* font-family: Open Sans; */
+    font-style: italic;
+    color: #666666;
+    padding: 1.1em 30px .8em 55px !important;
+    border-left: 8px solid #3e5a72 !important;
+    line-height: 1.5;
+    position: relative;
+    background: #EDEDED;
 }
+
 .post-content blockquote::before {
-    font-family:Arial;
+    font-family: Arial;
     content: "\201C";
-    color:#3e5a72;
-    font-size:4em;
+    color: #3e5a72;
+    font-size: 4em;
     position: absolute;
     left: 10px;
-    top:-10px;
+    top: -10px;
 }
 
 .post-content blockquote::after {
@@ -104,12 +109,24 @@ body {
 }
 
 .post-content blockquote span {
-    display:block;
-    color:#333333;
+    display: block;
+    color: #555555;
     font-style: normal;
     font-weight: bold;
-    margin-top:1em;}
+    margin-top: 1em;
+    text-align: right;
 
+    /* 添加前导“——” */
+    &::before {
+        content: "——";
+        margin-right: 0.5em;
+        font-weight: bold;
+        font-style: normal;
+        &::after {
+            content: "  ";
+        }
+    }
+}
 
 
 /* .post-content h1 {
@@ -143,4 +160,3 @@ body {
 .post-content h6 {
     font-size: calc(var(--font-size-base) + var(--font-size-add) * -2)
 } */
-
