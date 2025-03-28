@@ -3,6 +3,7 @@
 
 
 ## To-do
+- [ ] https://bhoot.dev/2025/typescript-function-type-syntaxes/
 - [ ] 刷题  [repeat:: every day]  [created:: 2025-02-19]
 - [ ] 学习微观经济学
 

@@ -23,7 +23,7 @@
 
   .post-diary-item {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 6px;
   }
 
@@ -140,7 +140,8 @@
 
     {{ with .Date }}
     <span class="post-diary-item">
-      {{ if isset $.Params "rating" }}
+      {{/* printf "Rating 类型：%T | 值：%#v" $.Params.rating $.Params.rating */}}
+      {{ if and (isset $.Params "rating") (or (eq (printf "%T" $.Params.rating) "int") (ne (string $.Params.rating) "")) }}
       {{ $rating := $.Params.rating }}
       <span class="post-diary-item">
         <div class="single-star rating-{{ $rating }}">
@@ -156,7 +157,7 @@
           </svg>
         </div>
       </span>
-      {{else}}
+      {{ else}}
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
         class="feather feather-calendar">

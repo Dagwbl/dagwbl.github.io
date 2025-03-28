@@ -1,30 +1,28 @@
-
 <style>
-    .original-notice {
-      /* background-color: #f8d7da; */
-      /* border-left: 4px solid #b3a5a6; */
-      /* padding: 8px; */
-      /* color: #721c24; */
-      font-size: 14px;
-      margin-bottom: 20px;
-      font-weight: bold;
-      /* border-radius: 5px; */
-      /* display: contents; */
-    }
+  .original-notice {
+    /* background-color: #f8d7da; */
+    /* border-left: 4px solid #b3a5a6; */
+    /* padding: 8px; */
+    /* color: #721c24; */
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    /* border-radius: 5px; */
+    /* display: contents; */
+  }
 </style>
 
-{{ if and (eq .Params.Language "en") (in .Params.categories "original") }}
-  <div class="original-notice">
-    <strong>Original Declaration:</strong> This is an original article. All rights reserved by the author. Please cite the source if you wish to repost!
-  </div>
-{{ else if and (eq .Params.Language "cn") (in .Params.categories "original") }}
-  <div class="original-notice">
-    <strong>原创声明：</strong> 本文为原创文章，版权归作者所有，转载请注明出处！
-  </div>
+{{ if and (eq .Lang "en") (in .Params.categories "original") }}
+<div class="original-notice">
+  <strong>Declaration:</strong> This is an original article. All rights reserved by the author. Please cite the source if you wish to repost!
+</div>
+{{ else if and (in .Params.categories "original") (eq .Lang "zh")  }}
+<div class="original-notice">
+  <strong>原创声明：</strong> 本文为原创文章，版权归作者所有，转载请注明出处！
+</div>
 {{ else if (in .Params.categories "original") }}
-  <div class="original-notice">
-    <strong>原创声明：</strong> 本文为原创文章，版权归作者所有，转载请注明出处！
-  </div>
+<div class="original-notice">
+  <strong>Declaration:</strong> This article is the original work of the author. All rights reserved.
+  Unauthorized reproduction without proper attribution is prohibited.
+</div>
 {{ end }}
-
-
