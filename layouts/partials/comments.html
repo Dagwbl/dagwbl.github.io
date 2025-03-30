@@ -5,43 +5,74 @@
         </script>
 
 <script>
-        // Giscus 主题切换代码
+        function getTheme() {
+                return document.body.classList.contains("dark")
+                        ? "catppuccin_macchiato"
+                        : "catppuccin_latte";
+        }
+
+        let giscusAttributes = {
+                src: "https://giscus.app/client.js",
+                "data-repo": "schemar/blog",
+                "data-repo-id": "<id>",
+                "data-category": "General",
+                "data-category-id": "<id>",
+                "data-mapping": "pathname",
+                "data-strict": "1",
+                "data-reactions-enabled": "1",
+                "data-emit-metadata": "0",
+                "data-input-position": "top",
+                "data-theme": getTheme(),
+                "data-lang": "en",
+                crossorigin: "anonymous",
+                async: "",
+        };
+
+        let giscusScript = document.createElement("script");
+        Object.entries(giscusAttributes).forEach(([key, value]) =>
+                giscusScript.setAttribute(key, value),
+        );
+        document.querySelector("main").appendChild(giscusScript);
+
         function changeGiscusTheme() {
-                // var theme;
-                // if (localStorage.getItem("pref-theme") === "dark") {
-                //         theme = 'dark'
-                // } else if (localStorage.getItem("pref-theme") === "light") {
-                //         theme = 'light'
-                // } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                //         theme = 'dark'
-                // }
-                // 检查当前主题模式
-                const theme = document.body.classList.contains('dark') ? 'light' : 'dark';
-                console.log(theme);
+                const iframe = document.querySelector("iframe.giscus-frame");
 
-                // 发送消息到 Giscus iframe
-                function sendMessage(message) {
-                        const iframe = document.querySelector('iframe.giscus-frame');
-                        if (!iframe) return;
-                        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-                }
-
-                // 更新 Giscus 主题配置
-                sendMessage({
-                        setConfig: {
-                                theme: theme
+                const setGisSrc = (theme) => {
+                        if (!iframe) {
+                                return;
                         }
-                });
+
+                        const iframeSrc = iframe.src;
+                        const iframeUrl = new URL(iframeSrc);
+                        const iframeSearchParams = iframeUrl.searchParams;
+                        iframeSearchParams.set("theme", theme);
+
+                        iframe.src = iframeUrl.toString();
+                };
+
+                const sendMessage = (message) => {
+                        if (iframe?.contentWindow) {
+                                iframe.contentWindow.postMessage(
+                                        { giscus: message },
+                                        "https://giscus.app",
+                                );
+                        }
+                };
+
+                // Giscus doesn't accept messages if it's not loaded
+                if (iframe?.classList.contains("giscus-frame--loading")) {
+                        setGisSrc(getTheme());
+                } else {
+                        sendMessage({ setConfig: { theme: getTheme() } });
+                }
         }
 
-        // 查找主题切换按钮
-        const modeToggle = document.getElementById("theme-toggle");
+        const themeToggle = document.getElementById("theme-toggle");
 
-        // 如果按钮存在，则添加点击事件监听器
-        if (modeToggle) {
-                modeToggle.addEventListener('click', changeGiscusTheme);
-                console.log("Giscus theme change button initialized.");
+        if (typeof themeToggle !== "undefined") {
+                themeToggle.addEventListener("click", () =>
+                        // Add timeout to wait for actual switch before changing theme.
+                        setTimeout(changeGiscusTheme, 100),
+                );
         }
-
-        // changeGiscusTheme();
 </script>

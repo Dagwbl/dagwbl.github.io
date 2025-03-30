@@ -185,7 +185,8 @@ params:
   TocOpen: true
   comments: true
   busuanzi:
-    enable: false
+    enable: true
+    homePage: false
     # 配置是否显示访问量
   # images: ["/images/wallpaperflare.com_flower.jpg"]
   # ShowShareButtons: true
