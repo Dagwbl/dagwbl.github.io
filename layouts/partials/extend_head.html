@@ -34,6 +34,6 @@
   <meta name="referrer" content="no-referrer-when-downgrade">
 {{- end -}}
 
-{{- if and (.Site.Params.InsteadPicture) 1 -}}
+{{- if .Site.Params.InsteadPicture -}}
 <script src="{{ "/js/instead_images.js" | relURL }}"></script>
 {{- end -}}

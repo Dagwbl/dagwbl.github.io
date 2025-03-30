@@ -157,6 +157,7 @@ outputs:
     - JSON
 
 params:
+  InsteadPicture: true
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "A blog about technology, programming, and life."
   author: ZJeapo
