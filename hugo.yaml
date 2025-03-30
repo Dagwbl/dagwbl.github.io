@@ -22,9 +22,9 @@ resourceDir: "../hugo_resources"
 
 mainsections: 
   - posts
-  # - diary
-  # - letter
-  # - navi
+  - diary
+  - letter
+  - navi
 ignoreFiles:
   - \.ignore$  # 忽略所有以 `.ignore` 结尾的文件
   - ^.obsidian/     # 忽略 `temp` 文件夹及其内容
