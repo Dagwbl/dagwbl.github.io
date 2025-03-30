@@ -24,6 +24,15 @@
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
+      {{- if (.Site.Params.busuanzi.enable) -}} <!-- 添加页面访问量统计 -->
+      &nbsp;·&nbsp;
+      <span id="busuanzi_value_page_pv"> </span>&nbsp;
+      <svg style="display:inline-block;margin-top:4px;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"
+        width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+        <circle cx="12" cy="12" r="3" />
+      </svg>
+      {{- end }}
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}

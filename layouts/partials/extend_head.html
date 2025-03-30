@@ -33,3 +33,7 @@
   <script defer src="https://cn.vercount.one/js"></script>
   <meta name="referrer" content="no-referrer-when-downgrade">
 {{- end -}}
+
+{{- if and (.Site.Params.InsteadPicture) 1 -}}
+<script src="{{ "/js/instead_images.js" | relURL }}"></script>
+{{- end -}}
