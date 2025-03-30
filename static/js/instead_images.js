@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const tester = new Image();
             tester.onload = () => callback(true);
             tester.onerror = () => callback(false);
-            tester.src = `${url}?ts=${Date.now()}`;
+            tester.src = `${url}?ts=${Date.now()}_${Math.random()}`; // 添加随机参数避免缓存
         };
 
         checkImage(originalSrc, (exists) => {
