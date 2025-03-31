@@ -1,3 +1,7 @@
+{{- if .Site.Params.InsteadPicture -}}
+<script src="{{ "/js/instead_images.js" | relURL }}"></script>
+{{- end -}}
+
 {{ if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
 {{ end }}
@@ -34,6 +38,3 @@
   <meta name="referrer" content="no-referrer-when-downgrade">
 {{- end -}}
 
-{{- if .Site.Params.InsteadPicture -}}
-<script src="{{ "/js/instead_images.js" | relURL }}"></script>
-{{- end -}}
