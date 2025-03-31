@@ -1,0 +1,27 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+  hooks:
+    - id: check-added-large-files  # 禁止提交大文件
+    - id: trailing-whitespace      # 检查行尾空格
+      args: [ --markdown-linebreak-ext=md ]
+    - id: check-json
+    - id: check-xml
+    - id: check-yaml
+    - id: end-of-file-fixer
+- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: v0.35.0
+  hooks:
+    - id: markdownlint             # Markdown 检查
+      exclude: '^docs/(README|CHANGELOG)\.md$'
+      # args: ['--rules', 'MD013,MD041']
+      args: ['--config', 'data\.markdownlint.yaml']
+      # additional_dependencies: ['@markdownlint/cli@latest']
+- repo: local
+  hooks:
+    - id: hugo-build
+      name: Hugo Build Check
+      entry: hugo build --gc --minify    # 自定义 Hugo 检查
+      language: system
+      files: '' # 无条件运行构建检查
+      pass_filenames: false # 不传递文件名给 Hugo

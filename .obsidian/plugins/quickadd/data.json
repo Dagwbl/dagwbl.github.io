@@ -36,12 +36,14 @@
       "templatePath": "archetypes/article-ob.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "article_{{date:YYYYMMDD}}{{time:HHmmss}}"
+        "format": "article_{{date:YYYYMMDD}}{{time:HHmm}}"
       },
       "folder": {
         "enabled": true,
         "folders": [
-          "content/posts"
+          "content/posts",
+          "content/posts/essay",
+          "content/posts/note"
         ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false,
@@ -66,7 +68,7 @@
       "templatePath": "archetypes/article-ob.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "note_{{date:YYYYMMDD}}{{time:HHmmss}}"
+        "format": "note_{{date:YYYYMMDD}}{{time:HHmm}}"
       },
       "folder": {
         "enabled": true,
@@ -158,7 +160,7 @@
       "templatePath": "archetypes/letter.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "letter_{{date:YYYYMMDD}}{{time:HHmmss}}"
+        "format": "letter_{{date:YYYYMMDD}}{{time:HHmm}}"
       },
       "folder": {
         "enabled": true,

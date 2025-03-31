@@ -211,7 +211,7 @@ settings:
 		type: variable-select
 		default: var(--font-normal)
 		options:
-			- 
+			-
 				label: Theme
 				value: var(--h2-weight)
 			-
@@ -285,7 +285,7 @@ settings:
 		type: variable-select
 		default: var(--font-normal)
 		options:
-			- 
+			-
 				label: Theme
 				value: var(--h3-weight)
 			-
@@ -359,7 +359,7 @@ settings:
 		type: variable-select
 		default: var(--font-normal)
 		options:
-			- 
+			-
 				label: Theme
 				value: var(--h4-weight)
 			-
@@ -433,7 +433,7 @@ settings:
 		type: variable-select
 		default: var(--font-normal)
 		options:
-			- 
+			-
 				label: Theme
 				value: var(--h5-weight)
 			-
@@ -507,7 +507,7 @@ settings:
 		type: variable-select
 		default: var(--font-normal)
 		options:
-			- 
+			-
 				label: Theme
 				value: var(--h6-weight)
 			-
@@ -525,7 +525,7 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
-    - 
+    -
         id: dynamic-outline-font-size
         title: 'Font size'
         description: 'Font size of the outline headings'
@@ -715,7 +715,7 @@ settings:
 	opacity: 0.5;
 }
 
-/* 
+/*
  * Dynamic Outline Window
  */
 
@@ -731,7 +731,8 @@ settings:
 	);
 
 	width: var(--dynamic-outline-window-width);
-	padding: 10px 0 5px;
+	/* padding: 10px 0 5px; */
+	padding: 5px 0 5px;
 	right: 20px;
 
 	font-size: var(--dynamic-outline-font-size);
@@ -740,8 +741,13 @@ settings:
 	border: 1px solid var(--dynamic-outline-border-color);
 	border-radius: 12px;
 	box-shadow: var(--dynamic-outline-shadow-color) 0px 2px 8px 0px;
+	box-sizing: border-box;
 
 	opacity: var(--dynamic-outline-opacity);
+}
+
+#dynamic-outline.hidden {
+	display: none;
 }
 
 /* Corner case for the Editing Toolbar plugin */
@@ -768,14 +774,19 @@ button.dynamic-outline-reload[disabled] {
 	display: none;
 }
 
-/* 
+/*
  * Dynamic Outline Search Container
  */
+
+.dynamic-outline-search-container.hidden {
+	display: none;
+}
 
 .dynamic-outline-search-container {
 	display: flex;
 	align-items: center;
 
+	margin-top: 5px;
 	margin-bottom: 5px;
 }
 
@@ -813,9 +824,14 @@ button.dynamic-outline-reload[disabled] {
 	display: block;
 }
 
-/* 
+/*
  * Dynamic Outline Content Container
  */
+
+.dynamic-outline-search-container.hidden ~ .dynamic-outline-content-container {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
 
 .dynamic-outline-content-container {
 	overflow-y: auto;
@@ -826,7 +842,7 @@ button.dynamic-outline-reload[disabled] {
 	padding: 0 15px;
 }
 
-/* 
+/*
  * Dynamic Outline List Items
  */
 
@@ -965,7 +981,7 @@ button.dynamic-outline-reload[disabled] {
 	display: none !important;
 }
 
-/* 
+/*
  * Dynamic Outline Button
  */
 
@@ -980,11 +996,12 @@ button.dynamic-outline-reload[disabled] {
 	color: var(--text-normal);
 }
 
+.dynamic-outline-button.hidden,
 .hide-button-from-toolbar .dynamic-outline-button {
 	display: none;
 }
 
-/* 
+/*
  * Other
  */
 
@@ -994,4 +1011,9 @@ button.dynamic-outline-reload[disabled] {
 	.setting-item[data-id="headings"]
 	+ .style-settings-container {
 	padding-left: 17px;
+}
+
+/* Custom hide logic for settings options */
+.setting-item.dynamic-outline-setting-item-hidden.is-disabled {
+	display: none;
 }

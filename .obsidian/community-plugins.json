@@ -4,7 +4,6 @@
   "dataview",
   "homepage",
   "buttons",
-  "OA-file-hider",
   "obsidian-minimal-settings",
   "obsidian-export-image",
   "obsidian-tasks-plugin",
@@ -15,5 +14,6 @@
   "obsidian-icon-folder",
   "easy-typing-obsidian",
   "dynamic-outline",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "file-explorer-plus"
 ]

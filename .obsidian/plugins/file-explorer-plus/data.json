@@ -1,0 +1,120 @@
+{
+  "hideStrictPathFilters": true,
+  "pinFilters": {
+    "active": false,
+    "tags": [
+      {
+        "name": "",
+        "active": true,
+        "pattern": "",
+        "patternType": "STRICT"
+      }
+    ],
+    "paths": [
+      {
+        "name": "HomePage",
+        "active": false,
+        "type": "FILES_AND_DIRECTORIES",
+        "pattern": "assist/Homepage.md",
+        "patternType": "WILDCARD"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES_AND_DIRECTORIES",
+        "pattern": "",
+        "patternType": "WILDCARD"
+      }
+    ]
+  },
+  "hideFilters": {
+    "active": true,
+    "tags": [
+      {
+        "name": "",
+        "active": true,
+        "pattern": "",
+        "patternType": "STRICT"
+      }
+    ],
+    "paths": [
+      {
+        "name": "",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "themes",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "layouts",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "i18n",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "data",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "assets",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "index",
+        "active": true,
+        "type": "FILES",
+        "pattern": "_index(\\.(zh|en))?\\.md",
+        "patternType": "REGEX"
+      },
+      {
+        "name": "other",
+        "active": true,
+        "type": "FILES_AND_DIRECTORIES",
+        "pattern": "(about|archives|search)(\\.(zh|en))?\\.md",
+        "patternType": "REGEX"
+      },
+      {
+        "name": "static",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "^static\\/(?!images).*",
+        "patternType": "REGEX"
+      },
+      {
+        "name": "navi",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "ivan",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "navi",
+        "active": true,
+        "type": "FILES_AND_DIRECTORIES",
+        "pattern": "content/navi",
+        "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "FILES_AND_DIRECTORIES",
+        "pattern": "",
+        "patternType": "WILDCARD"
+      }
+    ]
+  }
+}

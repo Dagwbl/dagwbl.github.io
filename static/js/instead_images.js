@@ -1,17 +1,16 @@
 // 配置中心
-console.log('instead_images.js');
 const IMAGE_REWRITER_CONFIG = {
   // 路径匹配规则
   pathPatterns: [
-    { 
-      test: /(\/zh|\/en)\/static\/images\/(.*)/, 
-      replace: '/images/$2' 
+    {
+      test: /(\/zh|\/en)\/static\/images\/(.*)/,
+      replace: '/images/$2'
     }
   ],
-  
+
   // 缓存控制参数
   cacheBuster: false,
-  
+
   // 调试模式
   debug: true
 };
@@ -20,7 +19,7 @@ const IMAGE_REWRITER_CONFIG = {
 function rewriteImageSource(src) {
   try {
     const url = new URL(src);
-    
+
     // 遍历所有匹配规则
     for (const rule of IMAGE_REWRITER_CONFIG.pathPatterns) {
       const match = url.pathname.match(rule.test);
@@ -28,13 +27,13 @@ function rewriteImageSource(src) {
         const newPath = rule.replace.replace(/\$(\d+)/g, (_, n) => match[n]);
         const newUrl = new URL(url);
         newUrl.pathname = newPath;
-        
+
         // 添加缓存破坏参数
         if (IMAGE_REWRITER_CONFIG.cacheBuster) {
           newUrl.search += (newUrl.search ? '&' : '?') + `_=${Date.now()}`;
         }
-        
-        IMAGE_REWRITER_CONFIG.debug && 
+
+        IMAGE_REWRITER_CONFIG.debug &&
           console.log('[ImageRewriter] Rewrote:', src, '→', newUrl.href);
         return newUrl.href;
       }
