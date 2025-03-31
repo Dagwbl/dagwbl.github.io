@@ -1,7 +1,7 @@
 
 {{- $scratch := newScratch }}
 
-{{- if not .Date.IsZero -}}
+{{- if and (not .Date.IsZero) (.Site.Params.ShowMetaDate) (not (in .Params.categories "diary")) -}}
 {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)))) }}
 {{- end }}
 
@@ -12,15 +12,6 @@
 {{- if (.Param "ShowWordCount") -}}
 {{- $scratch.Add "meta" (slice (i18n "words" .WordCount | default (printf "%d words" .WordCount))) }}
 {{- end }}
-
-{{/*  {{- if (.Site.Params.busuanzi.enable) -}}
-{{- $scratch.Add "meta" (slice (printf "%s&nbsp;%s" 
-    "<span id=\"busuanzi_value_page_pv\"> </span>" 
-    "<svg style=\"display:inline-block;margin-top:4px;vertical-align:middle\" xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>"
-)) }}
-{{- end }}  */}}
-
-
 
 {{- if not (.Param "hideAuthor") -}}
 {{- with (partial "author.html" .) }}

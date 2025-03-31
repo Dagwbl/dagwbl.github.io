@@ -158,9 +158,10 @@ outputs:
 
 params:
   InsteadPicture: true
+  ShowMetaDate: true
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "A blog about technology, programming, and life."
-  author: ZJeapo
+  author: Jeapo
   dateFormat: "2006-01-02"
   # author: ["Me", "You"] # multiple authors
   ShowFullTextinRSS: true
