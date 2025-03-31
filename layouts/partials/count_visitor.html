@@ -1,0 +1,47 @@
+{{- if (.Site.Params.busuanzi.enable) -}}
+<span id="busuanzi-container" style="display:none">&nbsp;·&nbsp;
+  <span id="busuanzi_value_page_pv"></span>&nbsp;
+  <span style="display:inline-flex; align-items:center">
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         width="14" 
+         height="14" 
+         viewBox="0 0 24 24"
+         fill="none" 
+         stroke="currentColor" 
+         stroke-width="2">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  </span>
+</span>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const targetNode = document.getElementById('busuanzi_value_page_pv');
+  const container = document.getElementById('busuanzi-container');
+  
+  if (!targetNode || !container) return;
+
+  // 性能保护计时器
+  const performanceGuard = setTimeout(() => {
+    observer.disconnect();
+    console.debug('Busuanzi observer stopped after 5s');
+  }, 5000);
+
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach(mutation => {
+      // 检测实际内容变化（排除空白字符）
+      if (mutation.target.textContent.trim().length > 0) {
+        container.style.display = 'inline-flex'; // 显示元素
+        observer.disconnect(); // 立即停止观察
+      }
+    });
+  });
+
+  observer.observe(targetNode, {
+    characterData: true,    // 监听文本内容变化
+    childList: true,        // 监听子节点变化
+    subtree: true           // 监听所有后代节点
+  });
+});
+</script>
+{{- end }}
