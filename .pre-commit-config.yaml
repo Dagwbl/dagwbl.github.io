@@ -20,7 +20,7 @@ repos:
   rev: v0.35.0
   hooks:
     - id: markdownlint             # Markdown 检查
-      exclude: '^docs/(README|CHANGELOG)\.md$'
+      # exclude: '^docs/(README|CHANGELOG)\.md$'
       # args: ['--rules', 'MD013,MD041']
       args: ['--config', 'data\.markdownlint.yaml']
       # additional_dependencies: ['@markdownlint/cli@latest']
