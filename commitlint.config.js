@@ -14,25 +14,24 @@ module.exports = {
     rules: {
       // 自定义规则
       "type-enum": [2, "always", [
-        "build", // 打包
-        "chore", // 其他修改
-        "ci", // 持续集成
-        "docs", // 文档
-        "feat", // 新功能
-        "fix", // 修复bug
-        "perf", // 性能优化
-        "refactor", // 代码重构
-        "revert",  // 回滚
-        "style", // 代码格式修改，如空格、分号等
-        "test", // 新增测试用例
-        "article", // 新增文章
-        "diary", // 新增日记
-        "note", // 新增笔记
-        "letter" // 新增信件
+        "build", // changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+        "chore", // other changes that don't modify src or test files
+        "ci", // continuous integration
+        "docs", // Documentation only changes, modifications to non-new pages
+        "feat", // A new feature
+        "fix", // A bug fix
+        "perf", // A code change that improves performance
+        "refactor", // A code change that neither fixes a bug nor adds a feature
+        "revert",  // Reverts a previous commit
+        "style", // Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+        "test", // Adding missing tests or correcting existing tests
+        "article", // A new article
+        "diary", // A new diary
+        "note", // A new note
+        "letter" // A new letter
       ]]
     },
-    helpUrl:
-    "https://github.com/conventional-changelog/commitlint/#what-is-commitlint",
+    helpUrl: "https://github.com/conventional-changelog/commitlint/#what-is-commitlint",
     prompt: {
       settings: {},
       messages: {
