@@ -3,7 +3,7 @@ title: "TXT to Markdown"
 # category: "local" 注释以不显示
 icon: "📑"
 customcss: "css/extended/tools.css"
-# customjs: 
+# customjs:
 showToc: false
 tools: true
 weight: 2

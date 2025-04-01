@@ -18,7 +18,7 @@ enableEmoji: true
 pygmentsUseClasses: true
 enableGitInfo: true
 
-mainsections: 
+mainsections:
   - posts
   - diary
   - letter
@@ -70,7 +70,7 @@ languages:
       homeInfoParams:
         Title: "Timid Thoughts 🌱"
         Content: |
-          👋 **O troupe of little vagrants of the world, leave your footprints in my words.** 
+          👋 **O troupe of little vagrants of the world, leave your footprints in my words.**
 
           - Thoughts feeds itself with its own words and grows.
 
@@ -132,7 +132,7 @@ languages:
           - 不要逗留采集花朵以保存它们，继续前行吧，因为花朵会一路为你绽放。
 
           - 我们，这些沙沙作响的树叶，有回应风暴的声音，而你为何如此沉默？
-          
+
       profileMode:
         enabled: false
         title: "呜呼~ \U0001F44B"
@@ -213,7 +213,7 @@ params:
     - name: reddit
       title: Take a rest for fun :)
       url: "https://reddit.com"
-      
+
   editPost:
     URL: "https://github.com/Dagwbl/dagwbl.github.io/edit/main/content"
     Text: "Edit" # edit text

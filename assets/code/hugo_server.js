@@ -77,7 +77,7 @@ async function startHugoServer() {
 function openBrowser() {
     const url = 'http://localhost:1313';
     console.log(`正在打开浏览器访问: ${url}`);
-    
+
     const platform = process.platform;
     if (platform === 'linux') {
         exec(`xdg-open ${url}`);

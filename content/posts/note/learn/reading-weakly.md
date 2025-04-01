@@ -8,37 +8,37 @@ draft: false
 
 ### Reducing Conjuctions
 
-- and /ænd/ -/ən/ 
-- or /ɔ:r/-/ər/ 
+- and /ænd/ -/ən/
+- or /ɔ:r/-/ər/
 - as /æz/-/əz/
 
 ### Reducing Prepositions
 
-- to /tu:/-/tə/ 
-- for /fɔ:(r)/-/fə(r)/ 
+- to /tu:/-/tə/
+- for /fɔ:(r)/-/fə(r)/
 - of /ʌv//ɒv/-/əv//ə/
 
 ### Reducing Auxiliary Verbs
 
-- have /hæv/-/əv//ə/ 
-- has /hæz/-/əz//ə/ 
+- have /hæv/-/əv//ə/
+- has /hæz/-/əz//ə/
 - can /kæn/-/kən/
 
 ### Reducing Pronous
 
-- he /hi/-/i/ 
-- you /jʊ/-/yə/ 
-- her /hə(r)/-/ə(r)/ 
-- his /hɪz/-/ɪz/ 
+- he /hi/-/i/
+- you /jʊ/-/yə/
+- her /hə(r)/-/ə(r)/
+- his /hɪz/-/ɪz/
 - him /hɪm/-/ɪm//əm/
 
 ### Reducing Verb + to
 
-- want to——wanna 
-- going to——gonna 
-- have to——hafta 
-- has to——hasta 
-- had to——hada 
+- want to——wanna
+- going to——gonna
+- have to——hafta
+- has to——hasta
+- had to——hada
 - ought to——oudda
 
 

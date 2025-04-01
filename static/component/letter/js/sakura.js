@@ -1,7 +1,7 @@
 var RENDERER = {
 	INIT_CHERRY_BLOSSOM_COUNT : 9,	// default : 30
 	MAX_ADDING_INTERVAL : 30,		// default : 10
-	
+
 	init : function(){
 		this.setParameters();
 		this.reconstructMethods();
@@ -28,7 +28,7 @@ var RENDERER = {
 	render : function(){
 		requestAnimationFrame(this.render);
 		this.context.clearRect(0, 0, this.width, this.height);
-		
+
 		this.cherries.sort(function(cherry1, cherry2){
 			return cherry1.z - cherry2.z;
 		});
@@ -57,7 +57,7 @@ CHERRY_BLOSSOM.prototype = {
 	RIPPLE_RADIUS : 10,		// default : 100
 	SURFACE_RATE : 0.5,
 	SINK_OFFSET : 20,
-	
+
 	init : function(isRandom){
 		this.x = this.getRandomValue(-this.renderer.width, this.renderer.width);
 		this.y = isRandom ? this.getRandomValue(0, this.renderer.height) : this.renderer.height * 1.5;
@@ -72,11 +72,11 @@ CHERRY_BLOSSOM.prototype = {
 		this.endTheta = false;
 		this.endPhi = false;
 		this.rippleCount = 0;
-		
+
 		var axis = this.getAxis(),
 			theta = this.theta + Math.ceil(-(this.y + this.renderer.height * this.SURFACE_RATE) / this.vy) * Math.PI / 500;
 		theta %= Math.PI * 2;
-		
+
 		this.offsetY = 40 * ((theta <= Math.PI / 2 || theta >= Math.PI * 3 / 2) ? -1 : 1);
 		this.thresholdY = this.renderer.height / 2 + this.renderer.height * this.SURFACE_RATE * axis.rate;
 		this.entityColor = this.renderer.context.createRadialGradient(0, 40, 0, 0, 40, 80);
@@ -103,7 +103,7 @@ CHERRY_BLOSSOM.prototype = {
 		context.bezierCurveTo(-60, 20, -10, -60, 0, -20);
 		context.bezierCurveTo(10, -60, 60, 20, 0, 40);
 		context.fill();
-		
+
 		for(var i = -4; i < 4; i++){
 			context.beginPath();
 			context.moveTo(0, 40);
@@ -113,7 +113,7 @@ CHERRY_BLOSSOM.prototype = {
 	},
 	render : function(context){
 		var axis = this.getAxis();
-		
+
 		if(axis.y == this.thresholdY && this.rippleCount < this.MAX_RIPPLE_COUNT){
 			context.save();
 			context.lineWidth = 2;
@@ -150,7 +150,7 @@ CHERRY_BLOSSOM.prototype = {
 		context.translate(0, this.offsetY);
 		this.renderCherry(context, axis);
 		context.restore();
-		
+
 		if(this.y <= -this.renderer.height / 4){
 			if(!this.endTheta){
 				for(var theta = Math.PI / 2, end = Math.PI * 3 / 2; theta <= end; theta += Math.PI){

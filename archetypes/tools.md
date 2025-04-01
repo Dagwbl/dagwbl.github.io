@@ -1,10 +1,10 @@
 ---
 title: "Tools"
 layout: tools
-customcss: 
+customcss:
   - "css/extended/tools.css"
-customjs: 
+customjs:
   - ""
-customjscssraw: 
+customjscssraw:
   - ""
 ---

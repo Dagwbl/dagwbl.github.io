@@ -4,7 +4,7 @@
         <p>🔒 此处内容已加密</p>
         <div class="password-prompt">
             <input type="password" class="password-input"
-                   placeholder="{{ $hint }}" 
+                   placeholder="{{ $hint }}"
                    id="pwd-input-{{ .Ordinal }}"
                    aria-label="加密内容密码">
             <button class="decrypt-btn" onclick="decryptContent(event, 'pwd-input-{{ .Ordinal }}')">解锁</button>
@@ -88,7 +88,7 @@ function decryptContent(event, inputId) {
   const container = input.closest('.encrypted-content');
   const statusEl = container.querySelector('.status-message');
   const decryptedContent = container.querySelector('.decrypted-content');
-  
+
   statusEl.textContent = '';
   input.classList.remove('error');
 
@@ -162,39 +162,39 @@ function simpleMarkdown(str) {
     .replace(/^###\s+(.+)$/gm, '<h3>$1</h3>')
     .replace(/^##\s+(.+)$/gm, '<h2>$1</h2>')
     .replace(/^#\s+(.+)$/gm, '<h1>$1</h1>')
-    
+
     // 处理粗体
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    
+
     // 处理斜体
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    
+
     // 处理删除线
     .replace(/~~(.+?)~~/g, '<del>$1</del>')
-    
+
     // 处理内联代码
     .replace(/`(.+?)`/g, '<code>$1</code>')
-    
+
     // 处理代码块
     // .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
-    
+
     // 处理无序列表
     .replace(/^\s*\*\s+(.+)$/gm, '<ul><li>$1</li></ul>')
     .replace(/<\/ul>\n<ul>/g, '') // 合并相邻的 ul 标签
-    
+
     // 处理有序列表
     .replace(/^\s*\d+\.\s+(.+)$/gm, '<ol><li>$1</li></ol>')
     .replace(/<\/ol>\n<ol>/g, '') // 合并相邻的 ol 标签
-    
+
     // 处理链接
     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>')
-    
+
     // 处理图片
     .replace(/!\[(.+?)\]\((.+?)\)/g, '<img src="$2" alt="$1">')
-    
+
     // 处理引用
     .replace(/^>\s+(.+)$/gm, '<blockquote>$1</blockquote>')
-    
+
     // 处理水平分割线
     .replace(/^\s*---\s*$/gm, '<hr>')
         // 处理段落和换行的新逻辑

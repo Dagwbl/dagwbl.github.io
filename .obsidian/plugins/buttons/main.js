@@ -892,7 +892,7 @@ postfix.eval=function(str,tokens,obj){
 		return this.lex(str).toPostfix().postfixEval();
 	}
 	else if (typeof obj==="undefined") {
-		if (typeof tokens.length!=="undefined") 
+		if (typeof tokens.length!=="undefined")
 			return this.lex(str,tokens).toPostfix().postfixEval();
 		else
 			return this.lex(str).toPostfix().postfixEval(tokens);

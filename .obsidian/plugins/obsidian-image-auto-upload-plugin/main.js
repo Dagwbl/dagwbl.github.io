@@ -1223,7 +1223,7 @@ npmRunPath$1.exports;
 		env[path] = module.exports(options);
 
 		return env;
-	}; 
+	};
 } (npmRunPath$1));
 
 var npmRunPathExports = npmRunPath$1.exports;
@@ -1904,7 +1904,7 @@ function requireSignals () {
 		    'SIGSTKFLT',
 		    'SIGUNUSED'
 		  );
-		} 
+		}
 	} (signals$1));
 	return signals$1.exports;
 }

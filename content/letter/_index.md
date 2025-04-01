@@ -5,8 +5,3 @@ summary: "Some letter with my friends"
 hidemeta: true
 weight: 2
 ---
-
-
-
-
-

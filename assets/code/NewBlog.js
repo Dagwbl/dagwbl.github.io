@@ -2,7 +2,7 @@ const util = require('util');
 const child_process = require('child_process');
 const exec = util.promisify(child_process.exec);
 
-  
+
 function getCreateTimeAsFileName() {
      var d = new Date();
      var year = d.getFullYear();
@@ -16,7 +16,7 @@ function getCreateTimeAsFileName() {
      return time;
 }
 
-  
+
 
 // execute command function
 
@@ -32,7 +32,7 @@ async function executeCommand() {
      }
 }
 
-  
+
 
 module.exports = async function(context, req) {
     await executeCommand();

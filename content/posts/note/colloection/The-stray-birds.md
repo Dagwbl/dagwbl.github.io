@@ -37,11 +37,11 @@ math: false
 11. Some unseen fingers, like an idle breeze, are playing upon my heart the music of the ripples.moment
 
 12. What language is thine, O sea?
-    
+
     The language of eternal question.
-  
+
     What language is the answer?
-    
+
     The language of the eternal silence.
 
 13. Listen, my heart, to the whispers of the world with which it makes love to you.
@@ -796,5 +796,4 @@ math: false
 
 325. Release me from my unfulfilled past clinging to me from behind making death difficult.
 
-326. Let this be my last word, that I trust in thy love. 
-
+326. Let this be my last word, that I trust in thy love.

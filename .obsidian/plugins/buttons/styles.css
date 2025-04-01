@@ -3,7 +3,7 @@
 name: Buttons
 id: buttons-styles
 settings:
-    - 
+    -
         id: button-background
         title: Background
         type: variable-themed-color
@@ -11,7 +11,7 @@ settings:
         opacity: false
         default-light: '#f5f6f8'
         default-dark: '#1b1b1b'
-    - 
+    -
         id: button-text
         title: Text
         type: variable-themed-color
@@ -19,7 +19,7 @@ settings:
         opacity: false
         default-light: '#1b1b1b'
         default-dark: '#f5f6f8'
-    - 
+    -
         id: button-border
         title: Border
         type: variable-themed-color
@@ -27,7 +27,7 @@ settings:
         opacity: false
         default-light: '#7a9486'
         default-dark: '#84a83a'
-    - 
+    -
         id: button-box-shadow
         title: Box Shadow
         type: variable-themed-color

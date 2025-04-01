@@ -40,4 +40,5 @@ repos:
       language: system
       files: '' # 无条件运行构建检查
       pass_filenames: false # 不传递文件名给 Hugo
+      verbose: true
       log_file: assist/logs/pre-commit.log

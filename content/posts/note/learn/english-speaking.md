@@ -30,7 +30,7 @@ UseHugoToc: true
 
 The functional words need next to behind, like this `is the`
 
-1. `How quickly` `is the world's population growing?` 
+1. `How quickly` `is the world's population growing?`
 
 ### Eye brain coordination
 
@@ -88,7 +88,7 @@ The child raised in an environment where there are many stimuli **will** experie
 
 
 
-### Divided 
+### Divided
 
 `People with active lifestyle` `are less likely` `to die early`  `or to have major illness.`
 

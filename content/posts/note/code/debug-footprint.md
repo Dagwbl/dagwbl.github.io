@@ -28,4 +28,3 @@ language: en
 2. html中的hugo代码，即便注释了，也依然会生效。
 
 - [x] [Hugo 内链当前标签页打开，外链新标签页打开 | YI-DA-JIA-BEI (tianheg.co)](https://tianheg.co/posts/hugo-open-internal-links-in-same-tab-external-links-in-new-tab/)
-

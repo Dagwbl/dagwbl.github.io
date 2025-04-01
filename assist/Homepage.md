@@ -2,7 +2,7 @@
 
 ```dataview
 CALENDAR date
-FROM "content/diary" 
+FROM "content/diary"
 WHERE date OR categories = "diary"
 ```
 ```tasks
@@ -159,8 +159,3 @@ type command
 action QuickAdd: Hugo Server
 ```
 ^button-hugo-server
-
-
-
-
-

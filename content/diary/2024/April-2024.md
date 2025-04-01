@@ -18,8 +18,6 @@ She's been practicing for days on end and may be **feeling** a bit stressed out.
 
 **None of your business!**
 
-
-
 ## Apr 24
 
 A few days ago, I left a message on Yihui's blog. He **replied** to my message on April 20th.
@@ -39,14 +37,16 @@ How to divide this sentence by meaning group? **It may not mean that it is possi
 > Here's one way to divide the sentence into meaning groups:
 >
 > **Group 1:** "It may not mean"
-> 	* This group introduces a possibility or uncertainty
+>
+> * This group introduces a possibility or uncertainty
 >
 > **Group 2:** "that it is possible"
 >
-> ​	* This group expresses a potential outcome or situation
+> ​ * This group expresses a potential outcome or situation
 >
 > **Group 3:** "to solve the problem easily"
-> 	* This group describes the specific action or task being referred to (solving a problem) and the desired outcome (easily)
+>
+> * This group describes the specific action or task being referred to (solving a problem) and the desired outcome (easily)
 >
 > So, the sentence can be broken down into three meaning groups:
 >
@@ -57,8 +57,6 @@ How to divide this sentence by meaning group? **It may not mean that it is possi
 An architect is required of problem solving skills and an eye of design.
 
 Of these
-
-
 
 ## Apr 22
 
@@ -83,8 +81,6 @@ Students should leave their bags `on the tables` `by the door`.
 The collapse of the housing market has triggered recessions throughout the world.
 
 Human beings compete with other living things for resources and space.
-
-
 
 ## Apr 20
 
@@ -122,7 +118,7 @@ I read this article early in this morning. It was very emotional and I left a co
 
 ---
 
-It's already nine o'clock. I learned for seven hours today, but I still felt that I learned nothing. Every day, I feel just like drawing water with a bamboo basket. 
+It's already nine o'clock. I learned for seven hours today, but I still felt that I learned nothing. Every day, I feel just like drawing water with a bamboo basket.
 
 In the evening, my eyes were really hard to see, and I wander to the Geely Park next to my dormitory to take a break. It turned out to be a good place to study, with a group of people dancing to loud music and adults and children playing there own games. I read out aloud in English without worrying about what other people thought, and no one would think I was strange.
 
@@ -149,8 +145,6 @@ This evening I also invited S.K. and Y.X. to bake something here. But I got rid 
 {{</collopse>}}
 
 ## Apr 11
-
-
 
 Today is the second day for training at Chengdu. My master brought my computer for playing games, and I don't have strongly motivation to study. So, today is wasted.
 
@@ -205,18 +199,13 @@ I learned a lot of useful suggestions from *Perfect English Grammar*, The style 
 
 Gradually realizing that forcing myself to produce will only result in reducing the desire to produce if I don't have the ability to express my thoughts skillfully. It will come up with a mood of anxiety difficult because I also don't know how to express what thoughts.
 
-
 Yesterday, a public account regularly posted an English article. I wanted to go to bed after reading, but I found a few minor mistakes in the reading progress; I turned to check the corrdinate Chinese translation, then discovered the words are very beautiful. I inevitably doubted that the author wrote the Chinese version first, and then translated it into the English version. Therefore, I left a message to the author for seeking the answer. The answer was as expected, which gave me great courage.
-
 
 Last but not least, mother tongue isn't the stumbling block for learning a foreign language. It will give us great help. The process of translating from Chinese to English is the best way to learn English.
 
-
-In the future, I will write the Chinese version first and then translate it into English, and I think this process will be reversed one day. 
+In the future, I will write the Chinese version first and then translate it into English, and I think this process will be reversed one day.
 
 ![image-20240407222514790](https://dagwbl.oss-cn-chengdu.aliyuncs.com/picture/obsidian/image-20240407222514790.png)
-
-
 
 ## Apr 6
 
@@ -227,8 +216,6 @@ Over time, my speech ability has been getting constantly progress.
 > Life is more or less a lie, but then again, that's extactly the way we want it to be.
 >
 > <right>–Bob Dylan</right>
-
-
 
 ## Apr 5
 
@@ -244,7 +231,7 @@ There are many interesting things that attract me. It caused me **to** always sp
 
  What are the common characteristics of these things? I can't find the answer right away, because they don't have almost  any similar characteristics.
 
-But what these things have in common, is that they all have the ability to attract my concentration. 
+But what these things have in common, is that they all have the ability to attract my concentration.
 
 A logical assumption is that all of these things accompany all kinds of information that **comes in**.
 
@@ -263,4 +250,3 @@ Unconsciously, it's already April. I **feel** that my progress cannot **keep up 
 I want to change my life **now** and explore the possibility of life. **But this** behavior **has put a lot of** pressure on me.
 
 There is one of the most important factors **that hinders** me to learn English **continuously**. It's **the** cell phone. I **have** to learn how to resist this big monster. Cutting its tongue is a very useful method, I thought.
-

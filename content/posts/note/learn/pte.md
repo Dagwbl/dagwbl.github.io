@@ -253,6 +253,3 @@ The main topic is that xxx. Firstly, the speaker points out xxx and xxx. In addi
 ### Write from dictation 50~100
 
 > You will hear a sentence. Type the sentence in the box below exactly as you hear it. Write as much of the sentence as you can. You will hear the sentence only once.
-
-
-

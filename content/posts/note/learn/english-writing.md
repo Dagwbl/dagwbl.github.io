@@ -99,4 +99,3 @@ Describe an occasion when you wanted a long time for a nice thing.
 |   过去   |     *ate*     |    *was/were* eating    |     *had* **eaten**      |     *had* **been eating**      |
 |   将来   | will eat  | will **be eating**  | will **have eaten**  | will **have been eating**  |
 | 过去将来 | would eat | would **be eating** | would **have eaten** | would **have been eating** |
-

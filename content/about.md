@@ -89,5 +89,3 @@ The world puts off its mask of vastness to its lover. It becomes small as one so
 {{<friend url="https://evex.one" name="Eval EXEC’s Blog" logo="https://avatars.githubusercontent.com/u/46400566?v=4" word="🐺嗷呜～～～">}}
 
 {{</collopse>}}
-
-

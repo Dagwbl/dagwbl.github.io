@@ -118,7 +118,7 @@
             .letter-content {
                 max-width: 75%;
             }
-            
+
             .letters-container {
                 padding: 10px;
             }
@@ -187,7 +187,7 @@
                 timelineItem.addEventListener('click', () => {
                     const letterElement = document.getElementById(`letter-${letter.id}`);
                     letterElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
+
                     // 更新活动状态
                     document.querySelectorAll('.timeline-item').forEach(item => {
                         item.classList.remove('active');

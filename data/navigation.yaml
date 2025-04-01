@@ -50,7 +50,7 @@
     - name: Chatbox
       weight: 99
       link: "https://web.chatboxai.app/"
-      
+
 
 - category: Social
   items:
@@ -104,4 +104,3 @@
       weight: 3
       icon: "💣"
       link: "/component/minesweeper/"
-    

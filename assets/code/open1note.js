@@ -6,10 +6,10 @@ const path = require('path');
 
 module.exports = async function (params) {
     const { quickAddApi } = params;
-    
+
     // 日记目录路径
     const diaryDir = path.join(app.vault.adapter.basePath, 'content/diary');
-    
+
     // 定义日记文件名的正则表达式（假设格式为 YYYY-MM-DD.md 或类似格式）
     const diaryFilePattern = /^\d{4}-\d{2}-\d{2}(\.(zh|en))?\.md$/;
 
@@ -38,7 +38,7 @@ module.exports = async function (params) {
         // 如果当前文件不是日记文件，则获取最新日记文件
         if (!diaryContent) {
             const files = fs.readdirSync(diaryDir);
-            
+
             // 过滤出 .md 文件并获取它们的创建时间
             const diaryFiles = files
                 .filter(file => diaryFilePattern.test(file))

@@ -112,7 +112,7 @@
     window.addEventListener('scroll', () => {
         // Check if there is an object in the top half of the screen or keep the last item active
         activeElement = Array.from(elements).find((element) => {
-            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
                 (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
                 return element;
             }
@@ -148,7 +148,7 @@
         }
         let rect = element.getBoundingClientRect();
         let win = element.ownerDocument.defaultView;
-        return rect.top + win.pageYOffset;   
+        return rect.top + win.pageYOffset;
     }
 </script>
 {{- end }}
