@@ -13,6 +13,7 @@ repos:
     - id: check-yaml
       log_file: assist/logs/pre-commit.log
     - id: end-of-file-fixer
+      exclude: '\.json | \.lock | \.js $'
       log_file: assist/logs/pre-commit.log
 - repo: https://github.com/igorshubovych/markdownlint-cli
   rev: v0.35.0
@@ -32,6 +33,7 @@ repos:
 - repo: local
   hooks:
     - id: hugo-build
+      stages: [pre-push]
       name: Hugo Build Check
       entry: hugo build --gc --minify    # 自定义 Hugo 检查
       language: system

@@ -1,11 +1,11 @@
 {
-  "hideStrictPathFilters": true,
+  "hideStrictPathFilters": false,
   "pinFilters": {
     "active": false,
     "tags": [
       {
         "name": "",
-        "active": true,
+        "active": false,
         "pattern": "",
         "patternType": "STRICT"
       }
@@ -20,7 +20,7 @@
       },
       {
         "name": "",
-        "active": true,
+        "active": false,
         "type": "FILES_AND_DIRECTORIES",
         "pattern": "",
         "patternType": "WILDCARD"
@@ -39,35 +39,35 @@
     ],
     "paths": [
       {
-        "name": "",
+        "name": "themes",
         "active": true,
         "type": "DIRECTORIES",
         "pattern": "themes",
         "patternType": "STRICT"
       },
       {
-        "name": "",
+        "name": "layouts",
         "active": true,
         "type": "DIRECTORIES",
         "pattern": "layouts",
         "patternType": "STRICT"
       },
       {
-        "name": "",
+        "name": "i18n",
         "active": true,
         "type": "DIRECTORIES",
         "pattern": "i18n",
         "patternType": "STRICT"
       },
       {
-        "name": "",
+        "name": "data",
         "active": true,
         "type": "DIRECTORIES",
         "pattern": "data",
         "patternType": "STRICT"
       },
       {
-        "name": "",
+        "name": "assets",
         "active": true,
         "type": "DIRECTORIES",
         "pattern": "assets",
@@ -97,23 +97,16 @@
       {
         "name": "navi",
         "active": true,
-        "type": "DIRECTORIES",
-        "pattern": "ivan",
-        "patternType": "STRICT"
-      },
-      {
-        "name": "navi",
-        "active": true,
         "type": "FILES_AND_DIRECTORIES",
         "pattern": "content/navi",
         "patternType": "STRICT"
       },
       {
-        "name": "",
+        "name": "node_modules",
         "active": true,
-        "type": "FILES_AND_DIRECTORIES",
-        "pattern": "",
-        "patternType": "WILDCARD"
+        "type": "DIRECTORIES",
+        "pattern": "node_modules",
+        "patternType": "STRICT"
       }
     ]
   }
