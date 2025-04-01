@@ -8,4 +8,5 @@ static/component/minesweeper/node_modules/
 .obsidian/translator_config.json
 .obsidian/plugins/copilot/data.json
 .vscode/
-
+node_modules/
+*.log
