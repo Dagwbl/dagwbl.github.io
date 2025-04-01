@@ -6,11 +6,10 @@ repos:
     - id: clear-log
       name: Clear Pre-Commit Log
       entry: >-
-        bash -c '> assist/logs/pre-commit.log'
+        bash -c 'truncate -s 0 assist/logs/pre-commit.log'
       language: system
       stages: [pre-commit]
       verbose: true
-      log_file: assist/logs/pre-commit.log
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v4.4.0
   hooks:
