@@ -1,5 +1,15 @@
 repos:
 # python -m pre_commit install --hook-type pre-commit --hook-type pre-push --hook-type commit-msg
+  # 添加清空日志文件的钩子
+- repo: local
+  hooks:
+    - id: clear-log
+      name: Clear Pre-Commit Log
+      entry: >-
+        bash -c '> assist/logs/pre-commit.log'
+      language: system
+      stages: [pre-commit]
+      verbose: true
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v4.4.0
   hooks:
