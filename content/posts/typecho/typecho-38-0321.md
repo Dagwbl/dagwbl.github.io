@@ -1,8 +1,10 @@
 ---
-title: "0321"
-date: "2022-03-21T22:39:48Z"
-slug: "38"
+title: '0321'
+date: '2022-03-21T22:39:48Z'
+slug: '38'
 tags: []
+categories:
+  - typecho
 ---
 ## Day planner
 

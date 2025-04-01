@@ -272,6 +272,13 @@
       "type": "Macro",
       "command": true,
       "macroId": "81492148-02ad-4481-aa40-75a7b356ce9c"
+    },
+    {
+      "id": "bfe264ed-2ca7-4853-833d-b9f7e9915226",
+      "name": "Batch Translate",
+      "type": "Macro",
+      "command": true,
+      "macroId": "de89e3cc-6f15-43de-af6a-b4e75538d68f"
     }
   ],
   "macros": [
@@ -391,6 +398,20 @@
           "type": "UserScript",
           "id": "dcbe49f0-d411-40cc-918c-9845e78d4781",
           "path": "assets/code/hugo_translate.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Batch Translate",
+      "id": "de89e3cc-6f15-43de-af6a-b4e75538d68f",
+      "commands": [
+        {
+          "name": "batch_translate",
+          "type": "UserScript",
+          "id": "38152b4c-542f-4233-82e1-ecd177c03076",
+          "path": "assets/code/batch_translate.js",
           "settings": {}
         }
       ],

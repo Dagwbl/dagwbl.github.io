@@ -1,8 +1,10 @@
 ---
-title: "0506"
-date: "2022-05-06T22:15:00Z"
-slug: "71"
+title: '0506'
+date: '2022-05-06T22:15:00Z'
+slug: '71'
 tags: []
+categories:
+  - typecho
 ---
 # Footprints and Insights
 

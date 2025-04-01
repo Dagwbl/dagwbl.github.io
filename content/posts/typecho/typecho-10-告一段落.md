@@ -1,8 +1,10 @@
 ---
-title: "告一段落"
-date: "2022-02-15T14:23:00Z"
-slug: "10"
+title: 告一段落
+date: '2022-02-15T14:23:00Z'
+slug: '10'
 tags: []
+categories:
+  - typecho
 ---
 就这样了，不动了
 

@@ -1,8 +1,10 @@
 ---
-title: "需要一点甜头"
-date: "2022-04-16T23:01:40Z"
-slug: "50"
+title: 需要一点甜头
+date: '2022-04-16T23:01:40Z'
+slug: '50'
 tags: []
+categories:
+  - typecho
 ---
 这几天在持续性摆烂
 

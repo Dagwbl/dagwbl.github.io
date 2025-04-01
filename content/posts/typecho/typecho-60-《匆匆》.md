@@ -1,8 +1,10 @@
 ---
-title: "《匆匆》"
-date: "2022-04-24T14:31:00Z"
-slug: "60"
+title: 《匆匆》
+date: '2022-04-24T14:31:00Z'
+slug: '60'
 tags: []
+categories:
+  - typecho
 ---
 # 匆匆
 

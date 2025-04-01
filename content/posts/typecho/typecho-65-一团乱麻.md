@@ -1,8 +1,10 @@
 ---
-title: "一团乱麻"
-date: "2022-04-27T10:23:27Z"
-slug: "65"
+title: 一团乱麻
+date: '2022-04-27T10:23:27Z'
+slug: '65'
 tags: []
+categories:
+  - typecho
 ---
 ## 捋捋
 

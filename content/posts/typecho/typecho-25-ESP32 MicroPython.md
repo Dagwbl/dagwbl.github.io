@@ -1,8 +1,10 @@
 ---
-title: "ESP32 MicroPython: Non-blocking Delays and Multithreading | Multitasking"
-date: "2022-03-07T15:54:00Z"
-slug: "25"
+title: 'ESP32 MicroPython: Non-blocking Delays and Multithreading | Multitasking'
+date: '2022-03-07T15:54:00Z'
+slug: '25'
 tags: []
+categories:
+  - typecho
 ---
 
 ![nonblock and multithreading][^1]

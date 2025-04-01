@@ -1,8 +1,10 @@
 ---
-title: "智慧与国学"
-date: "2022-08-02T01:10:00Z"
-slug: "93"
+title: 智慧与国学
+date: '2022-08-02T01:10:00Z'
+slug: '93'
 tags: []
+categories:
+  - typecho
 ---
 智慧与国学
 

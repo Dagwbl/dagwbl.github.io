@@ -1,8 +1,10 @@
 ---
-title: "肚子里的战争"
-date: "2022-08-04T11:12:00Z"
-slug: "95"
+title: 肚子里的战争
+date: '2022-08-04T11:12:00Z'
+slug: '95'
 tags: []
+categories:
+  - typecho
 ---
 文/王小波
 

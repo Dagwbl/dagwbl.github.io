@@ -1,8 +1,10 @@
 ---
-title: "0328"
-date: "2022-03-29T09:56:09Z"
-slug: "44"
+title: 0328
+date: '2022-03-29T09:56:09Z'
+slug: '44'
 tags: []
+categories:
+  - typecho
 ---
 # Todo List
 

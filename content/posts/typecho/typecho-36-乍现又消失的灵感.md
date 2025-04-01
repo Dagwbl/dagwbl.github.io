@@ -1,8 +1,10 @@
 ---
-title: "乍现又消失的灵感"
-date: "2022-03-20T15:20:26Z"
-slug: "36"
+title: 乍现又消失的灵感
+date: '2022-03-20T15:20:26Z'
+slug: '36'
 tags: []
+categories:
+  - typecho
 ---
 灵感乍现的时候
 

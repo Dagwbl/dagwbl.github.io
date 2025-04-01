@@ -1,8 +1,10 @@
 ---
-title: "不学无术"
-date: "2022-02-14T21:21:28Z"
-slug: "8"
+title: 不学无术
+date: '2022-02-14T21:21:28Z'
+slug: '8'
 tags: []
+categories:
+  - typecho
 ---
 我搞无用功是真的厉害
 

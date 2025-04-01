@@ -1,8 +1,10 @@
 ---
-title: "ESP 踩坑记录"
-date: "2022-03-03T21:15:17Z"
-slug: "19"
+title: ESP 踩坑记录
+date: '2022-03-03T21:15:17Z'
+slug: '19'
 tags: []
+categories:
+  - typecho
 ---
 ![image-20220303201018944](https://gitee.com/Dagwbl/cloudPicture/raw/master/typora/image-20220303201018944.png)
 

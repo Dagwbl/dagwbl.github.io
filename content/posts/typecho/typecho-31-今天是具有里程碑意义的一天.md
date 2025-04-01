@@ -1,8 +1,10 @@
 ---
-title: "今天是具有里程碑意义的一天"
-date: "2022-03-08T22:20:35Z"
-slug: "31"
+title: 今天是具有里程碑意义的一天
+date: '2022-03-08T22:20:35Z'
+slug: '31'
 tags: []
+categories:
+  - typecho
 ---
 ### Day planner
 

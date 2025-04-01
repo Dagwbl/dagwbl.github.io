@@ -1,8 +1,10 @@
 ---
-title: "关于"
-date: "2020-11-18T15:26:00Z"
-slug: "start-page"
+title: 关于
+date: '2020-11-18T15:26:00Z'
+slug: start-page
 tags: []
+categories:
+  - typecho
 ---
 # 关于网站
 没有关于，都是些零零碎碎

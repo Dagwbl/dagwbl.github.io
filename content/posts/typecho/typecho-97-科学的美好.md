@@ -1,8 +1,10 @@
 ---
-title: "科学的美好"
-date: "2022-08-05T15:21:19Z"
-slug: "97"
+title: 科学的美好
+date: '2022-08-05T15:21:19Z'
+slug: '97'
 tags: []
+categories:
+  - typecho
 ---
 *文/王小波 1997*
 

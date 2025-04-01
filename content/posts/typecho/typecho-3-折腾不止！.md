@@ -1,8 +1,10 @@
 ---
-title: "折腾不止！"
-date: "2022-02-11T18:53:00Z"
-slug: "3"
+title: 折腾不止！
+date: '2022-02-11T18:53:00Z'
+slug: '3'
 tags: []
+categories:
+  - typecho
 ---
 废了废了
 

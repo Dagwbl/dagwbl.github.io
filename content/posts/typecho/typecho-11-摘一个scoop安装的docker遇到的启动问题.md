@@ -1,8 +1,10 @@
 ---
-title: "摘一个scoop安装的docker遇到的启动问题"
-date: "2022-02-16T17:38:57Z"
-slug: "11"
+title: 摘一个scoop安装的docker遇到的启动问题
+date: '2022-02-16T17:38:57Z'
+slug: '11'
 tags: []
+categories:
+  - typecho
 ---
 The pipe access that the error message mentions is a (probably unrelated) issue when docker client is run by non-admin users (see here).
 

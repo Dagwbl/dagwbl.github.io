@@ -1,8 +1,10 @@
 ---
-title: "发现一个有趣的大佬"
-date: "2022-09-12T20:43:54Z"
-slug: "113"
+title: 发现一个有趣的大佬
+date: '2022-09-12T20:43:54Z'
+slug: '113'
 tags: []
+categories:
+  - typecho
 ---
 直接上大佬的网站: [yufree][1]
 

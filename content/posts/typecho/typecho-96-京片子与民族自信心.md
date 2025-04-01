@@ -1,8 +1,10 @@
 ---
-title: "京片子与民族自信心"
-date: "2022-08-04T22:18:00Z"
-slug: "96"
+title: 京片子与民族自信心
+date: '2022-08-04T22:18:00Z'
+slug: '96'
 tags: []
+categories:
+  - typecho
 ---
 *王小波*
 

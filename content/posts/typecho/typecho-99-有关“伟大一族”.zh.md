@@ -1,8 +1,11 @@
 ---
-title: "有关“伟大一族”"
-date: "2022-08-08T23:47:00Z"
-slug: "99"
+title: 有关“伟大一族”
+date: '2022-08-08T23:47:00Z'
+slug: '99'
 tags: []
+author: 王小波
+categories:
+  - typecho
 ---
 文/王小波
 

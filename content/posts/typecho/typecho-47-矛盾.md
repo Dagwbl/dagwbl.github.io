@@ -1,8 +1,10 @@
 ---
-title: "矛盾"
-date: "2022-03-30T22:25:26Z"
-slug: "47"
+title: 矛盾
+date: '2022-03-30T22:25:26Z'
+slug: '47'
 tags: []
+categories:
+  - typecho
 ---
 我现在喜欢和人保持有一定距离
 

@@ -1,8 +1,10 @@
 ---
-title: "椰子树与平等"
-date: "2022-08-04T00:32:00Z"
-slug: "94"
+title: 椰子树与平等
+date: '2022-08-04T00:32:00Z'
+slug: '94'
 tags: []
+categories:
+  - typecho
 ---
 *王小波*
 

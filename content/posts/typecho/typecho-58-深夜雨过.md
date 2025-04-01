@@ -1,8 +1,10 @@
 ---
-title: "深夜雨过"
-date: "2022-04-20T22:42:56Z"
-slug: "58"
+title: 深夜雨过
+date: '2022-04-20T22:42:56Z'
+slug: '58'
 tags: []
+categories:
+  - typecho
 ---
 情绪就像雷阵雨
 

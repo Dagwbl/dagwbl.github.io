@@ -1,8 +1,10 @@
 ---
-title: "鲸的浮沉"
-date: "2022-05-22T10:56:00Z"
-slug: "76"
+title: 鲸的浮沉
+date: '2022-05-22T10:56:00Z'
+slug: '76'
 tags: []
+categories:
+  - typecho
 ---
 生活，是一片浩渺汹涌的海
 

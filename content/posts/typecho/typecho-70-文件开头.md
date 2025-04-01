@@ -1,8 +1,10 @@
 ---
-title: "文件开头"
-date: "2022-05-06T09:36:28Z"
-slug: "70"
+title: 文件开头
+date: '2022-05-06T09:36:28Z'
+slug: '70'
 tags: []
+categories:
+  - typecho
 ---
 ## winhex中那些常见的文件格式对应的16进制头
 ```json

@@ -109,7 +109,7 @@ languages:
           url: archives
           weight: 5
         - name: 分 类
-          url: categories
+          url: categories/
           weight: 6
         - name: 搜 索
           url: search/

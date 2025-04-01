@@ -1,8 +1,10 @@
 ---
-title: "愚蠢的人类"
-date: "2022-06-01T15:09:00Z"
-slug: "82"
+title: 愚蠢的人类
+date: '2022-06-01T15:09:00Z'
+slug: '82'
 tags: []
+categories:
+  - typecho
 ---
 *摘自《金捷幡》https://jinjiefan.com/*
 

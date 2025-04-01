@@ -1,8 +1,10 @@
 ---
-title: "实现数据库控制ESP"
-date: "2022-04-01T21:51:01Z"
-slug: "48"
+title: 实现数据库控制ESP
+date: '2022-04-01T21:51:01Z'
+slug: '48'
 tags: []
+categories:
+  - typecho
 ---
 # Todo List
 
