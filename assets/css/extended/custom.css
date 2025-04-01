@@ -10,6 +10,7 @@
 @import url("friend.css");
 @import url("tag.css");
 @import url("toc.css");
+@import url("archives.css");
 
 :root {
     --gap: 24px;

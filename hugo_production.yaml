@@ -3,7 +3,7 @@
 baseURL: "https://dagwbl.github.io"
 title: "ZJeapo's Blog"
 pagination:
-  pageSize: 10
+  pageSize: 7
 theme: [ "hugo-notice","PaperMod"]
 
 defaultContentLanguage: en
