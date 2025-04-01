@@ -1,13 +1,8 @@
-## Temporary Clipboard
+# To-do
 
-
-
-## To-do
-- [ ] https://bhoot.dev/2025/typescript-function-type-syntaxes/
+- [x] https://bhoot.dev/2025/typescript-function-type-syntaxes/  [completion:: 2025-04-01]
 - [ ] 刷题  [repeat:: every day]  [created:: 2025-02-19]
 - [ ] 学习微观经济学
-
-## Done
 - [x] 接入https://aistudio.google.com/prompts/new_chat  [completion:: 2025-02-12] ^otx3
 - [x] 刷题  [repeat:: every day]  [created:: 2025-02-18]  [completion:: 2025-02-19]
 - [x] 刷题  [repeat:: every day]  [created:: 2025-02-18]  [completion:: 2025-02-18]

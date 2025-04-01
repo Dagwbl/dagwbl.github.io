@@ -14,17 +14,17 @@ module.exports = {
     rules: {
       // 自定义规则
       "type-enum": [2, "always", [
-        "build",
-        "chore",
-        "ci",
-        "docs",
-        "feat",
-        "fix",
-        "perf",
-        "refactor",
-        "revert",
-        "style",
-        "test",
+        "build", // 打包
+        "chore", // 其他修改
+        "ci", // 持续集成
+        "docs", // 文档
+        "feat", // 新功能
+        "fix", // 修复bug
+        "perf", // 性能优化
+        "refactor", // 代码重构
+        "revert",  // 回滚
+        "style", // 代码格式修改，如空格、分号等
+        "test", // 新增测试用例
         "article", // 新增文章
         "diary", // 新增日记
         "note", // 新增笔记

@@ -15,5 +15,7 @@
     "*.html",
     "*.css",
     "/.index\\.md/"
-  ]
+  ],
+  "showLineNumber": false,
+  "useTab": false
 }
