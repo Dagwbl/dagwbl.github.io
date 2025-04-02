@@ -22,8 +22,8 @@ path includes assist
 ### 📝 **Draft Box**
 ```dataview
 table without id
-	link(file.path, replace(file.name, ".en", "")) AS "File",
-	truncate(title,30) AS "Title",
+	link(file.path, replace(replace(file.name, ".en", ""),"*.zh","")) AS "File",
+	title AS "Title",
 	dateformat(date, "yyyy-MM-dd") AS "Date"
 from "content"
 where draft=true
@@ -36,7 +36,7 @@ limit 10
 ```dataview
 table without id
 	link(file.path, replace(file.name, ".en", "")) AS "File",
-	truncate(title,30) AS "Title",
+	title AS "Title",
 	dateformat(date, "yyyy-MM-dd") AS "Date"
 from "content"
 where draft=false AND contains(file.name, ".en")

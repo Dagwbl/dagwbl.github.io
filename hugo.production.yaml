@@ -1,7 +1,7 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://dagwbl.github.io"
-title: "ZJeapo's Blog"
+title: "Jeapo's Blog"
 pagination:
   pageSize: 10
 theme: [ "hugo-notice","PaperMod"]
