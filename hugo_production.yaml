@@ -48,11 +48,11 @@ languages:
         - name: Archive
           url: archives
           weight: 1
-        - name: Category
-          url: categories/
-          weight: 2
         - name: Diary
           url: diary/
+          weight: 2
+        - name: Category
+          url: categories/
           weight: 3
         # - name: Series
         #   url: series
@@ -111,8 +111,8 @@ languages:
         - name: 归 档
           url: archives
           weight: 5
-        - name: 文 章
-          url: posts/
+        - name: 日 记
+          url: diary/
           weight: 6
         - name: 分 类
           url: categories/
@@ -176,7 +176,7 @@ params:
   ShowShareButtons: false
   ShowReadingTime: true
   # disableSpecial1stPost: true
-  disableScrollToTop: false
+  disableScrollToTop: true
   displayFullLangName: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true

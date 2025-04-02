@@ -1,11 +1,13 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://127.0.0.1:1313"
+baseURL: "https://localhost:1313"
 title: "ZJeapo's Blog"
 pagination:
   pageSize: 10
 theme: [ "hugo-notice","PaperMod"]
 
+publishDir: "../hugo_public"
+resourceDir: "../hugo_resources"
 defaultContentLanguage: zh
 hasCJKLanguage: true # enable for reconginizing and counting CJK languages
 defaultContentLanguageInSubdir: true
@@ -17,8 +19,6 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 enableGitInfo: true
-publishDir: "../hugo_public"
-resourceDir: "../hugo_resources"
 
 mainsections:
   - posts
