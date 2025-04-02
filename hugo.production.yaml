@@ -6,7 +6,7 @@ pagination:
   pageSize: 10
 theme: [ "hugo-notice","PaperMod"]
 
-defaultContentLanguage: en
+defaultContentLanguage: zh
 hasCJKLanguage: true # enable for reconginizing and counting CJK languages
 defaultContentLanguageInSubdir: true
 enableInlineShortcodes: true

@@ -55,11 +55,12 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+          HUGO_PLATFORM: github
         run: |
           hugo -F\
             --gc \
             --minify \
-            --config hugo_production.yaml \
+            --config hugo.production.yaml \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
