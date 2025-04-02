@@ -1,7 +1,7 @@
 {{- define "main" }}
-{{ range .Params.customjscssraw }}
+{{/*  {{ range .Params.customjscssraw }}
 {{ . | safeHTML }}
-{{ end }}
+{{ end }}  */}}
 <header class="page-header">
   <h1>
     {{ .Title }}
@@ -30,7 +30,7 @@
 </header>
 
 <div class="archive-container">
-    {{/*  TODO: Pagination by year */}}
+
   <div class="archive-posts-container">
     {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 
@@ -77,24 +77,7 @@
     </div>
     {{- end }}
     {{- end }}
-  </div>
-  {{/*  TODO: become partial */}}
-  <div class="archive-sidebar">
-    <div class="archive-sidebar">
-      <div class="archive-categories-box">
-        <h3>分类</h3>
-        <ul>
-          {{- range $name, $taxonomy := .Site.Taxonomies.categories }}
-          <li>
-            <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }} <span>({{ $taxonomy.Count
-                }})</span></a>
-          </li>
-          {{- end }}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+
 </div>
 
 

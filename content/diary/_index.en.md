@@ -1,6 +1,6 @@
 ---
-title: 📅 日 记
-description: 每一个脚印都在这里
+title: 📅 Diaries
+description: Every footprint is here.
 summary: Every footprint is here.
 hidemeta: true
 weight: 1

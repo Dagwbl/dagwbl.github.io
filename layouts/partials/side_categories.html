@@ -1,0 +1,99 @@
+</div>
+{{/*  TODO: become partial */}}
+<div class="archive-sidebar">
+  <div class="archive-sidebar">
+    <div class="archive-categories-box">
+      <h3>分类</h3>
+      <ul>
+        {{- range $name, $taxonomy := .Site.Taxonomies.categories }}
+        <li>
+          <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }} <span>({{ $taxonomy.Count
+              }})</span></a>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<style>
+    /* 归档页面布局 */
+.archive-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    flex-direction: row;
+  }
+
+  .archive-posts-container {
+    flex: 3;
+  }
+
+  .archive-sidebar {
+      /* position: fixed;
+      top: 100px;
+      right: 20px;
+      width: 230px;
+      flex-shrink: 0;
+      height: calc(100vh - 120px);
+      overflow-y: auto;
+      z-index: 100;
+      margin-right:  calc((100vh - var(--main-width))); */
+      flex: 1;
+      width: 230px;
+
+  }
+
+
+  /* 分类侧边栏样式 */
+  .archive-categories-box {
+    /* background: var(--entry); */
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border: solid 2px var(--border);
+  }
+
+  .archive-categories-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 5px;
+  }
+
+  .archive-categories-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .archive-categories-box li {
+    margin-bottom: 10px;
+  }
+
+  .archive-categories-box a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--primary);
+  }
+
+  .archive-categories-box a:hover {
+    text-decoration: underline;
+  }
+
+  /* 响应式设计 */
+  @media screen and (max-width: 768px) {
+    .archive-container {
+      flex-direction: column;
+    }
+
+    .archive-sidebar {
+      width: 100%;
+      order: -1; /* 在移动端将分类显示在文章列表之前 */
+      margin-bottom: 20px;
+    }
+  }
+
+</style>

@@ -3,7 +3,7 @@
 baseURL: "https://dagwbl.github.io"
 title: "ZJeapo's Blog"
 pagination:
-  pageSize: 7
+  pageSize: 10
 theme: [ "hugo-notice","PaperMod"]
 
 defaultContentLanguage: en
@@ -20,7 +20,7 @@ enableGitInfo: true
 
 mainsections:
   - posts
-  - diary
+  # - diary
   - letter
   # - navi
 ignoreFiles:
@@ -45,12 +45,15 @@ languages:
       language: en
     menu:
       main:
-        - name: Archives
+        - name: Archive
           url: archives
           weight: 1
-        - name: Categories
+        - name: Category
           url: categories/
           weight: 2
+        - name: Diary
+          url: diary/
+          weight: 3
         # - name: Series
         #   url: series
         #   weight: 3
@@ -108,9 +111,12 @@ languages:
         - name: 归 档
           url: archives
           weight: 5
+        - name: 文 章
+          url: posts/
+          weight: 6
         - name: 分 类
           url: categories/
-          weight: 6
+          weight: 9
         - name: 搜 索
           url: search/
           weight: 10
@@ -170,7 +176,7 @@ params:
   ShowShareButtons: false
   ShowReadingTime: true
   # disableSpecial1stPost: true
-  disableScrollToTop: true
+  disableScrollToTop: false
   displayFullLangName: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
@@ -179,7 +185,7 @@ params:
   searchHidden: true
   ShowWordCount: true
   UseHugoToc: true
-  ShowAllPagesInArchive: true
+  ShowAllPagesInArchive: false
   ShowPageNums: true
   ShowToc: true
   TocOpen: true
