@@ -5,6 +5,7 @@ slug: '58'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 情绪就像雷阵雨
 

@@ -5,6 +5,7 @@ slug: '49'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 今天下午四点钟才来到工作室，其实就最近的状态来说，来与不来并没有什么差别。
 

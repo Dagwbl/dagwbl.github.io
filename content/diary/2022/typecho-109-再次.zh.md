@@ -5,5 +5,6 @@ slug: '109'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 ![20220828001932316](https://dagwbl.oss-cn-chengdu.aliyuncs.com/picture/picplus/20220828001932316.jpg)

@@ -2,7 +2,7 @@
 title: 记录一下bug
 date: '2022-03-08T19:59:40Z'
 slug: '29'
-tags: []
+tags: [thesis]
 categories:
   - typecho
 ---

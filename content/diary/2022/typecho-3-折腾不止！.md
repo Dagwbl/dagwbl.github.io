@@ -5,6 +5,7 @@ slug: '3'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 废了废了
 

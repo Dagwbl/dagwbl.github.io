@@ -5,6 +5,7 @@ slug: '71'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 # Footprints and Insights
 

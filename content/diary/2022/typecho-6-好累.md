@@ -5,6 +5,7 @@ slug: '6'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 今天重新把房间收拾布置了一下，终于是添置了一张稍微大点和高点的桌子。
 舒服了很多。

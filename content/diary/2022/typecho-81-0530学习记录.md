@@ -5,6 +5,7 @@ slug: '81'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 今日气温23.6摄氏度。下午气温23.6，晚上气温22.8摄氏度。
 

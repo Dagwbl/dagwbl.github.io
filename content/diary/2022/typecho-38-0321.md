@@ -5,6 +5,7 @@ slug: '38'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 ## Day planner
 

@@ -7,6 +7,7 @@ categories:
   - typecho
 ---
 ## winhex中那些常见的文件格式对应的16进制头
+
 ```json
 {'fileformat': '.zip', 'stahex': '504B0304', 'endhex': '504B'}
 {'fileformat': '.7z', 'stahex': '377ABCAF271C', 'endhex': ''}
@@ -39,3 +40,4 @@ categories:
 {'fileformat': '.mpg', 'stahex': '000001BA', 'endhex': ''}
 {'fileformat': '.mpg', 'stahex': '000001B3', 'endhex': ''}
 {'fileformat': '.dwg', 'stahex': '41433130', 'endhex': ''}
+```

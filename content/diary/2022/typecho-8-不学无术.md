@@ -5,6 +5,7 @@ slug: '8'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 我搞无用功是真的厉害
 

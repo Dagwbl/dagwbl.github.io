@@ -5,6 +5,7 @@ slug: '5'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 早上一整天都是好好的
 

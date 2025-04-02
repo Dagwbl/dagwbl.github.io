@@ -5,6 +5,7 @@ slug: '10'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 就这样了，不动了
 

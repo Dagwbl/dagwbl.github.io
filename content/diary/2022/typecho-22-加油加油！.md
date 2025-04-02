@@ -5,6 +5,7 @@ slug: '22'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 不能再长吁短叹了，向前看向前看，加油加油加油！
 ![IMG_20220307_084100.jpg][1]

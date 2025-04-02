@@ -5,6 +5,7 @@ slug: '44'
 tags: []
 categories:
   - typecho
+  - diary
 ---
 # Todo List
 

@@ -2,9 +2,10 @@
 title: '0320'
 date: '2022-03-20T22:44:14Z'
 slug: '37'
-tags: []
+tags: [thesis]
 categories:
   - typecho
+  - diary
 ---
 ### Day planner
 
