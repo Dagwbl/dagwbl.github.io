@@ -3,7 +3,7 @@ const IMAGE_REWRITER_CONFIG = {
   // 路径匹配规则
   pathPatterns: [
     {
-      test: /(\/zh|\/en)\/static\/images\/(.*)/,
+      test: /(\/zh|\/en)?\/static\/images\/(.*\.(png|jpg|jpeg|gif|svg|webp|avif|ico|bmp|tiff|tif|apng|))/,
       replace: '/images/$2'
     }
   ],
