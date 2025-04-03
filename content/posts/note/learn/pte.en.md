@@ -1,7 +1,7 @@
 ---
-title: 'PTE'
+title: PTE | Learn note
 date: 2024-04-20
-tocOpen: ture
+tocOpen: "true"
 ---
 
 ![image-20240504211025343](https://dagwbl.oss-cn-chengdu.aliyuncs.com/picture/obsidian/image-20240504211025343.png)

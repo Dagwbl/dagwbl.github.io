@@ -1,10 +1,12 @@
 ---
-title: Dearest Clare,
+title: A letter to be Opened in the Event of My Death | To Clare
 date: 1997-02-08T23:58:14
 categories:
   - letter
 series:
+  - love
 tags:
+  - death
 draft: false
 author: Henry
 ---

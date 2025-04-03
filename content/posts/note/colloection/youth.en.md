@@ -1,9 +1,13 @@
 ---
-title: 'Youth'
-date: '2024-03-21T22:04:49+08:00'
-series: [writing]
-categories: [poem]
-tags: [positive]
+title: Youth
+date: 2024-03-21T22:04:49+08:00
+series:
+  - excerpt
+categories:
+  - poem
+tags:
+  - positive
+  - time
 language: en
 showToc: false
 TocOpen: false
@@ -11,9 +15,9 @@ draft: false
 math: false
 hidemeta: false
 comments: true
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
+description: Desc Text.
+canonicalURL: https://canonical.url/to/page
+disableHLJS: true
 disableShare: false
 hideSummary: false
 searchHidden: false
@@ -23,12 +27,6 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-# cover:
-#     image: "<image path/url>" # image path/url
-#     alt: "<alt text>" # alt text
-#     caption: "<text>" # display caption under cover
-#     relative: false # when using page bundles set this to true
-#     hidden: true # only hide on current single page
 ---
 
 ## Youth

@@ -1,10 +1,14 @@
 ---
-title: 记录一下bug
-date: '2022-03-08T19:59:40Z'
-slug: '29'
-tags: [thesis]
+title: PHP中数据库插入错误
+date: 2022-03-08T19:59:40Z
+slug: "29"
+tags:
+  - thesis
+  - bug
 categories:
   - typecho
+series:
+  - code
 ---
 在php中数据库插入错误，一般是sql语句中参数不正确，或者参数对应的类型不正确。
 

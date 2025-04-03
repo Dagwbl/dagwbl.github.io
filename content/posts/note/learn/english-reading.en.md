@@ -1,9 +1,11 @@
 ---
-title: 'English Reading'
-date: '2024-03-20T20:42:11+08:00'
-series: [reading]
-categories: ["English learning"]
-tags: []
+title: PTE | English Reading
+date: 2024-03-20T20:42:11+08:00
+series:
+  - reading
+categories:
+  - English learning
+tags:
 language: en
 showToc: false
 TocOpen: false
@@ -11,11 +13,10 @@ draft: false
 math: false
 hidemeta: false
 comments: false
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
-disableShare: false
+description: Desc Text.
+canonicalURL: https://canonical.url/to/page
 disableHLJS: false
+disableShare: false
 hideSummary: false
 searchHidden: true
 ShowReadingTime: true

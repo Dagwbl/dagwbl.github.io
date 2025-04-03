@@ -30,3 +30,5 @@ UseHugoToc: false
 ## Net world
 
 The behavior, advertisers ask some famous people like Star or UP to promote their products by paying advertising fee, as like bribery behavior.
+
+But this is not illegal!

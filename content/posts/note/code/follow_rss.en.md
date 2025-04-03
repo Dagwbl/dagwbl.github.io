@@ -1,10 +1,14 @@
 ---
-title: 'Follow rss index'
+title: Follow rss index
 date: 2024-10-16T23:10:53+08:00
 draft: false
-series: [hugo]
-categories: [debug]
-tags: [rss]
+series:
+  - hugo
+categories:
+  - code
+tags:
+  - rss
+  - software
 language: en
 math: false
 ---

@@ -1,14 +1,21 @@
 ---
-title: To Huan
+title: 我们可以只说一句话，甚至是不说话 | 致欢欢
 date: 2024-04-16
-categories: letter
+categories:
+  - letter
+series:
+  - love
+tags:
+  - huan
+author: Jeapo
+to: Huan
 ---
 
 ## May 1st
 
 欢：
 
-最近过得不是很好，总觉得自己像是一坛腌菜一样，笼罩在一种很
+最近过得不是很好，总觉得自己像是一坛腌菜一样，笼罩在一种很压抑的情绪之中。
 
 The rest of the words is in the paper.
 

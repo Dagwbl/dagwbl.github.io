@@ -1,10 +1,14 @@
 ---
 title: 《匆匆》
-date: '2022-04-24T14:31:00Z'
-slug: '60'
-tags: []
+date: 2022-04-24T14:31:00Z
+slug: "60"
+tags:
+  - time
 categories:
   - typecho
+author: 朱自清
+series:
+  - excerpt
 ---
 # 匆匆
 

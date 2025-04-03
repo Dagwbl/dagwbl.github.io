@@ -1,8 +1,11 @@
 ---
-title: 'Some function words need reading weakly'
+title: 英语中一些需要弱读的功能词
 date: 2024-03-14T20:11:10+08:00
-tags: [Learn, speaking]
-categories: English
+tags:
+  - Learn
+  - speaking
+categories:
+  - English
 draft: false
 ---
 

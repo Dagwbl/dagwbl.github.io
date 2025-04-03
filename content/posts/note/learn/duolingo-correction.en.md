@@ -1,5 +1,5 @@
 ---
-title: Duolingo's correction
+title: Duolingo | correction
 date: 2024-03-20T20:41:20+08:00
 series:
   - duolingo

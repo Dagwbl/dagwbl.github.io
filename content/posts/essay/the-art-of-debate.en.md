@@ -1,17 +1,18 @@
 ---
-title: 'The Art of Debate'
-date: '2024-04-05T16:46:51+08:00'
-lastmod: ''
-series: []
-categories: []
-tags: [todo]
+title: The Art of Debate.en
+date: 2024-04-05T16:46:51+08:00
+lastmod: ""
+series:
+categories:
+tags:
+  - todo
 language: en
 showToc: false
 TocOpen: false
 draft: false
 math: false
 hidemeta: false
-description: "Desc Text."
+description: Desc Text.
 hideSummary: false
 searchHidden: true
 ShowReadingTime: true
@@ -20,12 +21,6 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-# cover:
-#     image: "<image path/url>" # image path/url
-#     alt: "<alt text>" # alt text
-#     caption: "<text>" # display caption under cover
-#     relative: false # when using page bundles set this to true
-#     hidden: true # only hide on current single page
 ---
 
 ## Background

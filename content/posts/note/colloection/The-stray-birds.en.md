@@ -3,9 +3,9 @@ title: The stray birds
 date: 2024-03-16T14:03:55+08:00
 draft: false
 series:
-  - poem
+  - excerpt
 categories:
-  - collection
+  - poem
 tags:
   - poem
 comments:

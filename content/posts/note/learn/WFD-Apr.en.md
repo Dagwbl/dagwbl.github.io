@@ -1,6 +1,10 @@
 ---
-title: Write from Dictation
+title: PTE | Write from Dictation
 date: 2024-04-25
+categories:
+  - note
+series:
+  - csc
 ---
 
 ## WRITE FROM DICTATION
