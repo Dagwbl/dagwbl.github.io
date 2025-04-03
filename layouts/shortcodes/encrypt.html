@@ -1,13 +1,13 @@
-{{ $hint := .Get "hint" | default "请输入密码" }}
+{{ $hint := .Get "hint" | default (i18n "input_pwd")}}
 <div class="encrypted-content" data-cipher="{{ .Inner | base64Encode | replaceRE "(.{5})(.{3})(.{4})(.+)" "$2$4$1$3" }}" data-hint="{{ $hint }}">
     <div class="locked-state">
-        <p>🔒 此处内容已加密</p>
+        <p>🔒 {{i18n "content_is_encrypted"}}</p>
         <div class="password-prompt">
             <input type="password" class="password-input"
                    placeholder="{{ $hint }}"
                    id="pwd-input-{{ .Ordinal }}"
                    aria-label="加密内容密码">
-            <button class="decrypt-btn" onclick="decryptContent(event, 'pwd-input-{{ .Ordinal }}')">解锁</button>
+            <button class="decrypt-btn" onclick="decryptContent(event, 'pwd-input-{{ .Ordinal }}')">{{i18n "unlock"}}</button>
         </div>
         <div class="status-message"></div>
     </div>
