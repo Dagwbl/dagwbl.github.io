@@ -26,9 +26,12 @@
   items:
     - name: "DeepSeek"
       icon: "🐳"
-      weight: 10
+      weight: 9
       refused: true
       link: "https://chat.deepseek.com/"
+    - name: Metaso
+      link: "https://metaso.cn/"
+      weight: 10
     - name: "Claude 3.7"
       weight: 11
       link: "https://poe.com/Claude-3.7-Sonnet"
