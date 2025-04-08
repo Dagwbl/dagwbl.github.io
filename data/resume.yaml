@@ -1,0 +1,94 @@
+# data/resume.yaml
+basics:
+  name: "Jeapo"
+  label: "Job waiting"
+  email: "dagwbl@outlook.com"
+  phone: "+86-1234567890"
+  url: "jeapo.top"
+  location:
+    address: "China"
+    postalCode: "552527"
+    city: "Guiyang"
+    countryCode: "86"
+  profiles:
+    - network: "GitHub"
+      url: "https://github.com/Dagwbl"
+      username: "Dagwbl"
+    - network: "Jeapo"
+      url: "https://linkedin.com/in/jeapo"
+      username: "Jeapo"
+  summary: "The world puts off its mask of vastness to its lover. It becomes small as one song, as one kiss of the eternal."
+
+work:
+  - company: "公司名称"
+    position: "职位"
+    url: "https://company.com"
+    startDate: "2018-01-01"
+    endDate: "2022-12-31"
+    summary: "在此职位的工作概述"
+    highlights:
+      - "工作亮点1"
+      - "工作亮点2"
+  - company: "之前的公司"
+    position: "之前的职位"
+    url: "https://previous-company.com"
+    startDate: "2015-01-01"
+    endDate: "2017-12-31"
+    summary: "在此职位的工作概述"
+    highlights:
+      - "工作亮点1"
+      - "工作亮点2"
+
+education:
+  - institution: "Guizhou University"
+    url: "https://university.edu"
+    area: "专业"
+    studyType: "学位"
+    startDate: "2010-09-01"
+    endDate: "2014-07-01"
+    gpa: "3.8"
+    courses:
+      - "主修课程1"
+      - "主修课程2"
+  - institution: "Guizhou University"
+    url: "https://university.edu"
+    area: "专业"
+    studyType: "学位"
+    startDate: "2010-09-01"
+    endDate: "2014-07-01"
+    gpa: "3.8"
+    courses:
+      - "主修课程1"
+      - "主修课程2"
+
+skills:
+  - name: "技能类别1"
+    level: "高级"
+    keywords:
+      - "关键词1"
+      - "关键词2"
+  - name: "技能类别2"
+    level: "中级"
+    keywords:
+      - "关键词1"
+      - "关键词2"
+
+projects:
+  - name: "项目名称"
+    description: "项目描述"
+    url: "https://project.com"
+    highlights:
+      - "项目亮点1"
+      - "项目亮点2"
+
+languages:
+  - language: "中文"
+    fluency: "母语"
+  - language: "英语"
+    fluency: "流利"
+
+interests:
+  - name: "兴趣爱好1"
+    keywords:
+      - "关键词1"
+      - "关键词2"

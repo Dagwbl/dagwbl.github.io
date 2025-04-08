@@ -1,0 +1,309 @@
+{{ define "main" }}
+{{ range .Params.customjscssraw }}
+{{ . | safeHTML }}
+{{ end }}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+
+    <style>
+      /* assets/css/resume.css */
+  #resume {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 13pt;
+      line-height: 1.4;
+      color: #444;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 15px;
+    }
+
+    #contact {
+      margin: 0 0 30px 0;
+    }
+
+    #name {
+      font-size: 2.5em;
+      margin: 0 0 10px 0;
+      font-weight: 600;
+      color: #333;
+    }
+
+    #contact-info, #profiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .contact-row {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .contact-row i {
+      margin-right: 8px;
+      color: #555;
+    }
+
+    section {
+      margin: 25px 0;
+    }
+
+    h2 {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      color: #333;
+      font-size: 1.4em;
+      margin: 25px 0 15px 0;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .job, .education, .project {
+      margin-bottom: 25px;
+    }
+
+    .job-title-container, .education-title-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .job-company, .education-institution {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .date-range {
+      color: #666;
+      font-size: 0.9em;
+      margin: 5px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 3px;
+    }
+
+    .skill-category, .interest-category {
+      margin-bottom: 15px;
+    }
+
+    .skill-category-name, .interest-category-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .skill-keywords, .interest-keywords, .languages-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .skill-keywords li, .interest-keywords li, .languages-list li {
+      background-color: #f0f0f0;
+      padding: 3px 8px;
+      margin: 0 8px 8px 0;
+      border-radius: 3px;
+    }
+
+    @media print {
+      #resume {
+        font-size: 11pt;
+        margin: 0;
+      }
+
+      a {
+        color: #000;
+      }
+
+      @page {
+        margin: 0.5cm;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      .job-title-container, .education-title-container {
+        flex-direction: column;
+      }
+
+      .job-title, .education-studyType {
+        margin-top: 5px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="resume">
+    {{ $resume := .Site.Data.resume }}
+    <div id="contact">
+      <h1 id="name">{{ $resume.basics.name }}</h1>
+      <div id="contact-info">
+        {{ with $resume.basics.email }}<div class="contact-row"><i class="fa fa-envelope-o"></i><span>{{ . }}</span></div>{{ end }}
+        {{ with $resume.basics.phone }}<div class="contact-row"><i class="fa fa-phone"></i><span>{{ . }}</span></div>{{ end }}
+        {{ with $resume.basics.url }}<div class="contact-row"><i class="fa fa-globe"></i><span><a href="{{ . }}">{{ . }}</a></span></div>{{ end }}
+        {{ with $resume.basics.location }}
+          {{ if .address }}<div class="contact-row"><i class="fa fa-map-marker"></i><span>{{ .address }}</span></div>{{ end }}
+        {{ end }}
+      </div>
+      <div id="profiles">
+        {{ range $resume.basics.profiles }}
+          <div class="contact-row">
+            <i class="fa fa-{{ lower .network }}"></i><span><a href="{{ .url }}">{{ .username }}</a></span>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+
+    {{ with $resume.basics.summary }}
+    <section id="summary">
+      <h2>简介</h2>
+      <p>{{ . }}</p>
+    </section>
+    {{ end }}
+
+    {{ if $resume.work }}
+    <section id="work">
+      <h2>工作经历</h2>
+      {{ range $resume.work }}
+      <div class="job">
+        <div class="job-title-container">
+          <div class="job-company">
+            {{ if .url }}<a href="{{ .url }}">{{ .company }}</a>{{ else }}{{ .company }}{{ end }}
+          </div>
+          <div class="job-title">{{ .position }}</div>
+        </div>
+        <div class="date-range">
+          {{ with .startDate }}{{ dateFormat "2006/01" . }}{{ end }} -
+          {{ if .endDate }}{{ dateFormat "2006/01" .endDate }}{{ else }}至今{{ end }}
+        </div>
+        {{ with .summary }}<p>{{ . }}</p>{{ end }}
+        {{ if .highlights }}
+        <ul>
+          {{ range .highlights }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ if $resume.education }}
+    <section id="education">
+      <h2>教育背景</h2>
+      {{ range $resume.education }}
+      <div class="education">
+        <div class="education-title-container">
+          <div class="education-institution">
+            {{ if .url }}<a href="{{ .url }}">{{ .institution }}</a>{{ else }}{{ .institution }}{{ end }}
+          </div>
+          <div class="education-studyType">{{ .studyType }} - {{ .area }}</div>
+        </div>
+        <div class="date-range">
+          {{ with .startDate }}{{ dateFormat "2006/01" . }}{{ end }} - {{ with .endDate }}{{ dateFormat "2006/01" . }}{{ end }}
+        </div>
+        {{ if .courses }}
+        <div class="courses">
+          <h3>主要课程</h3>
+          <ul>
+            {{ range .courses }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ if $resume.skills }}
+    <section id="skills">
+      <h2>专业技能</h2>
+      {{ range $resume.skills }}
+      <div class="skill-category">
+        <div class="skill-category-name">{{ .name }} - {{ .level }}</div>
+        <ul class="skill-keywords">
+          {{ range .keywords }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ if $resume.projects }}
+    <section id="projects">
+      <h2>项目经历</h2>
+      {{ range $resume.projects }}
+      <div class="project">
+        <div class="project-title">
+          {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+        </div>
+        <p>{{ .description }}</p>
+        {{ if .highlights }}
+        <ul class="project-highlights">
+          {{ range .highlights }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ if $resume.languages }}
+    <section id="languages">
+      <h2>语言能力</h2>
+      <ul class="languages-list">
+        {{ range $resume.languages }}
+        <li>{{ .language }} ({{ .fluency }})</li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+
+    {{ if $resume.interests }}
+    <section id="interests">
+      <h2>兴趣爱好</h2>
+      {{ range $resume.interests }}
+      <div class="interest-category">
+        <div class="interest-category-name">{{ .name }}</div>
+        {{ if .keywords }}
+        <ul class="interest-keywords">
+          {{ range .keywords }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+  </div>
+</body>
+
+{{ end }}
