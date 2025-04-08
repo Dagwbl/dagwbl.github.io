@@ -7,7 +7,7 @@ categories:
   - typecho
 ---
 
-By Qing Jiang  
+By Zhu Che
 
 I live on the top floor of Building 27. The sun scorches the reinforced concrete rooftop, and the heat lingers until four or five in the morning. As a result, my bed is nothing like those in Guiyang—during the summer, it’s essentially a full-coverage electric blanket. It’s unbearably hot, I fall asleep late, and dawn comes early. The construction workers start their noisy labor early too, so I inevitably wake up early, my pillow drenched in sweat. I’d love to go back to sleep, but the moment I pick up my phone and open Bilibili, I give up on the idea—though I’m still exhausted. So I drag myself out of bed, turn off my phone, sit naked in front of my computer, and start pondering: What do we actually gain from spending so much time on video platforms?  
 
