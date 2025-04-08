@@ -10,6 +10,7 @@ async function isHugoRunning() {
         const platform = process.platform;
         let command = '';
 
+        new Notice("检查 Hugo 进程...");
         if (platform === 'win32') {
             command = 'tasklist | findstr /I "hugo.exe"'; // Windows 查找进程
         } else {
@@ -28,7 +29,7 @@ async function stopHugoServer() {
     try {
         const platform = process.platform;
         let command = '';
-
+        new Notice("正在中止 Hugo 进程...");
         if (platform === 'win32') {
             command = 'taskkill /F /IM hugo.exe'; // Windows 强制终止 Hugo
         } else {
@@ -36,9 +37,11 @@ async function stopHugoServer() {
         }
 
         await exec(command);
-        console.log('Hugo 服务器已关闭。');
+        console.log('Hugo 服务器已关闭');
+        new Notice("Hugo 服务器已关闭");
     } catch (error) {
         console.error('关闭 Hugo 服务器失败:', error.message);
+        new Notice('关闭 Hugo 服务器失败:', error.message);
     }
 }
 
@@ -46,15 +49,18 @@ async function stopHugoServer() {
 async function startHugoServer() {
     const hugoProjectDir = app.vault.adapter.basePath; // 假设在 Obsidian 库目录下
     console.log(`Hugo 项目目录: ${hugoProjectDir}`);
+    new Notice("Hugo 项目目录:", hugoProjectDir);
 
     const configFiles = ['config.toml', 'hugo.yaml', 'hugo.json'];
     const hasConfigFile = configFiles.some(file => fs.existsSync(path.join(hugoProjectDir, file)));
 
     if (!hasConfigFile) {
         throw new Error('未找到 Hugo 配置文件。请确保当前目录是 Hugo 项目的根目录。');
+        new Notice('未找到 Hugo 配置文件。请确保当前目录是 Hugo 项目的根目录。');
     }
 
     console.log('正在启动 Hugo 服务器...');
+    new Notice("正在启动 Hugo 服务器...");
     const hugoProcess = child_process.spawn('hugo server', {
         shell: true,
         stdio: 'pipe',
@@ -77,6 +83,7 @@ async function startHugoServer() {
 function openBrowser() {
     const url = 'http://localhost:1313';
     console.log(`正在打开浏览器访问: ${url}`);
+    new Notice(`正在打开浏览器访问: ${url}`);
 
     const platform = process.platform;
     if (platform === 'linux') {
@@ -92,9 +99,11 @@ function openBrowser() {
 module.exports = async function () {
     if (await isHugoRunning()) {
         console.log('检测到 Hugo 服务器正在运行，正在关闭...');
+        new Notice('检测到 Hugo 服务器正在运行，正在关闭...');
         await stopHugoServer();
     } else {
         console.log('Hugo 服务器未运行，正在启动...');
+        new Notice('Hugo 服务器未运行，正在启动...');
         await startHugoServer();
     }
 };
