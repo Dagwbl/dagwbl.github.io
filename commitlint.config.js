@@ -29,7 +29,8 @@ module.exports = {
         "diary", // A new diary
         "note", // A new note
         "letter" // A new letter
-      ]]
+      ]],
+      "header-max-length": [2, "always", 150],
     },
     helpUrl: "https://github.com/conventional-changelog/commitlint/#what-is-commitlint",
     prompt: {
