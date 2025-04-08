@@ -17,5 +17,6 @@
     "/.index\\.md/"
   ],
   "showLineNumber": false,
-  "useTab": false
+  "useTab": false,
+  "propertiesInDocument": "visible"
 }
