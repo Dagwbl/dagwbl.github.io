@@ -1,0 +1,6 @@
+<div class="mermaid">
+    {{- .Inner | safeHTML }}
+</div>
+ {{ .Page.Store.Set "hasMermaid" true }}
+ {{/*  bug: will report error without any change occur  */}}
+

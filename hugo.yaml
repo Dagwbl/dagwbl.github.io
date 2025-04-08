@@ -2,6 +2,7 @@
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://localhost:1313"
 title: "Jeapo's Blog"
+copyright: ©️ 2025 Jeapo
 pagination:
   pageSize: 10
 theme: [ "hugo-notice","PaperMod"]
@@ -165,6 +166,7 @@ outputs:
     - JSON
 
 params:
+  mermaid: true
   InsteadPicture: true
   ShowMetaDate: true
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
