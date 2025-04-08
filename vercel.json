@@ -1,6 +1,18 @@
 {
     "routes": [
       {
+        "src": "/(.*\\.(css|js|png|jpg|svg|ico))",
+        "dest": "/$1",
+        "headers": {
+          "Cache-Control": "public, max-age=31536000, immutable"
+        }
+      },
+      {
+        "src": "/.*",
+        "dest": "/index.html",
+        "status": 200
+      },
+      {
         "src": "/404",
         "dest": "/en/404.html",
         "status": 404
@@ -8,11 +20,6 @@
       {
         "src": "/zh/404",
         "dest": "/zh/404.html",
-        "status": 404
-      },
-      {
-        "src": "/(?<lang>en|zh)/.*",
-        "dest": "/$lang/404.html",
         "status": 404
       }
     ]
