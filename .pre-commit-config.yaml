@@ -14,9 +14,11 @@ repos:
   rev: v4.4.0
   hooks:
     - id: check-added-large-files  # 禁止提交大文件
+      args: [--maxkb=3072]
       log_file: assist/logs/pre-commit.log
     - id: trailing-whitespace      # 检查行尾空格
       args: [ --markdown-linebreak-ext=md ]
+      exclude: '\.js$'
     - id: check-json
       log_file: assist/logs/pre-commit.log
     - id: check-xml
