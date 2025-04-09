@@ -195,7 +195,7 @@ privacy:
     disabled: false
     privacyEnhanced: true
 
-# googleAnalytics: G-BQTJ3STXR7
+googleAnalytics: G-BQTJ3STXR7
 services:
   googleAnalytics:
     id: G-BQTJ3STXR7
