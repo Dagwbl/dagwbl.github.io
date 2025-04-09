@@ -40,3 +40,18 @@
 
 - id: unlock
   translation: "Unlock"
+
+- id: caution
+  translation: 'Caution'
+
+- id: important
+  translation: 'Important'
+
+- id: note
+  translation: 'Note'
+
+- id: tip
+  translation: 'Tip'
+
+- id: warning
+  translation: 'Warning'
