@@ -61,6 +61,8 @@ Finally, regarding your mention of fewer words on your letter, I don't think tha
 
 I heard a great song the other day and resisted sharing it with you then, just until now. No surprise you should have heard it already.
 
-{{<saying "Good night, and in case I don not see you, Good afternoon, Good evening, And good morning." "The Truman Show">}}
+
+> Good night, and in case I don not see you, Good afternoon, Good evening, And good morning.  
+> <span>The Truman Show</span>
 
 {{</collopse>}}
