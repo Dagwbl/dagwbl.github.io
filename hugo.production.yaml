@@ -29,133 +29,14 @@ ignoreFiles:
   - ^.obsidian/     # 忽略 `temp` 文件夹及其内容
   - ^assets/images/old/  # 忽略 `assets/images/old` 文件夹及其内容
 
-# googleAnalytics: UA-123-45
-
 minify:
   disableXML: true
   # minifyOutput: true
 
-languages:
-  en:
-    languageName: "EN"
-    weight: 1
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
-      language: en
-    menu:
-      main:
-        - name: Archive
-          url: archives
-          weight: 1
-        - name: Diary
-          url: diary/
-          weight: 2
-        - name: Category
-          url: categories/
-          weight: 3
-        # - name: Series
-        #   url: series
-        #   weight: 3
-        # - name: Tag
-        #   url: tags/
-        #   weight: 4
-        - name: Search
-          url: search/
-          weight: 5
-        - name: 🪶
-          url: /navi/
-          weight: 99
-        # - name: About
-        #   url: /about
-        #   weight: 7
-    params:
-      homeInfoParams:
-        Title: "Timid Thoughts 🌱"
-        Content: |
-          👋 **O troupe of little vagrants of the world, leave your footprints in my words.**
-
-          - Thoughts feeds itself with its own words and grows.
-
-          - Do not linger to gather flowers to keep them, but walk on, for flowers will keep themselves blooming all your way.
-
-          - We, the rustling leaves, have a voice that answers the storms, but who are you so silent?
-
-      profileMode:
-        enabled: false
-        title: Huh, still alive!
-        imageUrl: "images/home-icon.png"
-        imageTitle: ZJeapo
-        imageWidth: 90
-        imageHeight: 90
-        buttons:
-          - name: ⏱️Timeline
-            url: archives
-          - name: 🕸️Post
-            url: posts
-          - name: 🦉Docs
-            url: guide
-          - name: 📎Collect
-            url: cheatsheet
-  # disable multi-language support
-  zh:
-    languageName: "CN"
-    weight: 3
-    taxonomies:
-      language: zh
-      tag: tags
-      category: categories
-      series: series
-    menu:
-      main:
-        - name: 归 档
-          url: archives
-          weight: 5
-        - name: 日 记
-          url: diary/
-          weight: 6
-        - name: 分 类
-          url: categories/
-          weight: 9
-        - name: 搜 索
-          url: search/
-          weight: 10
-        # - name: 标签
-        #   url: tags
-        #   weight: 10
-        - name: 🪶
-          url: /navi/
-          weight: 99
-    # custom params for each language should be under [langcode].parms - hugo v0.120.0
-    params:
-      homeInfoParams:
-        Title: "胆怯的想法 🌱"
-        Content: |
-          👋 世界上的小流浪者们啊，请在我的文字中留下你们的足迹。
-
-          - 思想以自己的言语为食，并因此成长。
-
-          - 不要逗留采集花朵以保存它们，继续前行吧，因为花朵会一路为你绽放。
-
-          - 我们，这些沙沙作响的树叶，有回应风暴的声音，而你为何如此沉默？
-
-      profileMode:
-        enabled: false
-        title: "呜呼~ \U0001F44B"
-        imageUrl: "images/home-icon.png"
-        imageTitle: ZJeapo
-        imageWidth: 90
-        imageHeight: 90
-        buttons:
-          - name: 📆时间轴
-            url: archives
-          - name: 🕸️信件
-            url: posts/letter
-          - name: 🗃️笔记
-            url: posts/note
-          - name: 📒日记
-            url: posts/diary
+sitemap:
+  changefreq: weekly
+  disable: true
+  priority: 0.8
 
 outputs:
   home:
@@ -169,13 +50,13 @@ params:
   ShowMetaDate: true
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "A blog about technology, programming, and life."
+  keywords: [blog, technology, programming, life, personal, diary, note, letter, code, navigation]
   author: Jeapo
   dateFormat: "2006-01-02"
   # author: ["Me", "You"] # multiple authors
   ShowFullTextinRSS: true
   defaultTheme: auto
-  # disableThemeToggle: true
-  ShowShareButtons: false
+  disableThemeToggle: false
   ShowReadingTime: true
   # disableSpecial1stPost: true
   disableScrollToTop: false
@@ -197,8 +78,8 @@ params:
     homePage: false
     # 配置是否显示访问量
   # images: ["/images/wallpaperflare.com_flower.jpg"]
-  # ShowShareButtons: true
-  # ShareButtons: [qq,bilibili]
+  ShowShareButtons: false
+  ShareButtons: [qq,bilibili]
   socialIcons:
     - name: github
       title: View Source on Github
@@ -296,25 +177,28 @@ markup:
     ordered: false
     startLevel: 2
 
-# privacy:
-#   vimeo:
-#     disabled: false
-#     simple: true
+privacy:
+  googleAnalytics:
+    disable: false
+    respectDoNotTrack: false
+  vimeo:
+    disabled: false
+    simple: true
+  twitter:
+    disabled: false
+    enableDNT: true
+    simple: true
+  instagram:
+    disabled: false
+    simple: true
+  youtube:
+    disabled: false
+    privacyEnhanced: true
 
-#   twitter:
-#     disabled: false
-#     enableDNT: true
-#     simple: true
-
-#   instagram:
-#     disabled: false
-#     simple: true
-
-#   youtube:
-#     disabled: false
-#     privacyEnhanced: true
-
+# googleAnalytics: G-BQTJ3STXR7
 services:
+  googleAnalytics:
+    id: G-BQTJ3STXR7
   instagram:
     disableInlineCSS: true
   twitter:
@@ -337,3 +221,122 @@ module:
     target: i18n
   - source: archetypes
     target: archetypes
+
+languages:
+  en:
+    languageName: "EN"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+      language: en
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 1
+        - name: Diary
+          url: diary/
+          weight: 2
+        - name: Category
+          url: categories/
+          weight: 3
+        # - name: Series
+        #   url: series
+        #   weight: 3
+        # - name: Tag
+        #   url: tags/
+        #   weight: 4
+        - name: Search
+          url: search/
+          weight: 5
+        - name: 🪶
+          url: /navi/
+          weight: 99
+    params:
+      homeInfoParams:
+        Title: "Timid Thoughts 🌱"
+        Content: |
+          👋 **O troupe of little vagrants of the world, leave your footprints in my words.**
+
+          - Thoughts feeds itself with its own words and grows.
+
+          - Do not linger to gather flowers to keep them, but walk on, for flowers will keep themselves blooming all your way.
+
+          - We, the rustling leaves, have a voice that answers the storms, but who are you so silent?
+
+      profileMode:
+        enabled: false
+        title: Huh, still alive!
+        imageUrl: "images/home-icon.png"
+        imageTitle: ZJeapo
+        imageWidth: 90
+        imageHeight: 90
+        buttons:
+          - name: ⏱️Timeline
+            url: archives
+          - name: 🕸️Post
+            url: posts
+          - name: 🦉Docs
+            url: guide
+          - name: 📎Collect
+            url: cheatsheet
+  # disable multi-language support
+  zh:
+    languageName: "CN"
+    weight: 3
+    taxonomies:
+      language: zh
+      tag: tags
+      category: categories
+      series: series
+    menu:
+      main:
+        - name: 归 档
+          url: archives
+          weight: 5
+        - name: 日 记
+          url: diary/
+          weight: 6
+        - name: 分 类
+          url: categories/
+          weight: 9
+        - name: 搜 索
+          url: search/
+          weight: 10
+        # - name: 标签
+        #   url: tags
+        #   weight: 10
+        - name: 🪶
+          url: /navi/
+          weight: 99
+    # custom params for each language should be under [langcode].parms - hugo v0.120.0
+    params:
+      homeInfoParams:
+        Title: "胆怯的想法 🌱"
+        Content: |
+          👋 世界上的小流浪者们啊，请在我的文字中留下你们的足迹。
+
+          - 思想以自己的言语为食，并因此成长。
+
+          - 不要逗留采集花朵以保存它们，继续前行吧，因为花朵会一路为你绽放。
+
+          - 我们，这些沙沙作响的树叶，有回应风暴的声音，而你为何如此沉默？
+
+      profileMode:
+        enabled: false
+        title: "呜呼~ \U0001F44B"
+        imageUrl: "images/home-icon.png"
+        imageTitle: ZJeapo
+        imageWidth: 90
+        imageHeight: 90
+        buttons:
+          - name: 📆时间轴
+            url: archives
+          - name: 🕸️信件
+            url: posts/letter
+          - name: 🗃️笔记
+            url: posts/note
+          - name: 📒日记
+            url: posts/diary
