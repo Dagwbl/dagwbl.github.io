@@ -189,7 +189,7 @@
 
             // 搜索功能核心逻辑
             function performSearch(engineUrl, query) {
-                if (query) {
+                if (query || true) {
                     const searchUrl = engineUrl + encodeURIComponent(query);
                     // 如果在 iframe 中，尝试与父页面通信
                     if (window !== window.top) {
@@ -225,7 +225,7 @@
             });
 
             // 输入框实时监控，禁用/启用按钮
-            function updateButtonState() {
+            /*  function updateButtonState() {
                 const query = searchInput.value.trim();
                 searchButtons.forEach(button => {
                     button.disabled = !query;
@@ -234,7 +234,7 @@
             }
 
             searchInput.addEventListener('input', updateButtonState);
-            updateButtonState(); // 初始化按钮状态
+            updateButtonState(); // 初始化按钮状态 */
         });
 
         // 主题切换逻辑（优化合并）
