@@ -83,7 +83,7 @@ params:
     homePage: false
     # 配置是否显示访问量
   # images: ["/images/wallpaperflare.com_flower.jpg"]
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShareButtons: [qq,bilibili]
   socialIcons:
     - name: github
