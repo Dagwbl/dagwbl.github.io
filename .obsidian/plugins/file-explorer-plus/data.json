@@ -75,7 +75,7 @@
       },
       {
         "name": "index",
-        "active": false,
+        "active": true,
         "type": "FILES",
         "pattern": "_index(\\.(zh|en))?\\.md",
         "patternType": "REGEX"
