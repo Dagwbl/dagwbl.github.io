@@ -30,7 +30,7 @@ sections:
       - name: "Hugo"
         url: "https://gohugo.io"
 
-  - title: "🔤 Dictionary"
+  - title: "🔤 Dicts"
     links:
       - name: "Collins English"
         url: "https://www.collinsdictionary.com/dictionary/english/"

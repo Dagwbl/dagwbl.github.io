@@ -33,6 +33,10 @@
 {{- $pages = site.RegularPages }}
 {{- end }}
 
+{{/* hide the page in archives by the hidden parameter  */}}
+{{- $visiblePages := where $pages "Params.hidden" "ne" true }}
+{{- $pages := $visiblePages}}
+
 {{- range $pages.GroupByPublishDate "2006" }}
 {{- if ne .Key "0001" }}
 <div class="archive-year">
