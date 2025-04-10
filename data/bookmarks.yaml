@@ -1,0 +1,88 @@
+sections:
+  - title: "📚 Learning"
+    links:
+      - name: "微信读书"
+        url: "https://weread.qq.com/web/shelf"
+      - name: "Qwerty Learner"
+        url: "https://qwerty.kaiyi.cool/"
+      - name: "Hello Algo"
+        url: "https://www.hello-algo.com/en/"
+      - name: "渐构"
+        url: "https://www.modevol.com/"
+
+  - title: "🏞️ English"
+    links:
+      - name: "APE practice"
+        url: "https://www.ptexj.com/zh-CN/practice"
+      - name: "多邻国"
+        url: "https://www.duolingo.cn/learn"
+      - name: "萤火虫"
+        url: "https://www.fireflyau.com/home"
+
+  - title: "💪 Library"
+    links:
+      - name: "EmojiAll"
+        url: "https://www.emojiall.com/zh-hans"
+      - name: "Emojis Wiki"
+        url: "https://emojis.wiki/"
+      - name: "Wikipedia"
+        url: "https://www.wikipedia.org"
+      - name: "Hugo"
+        url: "https://gohugo.io"
+
+  - title: "🔤 Dictionary"
+    links:
+      - name: "Collins English"
+        url: "https://www.collinsdictionary.com/dictionary/english/"
+      - name: "Merriam-Webster"
+        url: "https://www.merriam-webster.com/"
+      - name: "Vocabulary.com"
+        url: "https://www.vocabulary.com/"
+      - name: "优词词典"
+        url: "https://www.dictool.com/"
+      - name: "漢典"
+        url: "https://www.zdic.net/"
+      - name: "Urban Dictionary"
+        url: "https://www.urbandictionary.com/"
+
+  - title: "🎨 Design"
+    links:
+      - name: "AppIconForge"
+        url: "https://zhangyu1818.github.io/appicon-forge/"
+      - name: "CodePen"
+        url: "https://codepen.io/wodniack/pens/popular"
+
+  - title: "💻 Code"
+    links:
+      - name: "Toolbox of programmer"
+        url: "https://tool.ur1.fun"
+      - name: "火山方舟"
+        url: "https://console.volcengine.com/ark/region:ark+cn-beijing/model?vendor=Bytedance&view=LIST_VIEW"
+      - name: "SiliconCloud"
+        url: "https://cloud.siliconflow.cn/models"
+      - name: "Stack Overflow"
+        url: "https://stackoverflow.com"
+
+  - title: "⚒️ Tools"
+    links:
+      - name: "Character Counter"
+        url: "https://charactercalculator.com/"
+      - name: "GeoGebra"
+        url: "https://www.geogebra.org/"
+      - name: "Symbolab"
+        url: "https://www.symbolab.com/"
+      - name: "ToolWa"
+        url: "https://toolwa.com"
+      - name: "HuggingChat"
+        url: "https://huggingface.co/chat/"
+
+  - title: "🗿 Blog"
+    links:
+      - name: "WebCache"
+        url: "https://www.webcache.cn/"
+      - name: "webmasters"
+        url: "https://www.bing.com/webmasters/"
+      - name: "Google Analytics"
+        url: "https://analytics.google.com/"
+      - name: "Google Search Console"
+        url: "https://search.google.com/search-console"

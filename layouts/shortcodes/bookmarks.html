@@ -1,0 +1,30 @@
+{{- if not (.Page.Scratch.Get "bookmarkCSSLoaded") -}}
+  {{- $css := resources.Get "/css/bookmark.css" | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{- .Page.Scratch.Set "bookmarkCSSLoaded" true -}}
+{{- end -}}
+
+<div class="bookmark-grid">
+  {{- range .Site.Data.bookmarks.sections }}
+    <div class="bookmark-section">
+      <h3>{{ .title }}</h3>
+      <div class="bookmark-grid">
+        {{- range .links }}
+          <div class="bookmark-item">
+            <a href="{{ .url }}" target="_blank" rel="noopener">
+              <div class="bookmark-icon">
+                {{ $url := .url }}
+                {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
+                {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }}
+                <img src="{{ $iconUrl }}" alt="{{ $domain }} icon">
+              </div>
+              <div class="bookmark-info">
+                {{ .name }}
+              </div>
+            </a>
+          </div>
+        {{- end }}
+      </div>
+    </div>
+  {{- end }}
+</div>

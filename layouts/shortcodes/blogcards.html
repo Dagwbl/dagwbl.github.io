@@ -1,0 +1,24 @@
+{{- if not (.Page.Scratch.Get "blogcardCSSLoaded") -}}
+  {{- $css := resources.Get "/css/blogcard.css" | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{- .Page.Scratch.Set "blogcardCSSLoaded" true -}} 
+{{- end }}
+
+{{- range .Site.Data.blogcards.blogcards }}
+<a href="{{ .url }}" class="friend-card" target="_blank"> 
+  <div class="card-header">  
+    <div class="card-logo"> 
+      <img src="{{ .logo }}" alt="logo" onerror="this.onerror=null; this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';">
+    </div>
+    <div class="card-tags">
+      {{- with .tag }}
+        {{- range . }}
+          <span class="card-tag tag-{{ . }}">{{ . }}</span>
+        {{- end }}
+      {{- end }}
+    </div> 
+  </div>      
+  <div class="card-title">{{ .name }}</div>  
+  <div class="card-desc">{{ .word }}</div> 
+</a>
+{{- end }}

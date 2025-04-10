@@ -1,9 +1,17 @@
+.bookmark-section {
+    margin-bottom: 2em;
+  }
+.bookmark-section h3{
+    text-align: center;
+  }
+
 /* 网格容器 */
 .bookmark-grid {
-    display: inline-block;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    /* 设置最小宽度 180px */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 使用grid布局，更灵活 */
     padding: 0 4px 4px 0;
+    gap: 16px; /* 网格间距 */
+    margin-top: 16px; /* 让网格容器有一定间距 */
 }
 
 /* 单个书签 */
@@ -13,66 +21,63 @@
     align-items: center;
     justify-content: center;
     background: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #f0f0f0;
     border-radius: 8px;
-    padding: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.001);
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.2s ease-in-out, transform 0.2s;
     text-align: center;
-    min-width: 85px;
-    max-width: 130px;
-    /* 限制最大宽度 */
+    min-width: 100px;
+    max-width: 230px; /* 限制最大宽度 */
+    overflow: hidden; /* 防止溢出 */
 }
 
+/* 书签悬停效果 */
 .bookmark-item:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 
+/* 书签链接样式 */
 .bookmark-item a {
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    /* 确保链接占满整个容器 */
+    width: 100%; /* 确保链接占满整个容器 */
+    height: 100%; /* 确保链接占满整个容器 */
 }
 
 /* 图标样式 */
 .bookmark-icon {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 4px;
+    width: 48px; /* 更大的图标尺寸 */
+    height: 48px;
+    margin-bottom: 8px; /* 增加图标和标题的间距 */
 }
 
 .bookmark-icon img {
     width: 100%;
     height: 100%;
-    border-radius: 8px;
-    /* 使图标略带圆角 */
+    border-radius: 12px; /* 圆角更大 */
+    object-fit: cover; /* 保证图标图片的完整显示 */
 }
 
 /* 标题样式 */
 .bookmark-info {
     width: 100%;
-    /* 确保标题容器占满宽度 */
-    /* 设置标题允许换行 */
     overflow-wrap: break-word;
-    /* overflow: hidden; */
+    text-align: center;
+    font-size: small;
 }
 
 .bookmark-info h3 {
     margin: 0;
-    font-size: 12px;
+    font-size: 14px; /* 稍微调大标题文字 */
     color: #333;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    /* 允许换行 */
-    overflow: hidden;
-    /* 隐藏溢出内容 */
-    text-overflow: ellipsis;
-    /* 显示省略号 */
+    text-overflow: ellipsis; /* 显示省略号 */
     max-width: 100%;
-    /* 限制最大宽度 */
+    line-height: 1.4; /* 增加行高，使标题更易读 */
 }
