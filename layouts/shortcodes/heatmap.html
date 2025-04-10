@@ -1,0 +1,335 @@
+<p style="text-align: center;">{{i18n "statistics"}}</p>
+<div class="heatmap_container"> <!-- 全部用 Flex 排版 -->
+    <div class="heatmap_content">
+        <div class="heatmap_week">
+            <span>Mon</span>
+            <span>&nbsp;</span> <!-- 不需要显示的星期用空格表示 -->
+            <span>Wed</span>
+            <span>&nbsp;</span>
+            <span>Fri</span>
+            <span>&nbsp;</span>
+            <span>Sun</span>
+        </div>
+        <div class="heatmap_main">
+            <div class="month heatmap_month">
+                <!-- js 检测屏幕宽度动态生成月份 -->
+            </div>
+            <div id="heatmap" class="heatmap">
+                <!-- js 检测屏幕宽度动态生成年度日历小方块 -->
+            </div>
+        </div>
+    </div>
+    <div class="heatmap_footer">
+        <div class="heatmap_less">Less</div>
+        <div class="heatmap_level">
+            <span class="heatmap_level_item heatmap_level_0"></span>
+            <span class="heatmap_level_item heatmap_level_1"></span>
+            <span class="heatmap_level_item heatmap_level_2"></span>
+            <span class="heatmap_level_item heatmap_level_3"></span>
+            <span class="heatmap_level_item heatmap_level_4"></span>
+        </div>
+        <div class="heatmap_more">More</div>
+    </div>
+</div>
+<style>
+    :root {
+        /* GitHub Light Color */
+        --ht-main: #334155;
+        --ht-day-bg: #ebedf0;
+        --ht-tooltip: #24292f;
+        --ht-tooltip-bg: #fff;
+        --ht-lv-0: #ebedf0;
+        --ht-lv-1: #9be9a8;
+        --ht-lv-2: #40c463;
+        --ht-lv-3: #30a14e;
+        --ht-lv-4: #216e39;
+    }
+    body.dark {
+        /* GitHub Dark Dimmed Color */
+        --ht-main: #94a3b8;
+        --ht-day-bg: #161b22;
+        --ht-tooltip: #24292f;
+        --ht-tooltip-bg: #fff;
+        --ht-lv-0: #161b22;
+        --ht-lv-1: #0e4429;
+        --ht-lv-2: #006d32;
+        --ht-lv-3: #26a641;
+        --ht-lv-4: #39d353;
+    }
+    .heatmap_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px;
+        line-height: 12px;
+        color: var(--ht-main);
+    }
+    .heatmap_content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end
+    }
+    .heatmap_week {
+        display: flex;
+        margin-top: 0.25rem;
+        margin-right: 2px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right
+    }
+    .heatmap_main {
+        display: flex;
+        flex-direction: column
+    }
+    .heatmap_month {
+        display: flex;
+        margin-top: 0.25rem;
+        margin-right: 0.25rem;
+        justify-content: space-around;
+        align-items: flex-end;
+        text-align: right;
+    }
+    .heatmap {
+        display: flex;
+        flex-direction: row;
+        height: 84px;
+    }
+    .heatmap_footer {
+        display: flex;
+        margin-top: 0.5rem;
+        align-items: center
+    }
+    .heatmap_level {
+        display: flex;
+        gap: 2px;
+        margin: 0 0.25rem;
+        flex-direction: row;
+        align-items: center;
+        width: max-content;
+        height: 10px
+    }
+    .heatmap_level_item {
+        display: block;
+        border-radius: 0.125rem;
+        width: 10px;
+        height: 10px;
+    }
+    .heatmap_level_0 {
+        background: var(--ht-lv-0);
+    }
+    .heatmap_level_1 {
+        background: var(--ht-lv-1);
+    }
+    .heatmap_level_2 {
+        background: var(--ht-lv-2);
+    }
+    .heatmap_level_3 {
+        background: var(--ht-lv-3);
+    }
+    .heatmap_level_4 {
+        background: var(--ht-lv-4);
+    }
+    .heatmap_week {
+        display: flex;
+        flex-direction: column;
+    }
+    .heatmap_day {
+        width: 10px;
+        height: 10px;
+        background-color: var(--ht-day-bg);
+        margin: 1px;
+        border-radius: 2px;
+        display: inline-block;
+        position: relative;
+    }
+    .heatmap_tooltip {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        width: max-content;
+        color: var(--ht-tooltip);
+        background-color: var(--ht-tooltip-bg);
+        font-size: 12px;
+        line-height: 16px;
+        padding: 8px;
+        border-radius: 3px;
+        white-space: pre-wrap;
+        opacity: 1;
+        transition: 0.3s;
+        z-index: 1000;
+        text-align: right;
+        transform: translateX(-50%);
+    }
+    .heatmap_tooltip_count,
+    .heatmap_tooltip_post {
+        display: inline-block;
+    }
+    .heatmap_tooltip_title,
+    .heatmap_tooltip_date {
+        display: block;
+    }
+    .heatmap_tooltip_date {
+        margin: 0 0.25rem;
+    }
+    .heatmap_day_level_0 {
+        background-color: var(--ht-lv-0);
+    }
+    .heatmap_day_level_1 {
+        background-color: var(--ht-lv-1);
+    }
+    .heatmap_day_level_2 {
+        background-color: var(--ht-lv-2);
+    }
+    .heatmap_day_level_3 {
+        background-color: var(--ht-lv-3);
+    }
+    .heatmap_day_level_4 {
+        background-color: var(--ht-lv-4);
+    }
+</style>
+<script>
+    // 获取最近一年的文章数据
+{{ $pages := where .Site.RegularPages "Date" ">" (now.AddDate -1 0 0) }}
+{{ $pages := $pages.Reverse }}
+var blogInfo = {
+    "pages": [
+        {{ range $index, $element := $pages }}
+            {
+                "title": "{{ replace (replace .Title "《" "〈") "》" "〉" }}",
+                "date": "{{ .Date.Format "2006-01-02" }}",
+                "year": "{{ .Date.Format "2006" }}",
+                "month": "{{ .Date.Format "01" }}",
+                "day": "{{ .Date.Format "02" }}",
+                "word_count": "{{ .WordCount }}"
+            }{{ if ne (add $index 1) (len $pages) }},{{ end }}
+            {{ end }}
+    ]
+};
+// console.log(blogInfo)
+let currentDate = new Date();
+currentDate.setFullYear(currentDate.getFullYear() - 1);
+let startDate;
+let monthDiv = document.querySelector('.month');
+let monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+if (window.innerWidth < 768) {
+    numMonths = 6;
+} else {
+    numMonths = 12;
+}
+let startMonthIndex = (currentDate.getMonth() - (numMonths - 1) + 12) % 12;
+for (let i = startMonthIndex; i < startMonthIndex + numMonths; i++) {
+    let monthSpan = document.createElement('span');
+    let monthIndex = i % 12;
+    monthSpan.textContent = monthNames[monthIndex];
+    monthDiv.appendChild(monthSpan);
+}
+function getStartDate() {
+    const today = new Date();
+    if (window.innerWidth < 768) {
+        numMonths = 6;
+    } else {
+        numMonths = 12;
+    }
+    const startDate = new Date(today.getFullYear(), today.getMonth() - numMonths + 1, 1, today.getHours(), today.getMinutes(), today.getSeconds());
+    while (startDate.getDay() !== 1) {
+        startDate.setDate(startDate.getDate() + 1);
+    }
+    return startDate;
+}
+function getWeekDay(date) {
+    const day = date.getDay();
+    return day === 0 ? 6 : day - 1;
+}
+function createDay(date, title, count, post) {
+    const day = document.createElement("div");
+    day.className = "heatmap_day";
+    day.setAttribute("data-title", title);
+    day.setAttribute("data-count", count);
+    day.setAttribute("data-post", post);
+    day.setAttribute("data-date", date);
+    day.addEventListener("mouseenter", function () {
+        const tooltip = document.createElement("div");
+        tooltip.className = "heatmap_tooltip";
+        let tooltipContent = "";
+        if (post && parseInt(post, 10) !== 0) {
+            tooltipContent += '<span class="heatmap_tooltip_post">' + '共 ' + post + ' 篇' + '</span>';
+        }
+        if (count && parseInt(count, 10) !== 0) {
+            tooltipContent += '<span class="heatmap_tooltip_count">' + ' ' + count + ' 字；' + '</span>';
+        }
+        if (title && parseInt(title, 10) !== 0) {
+            tooltipContent += '<span class="heatmap_tooltip_title">' + title + '</span>';
+        }
+        if (date) {
+            tooltipContent += '<span class="heatmap_tooltip_date">' + date + '</span>';
+        }
+        tooltip.innerHTML = tooltipContent;
+        day.appendChild(tooltip);
+    });
+    day.addEventListener("mouseleave", function () {
+        const tooltip = day.querySelector(".heatmap_tooltip");
+        if (tooltip) {
+            day.removeChild(tooltip);
+        }
+    });
+    if (count == 0 ) {
+        day.classList.add("heatmap_day_level_0");
+    } else if (count > 0 && count < 1000) {
+        day.classList.add("heatmap_day_level_1");
+    } else if (count >= 1000 && count < 2000) {
+        day.classList.add("heatmap_day_level_2");
+    } else if (count >= 2000 && count < 3000) {
+        day.classList.add("heatmap_day_level_3");
+    } else {
+        day.classList.add("heatmap_day_level_4");
+    }
+    return day;
+}
+function createWeek() {
+    const week = document.createElement('div');
+    week.className = 'heatmap_week';
+    return week;
+}
+function createHeatmap() {
+    const container = document.getElementById('heatmap');
+    const startDate = getStartDate();
+    const endDate = new Date();
+    const weekDay = getWeekDay(startDate);
+    let currentWeek = createWeek();
+    container.appendChild(currentWeek);
+    let currentDate = startDate;
+    let i = 0;
+    while (currentDate <= endDate) {
+        if (i % 7 === 0 && i !== 0) {
+            currentWeek = createWeek();
+            container.appendChild(currentWeek);
+        }
+        const dateString = `${currentDate.getFullYear()}-${("0" + (currentDate.getMonth()+1)).slice(-2)}-${("0" + (currentDate.getDate())).slice(-2)}`;
+        const articleDataList = blogInfo.pages.filter(page => page.date === dateString);
+        if (articleDataList.length > 0) {
+            const titles = articleDataList.map(data => data.title);
+            const title = titles.map(t => `《${t}》`).join('<br />');
+            let count = 0;
+            let post = articleDataList.length;
+            articleDataList.forEach(data => {
+                count += parseInt(data.word_count, 10);
+            });
+            const formattedDate = formatDate(currentDate);
+            const day = createDay(formattedDate, title, count, post);
+            currentWeek.appendChild(day);
+        } else {
+            const formattedDate = formatDate(currentDate);
+            const day = createDay(formattedDate, '', '0', '0');
+            currentWeek.appendChild(day);
+        }
+        i++;
+        currentDate.setDate(currentDate.getDate() + 1);
+    }
+}
+function formatDate(date) {
+    const options = { month: 'short', day: 'numeric', year: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+}
+createHeatmap();
+</script>
