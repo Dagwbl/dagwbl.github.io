@@ -4,7 +4,7 @@ baseURL: "https://dagwbl.github.io"
 title: "Jeapo's Blog"
 copyright: ©️ 2025 Jeapo
 pagination:
-  pageSize: 10
+  pageSize: 9
 theme: [ "hugo-notice","PaperMod"]
 
 defaultContentLanguage: zh
