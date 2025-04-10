@@ -2,7 +2,7 @@
     display: inline-block;
     vertical-align: top;
     width: 180px;
-    height: 140px;
+    height: 150px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -11,10 +11,16 @@
     color: inherit;
     transition: transform 0.2s ease;
     margin: 0.5rem;
-    padding: 1rem 1rem 0.5rem 1rem;
+    padding: 1rem 1rem 0.8rem 1rem;
     box-sizing: border-box;
   }
-
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .friend-card {
+      width: calc(50% - 1rem); /* Ensure two cards fit in a row */
+      margin: 0.4rem; /* Adjust margin for spacing */
+  }
+}
   .friend-card:hover {
     transform: translateY(-4px);
   }
