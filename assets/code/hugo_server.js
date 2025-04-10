@@ -46,6 +46,7 @@ async function stopHugoServer() {
 }
 
 // 启动 Hugo 服务器
+let browserOpened = false; // 用于防止重复打开浏览器
 async function startHugoServer() {
     const hugoProjectDir = app.vault.adapter.basePath; // 假设在 Obsidian 库目录下
     console.log(`Hugo 项目目录: ${hugoProjectDir}`);
@@ -56,12 +57,11 @@ async function startHugoServer() {
 
     if (!hasConfigFile) {
         throw new Error('未找到 Hugo 配置文件。请确保当前目录是 Hugo 项目的根目录。');
-        new Notice('未找到 Hugo 配置文件。请确保当前目录是 Hugo 项目的根目录。');
     }
 
     console.log('正在启动 Hugo 服务器...');
     new Notice("正在启动 Hugo 服务器...");
-    const hugoProcess = child_process.spawn('hugo server', {
+    const hugoProcess = child_process.spawn('hugo server -D', {
         shell: true,
         stdio: 'pipe',
         cwd: hugoProjectDir
@@ -69,8 +69,9 @@ async function startHugoServer() {
 
     hugoProcess.stdout.on('data', (data) => {
         console.log(data.toString());
-        if (data.toString().includes('Web Server is available')) {
+        if (data.toString().includes('Web Server is available') && !browserOpened) {
             openBrowser();
+            browserOpened = true; // 标记浏览器已打开
         }
     });
 
