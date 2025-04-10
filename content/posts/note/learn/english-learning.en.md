@@ -27,21 +27,18 @@ UseHugoToc: true
 
 ## 🗽 English Learning
 
-{{< bookmark "Daily English Dictation bilibili" "https://www.bilibili.com/video/BV1U7411a7xG/" >}}
-{{< bookmark "中考、高考作文范句" "https://enpuz.com/article/sentence-list-comps" >}}
-{{< bookmark "英语连读及发音" "https://segmentfault.com/a/1190000021807407" >}}
-{{< bookmark "99 Mindful Conversation Topics" "https://www.thegoodtrade.com/features/conversation-topics/" >}}
-
-{{< bookmark "ISO 2 Letter Language Codes" "https://www.sitepoint.com/iso-2-letter-language-codes/" >}}
-
-{{< bookmark "Collins English" "https://www.collinsdictionary.com/dictionary/english/" >}}
-{{< bookmark "Merriam-Webster" "https://www.merriam-webster.com/" >}}
-{{< bookmark "Oxford English Dictionary" "https://www.oed.com/?tl=true" >}}
-{{< bookmark "Vocabulary.com" "https://www.vocabulary.com/" >}}
-{{< bookmark "Etymonline" "https://www.etymonline.com/" >}}
-{{< bookmark "优词词典" "https://www.dictool.com/" >}}
-{{< bookmark "漢典" "https://www.zdic.net/" >}}
-{{< bookmark "Urban Dictionary" "https://www.urbandictionary.com/" >}}
-
-{{< bookmark "中考、高考作文范句" "https://enpuz.com/article/sentence-list-comps" >}}
-{{< bookmark "英语连读及发音" "https://segmentfault.com/a/1190000021807407" >}}
+1. [Daily English Dictation bilibili](https://www.bilibili.com/video/BV1U7411a7xG/)
+2. [中考、高考作文范句](https://enpuz.com/article/sentence-list-comps)
+3. [英语连读及发音](https://segmentfault.com/a/1190000021807407)
+4. [99 Mindful Conversation Topics](https://www.thegoodtrade.com/features/conversation-topics/)
+5. [ISO 2 Letter Language Codes](https://www.sitepoint.com/iso-2-letter-language-codes/)
+6. [Collins English](https://www.collinsdictionary.com/dictionary/english/)
+7. [Merriam-Webster](https://www.merriam-webster.com/)
+8. [Oxford English Dictionary](https://www.oed.com/?tl=true)
+9. [Vocabulary.com](https://www.vocabulary.com/)
+10. [Etymonline](https://www.etymonline.com/)
+11. [优词词典](https://www.dictool.com/)
+12. [漢典](https://www.zdic.net/)
+13. [Urban Dictionary](https://www.urbandictionary.com/)
+14. [中考、高考作文范句](https://enpuz.com/article/sentence-list-comps)
+15. [英语连读及发音](https://segmentfault.com/a/1190000021807407)

@@ -55,3 +55,6 @@
 
 - id: warning
   translation: 'Warning'
+
+- id: statistics
+  translation: 'Article Statistics'

@@ -55,3 +55,6 @@
 
 - id: warning
   translation: '警告'
+
+- id: statistics
+  translation: '文章统计'
