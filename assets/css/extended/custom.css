@@ -66,3 +66,7 @@ body {
     background-repeat: no-repeat;
     background-image: url(/usr/not-by-ai/English/Written-By-Human-Not-By-AI-Badge-black.svg);
 }
+
+.post-content table tr:first-child th {
+    border-bottom: 2px solid var(--border);
+}
