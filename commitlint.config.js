@@ -30,7 +30,7 @@ module.exports = {
         "note", // A new note
         "letter" // A new letter
       ]],
-      "header-max-length": [2, "always", 150],
+      "header-max-length": [2, "always", 1000],
     },
     helpUrl: "https://github.com/conventional-changelog/commitlint/#what-is-commitlint",
     prompt: {

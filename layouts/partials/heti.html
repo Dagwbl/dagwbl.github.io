@@ -1,0 +1,8 @@
+{{- $css := resources.Get "/css/heti.min.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{/*  <link rel="stylesheet" href="/css/heti.min.css">  */}}
+<script src="/js/heti-addon.min.js"></script>
+<script>
+  const heti = new Heti('.heti');
+  heti.autoSpacing();
+</script>

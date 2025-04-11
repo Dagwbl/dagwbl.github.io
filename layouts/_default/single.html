@@ -46,7 +46,11 @@
   {{ end }}
 
   {{- if .Content }}
+  {{- if eq .Lang "zh"}}
+  <div class="post-content heti"><!-- 配置 heti -->
+  {{- else }}
   <div class="post-content">
+  {{- end }}
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
