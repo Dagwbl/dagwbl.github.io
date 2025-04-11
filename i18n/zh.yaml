@@ -15,7 +15,7 @@
     other: "{{ .Count }} 字"
 
 - id: toc
-  translation: "目录"
+  translation: "目 录"
 
 - id: translations
   translation: "语言"

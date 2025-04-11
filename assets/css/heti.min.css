@@ -388,7 +388,7 @@
   margin-inline-end: auto;
   border-collapse: collapse;
   border-width: 1px;
-  border-style: solid;
+  /* border-style: solid; */
   border-color: hsl(0deg, 0%, 80%);
   word-break: break-word;
 }
@@ -407,7 +407,7 @@
   padding-inline-start: 8px;
   padding-inline-end: 8px;
   border-width: 1px;
-  border-style: solid;
+  /* border-style: solid; */
   border-color: hsl(0deg, 0%, 80%);
 }
 [data-darkmode=dark] .heti th,
@@ -591,10 +591,10 @@
   margin-inline-end: 1px;
 }
 /* 设置字体 */
-.heti--sans {
+.heti, .heti--sans {
   font-family: "Helvetica Neue", helvetica, arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-.heti, .heti--serif {
+.heti--serif {
   font-family: "Times New Roman", times, "Heti Song", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .heti--classic {

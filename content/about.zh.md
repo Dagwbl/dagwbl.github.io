@@ -13,6 +13,6 @@ date: 2024-03-01
 
 The world puts off its mask of vastness to its lover. It becomes small as one song, as one kiss of the eternal.
 
-{{<heatmap>}}
+{{< heatmap >}}
 
 {{<aplayer netease 726854551 true>}}

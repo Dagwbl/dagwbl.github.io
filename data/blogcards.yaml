@@ -164,3 +164,8 @@ blogcards:
   logo: https://www.eallion.com/favicon.ico
   word: Eallion’s Blog
   tag: ["code"]
+- url: https://mantyke.icu/
+  name: 小球飞鱼
+  logo: https://mantyke.icu/images/logo.png
+  word: 我们会一起遇见鲸鱼吗？
+  tag: ["code", "life"]

@@ -114,10 +114,6 @@ params:
   icon: icon.png
   iconHeight: 35
 
-  # analytics:
-  #     google:
-  #         SiteVerificationTag: "XYZabc"
-
   assets:
     assets:
       css:
@@ -194,6 +190,10 @@ privacy:
   youtube:
     disabled: false
     privacyEnhanced: true
+
+  # analytics:
+  #     google:
+  #         SiteVerificationTag: "XYZabc"
 
 googleAnalytics: G-BQTJ3STXR7
 services:
