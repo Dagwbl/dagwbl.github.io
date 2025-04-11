@@ -81,7 +81,7 @@ Though It's so **tiring,** it is a precious and **specific** experience.
 
 > It is through science that we prove,  
 > But through intuition that we discover.
-> *{{<right "-- Henrry Pangalary">}}*
+> <span>-- Henrry Pangalary</span>
 
 Pay attention to why you are using tools, rather than just focusing on the tools themselves.
 
