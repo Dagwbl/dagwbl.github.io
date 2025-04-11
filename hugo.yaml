@@ -233,6 +233,11 @@ languages:
       tag: tags
       series: series
       language: en
+      mood: mood
+      rating: rating
+      location: location
+      weather: weather
+      author: author
     menu:
       main:
         - name: Archive
@@ -296,6 +301,11 @@ languages:
       tag: tags
       category: categories
       series: series
+      mood: mood
+      rating: rating
+      location: location
+      weather: weather
+      author: author
     menu:
       main:
         - name: 归 档
