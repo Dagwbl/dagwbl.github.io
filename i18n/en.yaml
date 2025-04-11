@@ -58,3 +58,9 @@
 
 - id: statistics
   translation: 'Article Statistics'
+
+- id: declaration
+  translation: 'Declaration'
+
+- id: declaration_content
+  translation: 'This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.'

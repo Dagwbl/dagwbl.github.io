@@ -1,28 +1,18 @@
-<style>
-  .original-notice {
-    /* background-color: #f8d7da; */
-    /* border-left: 4px solid #b3a5a6; */
-    /* padding: 8px; */
-    /* color: #721c24; */
-    font-size: 14px;
-    margin-bottom: 20px;
-    font-weight: normal;
-    /* border-radius: 5px; */
-    /* display: contents; */
-  }
-</style>
 
-{{ if and (eq .Lang "en") (in .Params.categories "original") }}
+
+{{if not (in .Params.categories "AI") }}
+
 <div class="original-notice">
-  <strong>Declaration:</strong> This is an original article. All rights reserved by the author. Please cite the source if you wish to repost!
-</div>
-{{ else if and (in .Params.categories "original") (eq .Lang "zh")  }}
-<div class="original-notice">
-  <strong>原创声明：</strong> 本文为原创文章，版权归作者所有，转载请注明出处！
-</div>
-{{ else if (in .Params.categories "original") }}
-<div class="original-notice">
-  <strong>Declaration:</strong> This article is the original work of the author. All rights reserved.
-  Unauthorized reproduction without proper attribution is prohibited.
+  <div class="badges" style="display: inline-flex;margin-top:10px;">
+    <a class="notbyai" href="https://notbyai.fyi" title="Witten by human, Not By AI">
+      <div class="written">
+      </div>
+    </a>
+    <a href="https://nonbot.org/pledged/view/9ea57aa0-0b1b-4584-b02b-f07b5423189b" target="_blank">
+      <img style="height:45px;margin-left:10px;" src="https://nonbot.org/images/nonbot_pledged_logo.svg" alt="Human-made Content">
+    </a>
+  </div>
+
+  <a style="display:block;font-size:14px; font-weight:normal;margin-bottom:20px;" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans"><strong>{{i18n "declaration"}}:</strong> {{i18n "declaration_content"}}</a>
 </div>
 {{ end }}
