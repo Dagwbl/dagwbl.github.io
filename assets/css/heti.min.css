@@ -457,9 +457,9 @@
 .heti dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)), .heti dfn:not(:lang(zh)) {
   font-weight: 400;
 }
-.heti em {
+/* .heti em {
   font-weight: 600;
-}
+} */
 .heti figcaption {
   display: inline-block;
   vertical-align: top;
@@ -564,11 +564,17 @@
     border-block-end-color: hsla(0deg, 0%, 100%, 0.54);
   }
 }
-.heti address,
+/* .heti address,
 .heti cite,
 .heti dfn,
 .heti dt,
 .heti em {
+  font-style: normal;
+} */
+.heti address,
+.heti cite,
+.heti dfn,
+.heti dt{
   font-style: normal;
 }
 .heti address:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)), .heti address:not(:lang(zh)),
