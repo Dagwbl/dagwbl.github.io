@@ -39,4 +39,4 @@ echo "检测到本机 IP: $IP"
 echo "Hugo 服务已启动：http://$IP:1313/"
 
 # 启动 Hugo
-hugo server -D --bind=0.0.0.0 --baseURL="http://$IP:1313/" --port=1313 --appendPort=false --cleanDestinationDir
+hugo server -D --bind=0.0.0.0 --baseURL="http://$IP:1313/" --port=1313 --appendPort=false

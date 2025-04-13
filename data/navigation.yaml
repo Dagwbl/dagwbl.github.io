@@ -43,7 +43,7 @@
     - name: "Gemini 2"
       icon: "🦋"
       weight: 12
-      link: "https://aistudio.google.com/prompts/new_chat"
+      link: "https://gemini.google.com/"
       refused: true
     - name: "LMArena"
       icon: "🏟️"
