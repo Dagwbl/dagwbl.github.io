@@ -17,7 +17,7 @@ path includes assist
 **New:** `button-new-article` `button-new-note`  `button-new-letter`
  `button-new-diary`  
 
-**Sync to GitHub:** `button-push`  `button-pull` `button-hugo-server`
+**Sync to GitHub:** `button-commit` `button-push`  `button-pull` `button-hugo-server`
 
 ### 📝 **Draft Box**
 ```dataview
@@ -119,6 +119,13 @@ action QuickAdd: New Letter
 ^button-new-letter
 
 ```button
+name 🗿 Commit
+type command
+action QuickAdd: Commit
+```
+^button-commit
+
+```button
 name 🆙 Push
 type command
 action QuickAdd: Push
@@ -154,7 +161,7 @@ action QuickAdd: Jump 1note
 ^button-jump-1note
 
 ```button
-name 💻 Hugo Server
+name 💻 Server
 type command
 action QuickAdd: Hugo Server
 ```

@@ -15,6 +15,13 @@
       "macroId": "028773fe-2036-4415-aab6-0aca67c4bc6d"
     },
     {
+      "id": "68bee834-c3b9-46f1-b881-907de169849c",
+      "name": "Commit",
+      "type": "Macro",
+      "command": true,
+      "macroId": "d3fced13-5d9f-44d7-9f80-5ac0b42d686c"
+    },
+    {
       "id": "58322bd0-beff-4da9-b6da-bdf75b8230da",
       "name": "Push",
       "type": "Macro",
@@ -413,6 +420,19 @@
           "id": "38152b4c-542f-4233-82e1-ecd177c03076",
           "path": "assets/code/batch_translate.js",
           "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Commit",
+      "id": "d3fced13-5d9f-44d7-9f80-5ac0b42d686c",
+      "commands": [
+        {
+          "name": "Git: Commit all changes with specific message",
+          "type": "Obsidian",
+          "id": "f8528a7b-3e61-4b16-9817-b9719179a231",
+          "commandId": "obsidian-git:commit-specified-message"
         }
       ],
       "runOnStartup": false
