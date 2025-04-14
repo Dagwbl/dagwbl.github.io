@@ -4,3 +4,5 @@ User-agent: *
 Disallow: {{ .RelPermalink }}
 {{ end }}
 {{ end }}
+
+Sitemap: {{ "sitemap.xml" | absURL }}

@@ -33,16 +33,17 @@ minify:
   disableXML: true
   # minifyOutput: true
 
-sitemap:
-  changefreq: weekly
-  disable: true
-  priority: 0.8
 
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+
+sitemap:
+  changefreq: always
+  disable: true
+  priority: 0.8
 
 params:
   mermaid: true

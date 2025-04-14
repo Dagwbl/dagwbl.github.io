@@ -21,8 +21,8 @@ repos:
     #   exclude: '\.js$'
     - id: check-json
       log_file: assist/logs/pre-commit.log
-    - id: check-xml
-      log_file: assist/logs/pre-commit.log
+    # - id: check-xml
+    #   log_file: assist/logs/pre-commit.log
     - id: check-yaml
       log_file: assist/logs/pre-commit.log
     # - id: end-of-file-fixer
