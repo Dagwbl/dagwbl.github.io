@@ -31,7 +31,7 @@ ignoreFiles:
 
 minify:
   disableXML: true
-  # minifyOutput: true
+  minifyOutput: true
 
 
 outputs:
@@ -42,7 +42,7 @@ outputs:
 
 sitemap:
   changefreq: always
-  disable: true
+  disable: false
   priority: 0.8
 
 params:
