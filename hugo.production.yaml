@@ -202,7 +202,7 @@ services:
     id: G-BQTJ3STXR7
   instagram:
     disableInlineCSS: true
-  twitter:
+  x:
     disableInlineCSS: true
 
 module:
