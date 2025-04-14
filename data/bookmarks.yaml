@@ -62,6 +62,10 @@ sections:
         url: "https://cloud.siliconflow.cn/models"
       - name: "Stack Overflow"
         url: "https://stackoverflow.com"
+      - name: "Stack Blitz"
+        url: "https://stackblitz.com/"
+      - name: "Bolt"
+        url: "https://bolt.new/"
 
   - title: "⚒️ Tools"
     links:
