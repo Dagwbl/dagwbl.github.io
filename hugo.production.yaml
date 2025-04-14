@@ -41,7 +41,7 @@ outputs:
     - JSON
 
 sitemap:
-  changefreq: always
+  changefreq: daily
   disable: false
   priority: 0.8
 
