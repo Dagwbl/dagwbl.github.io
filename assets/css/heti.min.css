@@ -598,7 +598,7 @@
 }
 /* 设置字体 */
 .heti, .heti--sans {
-  font-family: "Helvetica Neue", helvetica, arial, "Heti Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: helvetica, arial, "Heti Hei", sans-serif, "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .heti--serif {
   font-family: "Times New Roman", times, "Heti Song", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
