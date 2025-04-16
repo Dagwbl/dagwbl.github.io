@@ -38,5 +38,12 @@ fi
 echo "检测到本机 IP: $IP"
 echo "Hugo 服务已启动：http://$IP:1313/"
 
+# open baseURL with Edge browser
+if [ "$OS" = "Windows" ]; then
+    start msedge "http://$IP:1313/"
+    echo "已在 Edge 浏览器中打开 $baseURL"
+elif [ "$OS" = "macOS" ]; then
+    open "$baseURL"
+fi
 # 启动 Hugo
 hugo server -D --bind=0.0.0.0 --baseURL="http://$IP:1313/" --port=1313 --appendPort=false
