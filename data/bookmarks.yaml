@@ -9,6 +9,8 @@ sections:
         url: "https://www.hello-algo.com/en/"
       - name: "渐构"
         url: "https://www.modevol.com/"
+      - name: "粉笔"
+        url: "https://www.fenbi.com/page/home"
 
   - title: "🏞️ English"
     links:
