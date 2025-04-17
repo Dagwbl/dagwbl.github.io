@@ -4,8 +4,9 @@ baseURL: "https://dagwbl.github.io"
 title: "Jeapo's Blog"
 copyright: ©️ 2025 Jeapo
 pagination:
-  pageSize: 9
-theme: [ "hugo-notice","PaperMod"]
+  pagerSize: 7
+# theme: [ "hugo-notice","PaperMod"]
+theme: ["PaperMod"]
 
 defaultContentLanguage: zh
 hasCJKLanguage: true # enable for reconginizing and counting CJK languages

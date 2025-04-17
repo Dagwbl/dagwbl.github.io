@@ -4,8 +4,9 @@ baseURL: "http://localhost:1313"
 title: "Jeapo's Blog"
 copyright: ©️ 2025 Jeapo
 pagination:
-  pageSize: 9
-theme: [ "hugo-notice","PaperMod"]
+  pagerSize: 7
+# theme: [ "hugo-notice","PaperMod"]
+theme: ["PaperMod"]
 
 publishDir: "../hugo_public"
 resourceDir: "../hugo_resources"
