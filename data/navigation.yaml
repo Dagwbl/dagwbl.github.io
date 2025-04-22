@@ -50,13 +50,17 @@
       weight: 13
       link: "https://lmarena.ai/?model=grok-3"
       refused: true
-    - name: Chatbox
-      weight: 99
-      link: "https://web.chatboxai.app/"
+    # - name: Chatbox
+    #   weight: 99
+    #   link: "https://web.chatboxai.app/"
 
 
 - category: Social
   items:
+    - name: "Hacker News"
+      weight: 5
+      link: "https://news.ycombinator.com/"
+      refused: true
     - name: "V2EX"
       weight: 4
       link: "https://www.v2ex.com/"
@@ -72,10 +76,6 @@
 
 - category: Tool
   items:
-    - name: "MathDF"
-      weight: 5
-      link: "https://mathdf.com/cn/"
-      refused: true
     - name: "Scholar"
       weight: 1
       icon: "📚"
@@ -94,9 +94,6 @@
 
 - category: Relax
   items:
-    - name: Method of Action
-      weight: 2
-      link: "https://method.ac/"
     - name: "Word Search"
       weight: 14
       link: "https://www.thewordfinder.com/word-search-puzzles/"

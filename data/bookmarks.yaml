@@ -11,15 +11,25 @@ sections:
         url: "https://www.modevol.com/"
       - name: "粉笔"
         url: "https://www.fenbi.com/page/home"
-
-  - title: "🏞️ English"
-    links:
       - name: "APE practice"
         url: "https://www.ptexj.com/zh-CN/practice"
       - name: "多邻国"
         url: "https://www.duolingo.cn/learn"
       - name: "萤火虫"
         url: "https://www.fireflyau.com/home"
+
+  - title: "🏞️ News"
+    links:
+      - name: "Zeli"
+        url: "https://zeli.app/zh"
+      - name: "Hacker News"
+        url: "https://news.ycombinator.com/"
+      - name: "TechCrunch"
+        url: "https://techcrunch.com/"
+      - name: "The Verge"
+        url: "https://www.theverge.com/"
+      - name: "V2EX"
+        url: "https://www.v2ex.com/"
 
   - title: "💪 Library"
     links:
@@ -57,6 +67,8 @@ sections:
         url: "https://zhangyu1818.github.io/appicon-forge/"
       - name: "CodePen"
         url: "https://codepen.io/wodniack/pens/popular"
+      - name: Method of Action
+        url: "https://method.ac/"
 
   - title: "💻 Code"
     links:
@@ -75,6 +87,8 @@ sections:
 
   - title: "⚒️ Tools"
     links:
+      - name: "MathDF"
+        link: "https://mathdf.com/cn/"
       - name: "Character Counter"
         url: "https://charactercalculator.com/"
       - name: "GeoGebra"
