@@ -260,6 +260,7 @@ languages:
           weight: 5
         - name: 🪶
           url: /navi/
+          title: Navigation
           weight: 99
     params:
       homeInfoParams:
@@ -305,16 +306,16 @@ languages:
       # author: author
     menu:
       main:
-        - name: 归 档
+        - name: 归档
           url: archives
           weight: 5
-        - name: 日 记
+        - name: 日记
           url: diary/
           weight: 6
-        - name: 分 类
+        - name: 分类
           url: categories/
           weight: 9
-        - name: 搜 索
+        - name: 搜索
           url: search/
           weight: 10
         # - name: 标签
@@ -322,6 +323,7 @@ languages:
         #   weight: 10
         - name: 🪶
           url: /navi/
+          title: 导航
           weight: 99
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
