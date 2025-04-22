@@ -1,6 +1,6 @@
 ---
 title: 🗒️ Posts
-description: Some drafts I wrote myself
-summary: Some drafts I wrote myself
+description: Some scattered words I wrote myself
+summary: Some scattered words I wrote myself
 hidemeta: true
 ---
