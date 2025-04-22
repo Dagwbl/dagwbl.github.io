@@ -16,8 +16,9 @@ module.exports = async (params) => {
   let filePath = activeFile.path;
   let fileName = activeFile.basename;
   let fileExt = activeFile.extension;
+  let renameFlag = false;
 
-  if (!fileName.endsWith(".zh")) {
+  if (!fileName.endsWith(".zh") && renameFlag === true) {
     // 创建新的文件名和路径
     let newFileName = `${fileName}.zh`;
     let newFilePath = filePath.replace(fileName, newFileName);
@@ -112,7 +113,12 @@ module.exports = async (params) => {
   // 生成新文件
   let newFileContent = newFrontmatter + translatedContent;
   // 创建或更新英文版文件
-  let enFilePath = filePath.replace(".zh.", ".en.");
+  let enFilePath = filePath;
+  if (renameFlag === true) {
+    enFilePath = filePath.replace(".zh.", ".en.");
+  }else {
+    enFilePath = filePath.replace(".md", ".en.md");
+  }
   let enFile = app.vault.getAbstractFileByPath(enFilePath);
 
   if (enFile) {
