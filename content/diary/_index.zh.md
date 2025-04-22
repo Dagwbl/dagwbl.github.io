@@ -1,7 +1,7 @@
 ---
 title: 🌄 日记
-description: 每一个脚印都在这里
-summary: Every footprint is here.
+description: ''
+summary: 每一个脚印都在这里
 hidemeta: true
 weight: 1
 ---

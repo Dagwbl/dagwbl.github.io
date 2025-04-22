@@ -1,6 +1,6 @@
 ---
 title: Collection
-description: "Some favorite"
-summary: "Some favorite"
+description: Something that I personally believe is more recognized
+summary: Something that I personally believe is more recognized
 hidemeta: true
 ---
