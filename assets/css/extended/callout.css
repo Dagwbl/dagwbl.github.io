@@ -225,11 +225,11 @@
 
 /* Todo */
 .alert-blockquote.alert-todo {
-    --content-background-color: rgba(255, 255, 224, 0.3);
+    --content-background-color: rgba(224, 245, 255, 0.4);
 }
 
 .alert-blockquote.alert-todo .alert-heading {
-    color: #ffbf00 !important;
+    color: #268bd2 !important;
 }
 
 /* Abstract */
@@ -320,11 +320,11 @@
 }
 
 .dark .alert-blockquote.alert-todo {
-    --content-background-color: rgba(255, 191, 0, 0.401);
+    --content-background-color: rgba(51, 149, 188, 0.401);
 }
 
 .dark .alert-blockquote.alert-todo .alert-heading {
-    color: #ffbf00 !important;
+    color: #268bd2 !important;
 }
 
 .dark .alert-blockquote.alert-abstract {
