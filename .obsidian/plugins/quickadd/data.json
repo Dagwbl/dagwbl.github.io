@@ -137,7 +137,7 @@
       "templatePath": "archetypes/diary-ob.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "{{date}}.zh"
+        "format": "{{date}}"
       },
       "folder": {
         "enabled": true,
@@ -286,6 +286,36 @@
       "type": "Macro",
       "command": true,
       "macroId": "de89e3cc-6f15-43de-af6a-b4e75538d68f"
+    },
+    {
+      "id": "cb281d13-ffcf-4edc-9799-ef8972d30ef3",
+      "name": "New Poem",
+      "type": "Template",
+      "command": true,
+      "templatePath": "archetypes/article-ob.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "poem_{{date:YYYYMMDD}}{{time:HHmm}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "content/posts/poem"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": true
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
     }
   ],
   "macros": [
