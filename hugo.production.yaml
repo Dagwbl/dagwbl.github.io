@@ -54,6 +54,7 @@ params:
   description: "A blog about technology, programming, and life."
   keywords: [blog, technology, programming, life, personal, diary, note, letter, code, navigation]
   author: Jeapo
+  hideAuthor: false
   dateFormat: "2006-01-02"
   # author: ["Me", "You"] # multiple authors
   ShowFullTextinRSS: true
@@ -157,7 +158,7 @@ markup:
       autoHeadingID: true
       autoHeadingIDType: github
     renderer:
-      hardWraps: false
+      hardWraps: true
       unsafe: true
       xHTML: false
   highlight:
