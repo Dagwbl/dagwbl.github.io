@@ -237,7 +237,7 @@
       "type": "Capture",
       "command": true,
       "appendLink": false,
-      "captureTo": "content/diary/{{date}}.zh",
+      "captureTo": "content/diary/{{date}}",
       "captureToActiveFile": false,
       "createFileIfItDoesntExist": {
         "enabled": true,
