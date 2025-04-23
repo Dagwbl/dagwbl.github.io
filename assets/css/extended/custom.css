@@ -5,11 +5,6 @@
   Copyright (c) 2020 nanxiaobei and adityatelange
   Copyright (c) 2021-2024 adityatelange
 */
-@import url("highlight.css");
-@import url("fonts.css");
-@import url("tag.css");
-@import url("toc.css");
-@import url("archives.css");
 
 :root {
     --gap: 24px;
@@ -24,12 +19,9 @@ body {
     padding-inline-start: 20px
 }
 
-/* .main {
-    font-family: Helvetica,'Helvetica Neue','Times New Roman','LXGW WenKai','-apple-system','BlinkMacSystemFont','segoe ui','Roboto','Oxygen','Ubuntu','Cantarell','open sans', Verdana, sans-serif;
-    background-image: radial-gradient(rgba(50, 0, 0, 0.05) 1px, transparent 0) !important;
-    background-size: 10px 10px;
-    background-color: #fefefe42;
-} */
+.main {
+  padding-top: 0px;
+}
 
 
 .logo,
