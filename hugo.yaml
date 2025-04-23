@@ -161,8 +161,22 @@ markup:
       table: true
       taskList: true
       typographer: true
+      extras:
+        delete:
+          enable: false
+        insert:
+          enable: false
+        mark:
+          enable: true
+        subscript:
+          enable: false
+        superscript:
+          enable: false
     parser:
-      attribute: true
+      attribute:
+        block: true
+        title: true
+      wrapStandAloneImageWithinParagraph: false
       autoHeadingID: true
       autoHeadingIDType: github
     renderer:
