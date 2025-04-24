@@ -91,7 +91,7 @@
   "loadPropertySuggestions": true,
   "experimentalEnableFourthFont": false,
   "experimantalFourthFont": "Virgil",
-  "addDummyTextElement": false,
+  "addDummyTextElement": true,
   "zoteroCompatibility": false,
   "fieldSuggester": true,
   "compatibilityMode": false,

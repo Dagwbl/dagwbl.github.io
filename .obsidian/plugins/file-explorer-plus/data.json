@@ -25,6 +25,15 @@
         "pattern": "",
         "patternType": "WILDCARD"
       }
+    ],
+    "frontMatter": [
+      {
+        "name": "",
+        "active": true,
+        "path": "",
+        "pattern": "",
+        "patternType": "STRICT"
+      }
     ]
   },
   "hideFilters": {
@@ -91,7 +100,7 @@
         "name": "static",
         "active": true,
         "type": "DIRECTORIES",
-        "pattern": "^static\\/(?!images).*",
+        "pattern": "^static\\/(?!images|Excalidraw).*",
         "patternType": "REGEX"
       },
       {
@@ -106,6 +115,15 @@
         "active": true,
         "type": "DIRECTORIES",
         "pattern": "node_modules",
+        "patternType": "STRICT"
+      }
+    ],
+    "frontMatter": [
+      {
+        "name": "",
+        "active": true,
+        "path": "",
+        "pattern": "",
         "patternType": "STRICT"
       }
     ]
