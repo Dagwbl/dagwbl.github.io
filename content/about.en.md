@@ -15,4 +15,4 @@ The world puts off its mask of vastness to its lover. It becomes small as one so
 
 {{<heatmap>}}
 
-{{<aplayer netease 726854551 true>}}
+{{< music server="netease" type="playlist" id="726854551" >}}

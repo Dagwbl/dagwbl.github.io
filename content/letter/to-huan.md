@@ -23,7 +23,7 @@ The rest of the words is in the paper.
 
 ### 欢欢
 
-{{<netease 1878812258>}}
+{{<music netease song 1878812258>}}
 
 ---
 

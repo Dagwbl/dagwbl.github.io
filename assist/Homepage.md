@@ -12,10 +12,10 @@ not done
 path includes assist
 ```
 
-**Record:** `button-record-now` `button-new-todo` `button-jump-1note`
-
 **New:** `button-new-article` `button-new-note`  `button-new-letter`
- `button-new-diary`  
+ `button-new-poem`  
+
+**Record:**  `button-new-diary`   `button-record-now` `button-new-todo` `button-jump-1note`
 
 **Sync to GitHub:** `button-commit` `button-push`  `button-pull` `button-hugo-server`
 
@@ -91,7 +91,7 @@ dv.paragraph(result);
 ### 🅰️ Shortcuts
 
 ```button
-name 📃Article
+name 📃 Article
 type command
 action QuickAdd: New Article
 ```
@@ -117,6 +117,13 @@ type command
 action QuickAdd: New Letter
 ```
 ^button-new-letter
+
+```button
+name 🪁 Poem
+type command
+action QuickAdd: New Poem
+```
+^button-new-poem
 
 ```button
 name 🗿 Commit

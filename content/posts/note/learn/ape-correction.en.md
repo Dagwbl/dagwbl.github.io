@@ -77,6 +77,6 @@ hygiene, childhood, respiratory
 
 ### 2 Criminal Trials
 
-{{<audio-control "https://cdn.apeuni.com/public/system/ssts/audios/SST_26/original/278be3ce34de682590c980d0e879343c/SST_26.mp3?nonce=0">}}
+{{< music url="https://cdn.apeuni.com/public/system/ssts/audios/SST_26/original/278be3ce34de682590c980d0e879343c/SST_26.mp3?nonce=0" name="Criminal Trials" artist="pte">}}
 
 <!-- <video controls="" controlslist="nodownload" poster="https://cdn.apeuni.com/public/admin/publiclesson/20190103_Amy_RA/Cover.png" preload="auto" __idm_id__="1523713" style="user-select: auto;"><source src="https://apeuni-prod.oss-cn-hangzhou.aliyuncs.com/public/admin/publiclesson/20190103_Amy_RA/zoom_0.mp4" type="video/x-m4v" style="user-select: auto;">Your browser is not supported.</video> -->
