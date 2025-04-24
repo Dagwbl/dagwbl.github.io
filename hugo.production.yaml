@@ -165,7 +165,10 @@ markup:
         superscript:
           enable: false
     parser:
-      attribute: true
+      attribute:
+        block: true
+        title: true
+      wrapStandAloneImageWithinParagraph: false
       autoHeadingID: true
       autoHeadingIDType: github
     renderer:
