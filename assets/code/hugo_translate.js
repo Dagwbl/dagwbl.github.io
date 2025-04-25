@@ -11,6 +11,11 @@ module.exports = async (params) => {
 
   // 先加载配置
   let config = await loadConfig();
+  // 验证API密钥
+  if (!config.apiKey) {
+    new Notice("API key not found in configuration");
+    return;
+  }
 
   // 检查文件名，如果没有zh后缀，添加上
   let filePath = activeFile.path;
@@ -47,7 +52,6 @@ module.exports = async (params) => {
   let content = fileContent;
 
 
-
   // 修改frontmatter解析部分
   if (fileContent.startsWith("---")) {
     let frontmatterEnd = fileContent.indexOf("---", 3);
@@ -65,17 +69,11 @@ module.exports = async (params) => {
     }
   }
 
-  // 验证API密钥
-  if (!config.apiKey) {
-    new Notice("API key not found in configuration");
-    return;
-  }
-
   // 翻译标题
   let translatedTitle = "";
   if (post.title) {
     new Notice("Translating title...");
-    translatedTitle = await getTranslation(config.llmType, [
+    translatedTitle = await getTranslation([
       { "role": "system", "content": "Translate the following Chinese blog post title into English while keeping the original meaning. if the title is a date, just translate into English format (eg., March 11, 2025)" },
       { "role": "user", "content": post.title }
     ], config);
@@ -85,7 +83,7 @@ module.exports = async (params) => {
   let translatedSummary = "";
   if (post.summary) {
     new Notice("Translating summary...");
-    translatedSummary = await getTranslation(config.llmType, [
+    translatedSummary = await getTranslation([
       { "role": "system", "content": "Translate the following Chinese blog post summary into English while keeping the original meaning." },
       { "role": "user", "content": post.summary }
     ], config);
@@ -93,7 +91,7 @@ module.exports = async (params) => {
 
   // 翻译正文
   new Notice("Translating content...");
-  let translatedContent = await translateText(content, config.llmType, config);
+  let translatedContent = await translateText(content, config);
 
   // 修改frontmatter生成部分
   // 创建新的frontmatter
@@ -163,22 +161,24 @@ module.exports = async (params) => {
   async function loadConfig() {
     // 读取配置
     let configFilePath = ".obsidian/translator_config.json";
-    let config = JSON.parse(await app.vault.adapter.read(configFilePath));
+    let configJson = JSON.parse(await app.vault.adapter.read(configFilePath));
+    let config = configJson.services[configJson.default];
     return {
+      chunkSize: configJson.chunkSize || 20000,
+      maxLookback: configJson.maxLookback || 200,
       apiKey: config.apiKey,
-      llmType: config.llmType || "deepseek",
-      deepseekApiBase: config.deepseekApiBase || "https://api.deepseek.com/v1"
+      llmType: config.llmType,
+      apiBase: config.apiBase,
+      model: config.model
     };
   }
 
-  async function getTranslation(llmType, messages, config) {
-    let model = llmType === "openai" ? "gpt-4o" : "deepseek-chat";
-    let apiUrl = llmType === "openai" ?
-      "https://api.openai.com/v1/chat/completions" :
-      `${config.deepseekApiBase}/chat/completions`;
+  async function getTranslation(messages, config) {
+    let model = config.model;
+    let apiBase = config.apiBase;
 
     try {
-      let response = await fetch(apiUrl, {
+      let response = await fetch(apiBase, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -203,11 +203,11 @@ module.exports = async (params) => {
     }
   }
 
-  async function translateText(text, llmType, config) {
+  async function translateText(text, config) {
     let totalLength = text.length;
     let translatedText = "";
-    const chunkSize = 20000;
-    const maxLookback = 200;
+    const chunkSize = config.chunkSize || 20000; // 默认分块大小
+    const maxLookback = config.maxLookback || 200; // 默认最大回溯长度
     let i = 0;
 
     while (i < text.length) {
@@ -215,19 +215,25 @@ module.exports = async (params) => {
 
       // 查找句子结束符（包含中文标点和换行符）
       const punctuationIndex = text.lastIndexOf('\n', end - 1);    // 优先换行符
-      const fallbackPunctuation = text.lastIndexOf(/[。！？…]/g, end - 1); // 次要中文标点
-
+      // 找到最后出现的几个标点中的最大值
+      const periods = [
+        text.lastIndexOf('。', end - 1),
+        text.lastIndexOf('！', end - 1),
+        text.lastIndexOf('？', end - 1),
+        text.lastIndexOf('…', end - 1)
+      ];
+      const fallbackPunctuation = Math.max(...periods);
       let foundIndex = Math.max(
         punctuationIndex,
         fallbackPunctuation
       );
 
-      if (foundIndex > i && (end - foundIndex) < maxLookback) {
-        end = foundIndex + 1; // 包含分隔符
+      if (foundIndex > i && foundIndex !== -1 && (end - foundIndex) < maxLookback) {
+        end = foundIndex + 1;
       }
 
       let chunk = text.slice(i, end);
-      let translatedChunk = await getTranslation(llmType, [
+      let translatedChunk = await getTranslation([
         { "role": "system", "content": "Translate the following Chinese blog post into English while keeping the original meaning." },
         // { "role": "system", "content": "Translate the following Chinese blog post into English while keeping the original meaning and the original Markdown format accurately (include line break and space)." },
         { "role": "user", "content": chunk }
