@@ -136,13 +136,13 @@ I backed Guiyang from Chengdu at noon, cost 18RMB to bought a box of soda cracke
 
 This evening I also invited S.K. and Y.X. to bake something here. But I got rid of them early, because I don't have anything to play here.
 
-{{<collopse title="See original text">}}
+<details>
 
 今天中午从成都返回贵阳。在蛋糕店准备花了18元买一盒苏打饼干。店员说充值72就可以免费送一盒苏打饼干。再三犹豫，我还是充值了。只希望这个店后面不要倒闭了。
 
 今天傍晚还邀请骚坤和小霞来这里烤东西吃。不过我早早的就把他们撵走了，因为我这里没啥玩的。
 
-{{</collopse>}}
+</details>
 
 ## Apr 11
 
@@ -156,7 +156,7 @@ Therefore, I turned to buy a Xiaoxin Pad Pro 2023. Later, I returned it becase I
 
 Sincerely lamented that now didital equipment manufacturers do not think of progress, sometimes come new manufactorers of newproducts or more conscientious. But the law that the dragon slayer becomes the dragon remains the same.
 
-{{<collopse title="See original text">}}
+<details>
 
 今天是来成都培训的第二天，我师傅把我的电脑拿过去打游戏了。我也没有很强的动力学习，所以今天算是浪费了。
 
@@ -167,25 +167,25 @@ Sincerely lamented that now didital equipment manufacturers do not think of prog
 于是，我转头买小新 Pad Pro 2023。后面我又给退了，因为我想这是9个月前的平板，且价格还是这么贵。
 
 由衷地感叹现在数码设备制造商不思进取，有时候一些新厂家的新产品还是比较良心的。不过屠龙者终成恶龙这个规律还是亘古不变。
-{{</collopse>}}
+</details>
 
 ## Apr 10
 
 I was trained at Chengdu all day. I discovered that the leaders of the commpany are still eager to do things like environmental protextion. But somehow it got crooked down there.
 
-{{<collopse title="See original text">}}
+<details >
 
 今天一整天都在成都培训，集团的领导还是很想把类似于环保这些事情做好的。但是不知怎么到下面就歪了。
 
-{{</collopse>}}
+</details>
 
 ## Apr 9
 
 Last night. S.Y. came to Guiyang and then went to S.K's home for drinking with me. Undoubtly, we were drinked. It was okay to get up late because I would take a business trip with my colleagues yesterday noon.
 
-{{<collopse title="See original text">}}
+<details>
 昨晚，姚述屿来到贵阳，然后去到骚坤家喝酒。不出意外的喝醉了，因为今天中午要和同事一起去出差，所以今天起得比平时晚一些也没事。
-{{</collopse>}}
+</details>
 
 ## Apr 8
 

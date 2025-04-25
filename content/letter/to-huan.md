@@ -43,7 +43,7 @@ The rest of the words is in the paper.
 
 安！
 
-{{<collopse title="See the translation version">}}
+<details>
 
 ### Huan
 
@@ -65,4 +65,4 @@ I heard a great song the other day and resisted sharing it with you then, just u
 > Good night, and in case I don not see you, Good afternoon, Good evening, And good morning.  
 > <span>The Truman Show</span>
 
-{{</collopse>}}
+</details>
