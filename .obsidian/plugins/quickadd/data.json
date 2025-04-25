@@ -246,7 +246,7 @@
       },
       "format": {
         "enabled": true,
-        "format": "### {{time}} {{VALUE: Now}}\n\n{{VALUE: What I want to say}}\n"
+        "format": "### {{time}} {{VALUE: What I want to say}}\n"
       },
       "insertAfter": {
         "enabled": false,
@@ -468,7 +468,7 @@
       "runOnStartup": false
     }
   ],
-  "inputPrompt": "single-line",
+  "inputPrompt": "multi-line",
   "devMode": false,
   "templateFolderPath": "archetypes",
   "announceUpdates": true,
