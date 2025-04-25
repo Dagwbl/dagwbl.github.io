@@ -39,7 +39,7 @@ table without id
 	title AS "Title",
 	dateformat(date, "yyyy-MM-dd") AS "Date"
 from "content"
-where draft=false AND contains(file.name, ".en")
+where draft=false
 sort date desc
 limit 15
 ```
