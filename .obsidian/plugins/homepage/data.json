@@ -15,7 +15,7 @@
       "autoScroll": false,
       "pin": false,
       "commands": [],
-      "alwaysApply": false,
+      "alwaysApply": true,
       "hideReleaseNotes": false
     }
   },

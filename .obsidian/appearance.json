@@ -7,5 +7,6 @@
   "baseFontSizeAction": true,
   "baseFontSize": 16,
   "showRibbon": true,
-  "accentColor": ""
+  "accentColor": "#309ed9",
+  "theme": "system"
 }

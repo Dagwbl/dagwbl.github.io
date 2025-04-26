@@ -4,18 +4,17 @@
   "dataview",
   "homepage",
   "buttons",
-  "obsidian-minimal-settings",
   "obsidian-export-image",
   "obsidian-tasks-plugin",
   "templater-obsidian",
   "highlightr-plugin",
   "copilot",
   "calendar",
-  "obsidian-icon-folder",
   "easy-typing-obsidian",
   "dynamic-outline",
   "obsidian-style-settings",
   "file-explorer-plus",
   "edge-tts",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "obsidian-minimal-settings"
 ]
