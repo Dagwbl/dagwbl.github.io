@@ -341,7 +341,9 @@
 
         <div class="main-content">
             <iframe src="" id="toolFrame" class="content-frame"
-                sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-downloads allow-presentation"
+                fetchpriority="high"
+                loading="eager"
+                referrerpolicy="strict-origin-when-cross-origin"
                 allow="fullscreen; geolocation; microphone; camera; midi; clipboard-write; picture-in-picture">
             </iframe>
         </div>
