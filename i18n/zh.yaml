@@ -62,5 +62,8 @@
 - id: declaration
   translation: '声明'
 
+- id: idea
+  translation: '想法'
+
 - id: declaration_content
   translation: '本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可。'
