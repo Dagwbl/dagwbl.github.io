@@ -2,6 +2,8 @@ User-agent: *
 {{ range .Pages }}
 {{ if or (hasPrefix .RelPermalink "/zh/diary/") (hasPrefix .RelPermalink "/en/diary/") }}
 Disallow: {{ .RelPermalink }}
+{{ else }}
+Allow: {{ .RelPermalink }}
 {{ end }}
 {{ end }}
 
