@@ -1,0 +1,7 @@
+/* Custom CSS for Obsidian */
+
+/* Idea Callout */
+.callout[data-callout="idea"] {
+    --callout-color: 255, 204, 0;
+    --callout-icon: lightbulb;
+  }
