@@ -69,6 +69,8 @@ sections:
         url: "https://codepen.io/wodniack/pens/popular"
       - name: Method of Action
         url: "https://method.ac/"
+      - name: "Lucide Icons"
+        url: "https://lucide.dev/icons/"
 
   - title: "💻 Code"
     links:
