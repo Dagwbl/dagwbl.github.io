@@ -604,7 +604,7 @@
   font-family: "Times New Roman", times, "Heti Song", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .heti--classic {
-  font-family: "Times New Roman", times, "Heti Kai", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Times New Roman", times, "Heti Kai", "LXGW WenKai Screen", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .heti--classic h1,
 .heti--classic h2,
@@ -612,8 +612,9 @@
 .heti--classic h4,
 .heti--classic h5,
 .heti--classic h6 {
-  font-family: "Times New Roman", times, "Heti Kai Black", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Times New Roman", times,"LXGW WenKai Screen", "Heti Kai Black", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* custom use LXGW WenKai Screen as the main font family in headings */
   font-weight: 800;
+  
 }
 .heti--classic blockquote,
 .heti--classic cite,
