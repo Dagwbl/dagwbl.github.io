@@ -77,8 +77,7 @@
 
   </footer>
 
-
-  {{- if (.Param "comments") }}
+  {{- if and (.Param "comments") (eq site.Params.env "production") }}
   {{- partial "comments.html" . }}
   {{- end }}
 

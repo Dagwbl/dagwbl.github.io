@@ -54,7 +54,7 @@ params:
   mermaid: true
   InsteadPicture: true
   ShowMetaDate: true
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: development # to enable google analytics, opengraph, twitter-cards and schema.
   description: "A blog about technology, programming, and life."
   keywords: [blog, technology, programming, life, personal, diary, note, letter, code, navigation]
   author: Jeapo
