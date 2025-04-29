@@ -7,6 +7,7 @@
     border-radius: 4px;
     color: var(--content-color);
     border-left: none !important;
+    background: var(--content-background-color);
     /* border: 1px solid black; */
 }
 
@@ -20,11 +21,12 @@
 }
 
 .alert-blockquote .alert-heading {
-    margin: -18px -18px 12px;
+    margin: -18px -18px 0px;
     padding: 10px 18px;
     border-radius: 4px 4px 0 0;
     font-weight: 600;
     color: var(--title-color) !important;
+    background: var(--title-background-color);
     display: flex;
     align-items: center;
 }
@@ -178,13 +180,6 @@
     color: #ff9791 !important;
 }
 
-.alert-blockquote .alert-heading {
-    background: var(--title-background-color);
-}
-
-.alert-blockquote {
-    background: var(--content-background-color);
-}
 
 /* New type */
 /* Fold */
@@ -374,6 +369,7 @@
 .dark .alert-blockquote.alert-quote .alert-heading {
     color: #808080 !important;
 }
+
 /* Common blockquote */
 
 .post-content blockquote:not(.alert-blockquote, .quote-center, .quote) {
@@ -535,3 +531,32 @@ blockquote:not(.alert-blockquote, .quote-center, .quote) span {
 .post-content h6 {
     font-size: calc(var(--font-size-base) + var(--font-size-add) * -2)
 } */
+
+
+/* suport fold as obsidian */
+.alert-blockquote.is-collapsible .callout-content {
+    display: none;
+}
+
+.alert-blockquote.is-collapsible.is-collapsed .callout-content {
+    display: none;
+}
+
+.alert-blockquote.is-collapsible .callout-title {
+    cursor: pointer;
+}
+
+.alert-blockquote .callout-title svg {
+    vertical-align: middle;
+    display: inline-block;
+    /* 垂直对齐 */
+}
+
+.alert-blockquote.is-collapsible .callout-title .callout-fold {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.alert-blockquote.is-collapsible.is-collapsed .callout-title .callout-fold {
+    transform: rotate(0deg);
+}
