@@ -43,7 +43,11 @@
         {{- $alertType := index $alertTypes .AlertType | default $default }}
         {{ $alertType | safeHTML }}
       </svg>
+      {{ if eq (string .AlertTitle) "<br>" }}
       <span>{{ or (i18n .AlertType) (title .AlertType) }}</span>
+      {{ else }}
+      <span>{{ .AlertTitle }}</span>
+      {{ end }}
     </p>
     {{ .Text | safeHTML }}
   </blockquote>
