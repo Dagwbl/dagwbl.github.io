@@ -86,19 +86,19 @@ params:
     # 配置是否显示访问量
   # images: ["/images/wallpaperflare.com_flower.jpg"]
   ShowShareButtons: false
-  ShareButtons: [qq,bilibili]
+  ShareButtons: [x, linkedin, reddit, telegram, ycombinator, whatsapp]
   socialIcons:
     - name: github
       title: View Source on Github
       url: "https://github.com/Dagwbl/"
-    - name: googlescholar
-      title: Google scholar
-      url: "https://scholar.google.com"
+    # - name: googlescholar
+    #   title: Google scholar
+    #   url: "https://scholar.google.com"
     - name: youtube
       title: Watch some interesting videos
       url: "https://youtube.com"
-    - name: x
-      url: "https://twitter.com"
+    # - name: x
+    #   url: "https://twitter.com"
     - name: bilibili
       url: "https://bilibili.com"
     # - name: tiktok
