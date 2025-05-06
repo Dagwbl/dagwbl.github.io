@@ -1,7 +1,7 @@
 # To-do
 
 - [x] https://bhoot.dev/2025/typescript-function-type-syntaxes/  [completion:: 2025-04-01]
-- [ ] 刷题  [repeat:: every day]  [created:: 2025-02-19]
+- [ ] 学习行测  [created:: 2025-05-06]
 - [ ] 学习微观经济学
 - [x] 接入https://aistudio.google.com/prompts/new_chat  [completion:: 2025-02-12] ^otx3
 - [x] 刷题  [repeat:: every day]  [created:: 2025-02-18]  [completion:: 2025-02-19]
@@ -17,3 +17,6 @@
 
 - [x] 隐藏滚动条但仍可滚动  [completion:: 2025-02-18]
 - [x] 移动端左侧导航栏高度设置  [completion:: 2025-02-19]
+
+## To-do
+- [ ] 论自由
