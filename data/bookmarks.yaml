@@ -45,6 +45,8 @@ sections:
         url: "https://sass-lang.com/"
       - name: "Tailwind CSS"
         url: "https://tailwindcss.com/"
+      - name: "KaTeX"
+        url: "https://katex.org/docs/supported"
 
   - title: "🔤 Dicts"
     links:
