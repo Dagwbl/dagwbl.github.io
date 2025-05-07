@@ -1072,7 +1072,6 @@ var LineFormater = class {
       }
     }
     inlineChangeList = inlineChangeList.sort((a, b) => a.begin - b.begin);
-    console.log("resultLine", resultLine);
     return [resultLine, resultCursorCh, inlineChangeList];
   }
 };
