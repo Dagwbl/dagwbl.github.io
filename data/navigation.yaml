@@ -40,10 +40,10 @@
       weight: 12
       link: "https://chatgpt.com/"
       refused: true
-    - name: "Gemini 2"
-      icon: "🦋"
-      weight: 12
-      link: "https://gemini.google.com/"
+    # - name: "Gemini 2"
+    #   icon: "🦋"
+    #   weight: 12
+    #   link: "https://gemini.google.com/"
       refused: true
     - name: "LMArena"
       icon: "🏟️"
@@ -80,9 +80,10 @@
       weight: 1
       icon: "📚"
       link: "https://ac.scmor.com/"
-    - name: "Calculator"
-      weight: 96
-      link: "https://www.lddgo.net/math/calculator"
+    - name: GeoGebra
+      weight: 13
+      link: "https://www.geogebra.org/classic"
+      refused: false
     - name: "Toolbox"
       weight: 98
       link: "https://tool.lvtao.net/json"

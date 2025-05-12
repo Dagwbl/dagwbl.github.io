@@ -92,7 +92,7 @@ sections:
   - title: "⚒️ Tools"
     links:
       - name: "MathDF"
-        link: "https://mathdf.com/cn/"
+        url: "https://mathdf.com/cn/"
       - name: "Character Counter"
         url: "https://charactercalculator.com/"
       - name: "GeoGebra"
@@ -103,6 +103,8 @@ sections:
         url: "https://toolwa.com"
       - name: "HuggingChat"
         url: "https://huggingface.co/chat/"
+      - name: "Calculator"
+        ulr: "https://www.lddgo.net/math/calculator"
 
   - title: "🗿 Blog"
     links:
