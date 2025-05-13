@@ -88,6 +88,8 @@ sections:
         url: "https://stackblitz.com/"
       - name: "Bolt"
         url: "https://bolt.new/"
+      - name: "Visual Studio Code"
+        url: "https://vscode.dev/github/Dagwbl/dagwbl.github.io"
 
   - title: "⚒️ Tools"
     links:

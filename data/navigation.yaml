@@ -88,11 +88,11 @@
     - name: "Toolbox"
       weight: 98
       link: "https://tool.lvtao.net/json"
-    - name: "Visual Studio Code"
-      weight: 99
-      icon: "👨🏻‍💻"
-      refused: true
-      link: "https://vscode.dev/github/Dagwbl/dagwbl.github.io"
+    # - name: "Visual Studio Code"
+    #   weight: 99
+    #   icon: "👨🏻‍💻"
+    #   refused: true
+    #   link: "https://vscode.dev/github/Dagwbl/dagwbl.github.io"
 
 - category: Relax
   items:
@@ -106,3 +106,8 @@
       weight: 3
       icon: "💣"
       link: "/component/minesweeper/"
+    - name: "Chess"
+      weight: 1
+      # icon: "♟️"
+      refused: true
+      link: "https://lichess.org/"
