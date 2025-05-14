@@ -1,8 +1,8 @@
 ---
-title: "Common Website"
+title: "Bookmarks"
 description: "Common website address"
 category: "local"
-icon: "🖱️"
+icon: "🔖"
 tools: true
 weight: 3
 customjscssraw:
@@ -13,7 +13,5 @@ customjscssraw:
         }
     </style>
 ---
-
-
 
 {{< bookmarks >}}

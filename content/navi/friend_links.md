@@ -1,8 +1,8 @@
 ---
-title: "Link Collection"
+title: "Friend's  Blog"
 description: "Other blog links"
 category: "local"
-icon: "🗺️"
+icon: "🏂"
 tools: true
 weight: 4
 customjscssraw:
