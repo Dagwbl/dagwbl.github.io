@@ -48,6 +48,7 @@
     "excalidraw-embeddable-theme": "text",
     "excalidraw-open-md": "checkbox",
     "categories": "checkbox",
-    "project": "checkbox"
+    "project": "checkbox",
+    "ejaculate": "number"
   }
 }

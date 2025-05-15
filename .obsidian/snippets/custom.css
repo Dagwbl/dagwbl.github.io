@@ -5,3 +5,8 @@
     --callout-color: 255, 204, 0;
     --callout-icon: lightbulb;
   }
+
+/* Hide underline for internal links in Homepage*/
+h3 .metadata-container .internal-link, .markdown-rendered .internal-link {
+    text-decoration-line: none;
+}
