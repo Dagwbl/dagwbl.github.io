@@ -1,10 +1,10 @@
 ---
-title: 'January'
-date: '2025-01-07T22:27:51+08:00'
+title: '一月'
+date: '2025-01-07T22:27:13+08:00'
 series: []
-categories: []
-tags: []
-language: en
+categories: [diary]
+tags: [thought]
+language: zh
 showToc: false
 TocOpen: false
 draft: false
@@ -20,22 +20,69 @@ hideSummary: false
 #     hidden: true # only hide on current single page
 ---
 
-## 07 World and Money
+### 14 将故事写完
 
-It seems that dealing with people is a worldly thing. In my current cognition, secular is equal to money.
+我经常会有各种感悟和想法，也经常会尝试将突然冒入脑袋的想法记录下来。有一个很严重的问题，就是我经常会写很多开头，或者只是写了一个标题。
 
-Including the seemingly fantasy things, including feng shui, god ghosts, etc., in the eyes of many people can profoundly affect personal or family destiny, they can be solved through secular means.
+我能够清楚地知道当时我是一些想法多么想将它们写下来表达出来。但是过了许久之后，再次看到这些标题，我只能默默的将它们删除。
 
-It seems that the world is the sea of ​​life, and we are fish that live in it.Any fish living in the water cannot survive from the world.Tracing back to the birth of the currency, what we can't do without it is a variety of currency equivalent, that is, a variety of products, because we personally cannot produce the necessities of our own life.
+刚看完尼尔盖曼《如何讲好故事》的大师艺术课程，有很强的感悟，写完一个想法或者一个故事是如此的重要。
 
-Unless, we change our lifestyle, change our life concepts, and personally cultivate, hunt, build houses, and weaves. Of course, some people really explore such a lifestyle in contemporary contemporary.This is not difficult, but it is not simple. It depends on the land where they are located. There are enough water, soil, salt and other necessities.
+这看起来无关紧要的习惯，应是无数天才的陨落之因。
 
-But do we need to pursue such a lifestyle so extreme?It should be: Is the worldly thing bad?Answer this question depends on our status and we have wealth. If we are the poor who are still worried about three meals a day, then the worldly is not good, and it has even become a source of trouble for our lives.Words such as integrated calculations, comparison of baht must compare, open source throttling, hard work, hard work, poor love and rich, etc., constitute the normal state of our lives. Regardless of whether it is denied or not, most people will be more cautious and impulsive when they involve more money.Money has also become the standard of most things in the world, including most people.
+### 12 自己的路自己走
 
-Recently, I heard that there are too many words on both sides. The world is an excellent manifestation of both sides.On the one hand, the world makes our society more social, and each individual is connected to each other, becoming a community of human destiny; on the other hand, it binds everyone in it, each connected tag online tags on the line onlineThere is no difference to everyone.It can be said that as long as we still live in this social collective, we cannot remove and strip this effect.
+欢欢，今天回去了，时间额外的短暂。
 
-However, our attitude towards these labels is something we can choose.For yourself, "knowing the world but not the world" is a very high quality. For others, "knowing the world and the world" is also very high.We respect and understand others, so that we establish a good social relationship with others, whether it is worldly.Because the result is that we have avoided many impacts from society and will feel the benefits of society from time to time.
+又继续开始思考着副业这个事情，看着看着看到V2EX上面的一个帖子，很赞同一句评论。
 
-In general, we are not only inseparable from the world. On the contrary, we have to get some benefits from it.Echoing and beginning, naturally this is also the reason for our local pursuit of some money.
+> 千万不要觉得和谁结婚都一样的鬼话，婚姻遇到对的人，即使你在十八层地狱也能把你带回天堂，婚姻遇到错的人，即使你在天堂也会把你拉回十八层地狱。
+>
+> 切记，一定要摆脱原生家庭，自己的路自己走
 
-The gentleman loves the fortune, and it has a way.This road requires us to find it ourselves.But one direction is clear. Fortune comes from its own value, and its own value comes from the value of its own use.In other words, we must be able to provide the services needed by this society.
+的确是这样的，婚姻不允许别人指指点点，至少不要听别人指指点点。
+
+恋爱也是如此。
+
+### 09 重读少年杂志
+
+今天上午看完了《常识》模块，做了一下午的《数学运算》。数学这个东西还是老样子，一天就只能做那么些题。不管这个题目难不难，只要稍微有点复杂，动辄半小时起步。
+
+今天快下班的时候实在是做不动了，看了看意林之类的杂志。并没有觉得有很高的水准，很多时候都是在无病呻吟，强行生化，看了很是膈应，很难看到一篇比较好的文章。
+
+我决定开始尝试写写看看，希望能比我看到的好一些。
+
+
+
+## 08 开始
+
+我们缺少的是面对困难的勇气，这是我们迟迟不敢开始的原因。
+
+今天效率还算是挺高的，学了好几十页的公考知识，并不感觉到难，更多的偏。
+
+到了下班肚子饿了，不然可以在办公室多学一会儿。
+
+回到自己的房间煮了面吃，开始思考昨天同欢欢所说的事情。我存在有固有的偏见，只有先掌握方法才能够去做事情。但往往很多时候我连方法都没掌握就放弃了，我很欣赏欢欢的行动力，我想做的事情我立马就去做了，而不是管其他有的没有。
+
+写作是一件上限和下限都极高的事情，唯有勤奋，唯有思考，才能将其作为一件能够糊口的事情。
+似乎任何看似轻松的事情都是如此，不像跑跑腿、卖卖东西、摆个摊子那样，简单付出体力劳动就能够养活自己。
+
+## 07 世俗与钱
+
+似乎，与人打交道就是一件世俗的事情，在我的目前的认知里，世俗等于钱。
+
+包括风水、神鬼等看似玄幻的事情，在许多人眼里能够深刻影响个人或者家族命运的事情，都能够通过世俗的手段解决。
+
+似乎，世俗就是生活之海，我们就是生活在其中的鱼。生活在水里的任何一条鱼，都无法脱离世俗而存活。溯源到货币的诞生，我们离不开的是各种各样的货币等值物，也即是各种各样的商品，因为我们个人无法生产出我们自己所需要生活必需品。
+
+除非，我们改变我们生活方式，改变我们的生活理念，亲自耕种、狩猎、建房、织布，当然也确有人在当代探索这样的生活方式。这并不算难，却也不简单，更多的依赖于他们所处的土地，是否有足够的水、土、盐等必需品。
+
+但我们有必要如此极端地去追求这样的生活方式吗？换一个问法应该是：世俗的就是不好的吗？回答这个问题取决于我们所处的状态以及我们所拥有的财富，倘若我们是尚为一日三餐发愁的穷人，那么世俗的就是不好的，甚至成为了我们生活的烦恼来源。精打细算、锱铢必较、开源节流、辛勤劳作、嫌贫爱富等等词语就构成了我们生活常态，无论否认与否，大部分的人在涉及相对较多金钱时都会更加的谨慎和冲动。金钱也一度成为评判世界上绝大多数事物的标准，包括人的绝大部分。
+
+最近听到太多一体两面这个词了，世俗正是一体两面的绝佳体现。一方面，世俗它让我们的社会更加社会化，让每个个体彼此连接，成为另一种意义的人类命运共同体；另一方面，它又将每个人都束缚其中，每根连接线上的标签毫无差别的影响着每一个人。可以说，只要我们还在这个社会集体中生活，我们就无法去除和剥离这种影响。
+
+但是，我们对待这些标签的态度却是我们自己可以选择的。对于自己，“知世故而不世故”是极高的品质，对于他人而言，“知世故而世故”同样也是极高的品质。我们尊重和理解他人，使得我们同他人建立良好的社会关系，无论这是不是世俗的。因为这带来的结果是使得我们避免了很多来自社会的冲击，也会时不时的感受到社会的恩惠。
+
+总体而言，我们不仅离不开世俗，相反，我们还要从中获得一些好处。相呼应与开头，自然这也成为我们正当地去追求一些金钱的理由。
+
+君子爱财，取之有道。这个道需要我们自己去寻得。但有一个方向是清晰的，财来源于自己的价值，自己的价值来源于自身之于他人的使用价值。换言之，我们要能够提供这个社会所需要的服务，这也是纳瓦尔所秉持的观点。

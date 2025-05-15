@@ -1,4 +1,4 @@
-### **✔️ [Activity](assist/Heatmap.md) & To-do**
+### **✔️ [Activity](Heatmap.md) & To-do**
 
 ```contributionGraph
 title: Contributions activity
