@@ -10,5 +10,6 @@ weather:
 location: 
 rating: 
 stime: 
+release: 0
 draft: true
 ---
