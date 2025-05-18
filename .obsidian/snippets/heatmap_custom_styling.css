@@ -15,7 +15,8 @@
 /* ------------------------------------  */
 
 .heatmap-calendar-graph {
-    font-size: 0.4em !important;
+    font-size: 7px !important;
+    font-weight: 500 !important;
 }
 
 .heatmap-calendar-boxes .isEmpty,.hasData {
@@ -24,4 +25,8 @@
 
 .heatmap-calendar-days, .heatmap-calendar-boxes {
     grid-gap: 0.1rem !important;
+}
+
+.heatmap-calendar-boxes .internal-link {
+    color: white;
 }
