@@ -2,7 +2,8 @@
   "textFontFamily": "Helvetica,Noto Color Emoji,Microsoft YaHei,SimHei,SimSun",
   "enabledCssSnippets": [
     "custom",
-    "heatmap_custom_styling"
+    "heatmap_custom_styling",
+    "slides_extended"
   ],
   "cssTheme": "Minimal",
   "interfaceFontFamily": "Helvetica,Noto Color Emoji",
