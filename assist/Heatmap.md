@@ -94,7 +94,7 @@ for (let page of dv.pages('"content/diary"').where(p => p.stime !== undefined)) 
     calendarData.entries.push({
         date: page.file.name,     // (必填) 格式为YYYY-MM-DD
         intensity: page.stime, // (必填) 您要跟踪的数据，将自动映射颜色强度
-        content: await dv.span(`[${page.stime}](${page.file.name})`),           // (可选) 在日期单元格中添加文本
+        content: await dv.span(`[${Math.round(page.stime/60)}](${page.file.name})`),           // (可选) 在日期单元格中添加文本
         color: "orangeToRed",          // (可选) 从*calendarData.colors*引用。如果未提供颜色，则使用colors[0]
     })
 }
@@ -103,7 +103,7 @@ renderHeatmapCalendar(this.container, calendarData)
 ```
 
 ```dataviewjs
-dv.span("**🏂 Release status**") /* optional ⏹️💤⚡⚠🧩↑↓⏳📔💾📁📝🔄📝🔀⌨️🕸️📅🔍✨ */
+dv.span("**🏂 Release Status**") /* optional ⏹️💤⚡⚠🧩↑↓⏳📔💾📁📝🔄📝🔀⌨️🕸️📅🔍✨ */
 const calendarData = {
     year: 2025,  // (可选) 默认为当前年份
     colors: {    // (可选) 默认为绿色
