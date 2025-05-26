@@ -42,6 +42,8 @@
 
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{/* hide the diary in home list, keep the pagenav  */}}
+{{- $pages = where $pages "Section" "not in" (slice "diary" "notes") }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
 {{- end }}
 {{/* hide the page in all list by the hidden parameter  */}}
