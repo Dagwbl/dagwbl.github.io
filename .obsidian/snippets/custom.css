@@ -1,12 +1,23 @@
 /* Custom CSS for Obsidian */
+:root {}
 
 /* Idea Callout */
 .callout[data-callout="idea"] {
-    --callout-color: 255, 204, 0;
-    --callout-icon: lightbulb;
-  }
+  --callout-color: 255, 204, 0;
+  --callout-icon: lightbulb;
+}
 
 /* Hide underline for internal links in Homepage*/
-h3 .metadata-container .internal-link, .markdown-rendered .internal-link {
-    text-decoration-line: none;
+h3 .metadata-container .internal-link,
+.markdown-rendered .internal-link {
+  text-decoration-line: none;
+}
+
+a {
+  text-decoration-line: none !important;
+  color: #065588 !important;
+}
+
+.external-link {
+  background-image: none;
 }
