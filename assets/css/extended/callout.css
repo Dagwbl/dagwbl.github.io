@@ -402,16 +402,18 @@ blockquote:not(.alert-blockquote, .quote-center, .quote)::before {
     top: -10px;
 }
 
-blockquote:not(.alert-blockquote, .quote-center, .quote)::after {
+blockquote:not(.quote-center, .quote) p:not(.alert-heading)::after {
     content: '';
 }
 
-blockquote:not(.alert-blockquote, .quote-center, .quote) span {
+blockquote:not(.quote-center, .quote) p:not(.alert-heading) span {
     display: block;
     color: #555555;
-    font-style: normal;
+    font-style: italic;
     font-weight: bold;
     margin-top: 0em;
+    padding-right: 1em;
+    padding-top: 5px;
     text-align: right;
 
 
