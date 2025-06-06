@@ -50,7 +50,7 @@ path includes assist
 
 **Record:**  `button-new-diary`   `button-record-now` `button-new-todo` `button-jump-1note`
 
-**Sync to GitHub:** `button-commit` `button-push`  `button-pull` `button-hugo-server`
+**Sync to GitHub:** `button-commit` `button-sync`  `button-hugo-server`
 
 ### 📝 **Draft Box**
 ```dataview
@@ -68,7 +68,7 @@ limit 10
 ### **📁 Article Box**
 ```dataview
 table without id
-	link(file.path, replace(file.name, ".en", "")) AS "File",
+	link(file.path) AS "File",
 	title AS "Title",
 	dateformat(date, "yyyy-MM-dd") AS "Date"
 from "content"
@@ -166,18 +166,11 @@ action QuickAdd: Commit
 ^button-commit
 
 ```button
-name 🆙 Push
+name 🔃 Sync
 type command
-action QuickAdd: Push
+action QuickAdd: Sync Vault
 ```
-^button-push
-
-```button
-name 🔃 Pull
-type command
-action QuickAdd: Pull
-```
-^button-pull
+^button-sync
 
 ```button
 name 🕣 Now

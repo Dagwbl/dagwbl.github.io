@@ -1,6 +1,6 @@
 {
   "commitMessage": "diary: {{date}}",
-  "autoCommitMessage": "vault backup: {{date}}",
+  "autoCommitMessage": "diary: {{date}}",
   "commitDateFormat": "LL",
   "autoSaveInterval": 0,
   "autoPushInterval": 0,

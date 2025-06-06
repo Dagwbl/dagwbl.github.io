@@ -30,7 +30,7 @@
     },
     {
       "id": "539d71b4-41c7-46c3-8a7e-2ca99b1ecc6c",
-      "name": "Pull",
+      "name": "Sync Vault",
       "type": "Macro",
       "command": true,
       "macroId": "ede12b66-9728-4fa3-bbfb-71447ecbf43d"
@@ -372,14 +372,20 @@
       "runOnStartup": false
     },
     {
-      "name": "Pull Blog",
+      "name": "Sync Vault",
       "id": "ede12b66-9728-4fa3-bbfb-71447ecbf43d",
       "commands": [
         {
-          "name": "Git: Pull",
+          "name": "Git: Commit-and-sync",
           "type": "Obsidian",
-          "id": "4425a1ce-b8fe-428f-9c04-e37ebee1c514",
-          "commandId": "obsidian-git:pull"
+          "id": "3a007a23-a1ec-4d55-aea4-ab40f5d43373",
+          "commandId": "obsidian-git:push"
+        },
+        {
+          "name": "Remotely Save: start sync",
+          "type": "Obsidian",
+          "id": "49e31550-1efe-4cb9-8d6e-d2ff3171a713",
+          "commandId": "remotely-save:start-sync"
         }
       ],
       "runOnStartup": false
