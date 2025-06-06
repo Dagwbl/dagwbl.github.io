@@ -376,12 +376,6 @@
       "id": "ede12b66-9728-4fa3-bbfb-71447ecbf43d",
       "commands": [
         {
-          "name": "Git: Commit-and-sync",
-          "type": "Obsidian",
-          "id": "3a007a23-a1ec-4d55-aea4-ab40f5d43373",
-          "commandId": "obsidian-git:push"
-        },
-        {
           "name": "Remotely Save: start sync",
           "type": "Obsidian",
           "id": "49e31550-1efe-4cb9-8d6e-d2ff3171a713",
