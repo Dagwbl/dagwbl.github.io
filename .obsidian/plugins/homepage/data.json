@@ -19,5 +19,5 @@
       "hideReleaseNotes": false
     }
   },
-  "separateMobile": false
+  "separateMobile": true
 }
