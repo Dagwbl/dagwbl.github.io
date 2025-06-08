@@ -83,7 +83,7 @@
         "patternType": "STRICT"
       },
       {
-        "name": "index",
+        "name": "index.en",
         "active": true,
         "type": "FILES",
         "pattern": "_index(\\.(zh|en))?\\.md",
