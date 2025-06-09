@@ -12,3 +12,4 @@ node_modules/
 *.log
 
 .obsidian/plugins/remotely-save/
+.obsidian/workspace-mobile.json
