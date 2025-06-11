@@ -15,16 +15,17 @@
 /* ------------------------------------  */
 
 .heatmap-calendar-graph {
-    font-size: 7px !important;
+    font-size: 10px !important;
     font-weight: 500 !important;
 }
 
-.heatmap-calendar-boxes .isEmpty,.hasData {
+.heatmap-calendar-boxes .isEmpty, .hasData {
     border-radius: 0.4em !important;
+    font-size: 10px;
 }
 
 .heatmap-calendar-days, .heatmap-calendar-boxes {
-    grid-gap: 0.1rem !important;
+    grid-gap: 0.05rem !important;
 }
 
 .heatmap-calendar-boxes .internal-link {
