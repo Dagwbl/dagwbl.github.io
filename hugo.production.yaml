@@ -22,7 +22,7 @@ enableGitInfo: true
 
 mainsections:
   - posts
-  - diary
+  # - diary
   - letter
   # - navi
 ignoreFiles:
