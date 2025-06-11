@@ -1,6 +1,8 @@
 /* Custom CSS for Obsidian */
-:root {}
-
+.theme-light.minimal-solarized-light {
+    --bg1: #f3f2ee;
+    --bg2: #f1f1ea;
+}
 /* Idea Callout */
 .callout[data-callout="idea"] {
   --callout-color: 255, 204, 0;
