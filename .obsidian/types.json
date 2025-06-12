@@ -50,6 +50,7 @@
     "categories": "multitext",
     "project": "checkbox",
     "ejaculate": "number",
-    "category": "multitext"
+    "category": "multitext",
+    "publishdate": "date"
   }
 }
