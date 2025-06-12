@@ -35,6 +35,10 @@ body {
     display: none;
 }
 
+.footer a {
+    border-bottom: none;
+}
+
 .notbyai {
     display: inline-flex;
 
