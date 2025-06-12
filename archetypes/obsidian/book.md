@@ -1,13 +1,13 @@
 ---
-title: 
+title: <% tp.file.title %>
+date: <% tp.date.now() %>
 author: 
-category: 
+categories: 
 publisher: 
 publishdate: 
 pages: 
 cover: 
 rating: 
-date_read: 
 status: 
 re_read: 
 recommended_by:
