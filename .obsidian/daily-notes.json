@@ -2,5 +2,5 @@
   "folder": "content/diary",
   "template": "archetypes/obsidian/diary",
   "autorun": false,
-  "format": "YYYY-MM-DD"
+  "format": "YYYY/MMMM/YYYY-MM-DD"
 }
