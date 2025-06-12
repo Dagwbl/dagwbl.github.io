@@ -1,4 +1,12 @@
-## current projects
+---
+title: Projects
+description: 'My projects'
+summary: 'My projects'
+weight: 75
+draft: true
+---
+
+## Current projects
 
 ```dataview
 table

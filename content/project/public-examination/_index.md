@@ -3,7 +3,8 @@ title: public examination
 project: true
 status: ongoing
 date: 2025-04-29
-draft: false
+weight: 7
+draft: true
 ---
 
 ```folder-overview
@@ -25,5 +26,3 @@ storeFolderCondition: true
 showFolderNotes: false
 disableCollapseIcon: true
 ```
-
-
