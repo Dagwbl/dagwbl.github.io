@@ -137,7 +137,7 @@
       "templatePath": "archetypes/obsidian/diary.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "{{date}}"
+        "format": "{{date:YYYY}}/{{date:MMMM}}/{{date}}"
       },
       "folder": {
         "enabled": true,
@@ -237,7 +237,7 @@
       "type": "Capture",
       "command": true,
       "appendLink": false,
-      "captureTo": "content/diary/{{date}}",
+      "captureTo": "content/diary/{{date:YYYY}}/{{date:MMMM}}/{{date}}",
       "captureToActiveFile": false,
       "createFileIfItDoesntExist": {
         "enabled": true,
