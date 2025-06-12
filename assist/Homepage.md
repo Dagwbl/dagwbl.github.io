@@ -115,6 +115,9 @@ result += "| --- | :-: | :-: | :-: | :-: | :-: |\n";
 result += `| Published | ${da[0]} | ${da[2]} | ${da[3]} | ${da[4]} | ${da[5]} |\n`;
 result += `| Draft | ${da[1]} | ${da[6]} | ${da[7]} | ${da[8]} | ${da[9]} |\n`;
 
+const container = dv.container;
+container.style.overflowX = "hidden";
+
 // 展示信息
 dv.paragraph(result);
 
