@@ -9,9 +9,10 @@ path includes assist
 ```
 
 `button-new-article` `button-new-note`  `button-new-letter`
- `button-new-poem`  
 
-`button-new-diary`   `button-record-now` `button-new-todo` `button-jump-1note`
+ `button-new-poem`  `button-new-diary`   `button-record-now` 
+ 
+ `button-new-todo` `button-jump-1note`
 
 **Sync to OSS:** `button-sync` 
 

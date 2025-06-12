@@ -2,7 +2,7 @@
 ```contributionGraph
 title: Contributions
 graphType: default
-dateRangeValue: 360
+dateRangeValue: 120
 dateRangeType: LATEST_DAYS
 startOfWeek: "1"
 showCellRuleIndicators: true
