@@ -40,7 +40,7 @@
       "name": "New Article",
       "type": "Template",
       "command": true,
-      "templatePath": "archetypes/article-ob.md",
+      "templatePath": "archetypes/obsidian/article.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "article_{{date:YYYYMMDD}}{{time:HHmm}}"
@@ -72,7 +72,7 @@
       "name": "New Note",
       "type": "Template",
       "command": true,
-      "templatePath": "archetypes/article-ob.md",
+      "templatePath": "archetypes/obsidian/article.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "note_{{date:YYYYMMDD}}{{time:HHmm}}"
@@ -134,7 +134,7 @@
       "name": "New Diary",
       "type": "Template",
       "command": true,
-      "templatePath": "archetypes/diary-ob.md",
+      "templatePath": "archetypes/obsidian/diary.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "{{date}}"
@@ -164,7 +164,7 @@
       "name": "New Letter",
       "type": "Template",
       "command": true,
-      "templatePath": "archetypes/letter.md",
+      "templatePath": "archetypes/obsidian/letter.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "letter_{{date:YYYYMMDD}}{{time:HHmm}}"
@@ -207,7 +207,7 @@
       "createFileIfItDoesntExist": {
         "enabled": true,
         "createWithTemplate": true,
-        "template": "archetypes/diary-ob.md"
+        "template": "archetypes/obsidian/diary.md"
       },
       "format": {
         "enabled": false,
@@ -242,7 +242,7 @@
       "createFileIfItDoesntExist": {
         "enabled": true,
         "createWithTemplate": true,
-        "template": "archetypes/diary-ob.md"
+        "template": "archetypes/obsidian/diary.md"
       },
       "format": {
         "enabled": true,
@@ -292,7 +292,7 @@
       "name": "New Poem",
       "type": "Template",
       "command": true,
-      "templatePath": "archetypes/article-ob.md",
+      "templatePath": "archetypes/obsidian/article.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "poem_{{date:YYYYMMDD}}{{time:HHmm}}"

@@ -1,6 +1,6 @@
 {
   "folder": "content/diary",
-  "template": "archetypes/diary-ob",
+  "template": "archetypes/obsidian/diary",
   "autorun": false,
   "format": "YYYY-MM-DD"
 }
