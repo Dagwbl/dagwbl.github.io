@@ -19,11 +19,11 @@ path includes assist
 ### 📝 **Draft Box**
 ```dataview
 table without id
-	link(file.path, replace(replace(file.name, ".en", ""),"*.zh","")) AS "File",
-	title AS "Title",
-	dateformat(date, "yyyy-MM-dd") AS "Date"
+    link(file.path, replace(replace(file.name, ".en", ""),"*.zh","")) AS "File",
+    title AS "Title",
+    dateformat(date, "yyyy-MM-dd") AS "Date"
 from "content"
-where draft=true
+where draft=true and !contains(file.name, "index")
 sort date desc
 limit 10
 ```

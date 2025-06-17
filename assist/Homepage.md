@@ -59,7 +59,7 @@ table without id
 	title AS "Title",
 	dateformat(date, "yyyy-MM-dd") AS "Date"
 from "content"
-where draft=true
+where draft=true and !contains(file.name, "index")
 sort date desc
 limit 10
 ```
