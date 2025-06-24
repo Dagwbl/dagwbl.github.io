@@ -45,5 +45,15 @@
       ],
       "key": "M"
     }
-  ]
+  ],
+  "editor:toggle-source": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "/"
+    }
+  ],
+  "editor:toggle-comments": [],
+  "easy-typing-obsidian:easy-typing-toggle-comment": []
 }
