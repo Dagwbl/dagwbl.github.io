@@ -5,6 +5,9 @@
   "hideFolderNote": false,
   "templatePath": "archetypes/_index_template.md",
   "autoCreate": true,
+  "autoCreateFocusFiles": true,
+  "autoCreateForAttachmentFolder": false,
+  "autoCreateForFiles": false,
   "enableCollapsing": false,
   "excludeFolders": [],
   "whitelistFolders": [],
@@ -14,6 +17,8 @@
   "underlineFolderInPath": true,
   "openFolderNoteOnClickInPath": true,
   "openInNewTab": false,
+  "focusExistingTab": false,
+  "oldFolderNoteName": "_index",
   "folderNoteName": "_index",
   "folderNoteType": ".md",
   "disableFolderHighlighting": false,
@@ -39,7 +44,10 @@
     "onlyIncludeSubfolders": false,
     "storeFolderCondition": true,
     "showFolderNotes": false,
-    "disableCollapseIcon": true
+    "disableCollapseIcon": true,
+    "alwaysCollapse": false,
+    "autoSync": true,
+    "allowDragAndDrop": true
   },
   "useSubmenus": true,
   "syncMove": true,
@@ -88,7 +96,17 @@
     "hideInSettings": false
   },
   "hideCollapsingIcon": false,
+  "hideCollapsingIconForEmptyFolders": false,
   "tabManagerEnabled": false,
   "ignoreAttachmentFolder": true,
-  "deleteFilesAction": "trash"
+  "deleteFilesAction": "trash",
+  "openSidebar": {
+    "mobile": false,
+    "desktop": true
+  },
+  "highlightFolder": true,
+  "persistentSettingsTab": {
+    "afterRestart": true,
+    "afterChangingTab": true
+  }
 }
