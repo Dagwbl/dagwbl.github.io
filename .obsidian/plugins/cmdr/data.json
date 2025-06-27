@@ -1,0 +1,64 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "quickadd:choice:d1e8a242-ad51-4eea-812f-77c2db81cda6",
+      "icon": "lucide-languages",
+      "name": "QuickAdd: Translate into English",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [
+    {
+      "id": "remotely-save:start-sync",
+      "icon": "lucide-cloud-upload",
+      "name": "Remotely Save: start sync",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:61c74998-e37b-4e52-856c-81106139e211",
+      "icon": "lucide-check-circle",
+      "name": "QuickAdd: Add a To-do",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:8e81d692-d0a5-4fe4-924f-9158c6aa33a7",
+      "icon": "lucide-cone",
+      "name": "QuickAdd: Add a Record to Diary",
+      "mode": "any",
+      "color": "#000000"
+    }
+  ],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [
+      "properties",
+      "backlink"
+    ],
+    "leftRibbon": [
+      "Remotely Save",
+      "Advanced Tables Toolbar",
+      "Open Copilot Chat",
+      "Open quick switcher"
+    ]
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}
