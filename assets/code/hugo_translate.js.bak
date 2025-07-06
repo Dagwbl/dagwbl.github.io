@@ -1,0 +1,153 @@
+module.exports = async (params) => {
+  const notice = (msg) => new Notice(msg);
+
+  // 获取当前文件
+  const activeFile = app.workspace.getActiveFile();
+  if (!activeFile) return notice("No active file");
+
+  // 读取配置（移动端路径建议放在 vault 根目录）
+  async function loadConfig() {
+    const configPath = "./assets/code/translator_config.json"; // 建议放在 vault 根目录
+    try {
+      const configRaw = await app.vault.read(app.vault.getAbstractFileByPath(configPath));
+      const json = JSON.parse(configRaw);
+      const service = json.services[json.default];
+      return {
+        chunkSize: json.chunkSize || 20000,
+        maxLookback: json.maxLookback || 200,
+        apiKey: service.apiKey,
+        llmType: service.llmType,
+        apiBase: service.apiBase,
+        model: service.model
+      };
+    } catch (e) {
+      notice("配置文件读取失败：" + e.message);
+      throw e;
+    }
+  }
+
+  // 简化版 YAML 解析（只解析 frontmatter 的 key: value 形式）
+  function parseFrontmatter(content) {
+    if (!content.startsWith("---")) return {};
+    const end = content.indexOf("---", 3);
+    if (end === -1) return {};
+
+    const yamlRaw = content.substring(3, end).trim();
+    const lines = yamlRaw.split("\n");
+    const result = {};
+    for (const line of lines) {
+      const [key, ...rest] = line.split(":");
+      if (key && rest.length) result[key.trim()] = rest.join(":").trim();
+    }
+    return {
+      data: result,
+      content: content.substring(end + 3).trim()
+    };
+  }
+
+  // YAML 输出（最简单格式）
+  function dumpYAML(obj) {
+    return Object.entries(obj).map(([k, v]) => `${k}: ${v}`).join("\n");
+  }
+
+  // 调用翻译 API
+  async function getTranslation(messages, config) {
+    try {
+      const response = await fetch(config.apiBase, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${config.apiKey}`
+        },
+        body: JSON.stringify({
+          model: config.model,
+          messages: messages
+        })
+      });
+      const data = await response.json();
+      return data.choices?.[0]?.message?.content || "";
+    } catch (e) {
+      notice("翻译失败：" + e.message);
+      console.error(e);
+      return "";
+    }
+  }
+
+  // 翻译正文内容（分段处理）
+  async function translateText(text, config) {
+    const { chunkSize, maxLookback } = config;
+    let result = "";
+    let i = 0;
+    while (i < text.length) {
+      let end = Math.min(i + chunkSize, text.length);
+      let fallback = Math.max(
+        text.lastIndexOf("。", end),
+        text.lastIndexOf("！", end),
+        text.lastIndexOf("？", end),
+        text.lastIndexOf("\n", end)
+      );
+      if (fallback > i && end - fallback < maxLookback) end = fallback + 1;
+      const chunk = text.slice(i, end);
+      const translation = await getTranslation([
+        { role: "system", content: "Translate the following Chinese blog post into English while keeping the original meaning." },
+        { role: "user", content: chunk }
+      ], config);
+      result += translation + "\n\n";
+      i = end;
+    }
+    return result;
+  }
+
+  // 主执行流程
+  try {
+    const config = await loadConfig();
+    const raw = await app.vault.read(activeFile);
+    const { data: frontmatter, content } = parseFrontmatter(raw);
+
+    // 翻译标题和摘要
+    const translated = {};
+    if (frontmatter.title) {
+      notice("Translating title...");
+      translated.title = await getTranslation([
+        { role: "system", content: "Translate the following Chinese blog post title into English." },
+        { role: "user", content: frontmatter.title }
+      ], config);
+    }
+
+    if (frontmatter.summary) {
+      notice("Translating summary...");
+      translated.summary = await getTranslation([
+        { role: "system", content: "Translate the following Chinese blog post summary into English." },
+        { role: "user", content: frontmatter.summary }
+      ], config);
+    }
+
+    notice("Translating content...");
+    const translatedContent = await translateText(content, config);
+
+    // 构建新 frontmatter
+    const finalFrontmatter = {
+      ...frontmatter,
+      ...translated
+    };
+    const newRaw = `---\n${dumpYAML(finalFrontmatter)}\n---\n\n${translatedContent}`;
+
+    // 构造英文文件路径
+    const enPath = activeFile.path.replace(/\.md$/, ".en.md");
+    const existing = app.vault.getAbstractFileByPath(enPath);
+    if (existing) {
+      await app.vault.modify(existing, newRaw);
+    } else {
+      await app.vault.create(enPath, newRaw);
+    }
+
+    notice("✅ Translation done: " + enPath);
+
+    // 尝试打开
+    const enFile = app.vault.getAbstractFileByPath(enPath);
+    if (enFile) await app.workspace.getLeaf(false).openFile(enFile);
+  } catch (e) {
+    notice("脚本运行失败：" + e.message);
+    console.error(e);
+  }
+};
