@@ -5,9 +5,9 @@ categories:
   - diary
 series:
   - weekly
-tags:
+tags: 
+mood: 
+weather: 
+location: 
 draft: true
-mood:
-weather:
-location:
 ---

@@ -4,7 +4,7 @@
   "altKey": false,
   "hideFolderNote": false,
   "templatePath": "archetypes/_index_template.md",
-  "autoCreate": true,
+  "autoCreate": false,
   "autoCreateFocusFiles": true,
   "autoCreateForAttachmentFolder": false,
   "autoCreateForFiles": false,
@@ -59,7 +59,7 @@
     "explorer": true,
     "path": true
   },
-  "settingsTab": "file_explorer",
+  "settingsTab": "general",
   "supportedFileTypes": [
     "md",
     "canvas"
