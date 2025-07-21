@@ -47,13 +47,11 @@
     "excalidraw-autoexport": "text",
     "excalidraw-embeddable-theme": "text",
     "excalidraw-open-md": "checkbox",
-    "categories": "multitext",
+    "categories": "checkbox",
     "project": "checkbox",
     "ejaculate": "number",
     "stime": "number",
     "mood": "multitext",
-    "location": "multitext",
-    "to": "multitext",
-    "date": "text"
+    "location": "multitext"
   }
 }
