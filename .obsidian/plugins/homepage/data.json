@@ -9,7 +9,7 @@
       "manualOpenMode": "Keep open notes",
       "view": "Reading view",
       "revertView": true,
-      "openWhenEmpty": true,
+      "openWhenEmpty": false,
       "refreshDataview": false,
       "autoCreate": false,
       "autoScroll": false,

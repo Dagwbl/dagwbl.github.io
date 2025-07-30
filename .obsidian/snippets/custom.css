@@ -23,3 +23,11 @@ a {
 .external-link {
   background-image: none;
 }
+
+.wideInputPromptInputEl {
+  height: 15rem;
+  }
+
+  .quickAddModal .modal-content {
+  padding: 2px;
+}
