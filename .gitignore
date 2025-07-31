@@ -1,15 +1,20 @@
 public/
 resources/
-static/component/minesweeper/node_modules/
-*css.map
-*.js.map
+.obsidian/
+.obsidian/plugins/remotely-save/
+.obsidian/workspace-mobile.json
 .obsidian/workspace.json
 .obsidian/copilot-index-126ac9f6149081eb0e97c2e939eaad52.json
 .obsidian/translator_config.json
 .obsidian/plugins/copilot/data.json
+
+static/component/minesweeper/node_modules/
+*css.map
+*.js.map
+
 .vscode/
 node_modules/
 *.log
 
-.obsidian/plugins/remotely-save/
-.obsidian/workspace-mobile.json
+
+
