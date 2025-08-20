@@ -1,0 +1,32 @@
+views:
+  - type: table
+    name: Diary
+    filters:
+      and:
+        - file.inFolder("content/diary")
+        - draft == true
+  - type: table
+    name: Letter
+    filters:
+      and:
+        - file.inFolder("content/letter")
+        - draft == true
+  - type: table
+    name: Post
+    filters:
+      and:
+        - file.inFolder("content/posts")
+        - draft == true
+    order:
+      - file.name
+      - title
+      - date
+    columnSize:
+      file.name: 140
+      note.title: 167
+  - type: table
+    name: Note
+    filters:
+      and:
+        - file.inFolder("content/project")
+        - draft == true
