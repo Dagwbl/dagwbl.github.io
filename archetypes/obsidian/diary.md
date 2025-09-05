@@ -1,15 +1,15 @@
 ---
 title: "{{date:YYYY-MM-DD}}"
-date: "{{date:YYYY-MM-DD}}T{{time:HH:mm:ss}}+08:00"
+date: "{{date}}"
 categories:
   - diary
-series: 
-tags: 
-mood: 
-weather: 
-location: 
-rating: 
-stime: 
+series:
+tags:
+mood:
+weather:
+location:
+rating:
+stime:
 release: 0
 draft: true
 ---
