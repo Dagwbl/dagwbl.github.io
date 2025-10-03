@@ -1,10 +1,12 @@
 # ===== CONFIG =====
 $hostname = $env:COMPUTERNAME
 if ($hostname -eq "DESKTOP-KC9K3N7") {
-    $vault = "D:\blog\content\diary"
+    $vault = "D:\blog"
 } else {
-    $vault = "D:\A\Jeapo's blog\content\diary"
+    $vault = "D:\A\Jeapo's blog"
 }
+
+Set-Location -Path $vault
 
 # ===== DATE INFO =====
 $yyyy    = Get-Date -Format "yyyy"
@@ -14,7 +16,7 @@ $dd      = Get-Date -Format "dd"
 $curtime = Get-Date -Format "HH:mm"
 $isodate = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
 
-$folder  = Join-Path $vault "$yyyy\$month"
+$folder  = Join-Path $vault "\content\diary\$yyyy\$month"
 $file    = Join-Path $folder "$yyyy-$mm-$dd.md"
 
 # ===== Ensure folders =====
@@ -33,7 +35,7 @@ tags:
 mood:
 weather:
 location:
-rating:
+rating: 1
 stime:
 release: 0
 draft: true
@@ -42,58 +44,29 @@ draft: true
 }
 
 # ===== Input Mode =====
-Write-Host "Wow! What did you do just now?" -ForegroundColor Cyan
-Write-Host "Press Ctrl+D to save and exit" -ForegroundColor DarkGray
-Write-Host "### $curtime " -ForegroundColor DarkYellow -NoNewline
+# Write-Host "Wow! What did you do just now?" -ForegroundColor Cyan
+# Write-Host "Type your entry. Press Enter 3 times to finish." -ForegroundColor DarkGray
+Write-Host "`r`n### $curtime " -ForegroundColor DarkYellow -NoNewline
 
-# Gather multiline input until Ctrl+D
-$entry = @()
-$savedPressed = $false
+$lines = @()
+$emptyCount = 0   # 记录连续空行次数
 
-while (-not $savedPressed) {
-    if ([Console]::KeyAvailable) {
-        $key = [Console]::ReadKey($true)
-        
-        # Check for Ctrl+D
-        if ($key.Key -eq 'D' -and $key.Modifiers -eq 'Control') {
-            $savedPressed = $true
-            Write-Host ""  # New line after Ctrl+D
-            break
-        }
-        # Handle Enter key
-        elseif ($key.Key -eq 'Enter') {
-            Write-Host ""
-            if ($currentLine.Length -gt 0 -or $entry.Count -gt 0) {
-                $entry += $currentLine
-                $currentLine = ""
-            }
-        }
-        # Handle Backspace
-        elseif ($key.Key -eq 'Backspace') {
-            if ($currentLine.Length -gt 0) {
-                $currentLine = $currentLine.Substring(0, $currentLine.Length - 1)
-                Write-Host "`b `b" -NoNewline
-            }
-        }
-        # Regular character input
-        elseif (-not [char]::IsControl($key.KeyChar)) {
-            $currentLine += $key.KeyChar
-            Write-Host $key.KeyChar -NoNewline
-        }
+while ($true) {
+    $line = Read-Host
+    if ([string]::IsNullOrWhiteSpace($line)) {
+        $emptyCount++
+        if ($emptyCount -ge 3) { break }
+    } else {
+        $emptyCount = 0
+        $lines += $line
     }
-    Start-Sleep -Milliseconds 50
 }
 
-# Add the last line if exists
-if ($currentLine.Length -gt 0) {
-    $entry += $currentLine
-}
+$entry = $lines -join "`r`n"
 
-# ===== Write Entry =====
-if ($entry.Count -gt 0) {
-    $joined = $entry -join "`r`n"
-    Add-Content -Path $file -Value "`r`n### $curtime $joined"
-    Write-Host "Saved to $file" -ForegroundColor Green
+if ($entry.Trim().Length -gt 0) {
+    Add-Content -Path $file -Value "`r`n### $curtime $entry"
+    Write-Host "Saved to $file"
 } else {
-    Write-Host "No entry written." -ForegroundColor Red
+    Write-Host "No entry written."
 }
