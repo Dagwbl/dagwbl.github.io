@@ -56,6 +56,7 @@ while ($true) {
     if ([string]::IsNullOrWhiteSpace($line)) {
         $emptyCount++
         if ($emptyCount -ge 3) { break }
+        $lines += $line
     } else {
         $emptyCount = 0
         $lines += $line
