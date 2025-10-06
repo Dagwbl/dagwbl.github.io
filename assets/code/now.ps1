@@ -71,3 +71,5 @@ if ($entry.Trim().Length -gt 0) {
 } else {
     Write-Host "No entry written."
 }
+
+Clear-Host
