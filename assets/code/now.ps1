@@ -66,7 +66,7 @@ while ($true) {
 $entry = $lines -join "`r`n"
 
 if ($entry.Trim().Length -gt 0) {
-    Add-Content -Path $file -Value "`r`n### $curtime $entry"
+    Add-Content -Path $file -Value "### $curtime $entry"
     Write-Host "Saved to $file"
 } else {
     Write-Host "No entry written."
