@@ -115,7 +115,7 @@ while ($true) {
 $entry = $lines -join "`r`n"
 
 if ($entry.Trim().Length -gt 0) {
-    Add-Content -Path $file -Value "### $curtime $entry"
+    Add-Content -Path $file -Value "### $curtime $entry" -Encoding UTF8
     Write-Host "Saved to $file"
 } else {
     Write-Host "No entry written."
