@@ -1,6 +1,7 @@
 param(
-    [switch]$t,            # -t to open today's diary in Typora
-    [string]$TyporaPath    # Optional explicit Typora path
+    [switch]$t,
+    [string]$TyporaPath,
+    [switch]$w
 )
 
 # ===== CONFIG =====
@@ -21,8 +22,41 @@ $dd      = Get-Date -Format "dd"
 $curtime = Get-Date -Format "HH:mm"
 $isodate = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
 
-$folder  = Join-Path $vault "\content\diary\$yyyy\$month"
-$file    = Join-Path $folder "$yyyy-$mm-$dd.md"
+$folder  = Join-Path $vault "\content\diary\$yyyy"
+
+# if get the -w, set file as weekly note
+if ($w) {
+    $weekNumber = Get-Date -UFormat "%V"
+    $weekFolder = Join-Path $vault "\content\diary\$yyyy\weekly"
+    $file = Join-Path $weekFolder "$yyyy-W$weekNumber.md"
+    
+    # Ensure weekly folder exists
+    if (-not (Test-Path $weekFolder)) {
+        New-Item -ItemType Directory -Path $weekFolder -Force | Out-Null
+    }
+    
+    # Create file with weekly template if missing
+    if (-not (Test-Path $file)) {
+@"
+---
+title: "$yyyy-W$weekNumber"
+date: "$isodate"
+categories:
+  - weekly
+series:
+  - group-meeting
+tags:
+mood:
+weather:
+location:
+draft: true
+---
+"@ | Set-Content $file -Encoding UTF8
+    }
+}
+else {
+    $file = Join-Path $folder "$month\$yyyy-$mm-$dd.md"
+}
 
 # ===== Ensure folders =====
 if (-not (Test-Path $folder)) {
@@ -47,7 +81,7 @@ stime:
 release: 0
 draft: true
 ---
-"@ | Set-Content $file
+"@ | Set-Content $file -Encoding UTF8
 }
 
 function Open-TodayDiary {
@@ -64,26 +98,7 @@ function Open-TodayDiary {
         if (-not $PathToTypora) { $PathToTypora = "Typora.exe" } # rely on PATH
     }
 
-    if (-not (Test-Path $file)) {
-@"
----
-title: "$yyyy-$mm-$dd"
-date: "$isodate"
-categories:
-  - diary
-series:
-tags:
-mood:
-weather:
-location:
-rating: 1
-stime:
-release: 0
-draft: true
----
-"@ | Set-Content $file
-    }
-
+    # File is already created earlier, just open it
     Start-Process -FilePath $PathToTypora -ArgumentList "`"$file`""
 }
 
@@ -121,5 +136,5 @@ if ($entry.Trim().Length -gt 0) {
     Write-Host "No entry written."
 }
 
-Clear-Host
+# Clear-Host is removed to avoid disrupting terminal context, especially in VS Code.
 return

@@ -2,7 +2,7 @@
 title: "{{date:gggg-[W]ww}}"
 date: "{{date:YYYY-MM-DDTHH:mm:ssZ}}"
 categories:
-  - diary
+  - weekly
 series:
   - weekly
 tags:
