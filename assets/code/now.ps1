@@ -1,7 +1,9 @@
 param(
     [switch]$t,
     [string]$TyporaPath,
-    [switch]$w
+    [switch]$w,
+    [Parameter(Position=0, ValueFromRemainingArguments=$true)]
+    [string[]]$Message
 )
 
 # ===== CONFIG =====
@@ -46,6 +48,7 @@ categories:
 series:
   - group-meeting
 tags:
+  - reflection
 mood:
 weather:
 location:
@@ -106,6 +109,14 @@ function Open-TodayDiary {
 if ($t) {
     Open-TodayDiary -PathToTypora $TyporaPath
     Write-Host "Opened $file in Typora."
+    return
+}
+
+# ===== One-line quick entry mode =====
+if ($Message -and $Message.Count -gt 0) {
+    $msg = ($Message -join ' ')
+    Add-Content -Path $file -Value "`r`n### $curtime $msg" -Encoding UTF8
+    Write-Host "Saved to $file"
     return
 }
 
