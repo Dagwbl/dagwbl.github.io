@@ -1,0 +1,23 @@
+.notbyai {
+    display: inline-flex;
+
+}
+
+.notbyai .written {
+    margin: 0;
+    padding: 0;
+    width: 131px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-image: url(/usr/not-by-ai/English/Written-By-Human-Not-By-AI-Badge-white.svg);
+}
+
+
+.dark .notbyai .written {
+    margin: 0;
+    padding: 0;
+    width: 131px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-image: url(/usr/not-by-ai/English/Written-By-Human-Not-By-AI-Badge-black.svg);
+}

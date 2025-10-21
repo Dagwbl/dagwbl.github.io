@@ -1,0 +1,18 @@
+@import "baseof";
+@import "papermod-custom";
+@import "heti-custom";
+@import "widgets";
+
+.heti {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.heti h3 {
+    font-size: 18px !important;
+    line-height: 32px !important;
+}
+
+body {
+    background-color: red !important;
+}

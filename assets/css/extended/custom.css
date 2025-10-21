@@ -21,6 +21,7 @@ body {
 
 .main {
     padding-top: 0px;
+    padding: calc(var(--gap)/2);
 }
 
 
@@ -72,4 +73,14 @@ img.w50 {
     height: auto;
     display: block;
     margin: 1em auto;
+}
+
+.heti {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.heti h3 {
+    font-size: 18px !important;
+    line-height: 32px !important;
 }

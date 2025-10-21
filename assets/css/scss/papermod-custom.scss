@@ -1,0 +1,35 @@
+/* Custom the style for home page */
+/*
+  PaperMod v7
+  License: MIT https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE
+  Copyright (c) 2020 nanxiaobei and adityatelange
+  Copyright (c) 2021-2024 adityatelange
+*/
+
+
+:root {
+    --gap: 24px;
+}
+
+img.w50 {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}
+
+/* 修复列表项不显示符号的问题 */
+.home-info ul {
+    padding-inline-start: 20px
+}
+
+.logo,
+#menu {
+    /* display: flex; */
+    margin: auto calc(var(--gap)*0.5);
+}
+
+/* 隐藏菜单中链接后面的 SVG 图标 */
+.nav #menu li a svg {
+    display: none;
+}
