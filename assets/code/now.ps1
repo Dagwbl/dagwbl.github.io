@@ -115,6 +115,8 @@ if ($t) {
 # ===== One-line quick entry mode =====
 if ($Message -and $Message.Count -gt 0) {
     $msg = ($Message -join ' ')
+    # Replace \n with actual line breaks
+    $msg = $msg -replace '\\n', "`r`n"
     Add-Content -Path $file -Value "`r`n### $curtime $msg" -Encoding UTF8
     Write-Host "Saved to $file"
     return
