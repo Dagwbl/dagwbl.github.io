@@ -110,4 +110,8 @@ img.w50 {
     h6 {
         font-size: 14px !important;
     }
+
+    h1, h2, h3 {
+    letter-spacing: 0em !important;
+}
 }
