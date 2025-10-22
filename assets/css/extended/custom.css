@@ -19,12 +19,6 @@ body {
     padding-inline-start: 20px
 }
 
-.main {
-    padding-top: 0px;
-    padding: calc(var(--gap)/2);
-}
-
-
 .logo,
 #menu {
     /* display: flex; */
@@ -75,12 +69,45 @@ img.w50 {
     margin: 1em auto;
 }
 
-.heti {
-    font-size: 16px !important;
-    font-weight: 500 !important;
-}
+@media screen and (max-width: 768px) {
 
-.heti h3 {
-    font-size: 18px !important;
-    line-height: 32px !important;
+    /* theme-vars */
+    :root {
+        --gap: 14px;
+    }
+
+    main {
+        padding-top: 0px;
+        padding: calc(var(--gap)/2);
+    }
+
+    p {
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        text-align: justify;
+    }
+
+    h1 {
+        font-size: 32px !important;
+    }
+
+    h2 {
+        font-size: 24px !important;
+    }
+
+    h3 {
+        font-size: 20px !important;
+    }
+
+    h4 {
+        font-size: 18px !important;
+    }
+
+    h5 {
+        font-size: 16px !important;
+    }
+
+    h6 {
+        font-size: 14px !important;
+    }
 }
