@@ -75,7 +75,9 @@ date: "$isodate"
 categories:
   - diary
 series:
+  - 
 tags:
+  - 
 mood:
 weather:
 location:

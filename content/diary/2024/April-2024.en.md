@@ -1,10 +1,9 @@
 ---
 title: "April 2024"
 date: 2024-04-30
-tags: [debate]
+tags: [debate，footprint]
 series: ["2024"]
 categories: diary
-tags: [footprint]
 language: en
 tocOpen: true
 math: false
