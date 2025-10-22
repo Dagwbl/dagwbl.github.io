@@ -6,6 +6,13 @@
 {{ partial "math.html" . }}
 {{ end }}
 
+{{ $sass := resources.Get "scss/custom.scss" }}
+{{ if $sass }}
+  {{ $style := $sass | css.Sass }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
+
+
 {{ range .Site.Params.customcss }}
     <link rel="stylesheet" href="{{ . | absURL }}">
 {{- end }}

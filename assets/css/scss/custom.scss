@@ -1,7 +1,7 @@
-@import "baseof";
-@import "papermod-custom";
-@import "heti-custom";
-@import "widgets";
+// @import "baseof";
+// @import "papermod";
+// @import "heti";
+// @import "widgets";
 
 .heti {
     font-size: 14px !important;
@@ -13,6 +13,7 @@
     line-height: 32px !important;
 }
 
-body {
+p{
     background-color: red !important;
+    font-size: 100px !important;
 }
