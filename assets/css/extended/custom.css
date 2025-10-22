@@ -14,6 +14,10 @@ body {
     font-family: 'Helvetica-EN', 'Times New Roman', 'LXGW WenKai Screen', '-apple-system', 'BlinkMacSystemFont', 'segoe ui', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'open sans', Verdana, sans-serif;
 }
 
+main {
+    text-align: justify;
+}
+
 /* 修复列表项不显示符号的问题 */
 .home-info ul {
     padding-inline-start: 20px
