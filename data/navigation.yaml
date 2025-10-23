@@ -45,7 +45,6 @@
     #   icon: "🦋"
     #   weight: 12
     #   link: "https://gemini.google.com/"
-      refused: true
     - name: "LMArena"
       icon: "🏟️"
       weight: 13

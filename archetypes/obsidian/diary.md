@@ -4,7 +4,9 @@ date: "{{date:YYYY-MM-DDTHH:mm:ssZ}}"
 categories:
   - diary
 series:
+  -
 tags:
+  -
 mood:
 weather:
 location:

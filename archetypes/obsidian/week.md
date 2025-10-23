@@ -4,8 +4,9 @@ date: "{{date:YYYY-MM-DDTHH:mm:ssZ}}"
 categories:
   - weekly
 series:
-  - weekly
+  - group-meeting
 tags:
+  - 
 mood:
 weather:
 location:

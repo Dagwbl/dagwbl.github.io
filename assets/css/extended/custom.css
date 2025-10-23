@@ -14,16 +14,14 @@ body {
     font-family: 'Helvetica-EN', 'Times New Roman', 'LXGW WenKai Screen', '-apple-system', 'BlinkMacSystemFont', 'segoe ui', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'open sans', Verdana, sans-serif;
 }
 
+main {
+    text-align: justify;
+}
+
 /* 修复列表项不显示符号的问题 */
 .home-info ul {
     padding-inline-start: 20px
 }
-
-.main {
-    padding-top: 0px;
-    padding: calc(var(--gap)/2);
-}
-
 
 .logo,
 #menu {
@@ -75,12 +73,49 @@ img.w50 {
     margin: 1em auto;
 }
 
-.heti {
-    font-size: 16px !important;
-    font-weight: 500 !important;
-}
+@media screen and (max-width: 768px) {
 
-.heti h3 {
-    font-size: 18px !important;
-    line-height: 32px !important;
+    /* theme-vars */
+    :root {
+        --gap: 14px;
+    }
+
+    main {
+        padding-top: 0px;
+        padding: calc(var(--gap)/2);
+    }
+
+    p {
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        text-align: justify;
+    }
+
+    h1 {
+        font-size: 32px !important;
+    }
+
+    h2 {
+        font-size: 24px !important;
+    }
+
+    h3 {
+        font-size: 20px !important;
+    }
+
+    h4 {
+        font-size: 18px !important;
+    }
+
+    h5 {
+        font-size: 16px !important;
+    }
+
+    h6 {
+        font-size: 14px !important;
+    }
+
+    h1, h2, h3 {
+    letter-spacing: 0em !important;
+}
 }
