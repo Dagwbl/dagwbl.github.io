@@ -24,12 +24,12 @@ $dd      = Get-Date -Format "dd"
 $curtime = Get-Date -Format "HH:mm"
 $isodate = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
 
-$folder  = Join-Path $vault "\content\diary\$yyyy"
+$folder  = Join-Path $vault "content\diary\$yyyy"
 
 # if get the -w, set file as weekly note
 if ($w) {
     $weekNumber = Get-Date -UFormat "%V"
-    $weekFolder = Join-Path $vault "\content\diary\$yyyy\weekly"
+    $weekFolder = Join-Path $vault "content\diary\$yyyy\weekly"
     $file = Join-Path $weekFolder "$yyyy-W$weekNumber.md"
     
     # Ensure weekly folder exists
@@ -58,12 +58,19 @@ draft: true
     }
 }
 else {
-    $file = Join-Path $folder "$month\$yyyy-$mm-$dd.md"
+    $monthFolder = Join-Path $folder $month
+    $file = Join-Path $monthFolder "$yyyy-$mm-$dd.md"
 }
 
 # ===== Ensure folders =====
 if (-not (Test-Path $folder)) {
-    New-Item -ItemType Directory -Path $folder | Out-Null
+    New-Item -ItemType Directory -Path $folder -Force | Out-Null
+}
+
+# Ensure the parent directory of the target file exists (e.g., the month folder)
+$parentDir = Split-Path -Path $file -Parent
+if (-not (Test-Path $parentDir)) {
+    New-Item -ItemType Directory -Path $parentDir -Force | Out-Null
 }
 
 # ===== Create file with template if missing =====
