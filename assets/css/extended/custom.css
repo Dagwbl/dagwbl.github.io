@@ -17,7 +17,17 @@ body {
 main {
     text-align: justify;
 }
+/* tight layout for table */
+.post-content table {
+    font-size: 12px !important;
+    white-space: nowrap !important;
 
+}
+.post-content table th, .post-content table:not(.highlighttable,.highlight table,.gist .highlight) td {
+    min-width: 20px !important;
+    padding: 5px 3px !important;
+
+}
 /* 修复列表项不显示符号的问题 */
 .home-info ul {
     padding-inline-start: 20px
