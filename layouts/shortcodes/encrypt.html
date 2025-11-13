@@ -11,14 +11,28 @@
 {{- $encoded := $html | base64Encode -}}
 {{- $cipher := $encoded | replaceRE "(.{5})(.{3})(.{4})(.+)" "$2$4$1$3" -}}
 
-<div class="encrypted-content" data-cipher="{{ $cipher }}" data-hint="{{ $hint }}">
+<div class="encrypted-content" data-cipher="{{ $cipher }}" data-hint="{{ $hint }}" data-error="{{ i18n "password_error" | htmlEscape }}">
   <div class="locked-state">
     <p>🔒 {{ i18n "content_is_encrypted" }}</p>
     <div class="password-prompt">
-      <input type="password" class="password-input"
-             placeholder="{{ $hint }}"
-             id="pwd-input-{{ .Ordinal }}"
-             aria-label="加密内容密码">
+      <div class="password-input-wrapper">
+        <input type="password" class="password-input"
+               placeholder="{{ $hint }}"
+               id="pwd-input-{{ .Ordinal }}"
+               aria-label="加密内容密码">
+        <button type="button"
+                class="toggle-visibility-btn"
+                aria-pressed="false"
+                aria-label="显示或隐藏密码"
+                onclick="toggleVisibility(this, 'pwd-input-{{ .Ordinal }}')">
+          <svg class="icon icon-eye-open" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 5C6 5 2 12 2 12s4 7 10 7 10-7 10-7-4-7-10-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+          </svg>
+          <svg class="icon icon-eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3.5 4.5 2 6l3.2 3.2A13 13 0 0 0 2 12s4 7 10 7a9.7 9.7 0 0 0 4.7-1.2L18 19l2.5 2.5 1.5-1.5-18-18Zm8.5 12c-5.1 0-8-4-8-4a11 11 0 0 1 2.6-2.9l1.6 1.6a4 4 0 0 0 5.2 5.2l1.6 1.6A7.7 7.7 0 0 1 12 16.5Zm8-4.5a12.5 12.5 0 0 0-4.2-3.6l1.6-1.6A13.6 13.6 0 0 1 22 12s-1.1 2-3 4.1l-1.4-1.4A11.2 11.2 0 0 0 20 12Z"/>
+          </svg>
+        </button>
+      </div>
       <button class="decrypt-btn" onclick="decryptContent(event, 'pwd-input-{{ .Ordinal }}')">
         {{ i18n "unlock" }}
       </button>
@@ -46,7 +60,7 @@
   /* background: transparent; */
   background-image: radial-gradient(rgba(50, 0, 0, 0.1) 1px, transparent 0) !important;
   background-size: 10px 10px;
-  background-color: #fefefe42;
+  /* background-color: #fefefe42; */
 }
 
 .password-prompt {
@@ -55,10 +69,16 @@
   margin: 1rem 0;
 }
 
-.password-input {
+.password-input-wrapper {
+  position: relative;
   flex: 3;
+}
+
+.password-input {
+  width: 100%;
   min-width: 150px;
   padding: 0.75rem;
+  padding-right: 2.5rem;
   border: 1px solid #ddd;
   border-radius: 0.25rem;
 }
@@ -67,10 +87,44 @@
   border-color: #dc3545;
 }
 
+.toggle-visibility-btn {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  line-height: 0;
+  padding: 0;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-visibility-btn .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
+.toggle-visibility-btn .icon-eye-closed {
+  display: none;
+}
+
+.toggle-visibility-btn.is-visible .icon-eye-open {
+  display: none;
+}
+
+.toggle-visibility-btn.is-visible .icon-eye-closed {
+  display: block;
+}
+
 .decrypt-btn {
   /*  padding: 0.75rem 1.25rem;  */
   background-color: var(--primary, #1e90ff);
-  color: var(--theme);
+  color: var(--theme, #fff);
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -96,6 +150,14 @@
 </style>
 
 <script>
+  function toggleVisibility(btn, inputId) {
+    const input = document.getElementById(inputId);
+    const isPwd = input.type === 'password';
+    input.type = isPwd ? 'text' : 'password';
+    btn.setAttribute('aria-pressed', String(isPwd));
+    btn.classList.toggle('is-visible', isPwd);
+  }
+
   function decryptContent(event, inputId) {
     event.preventDefault();
     const input = document.getElementById(inputId);
@@ -104,16 +166,18 @@
     const decryptedContent = container.querySelector('.decrypted-content');
   
     statusEl.textContent = '';
+    statusEl.classList.remove('error');
     input.classList.remove('error');
   
     // 自动生成今天的密码：1005 - MMDD（UTC）
     const today = new Date();
     const mmdd = String(today.getUTCMonth() + 1).padStart(2, '0') + String(today.getUTCDate()).padStart(2, '0');
-    const validPwd = String(1005 - parseInt(mmdd)).padStart(4, '0');
+    const diff = 1005 - (parseInt(mmdd, 10) || 0);
+    const validPwd = String(Math.abs(diff)).padStart(4, '0');
   
     if (input.value !== validPwd) {
       input.classList.add('error');
-      statusEl.textContent = '密码错误！';
+      statusEl.textContent = container.dataset.error || '';
       statusEl.classList.add('error');
       input.focus();
       return;
@@ -122,7 +186,15 @@
     try {
       let cipherText = container.dataset.cipher.replace(/\s+/g, '');
   
-      // 反混淆逻辑：匹配 replaceRE "$2$4$1$3"
+      // Cipher de-obfuscation logic:
+      // The original string was reordered using replaceRE "$2$4$1$3" in Hugo.
+      // Here, we reverse that process:
+      // - part1: first 3 chars ($2)
+      // - part2: chars from index 3 to length-9 ($4)
+      // - part3: chars from length-9 to length-4 ($1)
+      // - part4: last 4 chars ($3)
+      // The final order restores the original: $1 + $2 + $3 + $4
+      // Magic numbers (3, -9, -4, -4) correspond to the lengths of each group in the regex.
       if (cipherText.length > 12) {
         const part1 = cipherText.slice(0, 3);               // $2
         const part2 = cipherText.slice(3, -9);              // $4
@@ -149,7 +221,7 @@
   
     } catch (e) {
       console.error(e);
-      statusEl.textContent = '解码失败：' + e.message;
+      statusEl.textContent = '{{ i18n "decode_failed" }}: ' + e.message;
       statusEl.classList.add('error');
     }
   }

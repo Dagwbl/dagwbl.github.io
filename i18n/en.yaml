@@ -38,6 +38,12 @@
 - id: content_is_encrypted
   translation: "Content Here is Encrypted"
 
+- id: password_error
+  translation: "Password Error"
+
+- id: decode_failed
+  translation: "Decode Failed"
+
 - id: unlock
   translation: "Unlock"
 
