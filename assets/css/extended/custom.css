@@ -95,7 +95,7 @@ img.w50 {
         padding: calc(var(--gap)/2);
     }
 
-    p {
+    .post-content {
         font-size: 16px !important;
         font-weight: 500 !important;
         text-align: justify;
