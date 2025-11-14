@@ -15,7 +15,7 @@ body {
 }
 
 main {
-    text-align: justify;
+    /* text-align: justify; */
 }
 /* tight layout for table */
 .post-content table {
