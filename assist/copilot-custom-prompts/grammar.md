@@ -11,4 +11,4 @@ For each issue:
 
 - Only quote the original incorrect sentence.
 - Only correct what is necessary.
-- Markdown formatting as a table with 3cols  (Original, Correct, Category).
+- Markdown formatting as a table with 3cols  (Original, Correct, Reason).
