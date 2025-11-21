@@ -20,12 +20,10 @@ main {
 /* tight layout for table */
 .post-content table {
     font-size: 12px !important;
-    white-space: nowrap !important;
-
+    text-align: left !important;
 }
 .post-content table th, .post-content table:not(.highlighttable,.highlight table,.gist .highlight) td {
-    min-width: 20px !important;
-    padding: 5px 3px !important;
+    padding: 3px 1px !important;
 
 }
 /* 修复列表项不显示符号的问题 */
@@ -70,10 +68,6 @@ main {
     height: 42px;
     background-repeat: no-repeat;
     background-image: url(/usr/not-by-ai/English/Written-By-Human-Not-By-AI-Badge-black.svg);
-}
-
-.post-content table tr:first-child th {
-    border-bottom: 2px solid var(--border);
 }
 
 img.w50 {
