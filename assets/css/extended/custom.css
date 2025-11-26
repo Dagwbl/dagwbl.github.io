@@ -19,7 +19,7 @@ main {
 }
 /* tight layout for table */
 .post-content table {
-    font-size: 12px !important;
+    font-size: 14px !important;
     text-align: left !important;
 }
 .post-content table th, .post-content table:not(.highlighttable,.highlight table,.gist .highlight) td {
