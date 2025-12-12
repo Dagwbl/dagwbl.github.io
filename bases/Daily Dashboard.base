@@ -1,0 +1,32 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - '!file.name.contains("index")'
+        - file.folder.startsWith("content/diary")
+    order:
+      - date
+      - stime
+      - mood
+      - rating
+      - release
+      - file.name
+      - title
+    sort:
+      - property: date
+        direction: DESC
+      - property: title
+        direction: DESC
+    columnSize:
+      note.date: 102
+      note.release: 97
+      file.name: 135
+      note.title: 141
+  - type: list
+    name: View
+    order: []
+    indentProperties: false
+    markers: number
+  - type: table
+    name: View 2
