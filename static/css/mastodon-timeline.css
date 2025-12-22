@@ -231,7 +231,15 @@
     position: sticky;
     top: 20px;
     height: calc(100vh - 90px);
-    align-self: start
+    align-self: start;
+    text-align: end;
+}
+
+/* Keep the timeline nav flush to the right inside the sidebar so fixed positioning doesn't shift it */
+.mastodon-sidebar > .mastodon-timeline-nav,
+.mastodon-sidebar > nav.mastodon-timeline-nav {
+    display: block;
+    margin-left: auto;
 }
 
 .mastodon-timeline-scroll {

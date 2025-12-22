@@ -27,10 +27,26 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function onScroll() {
+    const isFixed = timeline.classList.contains('fixed');
     if (window.scrollY > stickyTop) {
-      timeline.classList.add('fixed');
+      if (!isFixed) {
+        // Preserve current on-screen position and width when switching to fixed
+        const rect = timeline.getBoundingClientRect();
+        timeline.style.left = rect.left + 'px';
+        timeline.style.width = rect.width + 'px';
+        // Set top to current visual top so adding `fixed` doesn't jump
+        timeline.style.top = rect.top + 'px';
+        timeline.classList.add('fixed');
+      }
     } else {
-      timeline.classList.remove('fixed');
+      if (isFixed) {
+        timeline.classList.remove('fixed');
+        // Remove inline positioning so nav returns to normal flow
+        timeline.style.left = '';
+        timeline.style.width = '';
+        // Recalculate sticky offset after unfixing
+        recalc();
+      }
     }
 
     const viewLine = window.scrollY + window.innerHeight / 3;
@@ -60,12 +76,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (active >= items.length) active = items.length - 1;
 
     // set top position to slide the nav (similar to CodePen behavior)
-    if (active >= 0) {
-      timeline.style.top = (-active * TIMELINE.step + TIMELINE.start) + 'px';
-    } else {
-      // no active milestone: reset to start position
-      timeline.style.top = TIMELINE.start + 'px';
-    }
+    // If nav is fixed we adjust the inline `top` (viewport pixels). If not, this remains the offset inside its container.
+    const targetTop = (active >= 0) ? (-active * TIMELINE.step + TIMELINE.start) : TIMELINE.start;
+    timeline.style.top = targetTop + 'px';
 
     // update active class only when a valid active index exists
     items.forEach((li, idx) => li.classList.toggle('active', active >= 0 && idx === active));
