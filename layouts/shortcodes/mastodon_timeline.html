@@ -35,7 +35,8 @@
     </div>
 
     <aside class="mastodon-sidebar" aria-label="Timeline navigation">
-      <div class="mastodon-timeline-scroll">
+      <nav class="mastodon-timeline-nav" aria-label="Timeline months">
+        <ul>
         {{/* show month labels only (link to newest post of that month) */}}
         {{ $sortedPosts := sort $data.posts "created_at" "desc" }}
         {{ $todayMonth := now.Format "2006-01" }}
@@ -45,13 +46,13 @@
           {{ $ym := $t.Format "2006-01" }}
           {{ if ne $ym $lastMonth }}
             {{/* render friendly month label and link to this (newest in month) post */}}
-            <div class="mastodon-month">
-              <a class="mastodon-side-item {{ if eq $ym $todayMonth }}current{{ end }}" href="#post-{{ $p.id }}">{{ $t.Format "Jan 2006" }}</a>
-            </div>
+            <li><span class="mastodon-month-item" data-target="post-{{ $p.id }}">{{ $t.Format "Jan 2006" }}</span></li>
             {{ $lastMonth = $ym }}
           {{ end }}
         {{ end }}
-      </div>
+        </ul>
+      </nav>
+      <script src="/js/mastodon-timeline.js" defer></script>
     </aside>
   </div>
 {{ end }}
