@@ -1,0 +1,388 @@
+.mastodon-timeline {
+    max-width: 900px;
+    margin: 24px auto;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    padding: 0 12px;
+}
+
+.mastodon-header-flex {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 2px;
+}
+.mastodon-avatar-wrap{
+    height: 72px; /* avatar height + extra space below */
+    display: flex;
+    align-items: center; /* center avatar vertically inside wrapper */
+    width: 64px;
+    flex: 0 0 64px;
+}
+.mastodon-avatar {
+    align-self: center;
+    display: block;
+}
+.mastodon-item {
+    padding: 16px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+    margin-bottom: 12px;
+    transition: box-shadow .15s ease, transform .06s ease;
+}
+
+.mastodon-body {
+    margin-left: calc(64px + 14px);
+}
+
+/* .mastodon-right-col removed — content now placed under header-flex for correct alignment */
+
+.mastodon-item:hover {
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.08);
+    transform: translateY(-2px);
+}
+
+.mastodon-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 64px;
+    box-shadow: 0 1px 2px rgba(2, 6, 23, 0.06);
+    align-self: center;
+}
+
+.mastodon-body {
+    flex: 1;
+    min-width: 0
+}
+
+.mastodon-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px
+}
+
+.mastodon-head-left {
+    display: block;
+    min-width: 0
+}
+
+.mastodon-head {
+    display: flex;
+    align-items: flex-start;
+}
+.mastodon-head-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mastodon-head-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.mastodon-head-date {
+    margin-top: 2px;
+}
+.mastodon-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: #0f172a;
+    box-shadow: none !important;
+}
+
+.mastodon-name:hover {
+    text-decoration: none;
+    color: #0b1220;
+}
+.mastodon-date {
+    color: #6b7280;
+    font-size: 13px;
+}
+.mastodon-link {
+    text-decoration: none !important;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    margin-left: 6px;
+}
+.mastodon-item:hover .mastodon-link {
+    opacity: 1;
+}
+.mastodon-link svg {
+    width: 18px;
+    height: 18px;
+    fill: #6364ff;
+    vertical-align: middle;
+}
+.mastodon-link svg {
+    width: 20px;
+    height: 20px;
+    fill: #6364ff;
+    vertical-align: middle;
+}
+
+.mastodon-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: #0f172a
+}
+
+.mastodon-user {
+    color: #6b7280;
+    font-size: 13px
+}
+
+.mastodon-time {
+    color: #9ca3af;
+    font-size: 12px;
+    margin-left: 6px
+}
+
+.mastodon-content {
+    margin-top: 8px;
+    color: #111827;
+    font-size: 15px;
+    line-height: 1.6;
+    word-break: break-word
+}
+
+.mastodon-content a {
+    color: #1d4ed8;
+    text-decoration: none
+}
+
+.mastodon-content a:hover {
+    text-decoration: underline
+}
+
+@media (max-width:640px) {
+    .mastodon-item {
+        padding: 12px
+    }
+
+    .mastodon-avatar {
+        width: 48px;
+        height: 48px;
+        flex: 0 0 48px
+    }
+
+    .mastodon-avatar-wrap{
+        height: 56px; /* smaller wrapper on mobile */
+        width: 48px;
+        flex: 0 0 48px;
+    }
+
+    .mastodon-body {
+        margin-left: calc(48px + 14px);
+    }
+
+    .mastodon-name {
+        font-size: 14px
+    }
+
+    .mastodon-content {
+        font-size: 14px
+    }
+}
+
+/* Add subtle divider between header and content for long posts */
+.mastodon-body .mastodon-head {
+    margin-bottom: 6px
+}
+
+.mastodon-meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #9ca3af;
+    font-size: 12px
+}
+
+.mastodon-item .mastodon-user::before {
+    content: "@";
+    margin-right: 0
+}
+
+/* Prevent justified text from stretching links and long words */
+.mastodon-content {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    text-align: left
+}
+
+/* Two-column layout: list + sticky timeline */
+.mastodon-layout {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 18px;
+    align-items: start
+}
+
+.mastodon-list {
+    min-width: 0
+}
+
+.mastodon-sidebar {
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 90px);
+    align-self: start
+}
+
+.mastodon-timeline-scroll {
+    background: transparent;
+    border-radius: 12px;
+    padding: 8px 6px;
+    overflow: auto;
+    height: 100%;
+    box-shadow: 0 1px 2px rgba(2, 6, 23, 0.04)
+}
+
+.mastodon-side-item {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: #374151;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 6px
+}
+
+.mastodon-side-item:hover {
+    background: #f1f5f9;
+    color: #0f172a
+}
+
+/* Narrower cards and smaller avatar for compact look */
+.mastodon-item {
+    padding: 12px;
+    border-radius: 10px
+}
+
+.mastodon-avatar {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px
+}
+
+/* Header lines alignment: name on first line, handle+time on second line aligned with avatar */
+.mastodon-head-line1 {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    min-height: 48px;
+}
+
+.mastodon-head-line2 {
+    display: block;
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 1px;
+}
+
+@media (max-width:900px) {
+    .mastodon-layout {
+        grid-template-columns: 1fr 180px
+    }
+}
+
+@media (max-width:720px) {
+    .mastodon-layout {
+        grid-template-columns: 1fr
+    }
+
+    .mastodon-sidebar {
+        position: relative;
+        height: auto
+    }
+
+    .mastodon-timeline-scroll {
+        display: flex;
+        gap: 6px;
+        overflow: auto;
+        padding: 6px
+    }
+
+    .mastodon-side-item {
+        white-space: nowrap
+    }
+}
+
+/* Vertical axis styling inside sidebar */
+.mastodon-timeline-scroll {
+    position: relative;
+    padding-left: 24px
+}
+
+.mastodon-timeline-scroll::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    background: linear-gradient(#e6edf3, #f8fafc);
+    border-radius: 2px
+}
+
+.mastodon-month {
+    margin-bottom: 12px;
+    padding-left: 8px
+}
+
+.mastodon-month-label {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 6px;
+    font-weight: 600
+}
+
+.mastodon-month-items {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.mastodon-side-item {
+    position: relative;
+    padding-left: 14px
+}
+
+.mastodon-side-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e6eefc;
+    border: 2px solid #f8fafc
+}
+
+.mastodon-side-item.current {
+    background: #1d4ed8;
+    color: #ffffff
+}
+
+.mastodon-side-item.current::before {
+    background: #ffffff;
+    border-color: #1d4ed8
+}
+
+/* Make sure left list cards align vertical spacing with the sidebar markers */
+.mastodon-list .mastodon-item {
+    margin-bottom: 10px
+}
+
+/* Date styling inside card */
+.mastodon-date {
+    color: #6b7280;
+    font-size: 13px
+}

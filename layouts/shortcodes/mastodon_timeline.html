@@ -1,0 +1,57 @@
+{{ $data := site.Data.mastodon.timeline }}
+{{ if not $data }}
+  <p>No Mastodon timeline data found.</p>
+{{ else }}
+  <link rel="stylesheet" href="/css/mastodon-timeline.css">
+  <div class="mastodon-layout">
+    <div class="mastodon-list">
+    {{/* Build ordered unique months list */}}
+    
+
+    {{/* Render posts list (left) in original order */}}
+    {{ range $data.posts }}
+      {{ $id := printf "post-%s" .id }}
+      {{ $t := time .created_at }}
+      {{ $date := $t.Format "2006-01-02 15:04" }}
+      <article id="{{ $id }}" class="mastodon-item">
+        <div class="mastodon-header-flex">
+          <div class="mastodon-avatar-wrap">
+            <img class="mastodon-avatar" src="{{ .account.avatar }}" alt="{{ .account.acct }}">
+          </div>
+          <div class="mastodon-head-main">
+            <div class="mastodon-head-row">
+              <a class="mastodon-name" href="{{ .url }}" target="_blank" rel="noopener">{{ .account.display_name }}</a>
+            </div>
+            <div class="mastodon-head-row mastodon-head-date">
+              <span class="mastodon-date">{{ $date }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="mastodon-body">
+          <div class="mastodon-content">{{ .content | safeHTML }}</div>
+        </div>
+      </article>
+    {{ end }}
+    </div>
+
+    <aside class="mastodon-sidebar" aria-label="Timeline navigation">
+      <div class="mastodon-timeline-scroll">
+        {{/* show month labels only (link to newest post of that month) */}}
+        {{ $sortedPosts := sort $data.posts "created_at" "desc" }}
+        {{ $todayMonth := now.Format "2006-01" }}
+        {{ $lastMonth := "" }}
+        {{ range $i, $p := $sortedPosts }}
+          {{ $t := time $p.created_at }}
+          {{ $ym := $t.Format "2006-01" }}
+          {{ if ne $ym $lastMonth }}
+            {{/* render friendly month label and link to this (newest in month) post */}}
+            <div class="mastodon-month">
+              <a class="mastodon-side-item {{ if eq $ym $todayMonth }}current{{ end }}" href="#post-{{ $p.id }}">{{ $t.Format "Jan 2006" }}</a>
+            </div>
+            {{ $lastMonth = $ym }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </aside>
+  </div>
+{{ end }}
