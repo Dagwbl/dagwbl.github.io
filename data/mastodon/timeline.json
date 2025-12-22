@@ -1,6 +1,19 @@
 {
-  "generated_at": "2025-12-22T08:56:52.568036Z",
+  "generated_at": "2025-12-22T18:36:19.012945Z",
   "posts": [
+    {
+      "id": "115764328705247587",
+      "url": "https://techhub.social/@pong/115764328705247587",
+      "created_at": "2025-12-22T17:11:12.676Z",
+      "content": "<p>I just went to the property management office to report the noise problem in the apartment office. </p><p>It&#39;s so annoying!😠🔊🔉🔊🔉🔊</p>",
+      "account": {
+        "id": "115749544003250069",
+        "display_name": "Pumbaa",
+        "username": "pong",
+        "acct": "pong",
+        "avatar": "https://techhub.social/avatars/original/missing.png"
+      }
+    },
     {
       "id": "115762378702488530",
       "url": "https://techhub.social/@pong/115762378702488530",
@@ -15,19 +28,6 @@
       }
     },
     {
-      "id": "115751539611400287",
-      "url": "https://floss.social/@pottekkat/115751539611400287",
-      "created_at": "2025-12-20T10:58:46.590Z",
-      "content": "<p>Hello from my first IndieWebClub meetup in Bangalore! Cool people with even cooler blogs. I think it is time we take back the internet. (<a href=\"https://navendu.me/notes/20251220162012-indiewebclub/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">navendu.me/notes/2025122016201</span><span class=\"invisible\">2-indiewebclub/</span></a>)</p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
       "id": "115749593459603428",
       "url": "https://techhub.social/@pong/115749593459603428",
       "created_at": "2025-12-20T02:43:50.671Z",
@@ -38,175 +38,6 @@
         "username": "pong",
         "acct": "pong",
         "avatar": "https://techhub.social/avatars/original/missing.png"
-      }
-    },
-    {
-      "id": "115531334742977289",
-      "url": "https://floss.social/@pottekkat/115531334742977289",
-      "created_at": "2025-11-11T13:37:46.951Z",
-      "content": "<p>This was posted on my personal website and syndicated to Mastodon. I&#39;ll be following POSSE from now on (<a href=\"https://indieweb.org/POSSE\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">indieweb.org/POSSE</span><span class=\"invisible\"></span></a>).</p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "115531322102077406",
-      "url": "https://floss.social/@pottekkat/115531322102077406",
-      "created_at": "2025-11-11T13:34:34.067Z",
-      "content": "<p>Hello IndieWeb! (<a href=\"https://navendu.me/notes/20251111190027-hello-indieweb/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">navendu.me/notes/2025111119002</span><span class=\"invisible\">7-hello-indieweb/</span></a>)</p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113507753585104809",
-      "url": "https://floss.social/@pottekkat/113507753585104809",
-      "created_at": "2024-11-19T04:34:28.915Z",
-      "content": "<p>The web doesn&#39;t just belong to software engineers.</p><p>From &quot;The Static Site Paradox&quot; by Loris Cro.</p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113504290534562277",
-      "url": "https://floss.social/@pottekkat/113504290534562277",
-      "created_at": "2024-11-18T13:53:46.954Z",
-      "content": "<p>I added a &quot;Today I Learned&quot; section to my blog to share the small stuff I learn every day.</p><p>My goal was to create a space where I can quickly publish shards of knowledge that would otherwise be lost to my future self and others.</p><p>I documented how I created this section for my Hugo blog here: <a href=\"https://navendu.me/posts/til-section-hugo/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">navendu.me/posts/til-section-h</span><span class=\"invisible\">ugo/</span></a></p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113476178211687336",
-      "url": "https://floss.social/@pottekkat/113476178211687336",
-      "created_at": "2024-11-13T14:44:26.949Z",
-      "content": "<p>For me, CSS is just trying every value for a property until I get what I want.</p><p>This CSS ignorance has only increased with access to Copilot in my code editor, where I conveniently delegate CSS specifics to the AI.</p><p>Today, I found this excellent interactive tutorial on CSS Flexbox (which I use a lot) that helps you intuitively understand how to use it properly.</p><p>I should look for more such CSS tutorials instead of trying random things.</p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113475858376009359",
-      "url": "https://floss.social/@pottekkat/113475858376009359",
-      "created_at": "2024-11-13T13:23:06.645Z",
-      "content": "<p>Both Aaron Swartz and Sam Altman were members of the first Y Combinator cohort.</p><p>Screenshot from &quot;Paul Graham and the Cult of the Founder&quot; by Dave Karpf.</p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113470577232955310",
-      "url": "https://floss.social/@pottekkat/113470577232955310",
-      "created_at": "2024-11-12T15:00:02.797Z",
-      "content": "<p>I have been using Front Matter CMS to manage my Hugo-based blog for the past month.</p><p>Spoiler: It works great!</p><p>I had tried other CMS solutions before, but every single one had annoying gaps that prevented me from committing fully.</p><p>Front Matter runs entirely in Visual Studio Code and has been a pleasant exception.</p><p>Read more on my blog: <a href=\"https://navendu.me/posts/cms-ide/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">navendu.me/posts/cms-ide/</span><span class=\"invisible\"></span></a></p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113436335665601187",
-      "url": "https://floss.social/@pottekkat/113436335665601187",
-      "created_at": "2024-11-06T13:51:57.944Z",
-      "content": "<p>Apache Superset and Apache ECharts are the best data visualization tools I have used recently. It is no coincidence that they are the most starred Apache projects (1 and 2).</p><p>PS: My bias as an ASF maintainer is irrelevant if the projects are this good 🤐</p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113435915015528425",
-      "url": "https://floss.social/@pottekkat/113435915015528425",
-      "created_at": "2024-11-06T12:04:59.331Z",
-      "content": "<p>Read the full article here: <a href=\"https://www.techcircle.in/2024/11/05/why-is-open-source-community-in-india-rallying-against-software-patents\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"ellipsis\">techcircle.in/2024/11/05/why-i</span><span class=\"invisible\">s-open-source-community-in-india-rallying-against-software-patents</span></a></p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113435912546533450",
-      "url": "https://floss.social/@pottekkat/113435912546533450",
-      "created_at": "2024-11-06T12:04:21.659Z",
-      "content": "<p>This is the simplest way to put it. SOFTWARE CAN&#39;T BE PATENTED.</p><p>While there has been an increase in software patents in India, there has also been an increase in companies adopting open source, community-friendly business models. Initiatives like End Software Patents (India) are helping discourage the former and embrace the latter.</p><p>Screenshot from &quot;Why is open-source community in India rallying against software patents&quot; by TechCircle.</p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113435901954826656",
-      "url": "https://floss.social/@pottekkat/113435901954826656",
-      "created_at": "2024-11-06T12:01:40.042Z",
-      "content": "<p>Read the full article by Dries Buytaert here: <a href=\"https://dri.es/balancing-makers-and-takers-to-scale-and-sustain-open-source\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">dri.es/balancing-makers-and-ta</span><span class=\"invisible\">kers-to-scale-and-sustain-open-source</span></a></p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113435897135736052",
-      "url": "https://floss.social/@pottekkat/113435897135736052",
-      "created_at": "2024-11-06T12:00:26.509Z",
-      "content": "<p>I might be five years late in reading this, but Dries Buytaert clearly and concisely explains how we can build and sustain open source projects using easy-to-understand economic models.</p><p>This is a must-read for everyone thinking about building sustainable open source projects.</p><p>From &quot;Balancing Makers and Takers to scale and sustain Open Source.&quot;</p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
-      }
-    },
-    {
-      "id": "113238763388857950",
-      "url": "https://floss.social/@pottekkat/113238763388857950",
-      "created_at": "2024-10-02T16:26:44.249Z",
-      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@rahulporuri\" class=\"u-url mention\">@<span>rahulporuri</span></a></span> Veritasium also made a video recently around this topic: <a href=\"https://youtu.be/qf7ws2DF-zk?si=8nR3bRAXaOUeY6uO\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">youtu.be/qf7ws2DF-zk?si=8nR3bR</span><span class=\"invisible\">AXaOUeY6uO</span></a></p>",
-      "account": {
-        "id": "113236196865901581",
-        "display_name": "Navendu Pottekkat",
-        "username": "pottekkat",
-        "acct": "pottekkat",
-        "avatar": "https://cdn.masto.host/floss/accounts/avatars/113/236/196/865/901/581/original/b6c55327c77bfbf5.png"
       }
     }
   ]

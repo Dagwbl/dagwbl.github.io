@@ -11,24 +11,31 @@
     gap: 14px;
     margin-bottom: 2px;
 }
-.mastodon-avatar-wrap{
-    height: 72px; /* avatar height + extra space below */
+
+.mastodon-avatar-wrap {
+    height: 72px;
+    /* avatar height + extra space below */
     display: flex;
-    align-items: center; /* center avatar vertically inside wrapper */
+    align-items: center;
+    /* center avatar vertically inside wrapper */
     width: 64px;
     flex: 0 0 64px;
 }
+
 .mastodon-avatar {
     align-self: center;
     display: block;
 }
+
 .mastodon-item {
     padding: 16px;
-    border-radius: 12px;
-    background: #ffffff;
-    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+    background: #ffffffec;
+    /* box-shadow: 0 0px 1px rgba(16, 24, 40, 0.1); */
     margin-bottom: 12px;
-    transition: box-shadow .15s ease, transform .06s ease;
+    /* transition: box-shadow .15s ease, transform .06s ease; */
+    border-radius: 6px
+
+
 }
 
 .mastodon-body {
@@ -73,20 +80,24 @@
     display: flex;
     align-items: flex-start;
 }
+
 .mastodon-head-main {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .mastodon-head-row {
     display: flex;
     align-items: center;
     gap: 8px;
 }
+
 .mastodon-head-date {
     margin-top: 2px;
 }
+
 .mastodon-name {
     font-weight: 700;
     font-size: 15px;
@@ -98,10 +109,12 @@
     text-decoration: none;
     color: #0b1220;
 }
+
 .mastodon-date {
     color: #6b7280;
     font-size: 13px;
 }
+
 .mastodon-link {
     text-decoration: none !important;
     display: inline-block;
@@ -110,15 +123,18 @@
     transition: opacity 0.2s;
     margin-left: 6px;
 }
+
 .mastodon-item:hover .mastodon-link {
     opacity: 1;
 }
+
 .mastodon-link svg {
     width: 18px;
     height: 18px;
     fill: #6364ff;
     vertical-align: middle;
 }
+
 .mastodon-link svg {
     width: 20px;
     height: 20px;
@@ -171,8 +187,9 @@
         flex: 0 0 48px
     }
 
-    .mastodon-avatar-wrap{
-        height: 56px; /* smaller wrapper on mobile */
+    .mastodon-avatar-wrap {
+        height: 56px;
+        /* smaller wrapper on mobile */
         width: 48px;
         flex: 0 0 48px;
     }
@@ -218,7 +235,7 @@
 /* Two-column layout: list + sticky timeline */
 .mastodon-layout {
     display: grid;
-    grid-template-columns: 1fr 220px;
+    grid-template-columns: 120px 1fr;
     gap: 18px;
     align-items: start
 }
@@ -232,12 +249,14 @@
     top: 20px;
     height: calc(100vh - 90px);
     align-self: start;
+    /* add a right vertical line as timeline */
+    border-right: 1px solid #e5e7eb;
     text-align: end;
 }
 
 /* Keep the timeline nav flush to the right inside the sidebar so fixed positioning doesn't shift it */
-.mastodon-sidebar > .mastodon-timeline-nav,
-.mastodon-sidebar > nav.mastodon-timeline-nav {
+.mastodon-sidebar>.mastodon-timeline-nav,
+.mastodon-sidebar>nav.mastodon-timeline-nav {
     display: block;
     margin-left: auto;
 }
@@ -266,12 +285,6 @@
     color: #0f172a
 }
 
-/* Narrower cards and smaller avatar for compact look */
-.mastodon-item {
-    padding: 12px;
-    border-radius: 10px
-}
-
 .mastodon-avatar {
     width: 48px;
     height: 48px;
@@ -295,7 +308,7 @@
 
 @media (max-width:900px) {
     .mastodon-layout {
-        grid-template-columns: 1fr 180px
+        grid-template-columns: 120px 1fr 
     }
 }
 
@@ -325,19 +338,22 @@
 /* Vertical axis styling inside sidebar (clean timeline look) */
 .mastodon-timeline-scroll {
     position: relative;
-    padding-left: 48px; /* space for line + markers */
+    padding-left: 48px;
+    /* space for line + markers */
 }
 
 .mastodon-timeline-scroll::before {
     content: "";
     position: absolute;
-    left: 28px; /* center of markers */
+    left: 28px;
+    /* center of markers */
     top: 12px;
     bottom: 12px;
     width: 3px;
-    background: #e6eefc; /* soft line color */
+    background: #e6eefc;
+    /* soft line color */
     border-radius: 2px;
-    box-shadow: inset 0 0 0 1px rgba(99,100,255,0.03);
+    box-shadow: inset 0 0 0 1px rgba(99, 100, 255, 0.03);
 }
 
 .mastodon-month {
@@ -345,7 +361,7 @@
     padding-left: 0;
 }
 
-.mastodon-month a { 
+.mastodon-month a {
     display: block;
     font-size: 13px;
     color: #6b7280;
@@ -371,28 +387,52 @@
 .mastodon-side-item::before {
     content: "";
     position: absolute;
-    left: 28px; /* on the line */
+    left: 28px;
+    /* on the line */
     top: 50%;
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background: #ffffff;
-    border: 3px solid #cfe0ff; /* light ring */
-    box-shadow: 0 1px 2px rgba(16,24,40,0.06);
+    border: 3px solid #cfe0ff;
+    /* light ring */
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
 }
 
-.mastodon-side-item:hover{background:#f8fbff}
+.mastodon-side-item:hover {
+    background: #f8fbff
+}
 
-.mastodon-side-item.current{color:#ffffff;background:#4f46e5}
-.mastodon-side-item.current::before{background:#ffffff;border-color:#4f46e5}
+.mastodon-side-item.current {
+    color: #ffffff;
+    background: #4f46e5
+}
+
+.mastodon-side-item.current::before {
+    background: #ffffff;
+    border-color: #4f46e5
+}
 
 /* Responsive adjustments */
-@media (max-width:720px){
-    .mastodon-timeline-scroll{padding-left:28px}
-    .mastodon-timeline-scroll::before{left:18px}
-    .mastodon-side-item::before{left:18px;width:10px;height:10px}
-    .mastodon-side-item{padding-left:34px}
+@media (max-width:720px) {
+    .mastodon-timeline-scroll {
+        padding-left: 28px
+    }
+
+    .mastodon-timeline-scroll::before {
+        left: 18px
+    }
+
+    .mastodon-side-item::before {
+        left: 18px;
+        width: 10px;
+        height: 10px
+    }
+
+    .mastodon-side-item {
+        padding-left: 34px
+    }
 }
 
 /* Make sure left list cards align vertical spacing with the sidebar markers */
@@ -407,17 +447,41 @@
 }
 
 /* Timeline nav (fixed + active) */
-.mastodon-timeline-nav{
+.mastodon-timeline-nav {
     position: relative;
     transition: top .3s ease-out;
 }
-.mastodon-timeline-nav.fixed{
+
+.mastodon-timeline-nav.fixed {
     position: fixed;
     top: 20px;
     z-index: 99;
 }
-.mastodon-timeline-nav ul{list-style:none;margin:0;padding:12px 8px}
-.mastodon-timeline-nav li{margin:8px 0}
-.mastodon-timeline-nav li.active span{font-weight:700;color:#da4426;transform:scale(1.05)}
-.mastodon-month-item{cursor:pointer;display:inline-block;padding:6px 8px;color:#6b7280}
-.mastodon-month-item.current{color:#da4426;font-weight:700}
+
+.mastodon-timeline-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 12px 8px
+}
+
+.mastodon-timeline-nav li {
+    margin: 8px 0
+}
+
+.mastodon-timeline-nav li.active span {
+    font-weight: 700;
+    color: #da4426;
+    transform: scale(1.05)
+}
+
+.mastodon-month-item {
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 2px;
+    color: #6b7280
+}
+
+.mastodon-month-item.current {
+    color: #da4426;
+    font-weight: 700
+}

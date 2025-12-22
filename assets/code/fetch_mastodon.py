@@ -9,7 +9,7 @@ import json
 import os
 import re
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 import yaml
@@ -116,12 +116,44 @@ def main():
 
     posts.sort(key=lambda p: parse_dt(p.get('created_at') or ''), reverse=True)
 
-    out = {'generated_at': datetime.utcnow().isoformat() + 'Z', 'posts': posts}
+    out = {'generated_at': datetime.now(timezone.utc).isoformat(), 'posts': posts}
 
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(out, f, ensure_ascii=False, indent=2)
+    # Load previous timeline if present and compare 'posts' arrays.
+    prev = None
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
+                prev = json.load(f)
+        except Exception as e:
+            print(f"Failed to read existing timeline: {e}", file=sys.stderr)
+            prev = None
 
-    print(f"Saved {len(posts)} posts to {OUTPUT_FILE}")
+    prev_posts = prev.get('posts') if isinstance(prev, dict) else None
+
+    if prev_posts == posts:
+        # No content changes (ignore generated_at); skip writing to keep git clean.
+        print('No content changes in posts array. Skipping write.')
+        print('Previous posts count:', len(prev_posts) if prev_posts is not None else 'unknown')
+        print('New posts count:', len(posts))
+        # Print small sample to help debugging
+        def sample(p):
+            try:
+                return [{'id': x.get('id'), 'created_at': x.get('created_at')} for x in p[:3]]
+            except Exception:
+                return p[:3]
+        if prev_posts:
+            print('Previous sample:', sample(prev_posts))
+        print('New sample:', sample(posts))
+        return
+
+    # Write updated timeline
+    try:
+        with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+            json.dump(out, f, ensure_ascii=False, indent=2)
+        print(f"Saved {len(posts)} posts to {OUTPUT_FILE}")
+    except Exception as e:
+        print(f"Failed to write timeline: {e}", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == '__main__':

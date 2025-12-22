@@ -1,58 +1,58 @@
 {{ $data := site.Data.mastodon.timeline }}
 {{ if not $data }}
-  <p>No Mastodon timeline data found.</p>
+<p>No Mastodon timeline data found.</p>
 {{ else }}
-  <link rel="stylesheet" href="/css/mastodon-timeline.css">
-  <div class="mastodon-layout">
-    <div class="mastodon-list">
-    {{/* Build ordered unique months list */}}
-    
-
-    {{/* Render posts list (left) in original order */}}
-    {{ range $data.posts }}
-      {{ $id := printf "post-%s" .id }}
-      {{ $t := time .created_at }}
-      {{ $date := $t.Format "2006-01-02 15:04" }}
-      <article id="{{ $id }}" class="mastodon-item">
-        <div class="mastodon-header-flex">
-          <div class="mastodon-avatar-wrap">
-            <img class="mastodon-avatar" src="{{ .account.avatar }}" alt="{{ .account.acct }}">
-          </div>
-          <div class="mastodon-head-main">
-            <div class="mastodon-head-row">
-              <a class="mastodon-name" href="{{ .url }}" target="_blank" rel="noopener">{{ .account.display_name }}</a>
-            </div>
-            <div class="mastodon-head-row mastodon-head-date">
-              <span class="mastodon-date">{{ $date }}</span>
-            </div>
-          </div>
-        </div>
-        <div class="mastodon-body">
-          <div class="mastodon-content">{{ .content | safeHTML }}</div>
-        </div>
-      </article>
-    {{ end }}
-    </div>
-
-    <aside class="mastodon-sidebar" aria-label="Timeline navigation">
-      <nav class="mastodon-timeline-nav" aria-label="Timeline months">
-        <ul>
+<link rel="stylesheet" href="/css/mastodon-timeline.css">
+<div class="mastodon-layout">
+  <aside class="mastodon-sidebar" aria-label="Timeline navigation">
+    <nav class="mastodon-timeline-nav" aria-label="Timeline months">
+      <ul>
         {{/* show month labels only (link to newest post of that month) */}}
         {{ $sortedPosts := sort $data.posts "created_at" "desc" }}
         {{ $todayMonth := now.Format "2006-01" }}
         {{ $lastMonth := "" }}
         {{ range $i, $p := $sortedPosts }}
-          {{ $t := time $p.created_at }}
-          {{ $ym := $t.Format "2006-01" }}
-          {{ if ne $ym $lastMonth }}
-            {{/* render friendly month label and link to this (newest in month) post */}}
-            <li><span class="mastodon-month-item" data-target="post-{{ $p.id }}">{{ $t.Format "Jan 2006" }}</span></li>
-            {{ $lastMonth = $ym }}
-          {{ end }}
+        {{ $t := time $p.created_at }}
+        {{ $ym := $t.Format "2006-01" }}
+        {{ if ne $ym $lastMonth }}
+        {{/* render friendly month label and link to this (newest in month) post */}}
+        <li><span class="mastodon-month-item" data-target="post-{{ $p.id }}">{{ $t.Format "Jan 2006" }}</span></li>
+        {{ $lastMonth = $ym }}
         {{ end }}
-        </ul>
-      </nav>
-      <script src="/js/mastodon-timeline.js" defer></script>
-    </aside>
+        {{ end }}
+      </ul>
+    </nav>
+    <script src="/js/mastodon-timeline.js" defer></script>
+  </aside>
+  <div class="mastodon-list">
+    {{/* Build ordered unique months list */}}
+
+
+    {{/* Render posts list (left) in original order */}}
+    {{ range $data.posts }}
+    {{ $id := printf "post-%s" .id }}
+    {{ $t := time .created_at }}
+    {{ $date := $t.Format "2006-01-02 15:04" }}
+    <article id="{{ $id }}" class="mastodon-item">
+      <div class="mastodon-header-flex">
+        <div class="mastodon-avatar-wrap">
+          <img class="mastodon-avatar" src="{{ .account.avatar }}" alt="{{ .account.acct }}">
+        </div>
+        <div class="mastodon-head-main">
+          <div class="mastodon-head-row">
+            <a class="mastodon-name" href="{{ .url }}" target="_blank" rel="noopener">{{ .account.display_name }}</a>
+          </div>
+          <div class="mastodon-head-row mastodon-head-date">
+            <span class="mastodon-date">{{ $date }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="mastodon-body">
+        <div class="mastodon-content">{{ .content | safeHTML }}</div>
+      </div>
+    </article>
+    {{ end }}
   </div>
+
+</div>
 {{ end }}
