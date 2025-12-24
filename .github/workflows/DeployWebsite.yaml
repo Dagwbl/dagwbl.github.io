@@ -9,10 +9,12 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  schedule:
+    - cron: '0 15 * * *'  # Runs at 15:00 UTC every day
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Fix: give GITHUB_TOKEN repo write permission so actions can commit & push
 permissions:
-  contents: read
+  contents: write   # <-- changed from read to write
   pages: write
   id-token: write
 
@@ -28,9 +30,40 @@ defaults:
     shell: bash
 
 jobs:
+  # Fetch Mastodon posts job
+  fetch-mastodon:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true   # explicit to ensure the GITHUB_TOKEN is available for push
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests pyyaml
+      - name: Fetch Mastodon posts
+        run: python assets/code/fetch_mastodon.py
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mastodon/timeline.json || true
+          if git diff --cached --quiet; then
+            echo "No data-content changes detected; not committing."
+            git --no-pager diff --name-only --staged || true
+          else
+            echo "Changes detected — committing and pushing."
+            git commit -m "Update Mastodon timeline [auto]" || echo "Nothing to commit or commit failed"
+            git push
+          fi
+
   # Build job
   build:
     runs-on: ubuntu-latest
+    needs: fetch-mastodon
     env:
       HUGO_VERSION: 0.142.0
     steps:

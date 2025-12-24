@@ -1,0 +1,96 @@
+{
+  "generated_at": "2025-12-23T16:36:17.888733+00:00",
+  "posts": [
+    {
+      "id": "115766168967369484",
+      "url": "https://techhub.social/@pong/115766168967369484",
+      "created_at": "2025-12-23T00:59:12.847Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://masto.es/@fodaveg\" class=\"u-url mention\">@<span>fodaveg</span></a></span> sorry I didn’t state it clearly. I want to record my daily life at different devices. I have an iPad, an android phone and a windows laptop, so I need use them at different situations. But the syncing is a problem.</p><p>I recently found I can use iOS shortcuts to boost and simplify the recording process, and I can combine working copy to achieve the pull and push operation. So I wan to change my phone to iOS.</p><p>Another reason, due to a series of processes, opening, writing, syncing, it will produce some psychological burden. It’s not worth to use it only for making some personal fragmented messages.</p>",
+      "account": {
+        "id": "115749544003250069",
+        "display_name": "Pumbaa",
+        "username": "pong",
+        "acct": "pong",
+        "avatar": "https://techhub.social/avatars/original/missing.png"
+      }
+    },
+    {
+      "id": "115765989139384992",
+      "url": "https://techhub.social/@pong/115765989139384992",
+      "created_at": "2025-12-23T00:13:28.891Z",
+      "content": "<p>Since using <a href=\"https://techhub.social/tags/Mastodon\" class=\"mention hashtag\" rel=\"tag\">#<span>Mastodon</span></a>, I haven&#39;t felt as eager to switch to an iPhone. It basically meets my needs for recording my daily life and random thoughts. I don&#39;t have to worry about syncing across different devices.</p><p>Therefore, <a href=\"https://techhub.social/tags/obsidian\" class=\"mention hashtag\" rel=\"tag\">#<span>obsidian</span></a> can also be used specifically to produce content of slightly higher quality.</p>",
+      "account": {
+        "id": "115749544003250069",
+        "display_name": "Pumbaa",
+        "username": "pong",
+        "acct": "pong",
+        "avatar": "https://techhub.social/avatars/original/missing.png"
+      }
+    },
+    {
+      "id": "115765504968006847",
+      "url": "https://techhub.social/@pong/115765504968006847",
+      "created_at": "2025-12-22T22:10:21.020Z",
+      "content": "<p>Before I knew it, the <a href=\"https://techhub.social/tags/cactus\" class=\"mention hashtag\" rel=\"tag\">#<span>cactus</span></a> I brought from the Bad Land had already begun to sprout new buds. </p><p>Life grows silently and gradually. </p><p>Slowly accumulating, slowly moving forward.</p>",
+      "account": {
+        "id": "115749544003250069",
+        "display_name": "Pumbaa",
+        "username": "pong",
+        "acct": "pong",
+        "avatar": "https://techhub.social/avatars/original/missing.png"
+      }
+    },
+    {
+      "id": "115765204388840291",
+      "url": "https://techhub.social/@pong/115765204388840291",
+      "created_at": "2025-12-22T20:53:54.546Z",
+      "content": "<p>When it rains, it pours.</p><p>The sound really annoyed me. What made it even worse was that it made me spill water and trash.</p><p>Everything is a <a href=\"https://techhub.social/tags/mess\" class=\"mention hashtag\" rel=\"tag\">#<span>mess</span></a>, I&#39;m so sleepy.</p><p>The repairmen have arrived; hopefully they can save me.</p><p>One more thing: the soaked beans also went bad. I tried washing them and boiling them, but the whole room smelled terrible.</p>",
+      "account": {
+        "id": "115749544003250069",
+        "display_name": "Pumbaa",
+        "username": "pong",
+        "acct": "pong",
+        "avatar": "https://techhub.social/avatars/original/missing.png"
+      }
+    },
+    {
+      "id": "115764328705247587",
+      "url": "https://techhub.social/@pong/115764328705247587",
+      "created_at": "2025-12-22T17:11:12.676Z",
+      "content": "<p>I just went to the property management office to report the noise problem in the apartment office. </p><p>It&#39;s so annoying!😠🔊🔉🔊🔉🔊</p>",
+      "account": {
+        "id": "115749544003250069",
+        "display_name": "Pumbaa",
+        "username": "pong",
+        "acct": "pong",
+        "avatar": "https://techhub.social/avatars/original/missing.png"
+      }
+    },
+    {
+      "id": "115762378702488530",
+      "url": "https://techhub.social/@pong/115762378702488530",
+      "created_at": "2025-12-22T08:55:17.994Z",
+      "content": "<p>I stay up late again to integrate Mastodon into my blog. </p><p>It also integrates others&#39; Mastodon posts, so I can build a small moment for Huan and me.</p>",
+      "account": {
+        "id": "115749544003250069",
+        "display_name": "Pumbaa",
+        "username": "pong",
+        "acct": "pong",
+        "avatar": "https://techhub.social/avatars/original/missing.png"
+      }
+    },
+    {
+      "id": "115749593459603428",
+      "url": "https://techhub.social/@pong/115749593459603428",
+      "created_at": "2025-12-20T02:43:50.671Z",
+      "content": "<p>Hello techhub social. :ablobcatwave:</p>",
+      "account": {
+        "id": "115749544003250069",
+        "display_name": "Pumbaa",
+        "username": "pong",
+        "acct": "pong",
+        "avatar": "https://techhub.social/avatars/original/missing.png"
+      }
+    }
+  ]
+}
