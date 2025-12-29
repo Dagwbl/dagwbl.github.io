@@ -1,6 +1,6 @@
 ---
 title: "{{date:YYYY-MM-DD}}"
-date: "{{date:YYYY-MM-DDTHH:mm:ssZ}}"
+date: <% tp.date.now('YYYY-MM-DDTHH:mm:ssZ') %>
 categories:
   - diary
 series:
@@ -16,3 +16,4 @@ stime:
 release: -1
 draft: true
 ---
+
