@@ -32,6 +32,7 @@ defaults:
 jobs:
   # Fetch Mastodon posts job
   fetch-mastodon:
+    if: ${{ github.event_name == 'schedule' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -63,7 +64,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    needs: fetch-mastodon
+    # needs: fetch-mastodon
     env:
       HUGO_VERSION: 0.142.0
     steps:
