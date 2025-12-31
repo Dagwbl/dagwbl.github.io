@@ -1,8 +1,8 @@
 ---
-title: Me on Mastodon Timeline
+title: Toots on Mastodon
 weight: 10
 customjscssraw:
-  - >
+  - |
     <style>
         .main {
           # max-width: calc(var(--nav-width) + var(--gap) * 2);
