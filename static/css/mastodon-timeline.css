@@ -27,15 +27,29 @@
     display: block;
 }
 
+/* Post item styling - clean and minimal */
 .mastodon-item {
-    padding: 16px;
-    background: #ffffffec;
-    /* box-shadow: 0 0px 1px rgba(16, 24, 40, 0.1); */
-    margin-bottom: 12px;
-    /* transition: box-shadow .15s ease, transform .06s ease; */
-    border-radius: 6px
+    padding: 24px;
+    background: var(--entry-bg);
+    margin-bottom: 8px;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: background 0.2s ease;
+    position: relative;
+}
 
+/* Remove top border from first item */
+.mastodon-item:first-child {
+    border-top: none;
+}
 
+/* Alternate background for visual separation */
+.mastodon-item:nth-child(odd) {
+    background: var(--entry-bg);
+}
+
+.mastodon-item:nth-child(even) {
+    background: var(--entry-bg);
 }
 
 .mastodon-body {
@@ -45,8 +59,7 @@
 /* .mastodon-right-col removed — content now placed under header-flex for correct alignment */
 
 .mastodon-item:hover {
-    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.08);
-    transform: translateY(-2px);
+    background: var(--entry-hover-bg);
 }
 
 .mastodon-avatar {
@@ -55,30 +68,13 @@
     border-radius: 50%;
     object-fit: cover;
     flex: 0 0 64px;
-    box-shadow: 0 1px 2px rgba(2, 6, 23, 0.06);
+    box-shadow: 0 1px 2px var(--shadow-small);
     align-self: center;
 }
 
 .mastodon-body {
     flex: 1;
-    min-width: 0
-}
-
-.mastodon-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px
-}
-
-.mastodon-head-left {
-    display: block;
-    min-width: 0
-}
-
-.mastodon-head {
-    display: flex;
-    align-items: flex-start;
+    min-width: 0;
 }
 
 .mastodon-head-main {
@@ -101,17 +97,17 @@
 .mastodon-name {
     font-weight: 700;
     font-size: 15px;
-    color: #0f172a;
+    color: var(--post-title);
     box-shadow: none !important;
 }
 
 .mastodon-name:hover {
     text-decoration: none;
-    color: #0b1220;
+    color: var(--primary-color);
 }
 
 .mastodon-date {
-    color: #6b7280;
+    color: var(--secondary-text-color);
     font-size: 13px;
 }
 
@@ -122,6 +118,7 @@
     opacity: 0.7;
     transition: opacity 0.2s;
     margin-left: 6px;
+    color: var(--primary-color);
 }
 
 .mastodon-item:hover .mastodon-link {
@@ -129,46 +126,22 @@
 }
 
 .mastodon-link svg {
-    width: 18px;
-    height: 18px;
-    fill: #6364ff;
-    vertical-align: middle;
-}
-
-.mastodon-link svg {
     width: 20px;
     height: 20px;
-    fill: #6364ff;
+    fill: var(--primary-color);
     vertical-align: middle;
-}
-
-.mastodon-name {
-    font-weight: 700;
-    font-size: 15px;
-    color: #0f172a
-}
-
-.mastodon-user {
-    color: #6b7280;
-    font-size: 13px
-}
-
-.mastodon-time {
-    color: #9ca3af;
-    font-size: 12px;
-    margin-left: 6px
 }
 
 .mastodon-content {
     margin-top: 8px;
-    color: #111827;
+    color: var(--post-content);
     font-size: 15px;
     line-height: 1.6;
     word-break: break-word
 }
 
 .mastodon-content a {
-    color: #1d4ed8;
+    color: var(--primary-color);
     text-decoration: none
 }
 
@@ -176,15 +149,42 @@
     text-decoration: underline
 }
 
-@media (max-width:640px) {
+/* Add subtle divider between header and content for long posts */
+.mastodon-body .mastodon-head {
+    margin-bottom: 6px;
+}
+
+.mastodon-meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--secondary-text-color);
+    font-size: 12px;
+}
+
+.mastodon-item .mastodon-user::before {
+    content: "@";
+    margin-right: 0
+}
+
+/* Prevent justified text from stretching links and long words */
+.mastodon-content {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    text-align: left;
+}
+
+@media (max-width: 640px) {
     .mastodon-item {
-        padding: 12px
+        padding: 18px 12px;
+        margin-bottom: 6px;
+        border-radius: 3px;
     }
 
     .mastodon-avatar {
         width: 48px;
         height: 48px;
-        flex: 0 0 48px
+        flex: 0 0 48px;
     }
 
     .mastodon-avatar-wrap {
@@ -199,58 +199,20 @@
     }
 
     .mastodon-name {
-        font-size: 14px
+        font-size: 14px;
     }
 
     .mastodon-content {
-        font-size: 14px
+        font-size: 14px;
     }
 }
 
-/* Add subtle divider between header and content for long posts */
-.mastodon-body .mastodon-head {
-    margin-bottom: 6px
-}
-
-.mastodon-meta {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    color: #9ca3af;
-    font-size: 12px
-}
-
-.mastodon-item .mastodon-user::before {
-    content: "@";
-    margin-right: 0
-}
-
-/* Prevent justified text from stretching links and long words */
-.mastodon-content {
-    word-break: break-word;
-    overflow-wrap: anywhere;
-    text-align: left
-}
-
-/* Container and list layout */
-.mastodon-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
+/* Pagination styling */
 .mastodon-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-}
-
-/* Pagination styling */
-.mastodon-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 8px;
-    flex-wrap: wrap;
+    margin-bottom: 24px;
 }
 
 .mastodon-pagination-item {
@@ -260,10 +222,10 @@
     min-width: 40px;
     height: 40px;
     padding: 0 8px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
-    background: #ffffff;
-    color: #374151;
+    background: var(--entry-bg);
+    color: var(--post-text);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
@@ -272,14 +234,14 @@
 }
 
 .mastodon-pagination-item:hover:not(:disabled):not(.disabled) {
-    background: #f3f4f6;
-    border-color: #d1d5db;
-    color: #111827;
+    background: var(--entry-hover-bg);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .mastodon-pagination-item.active {
-    background: #4f46e5;
-    border-color: #4f46e5;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
     color: #ffffff;
     font-weight: 600;
 }
@@ -288,19 +250,19 @@
 .mastodon-pagination-item.disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    background: #f9fafb;
-    color: #9ca3af;
+    background: var(--disabled-bg);
+    color: var(--disabled-text);
 }
 
 .mastodon-pagination-ellipsis {
     padding: 0 4px;
-    color: #9ca3af;
+    color: var(--secondary-text-color);
     font-size: 14px;
 }
 
 .mastodon-pagination-info {
     font-size: 13px;
-    color: #6b7280;
+    color: var(--secondary-text-color);
     margin: 0 8px;
 }
 
@@ -325,31 +287,31 @@
     width: 80px;
     height: 40px;
     padding: 0 12px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 14px;
-    color: #374151;
-    background: #ffffff;
+    color: var(--post-text);
+    background: var(--entry-bg);
     transition: all 0.2s ease;
 }
 
 .mastodon-goto-input:focus {
     outline: none;
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-focus-shadow);
 }
 
 .mastodon-goto-input::placeholder {
-    color: #d1d5db;
+    color: var(--placeholder-color);
 }
 
 .mastodon-goto-btn {
     height: 40px;
     padding: 0 16px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--primary-color);
     border-radius: 6px;
-    background: #ffffff;
-    color: #374151;
+    background: var(--primary-color);
+    color: #ffffff;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
@@ -357,24 +319,93 @@
 }
 
 .mastodon-goto-btn:hover {
-    background: #f3f4f6;
-    border-color: #d1d5db;
-    color: #111827;
+    background: var(--primary-color-light);
+    border-color: var(--primary-color-light);
+    box-shadow: var(--shadow-small);
 }
 
 .mastodon-goto-btn:active {
-    background: #e5e7eb;
+    background: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
 }
 
 .mastodon-goto-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    background: #f9fafb;
-    color: #9ca3af;
+    background: var(--disabled-bg);
+    border-color: var(--disabled-bg);
+    color: var(--disabled-text);
 }
 
 .mastodon-item.hidden {
     display: none;
+}
+
+/* Theme variables - Light mode (default) */
+:root {
+    --primary-color: #3b82f6;
+    --primary-color-light: #60a5fa;
+    --primary-color-dark: #1d4ed8;
+    --primary-focus-shadow: rgba(59, 130, 246, 0.1);
+    --entry-bg: #f9fafb;
+    --entry-alt-bg: #f9fafb;
+    --entry-hover-bg: #f0f1f3;
+    --post-title: #1f2937;
+    --post-text: #374151;
+    --post-content: #111827;
+    --secondary-text-color: #6b7280;
+    --border-color: #e5e7eb;
+    --placeholder-color: #d1d5db;
+    --disabled-bg: #f9fafb;
+    --disabled-text: #9ca3af;
+    --shadow-small: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark mode */
+html.dark,
+body.dark,
+[data-theme="dark"] {
+    --primary-color: #60a5fa;
+    --primary-color-light: #93c5fd;
+    --primary-color-dark: #3b82f6;
+    --primary-focus-shadow: rgba(96, 165, 250, 0.1);
+    --entry-bg: #1f2937;
+    --entry-alt-bg: #1f2937;
+    --entry-hover-bg: #2d3748;
+    --post-title: #f3f4f6;
+    --post-text: #d1d5db;
+    --post-content: #e5e7eb;
+    --secondary-text-color: #9ca3af;
+    --border-color: #4b5563;
+    --placeholder-color: #6b7280;
+    --disabled-bg: #374151;
+    --disabled-text: #6b7280;
+    --shadow-small: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Support for PaperMod theme */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #60a5fa;
+        --primary-color-light: #93c5fd;
+        --primary-color-dark: #3b82f6;
+        --primary-focus-shadow: rgba(96, 165, 250, 0.1);
+        --entry-bg: #1f2937;
+        --entry-alt-bg: #1f2937;
+        --entry-hover-bg: #2d3748;
+        --post-title: #f3f4f6;
+        --post-text: #d1d5db;
+        --post-content: #e5e7eb;
+        --secondary-text-color: #9ca3af;
+        --border-color: #4b5563;
+        --placeholder-color: #6b7280;
+        --disabled-bg: #374151;
+        --disabled-text: #6b7280;
+        --shadow-small: 0 1px 3px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
 }
 
 @media (max-width: 640px) {

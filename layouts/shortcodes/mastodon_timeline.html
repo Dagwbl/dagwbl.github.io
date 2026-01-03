@@ -4,23 +4,23 @@
 {{ else }}
 <link rel="stylesheet" href="/css/mastodon-timeline.css">
 <div class="mastodon-container">
-  <div class="mastodon-list" id="mastodon-list">
+  <div class="mastodon-list" id="mastodon-list" role="feed" aria-label="Mastodon Timeline">
     {{/* Render posts list in original order */}}
     {{ range $data.posts }}
     {{ $id := printf "post-%s" .id }}
     {{ $t := time .created_at }}
     {{ $date := $t.Format "2006-01-02 15:04" }}
-    <article id="{{ $id }}" class="mastodon-item" data-created-at="{{ .created_at }}">
+    <article id="{{ $id }}" class="mastodon-item" data-created-at="{{ .created_at }}" role="article">
       <div class="mastodon-header-flex">
         <div class="mastodon-avatar-wrap">
-          <img class="mastodon-avatar" src="{{ .account.avatar }}" alt="{{ .account.acct }}">
+          <img class="mastodon-avatar" src="{{ .account.avatar }}" alt="{{ .account.acct }}'s avatar" loading="lazy">
         </div>
         <div class="mastodon-head-main">
           <div class="mastodon-head-row">
-            <a class="mastodon-name" href="{{ .url }}" target="_blank" rel="noopener">{{ .account.display_name }}</a>
+            <a class="mastodon-name" href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="View post by {{ .account.display_name }} on Mastodon">{{ .account.display_name }}</a>
           </div>
           <div class="mastodon-head-row mastodon-head-date">
-            <span class="mastodon-date">{{ $date }}</span>
+            <time class="mastodon-date" datetime="{{ .created_at }}">{{ $date }}</time>
           </div>
         </div>
       </div>
@@ -32,13 +32,14 @@
   </div>
 
   <!-- 分页控件 -->
-  <div class="mastodon-pagination-wrapper">
+  <nav class="mastodon-pagination-wrapper" aria-label="Pagination">
     <div class="mastodon-pagination" id="mastodon-pagination" data-prev="{{ i18n "prev_page" }}" data-next="{{ i18n "next_page" }}"></div>
     <div class="mastodon-pagination-goto">
-      <input type="number" id="mastodon-goto-input" class="mastodon-goto-input" placeholder="{{ i18n "pagination_page" }}" min="1">
-      <button id="mastodon-goto-btn" class="mastodon-goto-btn">{{ i18n "pagination_goto" }}</button>
+      <label for="mastodon-goto-input" class="sr-only">{{ i18n "pagination_page" }}</label>
+      <input type="number" id="mastodon-goto-input" class="mastodon-goto-input" placeholder="{{ i18n "pagination_page" }}" min="1" aria-label="Go to page">
+      <button id="mastodon-goto-btn" class="mastodon-goto-btn" aria-label="Navigate to page">{{ i18n "pagination_goto" }}</button>
     </div>
-  </div>
+  </nav>
 </div>
 
 <script src="/js/mastodon-timeline.js" defer></script>
