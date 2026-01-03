@@ -3,37 +3,14 @@
 <p>No Mastodon timeline data found.</p>
 {{ else }}
 <link rel="stylesheet" href="/css/mastodon-timeline.css">
-<div class="mastodon-layout">
-  <aside class="mastodon-sidebar" aria-label="Timeline navigation">
-    <nav class="mastodon-timeline-nav" aria-label="Timeline months">
-      <ul>
-        {{/* show month labels only (link to newest post of that month) */}}
-        {{ $sortedPosts := sort $data.posts "created_at" "desc" }}
-        {{ $todayMonth := now.Format "2006-01" }}
-        {{ $lastMonth := "" }}
-        {{ range $i, $p := $sortedPosts }}
-        {{ $t := time $p.created_at }}
-        {{ $ym := $t.Format "2006-01" }}
-        {{ if ne $ym $lastMonth }}
-        {{/* render friendly month label and link to this (newest in month) post */}}
-        <li><span class="mastodon-month-item" data-target="post-{{ $p.id }}">{{ $t.Format "Jan 2006" }}</span></li>
-        {{ $lastMonth = $ym }}
-        {{ end }}
-        {{ end }}
-      </ul>
-    </nav>
-    <script src="/js/mastodon-timeline.js" defer></script>
-  </aside>
-  <div class="mastodon-list">
-    {{/* Build ordered unique months list */}}
-
-
-    {{/* Render posts list (left) in original order */}}
+<div class="mastodon-container">
+  <div class="mastodon-list" id="mastodon-list">
+    {{/* Render posts list in original order */}}
     {{ range $data.posts }}
     {{ $id := printf "post-%s" .id }}
     {{ $t := time .created_at }}
     {{ $date := $t.Format "2006-01-02 15:04" }}
-    <article id="{{ $id }}" class="mastodon-item">
+    <article id="{{ $id }}" class="mastodon-item" data-created-at="{{ .created_at }}">
       <div class="mastodon-header-flex">
         <div class="mastodon-avatar-wrap">
           <img class="mastodon-avatar" src="{{ .account.avatar }}" alt="{{ .account.acct }}">
@@ -54,5 +31,15 @@
     {{ end }}
   </div>
 
+  <!-- 分页控件 -->
+  <div class="mastodon-pagination-wrapper">
+    <div class="mastodon-pagination" id="mastodon-pagination" data-prev="{{ i18n "prev_page" }}" data-next="{{ i18n "next_page" }}"></div>
+    <div class="mastodon-pagination-goto">
+      <input type="number" id="mastodon-goto-input" class="mastodon-goto-input" placeholder="{{ i18n "pagination_page" }}" min="1">
+      <button id="mastodon-goto-btn" class="mastodon-goto-btn">{{ i18n "pagination_goto" }}</button>
+    </div>
+  </div>
 </div>
+
+<script src="/js/mastodon-timeline.js" defer></script>
 {{ end }}

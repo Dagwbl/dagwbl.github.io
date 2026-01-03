@@ -1,111 +1,154 @@
-// Vanilla JS timeline nav: sticky, active highlight, smooth scroll
+// Mastodon timeline pagination
 document.addEventListener('DOMContentLoaded', function () {
-  const timeline = document.querySelector('.mastodon-timeline-nav');
-  if (!timeline) return;
+  const listEl = document.getElementById('mastodon-list');
+  const paginationEl = document.getElementById('mastodon-pagination');
+  
+  if (!listEl || !paginationEl) return;
 
-  const items = Array.from(timeline.querySelectorAll('li'));
-  const targets = items.map(li => {
-    const span = li.querySelector('span');
-    const id = span && span.dataset && span.dataset.target;
-    return id ? document.getElementById(id) : null;
-  });
+  const ITEMS_PER_PAGE = 10;
+  const items = Array.from(listEl.querySelectorAll('.mastodon-item'));
+  const totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
+  let currentPage = 1;
 
-  const offsetTop = parseInt(getComputedStyle(timeline).top) || 0;
-  const TIMELINE = { start: 190, step: 30 };
-  let stickyTop = 0;
-  let scrollTarget = false;
+  function renderPagination() {
+    paginationEl.innerHTML = '';
 
-  function recalc() {
-    timeline.classList.remove('fixed');
-    const rect = timeline.getBoundingClientRect();
-    stickyTop = rect.top + window.scrollY - offsetTop;
-  }
+    // Get i18n text from data attributes
+    const prevText = paginationEl.dataset.prev || '←';
+    const nextText = paginationEl.dataset.next || '→';
 
-  function onResize() {
-    recalc();
-    onScroll();
-  }
-
-  function onScroll() {
-    const isFixed = timeline.classList.contains('fixed');
-    if (window.scrollY > stickyTop) {
-      if (!isFixed) {
-        // Preserve current on-screen position and width when switching to fixed
-        const rect = timeline.getBoundingClientRect();
-        timeline.style.left = rect.left + 'px';
-        timeline.style.width = rect.width + 'px';
-        // Set top to current visual top so adding `fixed` doesn't jump
-        timeline.style.top = rect.top + 'px';
-        timeline.classList.add('fixed');
-      }
-    } else {
-      if (isFixed) {
-        timeline.classList.remove('fixed');
-        // Remove inline positioning so nav returns to normal flow
-        timeline.style.left = '';
-        timeline.style.width = '';
-        // Recalculate sticky offset after unfixing
-        recalc();
-      }
+    // Previous button
+    const prevBtn = createPaginationItem(prevText, 'prev', currentPage === 1);
+    if (currentPage > 1) {
+      prevBtn.addEventListener('click', () => goToPage(currentPage - 1));
     }
+    paginationEl.appendChild(prevBtn);
 
-    const viewLine = window.scrollY + window.innerHeight / 3;
-    let active = -1;
+    // Page numbers with ellipsis
+    const maxVisible = 7;
+    let startPage = 1;
+    let endPage = totalPages;
 
-    if (scrollTarget === false) {
-      // Find the last index whose target element is above or equal to the viewLine
-      for (let i = 0; i < items.length; i++) {
-        const span = items[i].querySelector('span');
-        if (!span) continue;
-        const id = span.dataset && span.dataset.target;
-        if (!id) continue;
-        const el = document.getElementById(id);
-        if (!el) continue;
-        const elTop = el.getBoundingClientRect().top + window.scrollY;
-        if (elTop <= viewLine) {
-          active = i;
-        } else {
-          break;
+    if (totalPages > maxVisible) {
+      if (currentPage <= Math.ceil(maxVisible / 2)) {
+        endPage = maxVisible;
+      } else if (currentPage >= totalPages - Math.floor(maxVisible / 2)) {
+        startPage = totalPages - maxVisible + 1;
+      } else {
+        startPage = currentPage - Math.floor(maxVisible / 2);
+        endPage = currentPage + Math.floor(maxVisible / 2);
+      }
+
+      if (startPage > 1) {
+        const firstBtn = createPaginationItem('1');
+        firstBtn.addEventListener('click', () => goToPage(1));
+        paginationEl.appendChild(firstBtn);
+
+        if (startPage > 2) {
+          const ellipsis = document.createElement('span');
+          ellipsis.className = 'mastodon-pagination-ellipsis';
+          ellipsis.textContent = '...';
+          paginationEl.appendChild(ellipsis);
         }
       }
-    } else {
-      active = scrollTarget;
     }
 
-    // clamp upper bound only
-    if (active >= items.length) active = items.length - 1;
-
-    // set top position to slide the nav (similar to CodePen behavior)
-    // If nav is fixed we adjust the inline `top` (viewport pixels). If not, this remains the offset inside its container.
-    const targetTop = (active >= 0) ? (-active * TIMELINE.step + TIMELINE.start) : TIMELINE.start;
-    timeline.style.top = targetTop + 'px';
-
-    // update active class only when a valid active index exists
-    items.forEach((li, idx) => li.classList.toggle('active', active >= 0 && idx === active));
-
-    if (scrollTarget !== false && scrollTarget === active) {
-      scrollTarget = false;
+    // Page number buttons
+    for (let i = startPage; i <= endPage; i++) {
+      const btn = createPaginationItem(String(i), null, false, i === currentPage);
+      btn.addEventListener('click', () => goToPage(i));
+      paginationEl.appendChild(btn);
     }
+
+    if (totalPages > maxVisible && endPage < totalPages) {
+      if (endPage < totalPages - 1) {
+        const ellipsis = document.createElement('span');
+        ellipsis.className = 'mastodon-pagination-ellipsis';
+        ellipsis.textContent = '...';
+        paginationEl.appendChild(ellipsis);
+      }
+
+      const lastBtn = createPaginationItem(String(totalPages));
+      lastBtn.addEventListener('click', () => goToPage(totalPages));
+      paginationEl.appendChild(lastBtn);
+    }
+
+    // Next button
+    const nextBtn = createPaginationItem(nextText, 'next', currentPage === totalPages);
+    if (currentPage < totalPages) {
+      nextBtn.addEventListener('click', () => goToPage(currentPage + 1));
+    }
+    paginationEl.appendChild(nextBtn);
+
+    // Info text
+    const info = document.createElement('span');
+    info.className = 'mastodon-pagination-info';
+    info.textContent = `${currentPage} / ${totalPages}`;
+    paginationEl.appendChild(info);
   }
 
-  // click handlers
-  items.forEach((li, idx) => {
-    const span = li.querySelector('span');
-    if (!span) return;
-    span.addEventListener('click', function () {
-      const targetId = span.dataset.target;
-      const el = document.getElementById(targetId);
-      if (!el) return;
-      scrollTarget = idx;
-      const top = el.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top: top, behavior: 'smooth' });
+  function createPaginationItem(text, type = null, disabled = false, active = false) {
+    const btn = document.createElement('button');
+    btn.className = 'mastodon-pagination-item';
+    btn.textContent = text;
+    
+    if (type) btn.dataset.type = type;
+    if (disabled) btn.disabled = true;
+    if (active) btn.classList.add('active');
+    
+    btn.type = 'button';
+    return btn;
+  }
+
+  function renderPage(page) {
+    const startIdx = (page - 1) * ITEMS_PER_PAGE;
+    const endIdx = startIdx + ITEMS_PER_PAGE;
+
+    items.forEach((item, idx) => {
+      if (idx >= startIdx && idx < endIdx) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
     });
-  });
 
-  window.addEventListener('resize', onResize);
-  window.addEventListener('scroll', onScroll);
+    // Scroll to top of list
+    listEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
-  // initial
-  recalc();
-  onScroll();
+  function goToPage(page) {
+    if (page < 1 || page > totalPages) return;
+    currentPage = page;
+    renderPage(page);
+    renderPagination();
+  }
+
+  // Handle goto input and button
+  const gotoInput = document.getElementById('mastodon-goto-input');
+  const gotoBtn = document.getElementById('mastodon-goto-btn');
+
+  function handleGoto() {
+    const pageNum = parseInt(gotoInput.value, 10);
+    if (isNaN(pageNum) || pageNum < 1 || pageNum > totalPages) {
+      gotoInput.style.borderColor = '#ef4444';
+      setTimeout(() => {
+        gotoInput.style.borderColor = '';
+      }, 1500);
+      return;
+    }
+    goToPage(pageNum);
+    gotoInput.value = '';
+  }
+
+  if (gotoInput && gotoBtn) {
+    gotoBtn.addEventListener('click', handleGoto);
+    gotoInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') handleGoto();
+    });
+    gotoInput.max = totalPages;
+  }
+
+  // Initial render
+  renderPagination();
+  renderPage(1);
 });
