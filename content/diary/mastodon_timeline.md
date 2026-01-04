@@ -2,7 +2,7 @@
 title: 🦣 Toots~!!
 weight: 10
 hideMeta: true
-description: "This entry embeds some toots timeline of mastodon. Currently, it's just me and Huan."
+summary: "This entry embeds some toots timeline of mastodon. Currently, it's just me and Huan."
 customjscssraw:
   - |
     <style>
