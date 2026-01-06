@@ -250,9 +250,9 @@ languages:
         # - name: Series
         #   url: series
         #   weight: 3
-        # - name: Tag
-        #   url: tags/
-        #   weight: 4
+        - name: Tag
+          url: tags/
+          weight: 4
         - name: Search
           url: search/
           weight: 5
@@ -319,9 +319,9 @@ languages:
         - name: 搜索
           url: search/
           weight: 10
-        # - name: 标签
-        #   url: tags
-        #   weight: 10
+        - name: 标签
+          url: tags
+          weight: 10
         - name: 🪶
           url: /navi/
           title: 导航
