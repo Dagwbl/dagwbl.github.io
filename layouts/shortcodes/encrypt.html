@@ -13,11 +13,11 @@
 
 <div class="encrypted-content" data-cipher="{{ $cipher }}" data-hint="{{ $hint }}" data-error="{{ i18n "password_error" | htmlEscape }}">
   <div class="locked-state">
-    <p>🔒 {{ i18n "content_is_encrypted" }}</p>
+    <p>🔒 {{ $hint }}</p>
     <div class="password-prompt">
       <div class="password-input-wrapper">
         <input type="password" class="password-input"
-               placeholder="{{ $hint }}"
+               placeholder="{{ i18n "input_pwd" }}"
                id="pwd-input-{{ .Ordinal }}"
                aria-label="加密内容密码">
         <button type="button"
