@@ -45,8 +45,7 @@ not done
 path includes assist
 ```
 
-**New:** `button-new-article` `button-new-note`  `button-new-letter`
- `button-new-poem`  
+**New:** `button-new-article` `button-new-note`  `button-new-letter` `button-new-poem`  
 
 **Record:**  `button-new-diary`   `button-record-now` `button-new-todo` `button-jump-1note`
 
