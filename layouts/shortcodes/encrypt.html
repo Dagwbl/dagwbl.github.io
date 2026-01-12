@@ -6,7 +6,7 @@
 {{/* 将相对链接如 xxx.zh.md 或 xxx.en.md 替换为绝对路径，如 /zh/diary/xxx */}}
 {{- $fixed := $raw | replaceRE `\[(.*?)\]\(([^)]+?)\.?(zh|en)?\.md\)` (printf `[$1](%s$2)` $base) -}}
 
-{{- $hint := .Get "hint" | default (i18n "input_pwd") -}}
+{{- $hint := .Get "hint" | default (i18n "content_is_encrypted") -}}
 {{- $html := $fixed | markdownify -}}
 {{- $encoded := $html | base64Encode -}}
 {{- $cipher := $encoded | replaceRE "(.{5})(.{3})(.{4})(.+)" "$2$4$1$3" -}}
