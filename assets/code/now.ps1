@@ -1,5 +1,6 @@
 param(
     [switch]$t,
+    [switch]$v,
     [string]$TyporaPath,
     [switch]$w,
     [Parameter(Position=0, ValueFromRemainingArguments=$true)]
@@ -114,10 +115,34 @@ function Open-TodayDiary {
     Start-Process -FilePath $PathToTypora -ArgumentList "`"$file`""
 }
 
+function Open-TodayDiaryInNeovim {
+    # Try to find nvim in common locations or PATH
+    $nvimPath = (Get-Command nvim -ErrorAction SilentlyContinue).Source
+    if (-not $nvimPath) {
+        $candidatePaths = @(
+            "$env:LOCALAPPDATA\nvim-data\nvim.exe",
+            "C:\Program Files\Neovim\bin\nvim.exe",
+            "C:\tools\neovim\nvim-win64\bin\nvim.exe"
+        )
+        $nvimPath = $candidatePaths | Where-Object { Test-Path $_ } | Select-Object -First 1
+        if (-not $nvimPath) { $nvimPath = "nvim" } # rely on PATH
+    }
+
+    # Open file in Neovim
+    Start-Process -FilePath $nvimPath -ArgumentList "`"$file`"" -NoNewWindow -Wait
+}
+
 # If -t specified, open Typora and exit
 if ($t) {
     Open-TodayDiary -PathToTypora $TyporaPath
     Write-Host "Opened $file in Typora."
+    return
+}
+
+# If -v specified, open Neovim and exit
+if ($v) {
+    Open-TodayDiaryInNeovim
+    Write-Host "Opened $file in Neovim."
     return
 }
 
