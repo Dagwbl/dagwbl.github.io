@@ -1,6 +1,6 @@
 ---
-title: <% tp.file.title %>
-date: <% tp.date.now() %>
+title: {{date}}
+date: {{datetime}}
 author: 
 categories: 
   - 

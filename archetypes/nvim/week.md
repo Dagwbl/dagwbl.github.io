@@ -1,6 +1,6 @@
 ---
-title: "{{date:gggg-[W]ww}}"
-date: "{{date:YYYY-MM-DDTHH:mm:ssZ}}"
+title: {{date}}{{week}}
+date: {{datetime}}
 categories:
   - weekly
 series:
@@ -10,3 +10,4 @@ tags:
 location: 
 draft: true
 ---
+

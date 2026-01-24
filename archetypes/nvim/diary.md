@@ -1,6 +1,6 @@
 ---
-title: "{{date:YYYY-MM-DD}}"
-date: <% tp.date.now('YYYY-MM-DDTHH:mm:ssZ') %>
+title: {{date}}
+date: {{datetime}}
 categories:
   - diary
 series:
