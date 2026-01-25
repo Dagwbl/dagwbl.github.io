@@ -9,7 +9,7 @@ param(
 
 # ===== CONFIG =====
 $hostname = $env:COMPUTERNAME
-if ($hostname -eq "DESKTOP-KC9K3N7") {
+if ($hostname -eq "R7000") {
     $vault = "D:\blog"
 } else {
     $vault = "D:\A\Jeapo's blog"
