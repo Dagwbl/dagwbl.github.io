@@ -25,4 +25,4 @@
 - [ ] 学习英语[Oxford Spoken English 重塑你的英语表达](https://www.bilibili.com/video/BV1gwVLz5Eyi/?spm_id_from=333.337.search-card.all.click&vd_source=e73763f897ab8c92fdc67c477da1e273)
 - [x] 论自由  [completion:: 2025-08-19]
 - [-] 学习行测  [created:: 2025-05-06]  [cancelled:: 2025-06-30]
-- [ ] 学习微观经济学
+- [-] 学习微观经济学  [cancelled:: 2026-01-25]
