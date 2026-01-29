@@ -12,7 +12,7 @@ mood:
 weather:
   - 
 location:
-  - Edmonton
+  - UofA
 rating: 
 stime: 
 release: 0
