@@ -49,7 +49,6 @@
     height: 100%;
     fill: none;
     stroke: #e8d8b2dd;
-    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.6));
   }
 
   .star-foreground {
@@ -59,7 +58,6 @@
     width: 100%;
     height: 100%;
     fill: #fbbf24aa;
-    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.6));
   }
 
   /* 调整填充区域 */
@@ -67,26 +65,34 @@
     display: none;
   }
 
+  .rating-1 {
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.4));
+  }
   .rating-1 .star-foreground {
-    /* clip-path: polygon(50% 50%, 50% 0%, 100% 36%); */
     clip-path: polygon(50% 50%, 0% 0%, 100% 0%);
     stroke: #fbbf24aa;
   }
 
+  .rating-2 {
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.4));
+  }
   .rating-2 .star-foreground {
-    /* clip-path: polygon(50% 50%, 50% 0%, 100% 36%, 100% 100%, 50% 100%); */
     clip-path: polygon(50% 50%, 0% 0%, 100% 0%, 100% 75%);
     stroke: #fbbf24aa;
   }
 
+  .rating-3 {
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.4));
+  }
   .rating-3 .star-foreground {
-    /* clip-path: polygon(50% 50%, 50% 0%, 100% 36%, 100% 100%, 15% 100%); */
     clip-path: polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, 49% 100%);
     stroke: #fbbf24aa;
   }
 
+  .rating-4 {
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.4));
+  }
   .rating-4 .star-foreground {
-    /* clip-path: polygon(50% 50%, 50% 0%, 100% 36%, 100% 100%,0 100%, 0 36%); */
     clip-path: polygon(50% 50%,
         0% 0%,
         100% 0%,
@@ -97,6 +103,9 @@
     stroke: #fbbf24aa;
   }
 
+  .rating-5 {
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
+  }
   .rating-5 .star-foreground {
     clip-path: none;
     stroke: #fbbf24aa;
@@ -104,8 +113,8 @@
 
   /* Location map-pin icon style */
   .location-pin-icon {
-    stroke: #10b981aa;
-    filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.5)) drop-shadow(0 0 12px rgba(56, 189, 248, 0.3));
+    stroke: #1078b9aa;
+    filter: drop-shadow(0 0 8px rgba(16, 162, 185, 0.5)) drop-shadow(0 0 12px rgba(56, 189, 248, 0.3));
   }
 
   /* Weather cloud icon style */
