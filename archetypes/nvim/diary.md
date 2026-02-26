@@ -12,10 +12,12 @@ mood:
 weather:
   - 
 location:
-  - UofA
+  - gym
+  - office
+  - home
 rating: 1
 stime: 
-release: 0
+release: -1
 draft: true
 ---
 
