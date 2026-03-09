@@ -4,240 +4,601 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Search</title>
+    <title>Launchpad</title>
     <link rel="stylesheet" href="./../../css/theme-vars.css">
     <style>
-        /* 全局样式 */
+        :root {
+            --launchpad-bg: linear-gradient(135deg, rgba(235, 243, 239, 0.96), rgba(247, 242, 233, 0.96));
+            --launchpad-surface: rgba(255, 255, 255, 0.78);
+            --launchpad-surface-strong: rgba(255, 255, 255, 0.9);
+            --launchpad-accent: #2f6b5f;
+            --launchpad-accent-soft: rgba(47, 107, 95, 0.14);
+            --launchpad-ink-soft: rgba(31, 31, 31, 0.66);
+            --launchpad-shadow: 0 24px 60px rgba(31, 41, 55, 0.12);
+            --launchpad-border: rgba(55, 75, 70, 0.12);
+        }
+
+        body.dark {
+            --launchpad-bg: linear-gradient(135deg, rgba(22, 28, 29, 0.97), rgba(33, 31, 29, 0.97));
+            --launchpad-surface: rgba(34, 38, 40, 0.82);
+            --launchpad-surface-strong: rgba(38, 43, 45, 0.94);
+            --launchpad-accent: #91cfbb;
+            --launchpad-accent-soft: rgba(145, 207, 187, 0.16);
+            --launchpad-ink-soft: rgba(218, 218, 219, 0.72);
+            --launchpad-shadow: 0 28px 72px rgba(0, 0, 0, 0.3);
+            --launchpad-border: rgba(173, 193, 185, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: var(--theme);
-            color: var(--primary);
-            background-size: 100% 100%;
             margin: 0;
-            padding: 0;
+            min-height: 100dvh;
+            height: 100%;
+            color: var(--primary);
+            font-family: "Aptos", "Segoe UI Variable", "Segoe UI", sans-serif;
+            background: var(--launchpad-bg);
+            position: relative;
+            overflow-x: hidden;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
         }
 
-        .main-container {
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: auto;
+            width: 26rem;
+            height: 26rem;
+            border-radius: 999px;
+            filter: blur(20px);
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        body::before {
+            top: -8rem;
+            right: -6rem;
+            background: rgba(87, 157, 139, 0.22);
+        }
+
+        body::after {
+            bottom: -10rem;
+            left: -8rem;
+            background: rgba(224, 181, 105, 0.16);
+        }
+
+        .page {
+            position: relative;
+            z-index: 1;
+            width: min(980px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 28px 0 24px;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 100px 10px;
-            margin-top: 10px;
-        }
-
-        /* 标题 */
-        h1 {
-            font-size: 56px;
-            color: #333;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(3deg);
-            }
-
-            50% {
-                transform: translateY(-10px) rotate(-10deg);
-            }
-        }
-
-        /* 搜索容器 */
-        .search-container {
-            display: flex;
-            align-items: center;
-            background-color: #fff;
-            padding: 10px 20px;
-            border-radius: 50px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 600px;
-        }
-
-        /* 搜索框 */
-        .search-input {
             flex: 1;
-            font-size: 16px;
-            border: none;
-            outline: none;
-            padding: 10px;
-            border-radius: 50px;
-            background-color: #f5f5f5;
-            transition: background-color 0.3s ease;
+            min-height: 0;
         }
 
-        .search-input:focus {
-            background-color: #e9ecef;
+        .panel {
+            background: var(--launchpad-surface);
+            border: 1px solid var(--launchpad-border);
+            border-radius: 28px;
+            box-shadow: var(--launchpad-shadow);
+            backdrop-filter: blur(16px);
         }
 
-        /* 搜索图标按钮 */
-        .search-icon {
-            display: flex;
+        .eyebrow {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            margin-left: 10px;
-            background-color: #7c608b;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--launchpad-accent);
+            background: var(--launchpad-accent-soft);
         }
 
-        .search-icon:hover {
-            background-color: #005a9e;
+        h2,
+        h3 {
+            font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+            margin: 0;
         }
 
-        .search-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: #fff;
+        .launch-search {
+            padding: 30px;
+            margin-bottom: 14px;
+            flex: 1;
+            min-height: 0;
         }
 
-        /* 搜索引擎按钮容器 */
-        .search-buttons {
+        .search-title {
+            margin: 0 0 8px;
+            text-align: center;
+            font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+            font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+            letter-spacing: -0.02em;
+        }
+
+        .search-subtitle {
+            margin: 0 0 16px;
+            text-align: center;
+            color: var(--launchpad-ink-soft);
+        }
+
+        .mode-bar {
             display: flex;
-            gap: 10px;
             flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-            max-width: 650px;
+            gap: 10px;
+            margin-bottom: 16px;
         }
 
-        /* 搜索引擎按钮 */
-        .search-button {
-            padding: 10px 20px;
-            font-size: 14px;
-            color: #fff;
-            background-color: #607d8b;
-            border: none;
-            border-radius: 50px;
+        .mode-pill,
+        .engine-button,
+        .inline-button {
+            border: 1px solid transparent;
+            border-radius: 999px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+            font: inherit;
         }
 
-        .search-button:hover {
-            background-color: #005a9e;
-            transform: translateY(-2px);
+        .mode-pill {
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.56);
+            color: var(--launchpad-ink-soft);
         }
 
-        .search-button:active {
-            background-color: #004a86;
+        body.dark .mode-pill {
+            background: rgba(255, 255, 255, 0.05);
         }
 
-        /* 禁用状态 */
-        button:disabled {
-            background-color: #607d8b88;
-            cursor: not-allowed;
-            transform: none;
+        .mode-pill.is-active,
+        .engine-button:hover,
+        .inline-button:hover {
+            transform: translateY(-1px);
         }
 
-        h1 {
-            animation: float 3s ease-in-out infinite;
+        .mode-pill.is-active {
+            color: #fff;
+            background: var(--launchpad-accent);
+        }
+
+        .search-shell {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 12px;
+            align-items: center;
+            padding: 12px;
+            border-radius: 24px;
+            background: var(--launchpad-surface-strong);
+            border: 1px solid var(--launchpad-border);
+        }
+
+        .search-input {
+            width: 100%;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            color: var(--primary);
+            font-size: 1.05rem;
+            padding: 6px 4px;
+        }
+
+        .search-input::placeholder {
+            color: var(--launchpad-ink-soft);
+        }
+
+        .inline-button {
+            padding: 11px 16px;
+            background: rgba(255, 255, 255, 0.6);
+            color: var(--primary);
+            border-color: var(--launchpad-border);
+        }
+
+        body.dark .inline-button {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .inline-button.is-primary {
+            background: var(--launchpad-accent);
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .engine-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .engine-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            background: rgba(125, 133, 141, 0.14);
+            color: var(--primary);
+            border-color: var(--launchpad-border);
+        }
+
+        .engine-icon {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            object-fit: cover;
+            background: rgba(125, 133, 141, 0.2);
+        }
+
+        .launch-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .advanced-form {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+            padding: 12px;
+            border-radius: 16px;
+            background: rgba(125, 133, 141, 0.08);
+            border: 1px solid var(--launchpad-border);
+        }
+
+        .advanced-field {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            min-width: 0;
+        }
+
+        .advanced-field label {
+            font-size: 12px;
+            color: var(--launchpad-ink-soft);
+        }
+
+        .advanced-field input {
+            width: 100%;
+            border: 1px solid var(--launchpad-border);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.74);
+            color: var(--primary);
+            font: inherit;
+            font-size: 13px;
+            padding: 8px 10px;
+            outline: none;
+        }
+
+        .advanced-field select {
+            width: 100%;
+            border: 1px solid var(--launchpad-border);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.74);
+            color: var(--primary);
+            font: inherit;
+            font-size: 13px;
+            padding: 8px 10px;
+            outline: none;
+        }
+
+        .advanced-field input:focus {
+            border-color: rgba(47, 107, 95, 0.5);
+            box-shadow: 0 0 0 2px rgba(47, 107, 95, 0.12);
+        }
+
+        .advanced-field select:focus {
+            border-color: rgba(47, 107, 95, 0.5);
+            box-shadow: 0 0 0 2px rgba(47, 107, 95, 0.12);
+        }
+
+        body.dark .engine-button {
+            background: rgba(196, 205, 214, 0.14);
+        }
+
+        body.dark .advanced-form {
+            background: rgba(196, 205, 214, 0.08);
+        }
+
+        body.dark .advanced-field input {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        body.dark .advanced-field select {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .recent-timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-left: 18px;
+            min-height: 8px;
+        }
+
+        .recent-timeline::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            bottom: 2px;
+            left: 6px;
+            width: 2px;
+            background: rgba(125, 133, 141, 0.28);
+        }
+
+        .recent-item {
+            position: relative;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            font-size: 13px;
+            line-height: 1.35;
+        }
+
+        .recent-item::before {
+            content: "";
+            position: absolute;
+            left: -15px;
+            top: 8px;
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            transform: translateY(0);
+            background: rgba(125, 133, 141, 0.42);
+            border: 1px solid rgba(125, 133, 141, 0.6);
+        }
+
+        .recent-time {
+            color: var(--launchpad-ink-soft);
+            font-variant-numeric: tabular-nums;
+            flex-shrink: 0;
+        }
+
+        .recent-query {
+            color: var(--primary);
+            cursor: pointer;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .recent-query:hover {
+            color: var(--launchpad-accent);
+            border-bottom-color: var(--launchpad-accent-soft);
+        }
+
+        .hint {
+            text-align: center;
+            color: var(--launchpad-ink-soft);
+            font-size: 13px;
+            margin: 10px 0 0;
+        }
+
+        .hint strong {
+            padding: 2px 6px;
+            border-radius: 6px;
+            background: var(--launchpad-accent-soft);
+            color: var(--launchpad-accent);
+            font-size: 12px;
+        }
+
+        .muted {
+            color: var(--launchpad-ink-soft);
+        }
+
+        @media (max-width: 1040px) {
+            .advanced-form {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 860px) {
+            .advanced-form {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 500px) {
+            .page {
+                width: min(100% - 20px, 1180px);
+                padding-top: 16px;
+                padding-bottom: 24px;
+            }
+
+            .launch-search {
+                padding: 18px;
+            }
+
+            .search-shell {
+                grid-template-columns: 1fr;
+            }
+
+            .advanced-form {
+                grid-template-columns: 1fr;
+            }
+
+            .recent-timeline {
+                padding-left: 16px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="main-container">
-        <h1>🛸</h1>
-        <form id="search-form" class="search-container">
-            <input type="text" id="searchInput" class="search-input" placeholder="Please input a keyword..." required>
-            <button type="submit" class="search-icon" id="defaultSearch">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                        d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z" />
-                </svg>
-            </button>
-        </form>
-        <div class="search-buttons">
-            <button class="search-button" data-engine="https://www.bing.com/search?q=">Bing</button>
-            <button class="search-button" data-engine="https://www.google.com/search?q=">Google</button>
-            <button class="search-button" data-engine="https://www.baidu.com/s?wd=">Baidu</button>
-            <button class="search-button" data-engine="https://duckduckgo.com/?q=">DDuckGo</button>
-            <button class="search-button" data-engine="https://scholar.google.com/scholar?q=">GScholar</button>
-            <button class="search-button" data-engine="https://github.com/search?type=repositories&q=">Github</button>
-            <button class="search-button" data-engine="https://search.brave.com/search?q=">Brave</button>
-            <button class="search-button" data-engine="https://www.youtube.com/results?search_query=">YouTube</button>
-            <button class="search-button"
-                data-engine="https://www.xiaohongshu.com/search_result/?type=51&keyword=">Rednote</button>
-            <button class="search-button" data-engine="https://www.zhihu.com/search?type=content&q=">ZhiHu</button>
-            <button class="search-button" data-engine="https://search.bilibili.com/all?keyword=">Bilibili</button>
-            <button class="search-button" data-engine="https://weixin.sogou.com/weixin?type=2&query=">WeXin</button>
-            <button class="search-button" data-engine="https://www.douban.com/search?q=">DouBan</button>
-            <button class="search-button" data-engine="https://metaso.cn/?q=">Metaso</button>
-        </div>
-    </div>
+    <main class="page">
+        <section class="panel launch-search">
+            <h1 class="search-title">Search</h1>
+            <p class="search-subtitle">Choose a mode, type once, open with your preferred engine.</p>
+            <div class="mode-bar" id="modeBar"></div>
+            <form id="searchForm" class="search-shell">
+                <input type="text" id="searchInput" class="search-input" autocomplete="off" placeholder="Search for a paper, framework, concept, course note, or question" required>
+                <button type="submit" class="inline-button is-primary" id="defaultSearchButton">Search</button>
+            </form>
+            <div class="engine-row" id="engineRow"></div>
+            <div class="launch-meta">
+                <form class="advanced-form" id="advancedForm">
+                    <div class="advanced-field">
+                        <label for="advExact">Exact phrase</label>
+                        <input id="advExact" type="text" placeholder="e.g. large language model">
+                    </div>
+                    <div class="advanced-field">
+                        <label for="advExclude">Exclude words</label>
+                        <input id="advExclude" type="text" placeholder="e.g. review tutorial">
+                    </div>
+                    <div class="advanced-field">
+                        <label for="advAny">Any of words</label>
+                        <input id="advAny" type="text" placeholder="e.g. quantization pruning distillation">
+                    </div>
+                    <div class="advanced-field">
+                        <label for="advSite">Site</label>
+                        <input id="advSite" type="text" placeholder="e.g. arxiv.org">
+                    </div>
+                    <div class="advanced-field">
+                        <label for="advFiletype">Filetype</label>
+                        <input id="advFiletype" type="text" placeholder="e.g. pdf">
+                    </div>
+                    <div class="advanced-field">
+                        <label for="advTitle">In title</label>
+                        <input id="advTitle" type="text" placeholder="e.g. benchmark">
+                    </div>
+                    <div class="advanced-field">
+                        <label for="advAuthor">Author</label>
+                        <input id="advAuthor" type="text" placeholder="e.g. lecun">
+                    </div>
+                    <div class="advanced-field">
+                        <label for="advAfter">After date</label>
+                        <input id="advAfter" type="date">
+                    </div>
+                    <div class="advanced-field">
+                        <label for="advBefore">Before date</label>
+                        <input id="advBefore" type="date">
+                    </div>
+                    <div class="advanced-field">
+                        <label for="advLang">Language</label>
+                        <select id="advLang">
+                            <option value="">Any</option>
+                            <option value="en">English</option>
+                            <option value="zh">Chinese</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="ja">Japanese</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="recent-timeline" id="recentRow"></div>
+            </div>
+        </section>
+
+        <p class="hint">Press <strong>/</strong> to focus search &middot; <strong>Enter</strong> to search</p>
+    </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const searchForm = document.getElementById('search-form');
-            const searchInput = document.getElementById('searchInput');
-            const searchButtons = document.querySelectorAll('.search-button');
-            const defaultSearchButton = document.getElementById('defaultSearch');
+        const engines = {
+            google: { label: 'Google', template: 'https://www.google.com/search?q={query}', group: 'Web' },
+            bing: { label: 'Bing', template: 'https://www.bing.com/search?q={query}', group: 'Web' },
+            brave: { label: 'Brave', template: 'https://search.brave.com/search?q={query}', group: 'Web' },
+            duckduckgo: { label: 'DuckDuckGo', template: 'https://duckduckgo.com/?q={query}', group: 'Web' },
+            baidu: { label: 'Baidu', template: 'https://www.baidu.com/s?wd={query}', group: 'Regional' },
+            zhihu: { label: 'Zhihu', template: 'https://www.zhihu.com/search?type=content&q={query}', group: 'Regional' },
+            weixin: { label: 'Weixin', template: 'https://weixin.sogou.com/weixin?type=2&query={query}', group: 'Regional' },
+            bilibili: { label: 'Bilibili', template: 'https://search.bilibili.com/all?keyword={query}', group: 'Regional' },
+            rednote: { label: 'Rednote', template: 'https://www.xiaohongshu.com/search_result/?type=51&keyword={query}', group: 'Regional' },
+            youtube: { label: 'YouTube', template: 'https://www.youtube.com/results?search_query={query}', group: 'Media' },
+            douban: { label: 'Douban', template: 'https://www.douban.com/search?q={query}', group: 'Media' },
+            scholar: { label: 'Google Scholar', template: 'https://scholar.google.com/scholar?q={query}', group: 'Academic' },
+            semantic: { label: 'Semantic Scholar', template: 'https://www.semanticscholar.org/search?q={query}', group: 'Academic' },
+            arxiv: { label: 'arXiv', template: 'https://arxiv.org/search/?query={query}&searchtype=all', group: 'Academic' },
+            scite: { label: 'Scite', template: 'https://scite.ai/search?query={query}', group: 'Academic' },
+            github: { label: 'GitHub', template: 'https://github.com/search?q={query}', group: 'Code' },
+            stackoverflow: { label: 'Stack Overflow', template: 'https://stackoverflow.com/search?q={query}', group: 'Code' },
+            mdn: { label: 'MDN', template: 'https://developer.mozilla.org/en-US/search?q={query}', group: 'Code' },
+            npm: { label: 'npm', template: 'https://www.npmjs.com/search?q={query}', group: 'Code' },
+            uofa: { label: 'UAlberta', template: 'https://www.ualberta.ca/en/search/index.html#q={keywords}&t={category}&sort=relevancy', group: 'Campus' },
+            metaso: { label: 'Metaso', template: 'https://metaso.cn/?q={query}', group: 'AI' },
+            perplexity: { label: 'Perplexity', template: 'https://www.perplexity.ai/search?q={query}', group: 'AI' }
+        };
 
-            // 搜索功能核心逻辑
-            function performSearch(engineUrl, query) {
-                if (query || true) {
-                    const searchUrl = engineUrl + encodeURIComponent(query);
-                    // 如果在 iframe 中，尝试与父页面通信
-                    if (window !== window.top) {
-                        window.parent.postMessage({
-                            action: 'openUrl',
-                            url: searchUrl,
-                            target: '_blank'
-                        }, '*'); // 注意：'*' 应替换为父页面的具体域名以提高安全性
-                    } else {
-                        // 如果不在 iframe 中，直接打开
-                        window.open(searchUrl, '_blank');
-                    }
-                }
+        const modes = {
+            academic: {
+                label: 'Academic',
+                placeholder: 'Search for a paper, author, concept, or method',
+                defaultEngine: 'scholar',
+                engineGroups: [
+                    { title: 'Core academic', description: 'Use these for paper and citation search.', engines: ['scholar', 'semantic', 'arxiv', 'scite'] },
+                    { title: 'General web support', description: 'Useful when paper search needs broader web context.', engines: ['google', 'bing', 'brave', 'duckduckgo'] }
+                ]
+            },
+            ai: {
+                label: 'AI',
+                placeholder: 'Search for an idea, tool comparison, benchmark, or explanation',
+                defaultEngine: 'perplexity',
+                engineGroups: [
+                    { title: 'AI-native search', description: 'Use when you want synthesized answers first.', engines: ['perplexity', 'metaso'] },
+                    { title: 'Supportive web search', description: 'Use to verify claims and collect source diversity.', engines: ['google', 'brave', 'bing', 'duckduckgo'] }
+                ]
+            },
+            code: {
+                label: 'Code',
+                placeholder: 'Search for an API, error message, package, or implementation detail',
+                defaultEngine: 'github',
+                engineGroups: [
+                    { title: 'Code sources', description: 'Primary places to search implementations and Q and A.', engines: ['github', 'stackoverflow', 'mdn', 'npm'] },
+                    { title: 'Fallback web search', description: 'Use when an error message appears outside canonical docs.', engines: ['google', 'bing', 'brave', 'duckduckgo'] }
+                ]
+            },
+            campus: {
+                label: 'Campus',
+                placeholder: 'Search for a course note, library topic, policy, or university task',
+                defaultEngine: 'uofa',
+                engineGroups: [
+                    { title: 'Campus workflow', description: 'UAlberta built-in search and campus web results.', engines: ['uofa', 'google', 'bing'] },
+                    { title: 'Academic spillover', description: 'Use when campus tasks turn into paper hunting.', engines: ['scholar', 'semantic', 'arxiv'] }
+                ]
+            },
+            web: {
+                label: 'Web',
+                placeholder: 'Search the web, Chinese platforms, or media sources',
+                defaultEngine: 'google',
+                engineGroups: [
+                    { title: 'Global web', description: 'General search coverage across major engines.', engines: ['google', 'brave', 'bing', 'duckduckgo'] },
+                    { title: 'Regional and media', description: 'When the result probably lives on Chinese platforms or video.', engines: ['baidu', 'zhihu', 'weixin', 'bilibili', 'youtube', 'rednote', 'douban'] }
+                ]
             }
+        };
 
-            // 表单提交（默认搜索或回车）
-            searchForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const query = searchInput.value.trim();
-                if (query) {
-                    const defaultEngine = 'https://www.bing.com/search?q='; // 默认搜索引擎
-                    performSearch(defaultEngine, query);
-                }
-            });
+        const modeOrder = [ 'web','academic', 'ai', 'code', 'campus'];
+        const campusCategories = ['Main', 'Programs', 'Courses', 'People', 'News', 'Services', 'Policies'];
+        const searchInput = document.getElementById('searchInput');
+        const searchForm = document.getElementById('searchForm');
+        const modeBar = document.getElementById('modeBar');
+        const recentRow = document.getElementById('recentRow');
+        const engineRow = document.getElementById('engineRow');
+        const advExact = document.getElementById('advExact');
+        const advExclude = document.getElementById('advExclude');
+        const advAny = document.getElementById('advAny');
+        const advSite = document.getElementById('advSite');
+        const advFiletype = document.getElementById('advFiletype');
+        const advTitle = document.getElementById('advTitle');
+        const advAuthor = document.getElementById('advAuthor');
+        const advAfter = document.getElementById('advAfter');
+        const advBefore = document.getElementById('advBefore');
+        const advLang = document.getElementById('advLang');
 
-            // 点击搜索引擎按钮
-            searchButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const query = searchInput.value.trim();
-                    const engineUrl = button.getAttribute('data-engine');
-                    performSearch(engineUrl, query);
-                });
-            });
+        let activeMode = localStorage.getItem('launchpadMode') || 'academic';
 
-            // 输入框实时监控，禁用/启用按钮
-            /*  function updateButtonState() {
-                const query = searchInput.value.trim();
-                searchButtons.forEach(button => {
-                    button.disabled = !query;
-                });
-                defaultSearchButton.disabled = !query;
-            }
-
-            searchInput.addEventListener('input', updateButtonState);
-            updateButtonState(); // 初始化按钮状态 */
-        });
-
-        // 主题切换逻辑（优化合并）
         function applyTheme() {
             const prefTheme = localStorage.getItem('pref-theme');
             const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -249,10 +610,339 @@
             }
         }
 
-        // 初始化主题
-        applyTheme();
+        function openUrl(url) {
+            window.open(url, '_blank', 'noopener');
+        }
 
-        // 监听系统主题变化
+        function buildUrl(engineKey, query, options = {}) {
+            const engine = engines[engineKey];
+            if (!engine) {
+                return '';
+            }
+
+            const campusCategory = options.campusCategory || 'Main';
+            return engine.template
+                .replace('{query}', encodeURIComponent(query))
+                .replace('{keywords}', encodeURIComponent(query))
+                .replace('{category}', encodeURIComponent(campusCategory));
+        }
+
+        function getRecentQueries() {
+            try {
+                const raw = JSON.parse(localStorage.getItem('launchpadRecentQueries') || '[]');
+                if (!Array.isArray(raw)) {
+                    return [];
+                }
+
+                return raw
+                    .map((item) => {
+                        if (typeof item === 'string') {
+                            return { query: item, time: null };
+                        }
+
+                        if (item && typeof item.query === 'string') {
+                            return { query: item.query, time: item.time || null };
+                        }
+
+                        return null;
+                    })
+                    .filter((item) => item && item.query);
+            } catch (error) {
+                return [];
+            }
+        }
+
+        function setRecentQueries(queries) {
+            localStorage.setItem('launchpadRecentQueries', JSON.stringify(queries.slice(0, 10)));
+        }
+
+        function getUsageMap() {
+            try {
+                return JSON.parse(localStorage.getItem('launchpadEngineUsage') || '{}');
+            } catch (error) {
+                return {};
+            }
+        }
+
+        function setUsageMap(usageMap) {
+            localStorage.setItem('launchpadEngineUsage', JSON.stringify(usageMap));
+        }
+
+        function recordQuery(query) {
+            if (!query) {
+                return;
+            }
+
+            const existing = getRecentQueries().filter((item) => item.query !== query);
+            existing.unshift({ query, time: Date.now() });
+            setRecentQueries(existing);
+            renderRecents();
+        }
+
+        function formatRecentTime(timeValue) {
+            const date = new Date(timeValue || Date.now());
+            if (Number.isNaN(date.getTime())) {
+                return '';
+            }
+
+            const pad = (value) => String(value).padStart(2, '0');
+            const year = date.getFullYear();
+            const month = pad(date.getMonth() + 1);
+            const day = pad(date.getDate());
+            const hour = pad(date.getHours());
+            const minute = pad(date.getMinutes());
+            return `${year}-${month}-${day} ${hour}:${minute}`;
+        }
+
+        function bumpUsage(engineKey) {
+            const usageMap = getUsageMap();
+            usageMap[engineKey] = (usageMap[engineKey] || 0) + 1;
+            setUsageMap(usageMap);
+        }
+
+        function hasAdvancedFilters() {
+            return Boolean(
+                advExact.value.trim() ||
+                advExclude.value.trim() ||
+                advAny.value.trim() ||
+                advSite.value.trim() ||
+                advFiletype.value.trim() ||
+                advTitle.value.trim() ||
+                advAuthor.value.trim() ||
+                advAfter.value ||
+                advBefore.value ||
+                advLang.value
+            );
+        }
+
+        function getComposedQuery() {
+            if (!hasAdvancedFilters()) {
+                return searchInput.value.trim();
+            }
+
+            return buildAdvancedQuery();
+        }
+
+        function openEngine(engineKey, options = {}) {
+            const query = getComposedQuery();
+            if (!query) {
+                searchInput.focus();
+                return;
+            }
+
+            bumpUsage(engineKey);
+            recordQuery(query);
+            openUrl(buildUrl(engineKey, query, options));
+        }
+
+        function buildAdvancedQuery() {
+            const parts = [];
+            const base = searchInput.value.trim();
+            if (base) {
+                parts.push(base);
+            }
+
+            if (advExact.value.trim()) {
+                parts.push(`"${advExact.value.trim()}"`);
+            }
+
+            if (advExclude.value.trim()) {
+                advExclude.value
+                    .trim()
+                    .split(/\s+/)
+                    .forEach((word) => parts.push(`-${word}`));
+            }
+
+            if (advAny.value.trim()) {
+                const anyWords = advAny.value
+                    .trim()
+                    .split(/\s+/)
+                    .filter(Boolean)
+                    .join(' OR ');
+
+                if (anyWords) {
+                    parts.push(`(${anyWords})`);
+                }
+            }
+
+            if (advSite.value.trim()) {
+                parts.push(`site:${advSite.value.trim()}`);
+            }
+
+            if (advFiletype.value.trim()) {
+                parts.push(`filetype:${advFiletype.value.trim()}`);
+            }
+
+            if (advTitle.value.trim()) {
+                parts.push(`intitle:"${advTitle.value.trim()}"`);
+            }
+
+            if (advAuthor.value.trim()) {
+                parts.push(`author:"${advAuthor.value.trim()}"`);
+            }
+
+            if (advAfter.value) {
+                parts.push(`after:${advAfter.value}`);
+            }
+
+            if (advBefore.value) {
+                parts.push(`before:${advBefore.value}`);
+            }
+
+            if (advLang.value) {
+                parts.push(`lang:${advLang.value}`);
+            }
+
+            return parts.join(' ').trim();
+        }
+
+        function getEngineIconUrl(engineKey) {
+            const engine = engines[engineKey];
+            if (!engine) {
+                return '';
+            }
+
+            try {
+                const url = new URL(engine.template.replace('{query}', 'x'));
+                return `https://icons.duckduckgo.com/ip3/${url.hostname}.ico`;
+            } catch (error) {
+                return '';
+            }
+        }
+
+        function renderModes() {
+            modeBar.innerHTML = '';
+            modeOrder.forEach((modeKey) => {
+                const mode = modes[modeKey];
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = `mode-pill${modeKey === activeMode ? ' is-active' : ''}`;
+                button.textContent = mode.label;
+                button.addEventListener('click', () => {
+                    activeMode = modeKey;
+                    localStorage.setItem('launchpadMode', activeMode);
+                    renderModeState();
+                });
+                modeBar.appendChild(button);
+            });
+        }
+
+        function renderRecents() {
+            const recentQueries = getRecentQueries();
+            recentRow.innerHTML = '';
+
+            if (recentQueries.length === 0) {
+                const empty = document.createElement('span');
+                empty.className = 'muted';
+                empty.textContent = 'Recent searches will show up here.';
+                recentRow.appendChild(empty);
+                return;
+            }
+
+            recentQueries.forEach((entry) => {
+                const item = document.createElement('div');
+                item.className = 'recent-item';
+
+                const time = document.createElement('span');
+                time.className = 'recent-time';
+                time.textContent = formatRecentTime(entry.time);
+
+                const query = document.createElement('span');
+                query.className = 'recent-query';
+                query.textContent = entry.query;
+                query.addEventListener('click', () => {
+                    searchInput.value = entry.query;
+                    searchInput.focus();
+                });
+
+                item.appendChild(time);
+                item.appendChild(query);
+                recentRow.appendChild(item);
+            });
+        }
+
+        function renderEngines() {
+            const mode = modes[activeMode];
+            engineRow.innerHTML = '';
+
+            if (activeMode === 'campus') {
+                campusCategories.forEach((category) => {
+                    const button = document.createElement('button');
+                    button.type = 'button';
+                    button.className = 'engine-button';
+
+                    const icon = document.createElement('img');
+                    icon.className = 'engine-icon';
+                    icon.src = getEngineIconUrl('uofa');
+                    icon.alt = '';
+                    icon.loading = 'lazy';
+                    icon.decoding = 'async';
+                    icon.addEventListener('error', () => {
+                        icon.style.display = 'none';
+                    });
+
+                    const text = document.createElement('span');
+                    text.textContent = category;
+
+                    button.appendChild(icon);
+                    button.appendChild(text);
+                    button.addEventListener('click', () => openEngine('uofa', { campusCategory: category }));
+                    engineRow.appendChild(button);
+                });
+                return;
+            }
+
+            const allEngines = [...new Set(mode.engineGroups.flatMap(g => g.engines))];
+
+            allEngines.forEach((engineKey) => {
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'engine-button';
+                const icon = document.createElement('img');
+                icon.className = 'engine-icon';
+                icon.src = getEngineIconUrl(engineKey);
+                icon.alt = '';
+                icon.loading = 'lazy';
+                icon.decoding = 'async';
+                icon.addEventListener('error', () => {
+                    icon.style.display = 'none';
+                });
+
+                const text = document.createElement('span');
+                text.textContent = engines[engineKey].label;
+
+                button.appendChild(icon);
+                button.appendChild(text);
+                button.addEventListener('click', () => openEngine(engineKey));
+                engineRow.appendChild(button);
+            });
+        }
+
+        function renderModeState() {
+            const mode = modes[activeMode];
+            renderModes();
+            renderEngines();
+            searchInput.placeholder = mode.placeholder;
+        }
+
+        searchForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            openEngine(modes[activeMode].defaultEngine);
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === '/' && document.activeElement !== searchInput) {
+                event.preventDefault();
+                searchInput.focus();
+                searchInput.select();
+                return;
+            }
+
+        });
+
+        applyTheme();
+        renderRecents();
+        renderModeState();
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
     </script>
 </body>

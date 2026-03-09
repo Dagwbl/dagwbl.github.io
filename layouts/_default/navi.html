@@ -12,450 +12,613 @@
     <title>{{ .Title }}</title>
 
     <style>
-        .hidden {
-            opacity: 0;
-            transform: translateY(-60px);
-            /* 让 header 上移消失，footer 下移消失 */
-            pointer-events: none;
-            /* 禁止交互 */
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-
-        header,
-        footer {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-
         :root {
-            overflow-x: auto;
-            overflow-y: auto;
-            overflow: auto;
-            scrollbar-width: none;
-            /* Firefox */
-            -ms-overflow-style: none;
-            /* IE 和 Edge */
+            --navi-shell-bg: linear-gradient(180deg, rgba(242, 245, 241, 0.9), rgba(251, 248, 242, 0.94));
+            --navi-panel: rgba(255, 255, 255, 0.75);
+            --navi-panel-strong: rgba(255, 255, 255, 0.9);
+            --navi-panel-border: rgba(38, 70, 64, 0.12);
+            --navi-accent: #2f6b5f;
+            --navi-accent-soft: rgba(47, 107, 95, 0.12);
+            --navi-ink-soft: rgba(31, 31, 31, 0.62);
+            --navi-shadow: 0 26px 64px rgba(15, 23, 42, 0.12);
         }
 
-        :root::-webkit-scrollbar {
-            display: none;
+        .dark {
+            --navi-shell-bg: linear-gradient(180deg, rgba(20, 25, 27, 0.94), rgba(29, 28, 26, 0.95));
+            --navi-panel: rgba(31, 36, 39, 0.8);
+            --navi-panel-strong: rgba(35, 41, 44, 0.94);
+            --navi-panel-border: rgba(171, 197, 189, 0.12);
+            --navi-accent: #97d2bf;
+            --navi-accent-soft: rgba(151, 210, 191, 0.14);
+            --navi-ink-soft: rgba(218, 218, 219, 0.68);
+            --navi-shadow: 0 28px 72px rgba(0, 0, 0, 0.34);
         }
 
-        html body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--theme);
-            color: var(--primary);
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
             height: 100%;
         }
 
-        .container {
-            display: flex;
-            height: calc(100vh - var(--header-height));
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Aptos", "Segoe UI Variable", "Segoe UI", sans-serif;
+            background: var(--navi-shell-bg);
+            color: var(--primary);
+            min-height: 100dvh;
+            overflow: hidden;
         }
 
-        /* 左侧导航 */
-        .left-nav {
-            width: 180px;
-            overflow: auto;
-            scrollbar-width: none;
-            /* Firefox */
-            -ms-overflow-style: none;
-            /* IE 和 Edge */
-            padding: 0px;
-            border-radius: 4px;
-            transition: width 0.3s ease-in-out;
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            border-radius: 999px;
+            filter: blur(16px);
+            pointer-events: none;
+            opacity: 0.45;
+            z-index: 0;
+        }
+
+        body::before {
+            top: -140px;
+            right: -120px;
+            width: 380px;
+            height: 380px;
+            background: rgba(71, 145, 126, 0.16);
+        }
+
+        body::after {
+            bottom: -180px;
+            left: -120px;
+            width: 420px;
+            height: 420px;
+            background: rgba(208, 176, 126, 0.14);
+        }
+
+        .navi-shell {
             position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 320px minmax(0, 1fr);
+            gap: 18px;
+            height: calc(100dvh - var(--header-height));
+            padding: 18px;
+            transition: grid-template-columns 0.18s ease;
+        }
+
+        .navi-shell.is-collapsed {
+            grid-template-columns: 74px minmax(0, 1fr);
+        }
+
+        .left-nav {
+            position: sticky;
+            top: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            height: calc(100vh - var(--header-height) - 36px);
+            overflow: hidden;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 16px;
+            border-radius: 28px;
+            border: 1px solid var(--navi-panel-border);
+            background: var(--navi-panel);
+            box-shadow: var(--navi-shadow);
+            backdrop-filter: blur(16px);
+            transition: padding 0.18s ease;
         }
 
         .left-nav::-webkit-scrollbar {
             display: none;
         }
 
-        .left-nav.collapsed {
-            width: 50px;
-            opacity: 0.6;
-            transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
-            backdrop-filter: blur(1000px);
+        .nav-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
-        .left-nav.collapsed:hover {
-            opacity: 0.9;
-        }
-
-        .nav-toggle {
-            width: 24px;
-            height: 24px;
-            font-family: 'Material Icons';
-            border-radius: 50%;
+        .eyebrow {
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 8px;
+            width: fit-content;
+            padding: 0 0 0 10px;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            border-left: 3px solid var(--navi-accent);
+            color: var(--navi-accent);
+            text-transform: none;
+            letter-spacing: 0.03em;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1.2;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .eyebrow-text {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .eyebrow-toggle {
+            border: 0;
+            background: transparent;
+            color: inherit;
+            padding: 2px 6px;
+            font-size: 18px;
+            line-height: 1;
             cursor: pointer;
-            z-index: 1000;
-            transform: translateX(155px);
-            opacity: 0.8;
-            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+            border-radius: 6px;
+            min-width: 28px;
+            min-height: 24px;
         }
 
-        .collapsed .nav-toggle {
-            transform: translateX(0);
-            font-family: 'Material Icons';
+        .eyebrow-toggle:hover {
+            background: var(--navi-accent-soft);
         }
 
-        .nav-group {
-            margin-bottom: 2px;
+        .eyebrow-toggle:focus-visible {
+            outline: 2px solid rgba(47, 107, 95, 0.45);
+            outline-offset: 2px;
+        }
+
+        .dark .eyebrow {
+            color: var(--navi-accent);
+            border-left-color: var(--navi-accent);
+        }
+
+        .nav-brand h1 {
+            margin: 0;
+            font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+            letter-spacing: -0.04em;
+        }
+
+        .nav-brand h1 {
+            font-size: 2.25rem;
+            line-height: 0.95;
+        }
+
+        .nav-brand p,
+        .frame-meta {
+            margin: 0;
+            color: var(--navi-ink-soft);
+            line-height: 1.6;
+        }
+
+        .eyebrow-toggle:hover,
+        .nav-item-wrapper:hover {
+            transform: translateY(-1px);
+        }
+
+        .nav-scroll {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-height: 0;
+            overflow-y: auto;
+            padding-right: 4px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .nav-scroll::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        .left-nav.is-collapsed .nav-title,
+        .left-nav.is-collapsed .nav-item-text {
+            display: none;
+        }
+
+        .left-nav.is-collapsed .nav-items {
+            grid-template-columns: 1fr;
+        }
+
+        .left-nav.is-collapsed .nav-item {
+            justify-content: center;
+            gap: 0;
+            padding: 8px 6px;
+        }
+
+        .navi-shell.is-collapsed .left-nav {
+            padding: 12px 10px;
+        }
+
+        .navi-shell.is-collapsed .nav-brand {
+            gap: 0;
+        }
+
+        .navi-shell.is-collapsed .eyebrow {
+            padding-left: 0;
+            border-left: 0;
+            gap: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .navi-shell.is-collapsed .eyebrow-toggle {
+            min-width: 20px;
+            min-height: 20px;
+            padding: 0 2px;
+            font-size: 14px;
         }
 
         .nav-title {
-            padding: 2px 4px 0px 4px;
-            color: #666;
+            padding: 0 4px;
+            color: var(--navi-ink-soft);
             font-size: 12px;
-            font-weight: bold;
+            font-weight: 700;
             text-transform: uppercase;
-            border-radius: 4px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
         }
 
-        .collapsed .nav-title {
-            text-align: center;
-            font-size: 10px;
+        .nav-group {
+            display: block;
+        }
+
+        .nav-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
         }
 
         .nav-item {
             flex: 1;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            padding: 3px 6px;
-            font-size: 14px;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 10px;
+            color: inherit;
+            text-decoration: none;
         }
 
         .nav-item-wrapper {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            gap: 8px;
             color: var(--primary);
             text-decoration: none;
             font-size: 14px;
-            transition: background-color 0.2s ease;
-            min-height: 30px;
-            padding: 1px 2px;
+            min-height: 38px;
+            padding: 2px;
+            border-radius: 18px;
+            transition: background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
         }
 
         .nav-item-wrapper:hover {
-            background: linear-gradient(to left, transparent, #60708b3d);
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.18);
         }
 
-        .nav-item span.icon,
+        .nav-item .icon,
         .nav-item-wrapper img {
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-right: 8px;
-            margin-left: 5px;
+            flex-shrink: 0;
         }
 
-        .nav-item span.icon {
-            font-size: 16px;
-            line-height: 16px;
+        .nav-item .icon {
+            font-size: 18px;
+            line-height: 1;
             text-align: center;
         }
 
-        .collapsed .nav-item-wrapper img,
-        .collapsed .nav-item span.icon {
-            margin-left: 10px;
-            width: 16px;
-            height: 16px;
-        }
-
-        .nav-item-wrapper a {
-            text-decoration: none;
-            color: inherit;
+        .nav-item-text {
+            min-width: 0;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .nav-item-name {
+            display: flex;
             align-items: center;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-weight: 600;
         }
 
-        .external-link {
+        .nav-item-meta {
+            color: var(--navi-ink-soft);
             font-size: 12px;
-            text-decoration: none;
-            padding: 0 4px;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
-        .collapsed .external-link {
-            display: none;
+        .nav-item-wrapper.is-active {
+            background: linear-gradient(135deg, var(--navi-accent-soft), rgba(255, 255, 255, 0.1));
+            box-shadow: inset 0 0 0 1px rgba(47, 107, 95, 0.18);
         }
 
-        .collapsed .nav-item span:not(.icon) {
-            display: none;
-        }
 
-        .nav-item-wrapper:hover .external-link {
-            visibility: visible;
-            opacity: 0.5;
-        }
-
-        .nav-item-wrapper.active {
-            background: linear-gradient(to left, transparent, #75d4fc7d);
-            border-radius: 4px;
-        }
 
         .main-content {
-            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+
+        .frame-shell {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 0;
+            border-radius: 32px;
+            border: 1px solid var(--navi-panel-border);
+            background: var(--navi-panel);
+            box-shadow: var(--navi-shadow);
+            backdrop-filter: blur(16px);
+            overflow: hidden;
         }
 
         .content-frame {
             width: 100%;
+            flex: 1;
+            min-height: 0;
             height: 100%;
             border: none;
-            background: #fff;
-            border-radius: 4px;
+            background: var(--entry);
         }
 
-        /* 移动端样式 */
         @media (max-width: 768px) {
-            .nav {
-                position: relative;
+            .navi-shell {
+                grid-template-columns: 1fr;
+                padding: 12px;
             }
 
             .left-nav {
-                position: absolute;
-                /* 改为绝对定位 */
-                top: 0;
-                /* 粘附于顶部 */
-                left: 0;
-                /* 粘附于左边 */
-                /* height: calc(100% - var(--header-height)); */
-                height: 100%;
-                z-index: 1000;
-                transform: translateX(0px) translateY(0%);
-                /* 保持偏移量 */
-                overflow-y: auto;
-                scrollbar-width: none;
-                /* Firefox */
-                -ms-overflow-style: none;
-                /* IE 和 Edge */
-                transition: transform 0.3s ease;
-                font-family: 'Material Icons';
-                background: #f5f5f5;
-            }
-
-            .left-nav.collapsed {
                 position: fixed;
-                top: 10px;
-                left: 10px;
-                /* background: none;*/
-                width: 23px;
-                height: 23px;
-                overflow: hidden;
+                top: 12px;
+                left: 12px;
+                right: 12px;
+                height: auto;
+                max-height: calc(100vh - 24px);
+                z-index: 1000;
+                overflow: auto;
             }
 
-            .left-nav.collapsed .nav-group {
+            .left-nav.is-collapsed {
+                right: auto;
+                max-height: none;
+                overflow: hidden;
+                padding: 10px 14px;
+            }
+
+            .left-nav.is-collapsed .nav-brand p,
+            .left-nav.is-collapsed .nav-title,
+            .left-nav.is-collapsed .nav-item-text {
                 display: none;
             }
 
-            .left-nav.collapsed .nav-toggle {
-                display: block;
-                transform: translateX(0);
-                font-family: 'Material Icons';
+            .left-nav.is-collapsed .eyebrow {
+                display: flex;
             }
 
-            .main-content {
-                margin-left: 0;
+            .left-nav.is-collapsed .nav-items {
+                grid-template-columns: 1fr;
             }
 
+            .left-nav.is-collapsed .nav-item {
+                justify-content: center;
+                gap: 0;
+                padding: 8px 6px;
+            }
+
+            .left-nav.is-collapsed .nav-brand h1 {
+                font-size: 1.1rem;
+            }
+
+            .frame-shell {
+                min-height: calc(100vh - var(--header-height) - 24px);
+            }
         }
+
     </style>
 
 </head>
 
 <body>
-    <div class="container">
-        <div class="left-nav">
-            <div class="nav-toggle nav-group" id="navToggle">
-                <span>◀</span>
+    <div class="navi-shell" id="naviShell">
+        <aside class="left-nav" id="leftNav">
+            <div class="nav-brand">
+                <span class="eyebrow" id="eyebrowDisplay">
+                    <span class="eyebrow-text" id="currentDateTime"></span>
+                    <button class="eyebrow-toggle" id="eyebrowToggle" type="button" aria-label="Collapse sidebar">◂</button>
+                </span>
             </div>
 
-            {{ range .Site.Data.navigation }}
-            <div class="nav-group">
-                <div class="nav-title">{{ .category | upper }}</div>
-                <div class="nav-items">
-                    {{ range sort .items "weight" "asc" }}
-                    <div class="nav-item-wrapper">
-                        {{ if .refused }}
-                        <a href="{{ .link }}" class="nav-item" target="_blank" title="{{ .name }}">
+            <div class="nav-scroll" id="navScroll">
+                {{ range .Site.Data.navigation }}
+                <section class="nav-group" data-filter-group>
+                    <div class="nav-title">{{ .category | upper }}</div>
+                    <div class="nav-items">
+                        {{ range sort .items "weight" "asc" }}
+                        <div class="nav-item-wrapper" data-name="{{ .name }}" data-category="{{ .category }}">
+                            {{ if .refused }}
+                            <a href="{{ .link }}" class="nav-item" target="_blank" rel="noopener noreferrer" title="{{ .name }}">
                             {{ else }}
-                            <a href="#{{ .name | urlize }}" class="nav-item" data-tool="{{ .link }}"
-                                data-category="{{ .category }}" title="{{ .name }}">
-                                {{ end }}
-                                {{ if .icon }}
-                                {{ if (strings.HasPrefix .icon "http") }}
-                                <img src="{{ .icon }}" alt="icon" onerror="this.src='/default-favicon.png';">
-                                {{ else }}
-                                <span class="icon">{{ .icon }}</span>
-                                {{ end }}
-                                {{ else }}
-                                {{ $url := .link }}
-                                {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
-                                {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }}
-                                <img src="{{ $iconUrl }}" alt="{{ $domain }} icon">
-                                {{ end }}
-                                <span>{{ .name }}</span>
-                            </a>
-                            <a href="{{ .link }}" target="_blank" class="external-link">↪</a>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
-            {{ end }}
-
-            <div class="nav-group">
-                <div class="nav-title">LOCAL</div>
-                <div class="nav-items">
-                    {{ $localTools := where (where .Site.RegularPages "Section" "navi") "Params.category" "local" }}
-                    {{ range sort $localTools "Params.weight" "asc" }}
-                    <div class="nav-item-wrapper">
-                        <a href="#{{ .File.ContentBaseName }}" class="nav-item" data-tool="{{ .File.ContentBaseName }}">
-                            {{ if .Params.icon }}
-                            <span class="icon">{{ .Params.icon }}</span>
+                            <a href="#{{ .name | urlize }}" class="nav-item" data-tool="{{ .link }}" data-category="{{ .category }}" data-label="{{ .name }}" title="{{ .name }}">
                             {{ end }}
-                            <span>{{ .Title }}</span>
-                        </a>
-                        <a href="{{ .File.ContentBaseName }}" target="_blank" class="external-link">↪</a>
+                                {{ if .icon }}
+                                    {{ if (strings.HasPrefix .icon "http") }}
+                                    <img src="{{ .icon }}" alt="icon" onerror="this.src='/default-favicon.png';">
+                                    {{ else }}
+                                    <span class="icon">{{ .icon }}</span>
+                                    {{ end }}
+                                {{ else }}
+                                    {{ $url := .link }}
+                                    {{ $domain := replaceRE "^https?://([^/]+).*" "$1" $url }}
+                                    {{ $iconUrl := print "https://icons.duckduckgo.com/ip3/" $domain ".ico" }}
+                                    <img src="{{ $iconUrl }}" alt="{{ $domain }} icon">
+                                {{ end }}
+                                <span class="nav-item-text">
+                                    <span class="nav-item-name">{{ .name }}</span>
+                                    <span class="nav-item-meta">{{ .category }}</span>
+                                </span>
+                            </a>
+                        </div>
+                        {{ end }}
                     </div>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
+                </section>
+                {{ end }}
 
-        <div class="main-content">
-            <iframe src="" id="toolFrame" class="content-frame"
-                fetchpriority="high"
-                loading="eager"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="fullscreen; geolocation; microphone; camera; midi; clipboard-write; picture-in-picture">
-            </iframe>
-        </div>
+                <section class="nav-group" data-filter-group>
+                    <div class="nav-title">LOCAL</div>
+                    <div class="nav-items">
+                        {{ $localTools := where (where .Site.RegularPages "Section" "navi") "Params.category" "local" }}
+                        {{ range sort $localTools "Params.weight" "asc" }}
+                        <div class="nav-item-wrapper" data-name="{{ .Title }}" data-category="Local">
+                            <a href="#{{ .File.ContentBaseName }}" class="nav-item" data-tool="{{ .File.ContentBaseName }}" data-category="Local" data-label="{{ .Title }}" title="{{ .Title }}">
+                                {{ if .Params.icon }}
+                                <span class="icon">{{ .Params.icon }}</span>
+                                {{ else }}
+                                <span class="icon">•</span>
+                                {{ end }}
+                                <span class="nav-item-text">
+                                    <span class="nav-item-name">{{ .Title }}</span>
+                                    <span class="nav-item-meta">Local</span>
+                                </span>
+                            </a>
+                        </div>
+                        {{ end }}
+                    </div>
+                </section>
+
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <div class="frame-shell">
+                <iframe src="" id="toolFrame" class="content-frame"
+                    fetchpriority="high"
+                    loading="eager"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="fullscreen; geolocation; microphone; camera; midi; clipboard-write; picture-in-picture">
+                </iframe>
+            </div>
+        </section>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const navItems = document.querySelectorAll('.nav-item[data-tool]');
-            const navItemWrappers = document.querySelectorAll('.nav-item-wrapper');
+            const COLLAPSE_KEY = 'naviSidebarCollapsed';
+            const naviShell = document.getElementById('naviShell');
+            const navItems = Array.from(document.querySelectorAll('.nav-item[data-tool]'));
+            const navItemWrappers = Array.from(document.querySelectorAll('.nav-item-wrapper'));
             const toolFrame = document.getElementById('toolFrame');
-            const leftNav = document.querySelector('.left-nav');
-            const navToggle = document.getElementById('navToggle');
-            const container = document.querySelector('.container');
-            const header = document.querySelector('header');
-            const footer = document.querySelector('footer');
+            const leftNav = document.getElementById('leftNav');
+            const eyebrowToggle = document.getElementById('eyebrowToggle');
+            const currentDateTime = document.getElementById('currentDateTime');
 
-            // 获取导航栏状态，首次访问默认展开
-            let isNavCollapsed;
-            if (localStorage.getItem('navCollapsed') === null) {
-                isNavCollapsed = false;
-                localStorage.setItem('navCollapsed', JSON.stringify(false));
-            } else {
-                isNavCollapsed = JSON.parse(localStorage.getItem('navCollapsed'));
+            function updateDateTime() {
+                if (!currentDateTime) return;
+
+                const now = new Date();
+                const month = now.toLocaleString('en-US', { month: 'long' });
+                const day = String(now.getDate()).padStart(2, '0');
+                const year = now.getFullYear();
+                const hour = String(now.getHours()).padStart(2, '0');
+                const minute = String(now.getMinutes()).padStart(2, '0');
+                const second = String(now.getSeconds()).padStart(2, '0');
+                const isCollapsed = leftNav.classList.contains('is-collapsed');
+                currentDateTime.textContent = isCollapsed
+                    ? `${hour}:${minute}`
+                    : `${month} ${day}, ${year} ${hour}:${minute}:${second}`;
             }
 
-            function hideWithAnimation() {
-                header.classList.add('hidden');
-                footer.classList.add('hidden');
-                setTimeout(() => {
-                    header.style.display = 'none';
-                    footer.style.display = 'none';
-                }, 300);
-            }
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
 
-            function showWithAnimation() {
-                header.style.display = '';
-                footer.style.display = '';
-                setTimeout(() => {
-                    header.classList.remove('hidden');
-                    footer.classList.remove('hidden');
-                }, 10);
-            }
+            function setCollapsed(collapse, persist = true) {
+                leftNav.classList.toggle('is-collapsed', collapse);
+                naviShell.classList.toggle('is-collapsed', collapse && window.innerWidth > 768);
+                eyebrowToggle.textContent = collapse ? '\u25B8' : '\u25C2';
+                eyebrowToggle.setAttribute('aria-label', collapse ? 'Expand sidebar' : 'Collapse sidebar');
+                updateDateTime();
 
-            // 设置初始状态
-            if (isNavCollapsed) {
-                leftNav.classList.add('collapsed');
-                navToggle.querySelector('span').textContent = '▶';
-                container.style.height = '100vh';
-                hideWithAnimation();
-            } else {
-                leftNav.classList.remove('collapsed');
-                navToggle.querySelector('span').textContent = '◀';
-                container.style.height = 'calc(100vh - var(--header-height))';
-                showWithAnimation();
-            }
-
-            // 侧边栏切换
-            navToggle.addEventListener('click', () => {
-                leftNav.classList.toggle('collapsed');
-                if (leftNav.classList.contains('collapsed')) {
-                    navToggle.querySelector('span').textContent = '▶';
-                    localStorage.setItem('navCollapsed', JSON.stringify(true));
-                    container.style.height = '100vh';
-                    hideWithAnimation();
-                } else {
-                    navToggle.querySelector('span').textContent = '◀';
-                    localStorage.setItem('navCollapsed', JSON.stringify(false));
-                    container.style.height = 'calc(100vh - var(--header-height))';
-                    showWithAnimation();
+                if (persist) {
+                    localStorage.setItem(COLLAPSE_KEY, collapse ? '1' : '0');
                 }
+            }
+
+            function getStoredCollapsed() {
+                return localStorage.getItem(COLLAPSE_KEY) === '1';
+            }
+
+            function activateItem(item, updateHash) {
+                if (!item) return;
+
+                navItemWrappers.forEach(w => w.classList.remove('is-active'));
+                item.parentElement.classList.add('is-active');
+
+                toolFrame.src = item.dataset.tool;
+
+                if (updateHash) {
+                    window.location.hash = item.getAttribute('href');
+                }
+
+                if (window.innerWidth <= 768) {
+                    setCollapsed(true);
+                }
+            }
+
+            eyebrowToggle.addEventListener('click', () => {
+                const collapse = !leftNav.classList.contains('is-collapsed');
+                setCollapsed(collapse);
             });
 
-            // 默认加载 weight 最小的工具
-            const defaultTool = navItems[0];
-            if (defaultTool) {
-                const toolLink = defaultTool.getAttribute('data-tool');
-                toolFrame.src = `${toolLink}/`;
-                defaultTool.parentElement.classList.add('active');
-            }
-
-            // 导航项点击处理
             navItems.forEach(item => {
-                item.addEventListener('click', (e) => {
+                item.addEventListener('click', e => {
                     e.preventDefault();
-
-                    navItems.forEach(i => i.classList.remove('active'));
-                    navItemWrappers.forEach(i => i.classList.remove('active'));
-                    item.parentElement.classList.add('active');
-
-                    const toolLink = item.getAttribute('data-tool');
-                    toolFrame.src = toolLink;
-                    window.location.hash = item.getAttribute('href').slice(1);
+                    activateItem(item, true);
                 });
             });
 
-            // 处理 URL hash
+            const shouldCollapse = window.innerWidth <= 768 ? true : getStoredCollapsed();
+            setCollapsed(shouldCollapse, false);
+
+            window.addEventListener('resize', () => {
+                naviShell.classList.toggle('is-collapsed', leftNav.classList.contains('is-collapsed') && window.innerWidth > 768);
+            });
+
+            let initialItem = null;
             if (window.location.hash) {
-                const tool = window.location.hash.slice(1);
-                const toolItem = document.querySelector(`.nav-item[href="#${tool}"]`);
-                if (toolItem) {
-                    toolItem.click();
-                }
+                initialItem = navItems.find(el => el.getAttribute('href') === window.location.hash);
             }
+            activateItem(initialItem || navItems[0], false);
+
+
         });
+
         window.addEventListener('message', function (event) {
-            if (event.data.action === 'openUrl') {
-                if (event.data.target === '_blank') {
-                    window.open(event.data.url, '_blank');
-                } else {
-                    window.location.href = event.data.url;
-                }
+            if (!event.data || event.data.action !== 'openUrl') return;
+
+            if (event.data.target === '_blank') {
+                window.open(event.data.url, '_blank', 'noopener');
+                return;
             }
+
+            window.location.href = event.data.url;
         });
     </script>
 </body>

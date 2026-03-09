@@ -1,112 +1,147 @@
-- category: FOR ME
+- category: DAILY
   items:
+    - name: "Launchpad"
+      icon: "🦣"
+      weight: 5
+      link: "/component/multiple-search/"
     - name: "One Diary"
       icon: "📅"
       weight: 1
       link: "https://web.xianfengtech.cn/web2/#/record"
-    # - name: "Txt to Markdown"
-    #   icon: "📑"
-    #   weight: 4
-    #   link: "/component/txt-to-md/"
-    - name: "Multiple Search"
-      icon: "🔍"
-      weight: 0
-      link: "/component/multiple-search/"
+      refused: true
     - name: "Pomodoro"
       icon: "🍅"
       weight: 3
       link: "/component/tomodoro/"
-#    - name: "Sharpening Life"
-#       icon: "🔪"
-#      weight: 2
-#      link: "https://www.yuque.com/dagwbl/rhcp4m?#%20%E3%80%8ASharpening%E3%80%8B"
+    - name: "Follow"
+      weight: 3
+      link: "https://app.follow.is/timeline/view-0/all/pending"
+      refused: true
 
-
-- category: AI
+- category: CAMPUS
   items:
-    - name: "DeepSeek"
-      icon: "🐳"
-      weight: 9
+    - name: "Canvas"
+      weight: 1
+      link: "https://canvas.ualberta.ca/"
       refused: true
-      link: "https://chat.deepseek.com/"
-    - name: Metaso
-      link: "https://metaso.cn/"
-      weight: 10
+    - name: "Library"
+      weight: 2
+      link: "https://www.library.ualberta.ca/"
       refused: true
-    - name: "Claude 3.7"
-      weight: 11
-      link: "https://poe.com/Claude-3.7-Sonnet"
+    - name: "Bear Tracks"
+      weight: 3
+      icon: "🐻"
+      link: "https://www.beartracks.ualberta.ca/"
       refused: true
+    - name: "Gmail"
+      weight: 4
+      link: "https://mail.google.com/"
+      refused: true
+
+- category: AI STUDIO
+  items:
     - name: "ChatGPT"
-      weight: 12
+      weight: 1
       link: "https://chatgpt.com/"
       refused: true
-    # - name: "Gemini 2"
-    #   icon: "🦋"
-    #   weight: 12
-    #   link: "https://gemini.google.com/"
-    - name: "LMArena"
-      icon: "🏟️"
-      weight: 13
-      link: "https://lmarena.ai/?model=grok-3"
+    - name: "Claude"
+      weight: 2
+      link: "https://claude.ai/"
       refused: true
-    # - name: Chatbox
-    #   weight: 99
-    #   link: "https://web.chatboxai.app/"
-
-
-- category: Social
-  items:
-    - name: "Hacker News"
+    - name: "Gemini"
+      weight: 3
+      link: "https://gemini.google.com/"
+      refused: true
+    - name: "DeepSeek"
+      icon: "🐳"
+      weight: 4
+      link: "https://chat.deepseek.com/"
+      refused: true
+    - name: "Perplexity"
       weight: 5
+      link: "https://www.perplexity.ai/"
+      refused: true
+    # - name: "Metaso"
+    #   weight: 6
+    #   link: "https://metaso.cn/"
+    #   refused: true
+    - name: "LMArena"
+      weight: 7
+      link: "https://lmarena.ai/"
+      refused: true
+
+- category: RESEARCH
+  items:
+    - name: "Google Scholar"
+      weight: 1
+      link: "https://scholar.google.com/"
+      refused: true
+    - name: "Semantic Scholar"
+      weight: 3
+      link: "https://www.semanticscholar.org/"
+      refused: true
+    - name: "arXiv"
+      weight: 2
+      link: "https://arxiv.org/"
+      refused: true
+    - name: "Scite"
+      weight: 4
+      link: "https://scite.ai/"
+      refused: true
+    - name: "Connected Papers"
+      weight: 5
+      link: "https://www.connectedpapers.com/"
+      refused: true
+    - name: "Overleaf"
+      weight: 6
+      link: "https://www.overleaf.com/"
+      refused: true
+
+
+
+- category: BUILD
+  items:
+    - name: "Scholar Mirror"
+      weight: 1
+      icon: "🧭"
+      link: "https://ac.scmor.com/"
+      refused: true
+    - name: "GeoGebra"
+      weight: 2
+      link: "https://www.geogebra.org/classic"
+      refused: true
+    - name: "Toolbox"
+      weight: 3
+      link: "https://tool.lvtao.net/json"
+      refused: true
+    - name: "Hacker News"
+      weight: 1
       link: "https://news.ycombinator.com/"
       refused: true
     - name: "V2EX"
-      weight: 4
+      weight: 2
       link: "https://www.v2ex.com/"
       refused: true
     - name: "Chongbuluo"
       weight: 3
       link: "https://chongbuluo.com/"
       refused: true
-    - name: "Follow"
-      weight: 2
-      link: "https://app.follow.is/timeline/view-0/all/pending"
-      refused: true
 
-- category: Tool
+- category: RESET
   items:
-    - name: "Scholar"
-      weight: 1
-      icon: "📚"
-      link: "https://ac.scmor.com/"
-    - name: GeoGebra
-      weight: 13
-      link: "https://www.geogebra.org/classic"
-      refused: false
-    - name: "Toolbox"
-      weight: 98
-      link: "https://tool.lvtao.net/json"
-    # - name: "Visual Studio Code"
-    #   weight: 99
-    #   icon: "👨🏻‍💻"
-    #   refused: true
-    #   link: "https://vscode.dev/github/Dagwbl/dagwbl.github.io"
-
-- category: Relax
-  items:
-    - name: "Word Search"
-      weight: 14
-      link: "https://www.thewordfinder.com/word-search-puzzles/"
-    - name: "Daily Anagram"
-      weight: 15
-      link: "https://www.thewordfinder.com/daily-anagram/"
-    - name: MineSweeper
-      weight: 3
-      icon: "💣"
-      link: "/component/minesweeper/"
     - name: "Chess"
       weight: 1
-      # icon: "♟️"
-      refused: true
       link: "https://lichess.org/"
+      refused: true
+    - name: "MineSweeper"
+      weight: 2
+      icon: "💣"
+      link: "/component/minesweeper/"
+    - name: "WordSearch"
+      weight: 3
+      link: "https://www.thewordfinder.com/word-search-puzzles/"
+      refused: true
+    - name: "Anagram"
+      weight: 4
+      link: "https://www.thewordfinder.com/daily-anagram/"
+      refused: true
