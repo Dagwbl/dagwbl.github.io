@@ -1,8 +1,8 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "http://localhost:1313"
-title: "Jeapo's Blog"
-copyright: ©️ 2025 Jeapo
+title: "Ben's Blog"
+copyright: ©️ 2025 Ben
 pagination:
   pagerSize: 7
 # theme: [ "hugo-notice","PaperMod"]
@@ -57,7 +57,7 @@ params:
   env: development # to enable google analytics, opengraph, twitter-cards and schema.
   description: "A blog about technology, programming, and life."
   keywords: [blog, technology, programming, life, personal, diary, note, letter, code, navigation]
-  author: Jeapo
+  author: Ben
   hideAuthor: true
   dateFormat: "2006-01-02"
   # author: ["Me", "You"] # multiple authors
@@ -279,7 +279,7 @@ languages:
         enabled: false
         title: Huh, still alive!
         imageUrl: "images/home-icon.png"
-        imageTitle: ZJeapo
+        imageTitle: Ben
         imageWidth: 90
         imageHeight: 90
         buttons:
@@ -343,7 +343,7 @@ languages:
         enabled: false
         title: "呜呼~ \U0001F44B"
         imageUrl: "images/home-icon.png"
-        imageTitle: ZJeapo
+        imageTitle: Ben
         imageWidth: 90
         imageHeight: 90
         buttons:

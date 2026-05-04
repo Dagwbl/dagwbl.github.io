@@ -1,10 +1,10 @@
 # data/resume.yaml
 basics:
-  name: "Jeapo"
+  name: "Ben"
   label: "Job waiting"
   email: "dagwbl@outlook.com"
   phone: "+86-1234567890"
-  url: "jeapo.top"
+  url: "jinpeng.cv"
   location:
     address: "China"
     postalCode: "552527"
@@ -14,9 +14,9 @@ basics:
     - network: "GitHub"
       url: "https://github.com/Dagwbl"
       username: "Dagwbl"
-    - network: "Jeapo"
-      url: "https://linkedin.com/in/jeapo"
-      username: "Jeapo"
+    - network: "LinkedIn"
+      url: "https://linkedin.com/in/ben"
+      username: "Ben"
   summary: "The world puts off its mask of vastness to its lover. It becomes small as one song, as one kiss of the eternal."
 
 work:
