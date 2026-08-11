@@ -1,0 +1,36 @@
+% UofA Engineering Assignment Title Page Partial
+% This partial customizes the title page for University of Alberta engineering assignments
+
+% Page geometry and spacing
+% \setlength{\textwidth}{6.5in}
+% \setlength{\textheight}{9.in}
+% \setlength{\oddsidemargin}{0in}
+% \setlength{\headheight}{0in}
+
+\usepackage[margin=3cm]{geometry}
+\makeatletter
+\makeatother
+
+
+% Custom title page for UofA Engineering Assignment
+\renewcommand\maketitle{
+    \begin{flushleft}
+        Student Name: $if(author)$$author$$endif$ \\
+        Student ID: $if(student-id)$$student-id$$endif$
+        $if(date)$\\ Date: $date$$endif$
+    \end{flushleft}
+
+    \begin{flushright}\vspace{-15mm}
+        \includegraphics[height=2cm]{$if(logo)$$logo$$else$logo.png$endif$}
+    \end{flushright}
+
+    \begin{center}\vspace{-0.7cm}
+        \textbf{\large $if(course)$$course$$endif$}\\
+        $if(title)$$title$$endif$
+    \end{center}
+
+    \rule{\linewidth}{0.1mm}
+
+    \bigskip
+    \bigskip
+}

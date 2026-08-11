@@ -1,0 +1,62 @@
+% UofA Engineering Assignment Title Page Partial
+% This partial customizes the title page for University of Alberta engineering assignments
+
+% Page geometry and spacing
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\headheight}{0in}
+
+\usepackage[margin=2cm]{geometry}
+
+% Color definitions for code highlighting (if needed)
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Graphics and figures
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{epsfig,graphicx}
+\usepackage{multicol}
+
+% Mathematics packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{eucal}
+
+% Custom math operators
+\DeclareMathOperator{\tr}{Tr}
+\newcommand*{\op}[1]{\check{\mathbf#1}}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+\newcommand{\mean}[1]{\langle #1 \rangle}
+\newcommand{\opvec}[1]{\check{\vec #1}}
+\renewcommand{\sp}[1]{$${\begin{split}#1\end{split}}$$}
+
+% Custom title page for UofA Engineering Assignment
+\renewcommand\maketitle{
+    \begin{flushleft}
+        Student Name: $if(author)$$author$$endif$ \\
+        Student ID: $if(student-id)$$student-id$$endif$
+        $if(date)$\\ Date: $date$$endif$
+    \end{flushleft}
+
+    \begin{flushright}\vspace{-15mm}
+        \includegraphics[height=2cm]{$if(logo)$$logo$$else$logo.png$endif$}
+    \end{flushright}
+
+    \begin{center}\vspace{-1cm}
+        \textbf{\large $if(course)$$course$$endif$}\\
+        $if(assignment)$$assignment$$endif$
+    \end{center}
+
+    \rule{\linewidth}{0.1mm}
+
+    \bigskip
+    \bigskip
+}

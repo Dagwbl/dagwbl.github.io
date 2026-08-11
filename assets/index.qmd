@@ -1,0 +1,434 @@
+---
+title: "Sensing technologies for cementitious ground support systems in underground mining: advances, challenges, and future perspectives"
+author: Jinpeng Zhu
+date: today
+format:
+  html:
+    toc: true
+    number-sections: true
+  # typst:
+  #   papersize: a5
+  #   margin:
+  #     x: 1cm
+  #     y: 1cm
+  #   columns: 1
+  pdf:
+    number-sections: true
+    toc: false
+  docx:
+    reference-doc: ../../Assets/sme-reference-doc.docx
+    number-sections: true
+    toc: false
+bibliography: ../../references.bib
+bibliographystyle: chicago-author-date
+abstract:  "Cementitious ground support systems, such as shotcrete, cast-in-place linings, cemented backfill, and grouted bolts, are essential for excavation stability in deep underground mines facing high stresses, seismicity, and harsh groundwater conditions. This paper reviews sensing technologies for these systems using a lifecycle framework spanning five phases: (1) placement and early-age, (2) early service, (3) long-term degradation, (4) dynamic events, and (5) post-event assessment. For each phase, key physical variables (temperature, maturity, strain,stress, corrosion, creep, dynamic response, geometric change) are mapped to appropriate sensing methods: thermal, maturity monitoring, mechanical,deformation sensing, wave-based damage detection, durability/chemical measurements, and geometric mapping. System integration aspects—underground communication, data fusion, AI/ML predictive models, and digital twins—are discussed, alongside challenges in sensor robustness, standardization/QAQC, data management, and transitioning to risk-informed control. The review identifies priorities for future research to enable reliable, lifecycle-oriented monitoring that enhances safety and productivity in underground mining."
+
+---
+
+# Introduction
+
+## Background and motivation
+
+As underground mines extend to greater depths, they are increasingly exposed to high in situ stresses, high temperatures, and more complex hydrogeological conditions [@ranjithOpportunitiesChallengesDeep2017]. Under these conditions, the stability of excavations depends critically on the performance of ground support systems, which must accommodate both static ground loads and dynamic events such as blasting and rockbursts [@mazairaIntenseRockburstImpacts2015; @potvinOptimisingGroundSupport2019]. Cementitious materials, including shotcrete, cast‑in‑place linings, cemented backfill, and grouted bolts, which form a major component of this support system because they can be adapted to irregular geometries, provide good load re-equilibrium, and are relatively cost‑effective.
+
+However, the performance of cementitious support is strongly time‑dependent and environment‑sensitive. Its performance evolves from fresh slurry through early‑age strength gain to long term service, and the degradation occurs by creep, shrinkage, cracking, corrosion, and chemical attack over time[@gilbert2010time; @tangRecentDurabilityStudies2015]. In deep, high‑stress mines, these processes are further coupled with stress redistribution, seismic loading, and groundwater inflow, making it difficult to verify design assumptions using traditional visual inspection and spot measurements alone [@hustrulidUndergroundMiningMethods2001]. This motivates the use of dedicated sensing technologies to provide quantitative information on the state and evolution of cementitious support in situ.
+
+## Importance of ground support and monitoring
+
+Throughout the lifecycle of cementitious support, from placement to end of service, different physical processes control safety and serviceability [@vieiraLifeCycleAssessment2016]. At early ages, temperature evolution, moisture condition, setting time, and strength gain govern re‑entry decisions and quality control for shotcrete, linings, and backfill [@deanMaturityMethodInPlace2019]. In service, structural response becomes dominant: stress and strain in shotcrete and grouted bolts, cracking and debonding at the rock–support interface,  and the onset of time‑dependent deformation [@gilbertTimeDependentBehaviourConcrete2010]. Over longer time scales, durability issues such as corrosion of reinforcement, carbonation, leaching, and sulphate attack reduce residual capacity and can lead to costly rehabilitation or unplanned downtime [@galanDurabilityShotcreteUnderground2019; @songCorrosionMonitoringReinforced2007].
+
+Sensing technologies provide a means to track these processes quantitatively and to connect them with operational decisions. Various sensors can supply information on temperature, strain, deformation, damage, and degradation that is not accessible through routine inspections alone [@cacciuttoloLowCostSensorsTechnologies2023]. When appropriately integrated with mine communication systems and data analytics, such monitoring can support safer re‑entry criteria, more targeted reinforcement, optimized backfilling and extraction sequences, and earlier detection of emerging hazards [@yarkanUndergroundMineCommunications2009; @chimunhuReviewMachineLearning2022].
+
+## Scope and structure of the review
+
+Cementitious materials are used in several key support functions in underground mining, including shotcrete linings in drifts and intersections, cast‑in‑place and precast shaft linings, cemented paste or rockfill in stopes, and cementitious grout around bolts and cables. This paper focuses on sensing technologies that are directly applicable to these cement‑based systems, rather than to rock mass monitoring or general mine‑wide geotechnical instrumentation.
+
+The review is organized around a simplify lifecycle perspective. First, the main types of cementitious ground support, their operating environments, and dominant failure mechanisms are summarized to establish monitoring needs. And then introduces a phase‑based framework that links five stages of the support lifecycle to physical variables and associated sensing targets [@vieiraLifeCycleAssessment2016]. On this basis, sensing technologies are grouped by their primary measurement function (thermal–maturity, mechanical response, deformation, damage/wave‑based methods, durability/chemical, and geometric/global mapping) and mapped to the phases where they provide the useful parameters. Subsequent sections discuss system‑level integration, including underground communication, data fusion, AI/ML, and digital twin concepts, and finally outline current key challenges and future research directions for deploying sensing technologies in cementitious ground support systems in underground mines.
+
+# Cementitious support types in underground mining
+
+Concrete is one of the most widely used cementitious materials in mining, providing durable, relatively low‑cost, and versatile support for shafts, drifts, excavations, and surface infrastructure. From the moment concrete is mixed and placed until the end of its service life, multiple properties must be monitored to ensure that design strength is reached and maintained, and to optimize construction and production schedules [@taheriReviewFiveKey2019]. The relevant parameters depend on the support function, construction method, and age, and include inherent attributes (temperature, humidity, pH, thermal and electrical conductivity, hydration degree, microstructure) and induced attributes (strain, stress, cracking, corrosion, stiffness, strength, and maturity). If abnormal changes in these parameters are not detected and acted upon, ground support performance can deteriorate, leading to increased risk of instability and lost productivity.
+
+## Shotcrete
+
+Shotcrete is special pneumatically sprayed concrete used as primary support in drifts and tunnels. It rapidly bonds to irregular rock surfaces and provides early strength and confinement. Its performance is sensitive to application quality and environmental conditions, with common issues including shrinkage cracking, debonding, and durability degradation [@galanDurabilityShotcreteUnderground2019].
+
+From a process perspective, shotcrete shares similarities with extrusion-based concrete printing, particularly in terms of layer deposition and rheology control, as shown in the @fig-shotcrete3dprint-r. Therefore, sensing and control techniques from digital concrete fabrication are increasingly considered for improving shotcrete quality and monitoring [@wanglerDigitalConcreteReview2019].
+
+```{r}
+#| label: fig-shotcrete3dprint-r
+#| fig-cap: "Shotcrete and 3D printing comparison"
+#| fig-subcap: 
+#|   - "Wet mix process of shotcrete @heidarnezhadShotcreteBased3D2022"
+#|   - "Schematic diargram of the 3D prinitng setup @zhangReviewCurrentProgress2019"
+#| layout-ncol: 2
+#| fig-align: center
+#| out-height: "2.5in"
+#| echo: false
+
+knitr::include_graphics(c("assets/2026-03-13-12-07-36.png", "assets/2026-03-13-13-33-18.png"))
+```
+
+
+## Cast-in-place concrete and shaft linings
+
+Cast-in-place concrete is usually used in permanent structures such as shaft linings and underground chambers, where high structural integrity and durability are required. These systems resemble conventional civil structures and can be assessed using established methods such as impact-echo testing for defect detection [@linImpactEchoResponseConcrete1991].
+
+Their performance under deep mining conditions, including high stress and aggressive environments, has been studied to evaluate long-term stability [@zhouPerformanceChangeShaft2020]. Cementitious materials are also used in artificial pillars to support excavations while enabling resource recovery [@caoUtilizingConcretePillars2021].
+
+## Cemented backfill and barricades
+Cemented paste backfill (CPB) is a mixture of tailings, water, and binder used to fill mined-out stopes, providing support and enabling waste reuse [@sheshpariReviewUndergroundMine2015]. Its performance depends on composition, curing, and placement quality.
+
+Due to its heterogeneity, defects such as segregation and poor roof contact can reduce strength and create potential failure zones [@yinActiveRoofcontactFuture2023]. Key influencing factors include water-to-binder ratio and curing conditions [@chiloaneRevisitingFactorsContributing2023]. Cementitious materials are also used in barricades that must withstand hydraulic and mechanical loading.
+
+## Grout interacts with bolts/cables
+
+Grouted bolts and cables use cementitious grout to bond reinforcement elements to the rock mass, enabling load transfer and improving stability [@heFullyGroutedRock2015]. Their behavior depends on interactions at bolt–grout and grout–rock interfaces.
+
+Failure may occur through bond degradation, grout cracking, or bolt rupture, and is strongly influenced by installation quality and material properties [@wangStudyEngineeringApplication2019]. Because these systems are embedded, indirect sensing methods are required for monitoring.
+
+The schematic diagram and the principle are shown as the @fig-groutbolt-r-1. Grouting enhances the mechanical behavior of the rock–support system by improving the bond strength and stiffness at the bolt–grout–rock interface, thereby increasing cohesion and frictional resistance and shifting the failure envelope to a higher strength level @fig-groutbolt-r-2 [@wangStudyEngineeringApplication2019].
+
+```{r}
+#| label: fig-groutbolt-r
+#| fig-cap: "The schematic diagram and the mechanics"
+#| fig-subcap:
+#|   - "The mechanical schematic diagram of surrounding rock-anchorage body interface"
+#|   - "The mechanical schematic diagram of rock mass failure before and after grouting"
+#| layout-ncol: 2
+#| fig-align: center
+#| out-height: "2in"
+#| echo: false
+
+knitr::include_graphics(c("assets/2026-03-13-16-03-53.png", "assets/2026-03-13-16-05-27.png"))
+```
+
+The operating environment is not stable like a building, all devices, equipments, and even tunnels will change with the open-stop moving forward. During the mining process, explosives might be used for caving the minerals, and it can produce powerful impact wave to affect the support stability and integrity; Due to the mining system high probablity through the aquiffer, the water inflow from the aquiffer will change the support physical properties and reduce the longevity of sensors. In deep mine, the high temperature gradients might cause the extra temperature drift error on sensor. There are also some security requirements must conform, in particular the coal mine, which includes the gas, and combustiable coal dust.
+
+Thus, these harsh environment and constraints need to have more strict requirements. high stress, dynamic  loading, and ground water erosion can degrade sensors or affect signal stability. On the another hand, because the absence of GPS, underground mining requires complex wireless signal networks to transmit data from embedded sensors.
+
+# Cementitious material failure mechanisms
+
+Cementitious ground support deteriorates through multiple interacting mechanisms that evolve over time and depend on loading conditions, environmental exposure, and material properties. These mechanisms do not occur in isolation; rather, they interact and often accelerate each other, ultimately reducing the load-bearing capacity and durability of the support system. This section classifies failure mechanisms into five main categories: early-age risks, mechanical and structural damage, time-dependent deformation, chemical and durability degradation, and dynamic loading effects.
+
+## The lifecycle of cementitious support
+
+In underground mining, sensing technology must ultimately support specific operational decisions rather than purely academic measurement. Key decisions include re‑entry time after shotcrete application, verification of support re-entry time, support quality, recovery timing, and hazard alert. Therefore, the lifecycle of cementitious support divided into five phases, each phase should be mapped to both its measurement function and the associated decision or alarm logic, as shown in the @fig-lifecycle.
+
+```{mermaid}
+%%| label: fig-lifecycle
+%%| fig-cap: Lifecycle-oriented mapping of physical variable, sensing technologies, and engnineering decisions for cementitious ground support systems
+
+flowchart LR
+    %% Keep each phase as a vertical stack, and place phase subgraphs left-to-right.
+    subgraph S1 ["Phase I"]
+        direction TB
+        P1["Placement and Early-age"]
+        A1["Physical variables:<br/>Temperature, moisture, stiffness"]
+        B1["Sensing:<br/>Thermocouple, maturity, UPV, LiDAR"]
+        C1["Decisions:<br/>Re-entry time<br/>QA/QC (thickness, coverage)"]
+        P1 --> A1 --> B1 --> C1
+    end
+
+    subgraph S2 ["Phase II"]
+        direction TB
+        P2["Early Service"]
+        A2["Physical variables:<br/>Strain, stress, interface behavior"]
+        B2["Sensing:<br/>Strain gauge, vibrating wire, DFOS, AE"]
+        C2["Decisions:<br/>Load redistribution<br/>Early damage detection<br/>Support optimization"]
+        P2 --> A2 --> B2 --> C2
+    end
+
+    subgraph S3 ["Phase III"]
+        direction TB
+        P3["Long-term Degradation"]
+        A3["Physical variables:<br/>Creep, shrinkage, corrosion"]
+        B3["Sensing:<br/>Extensometer, resistivity, corrosion probes"]
+        C3["Decisions:<br/>Maintenance planning<br/>Residual capacity assessment"]
+        P3 --> A3 --> B3 --> C3
+    end
+
+    subgraph S4 ["Phase IV"]
+        direction TB
+        P4["Dynamic Events"]
+        A4["Physical variables:<br/>Dynamic strain, wave propagation"]
+        B4["Sensing:<br/>AE, microseismic, high-speed DFOS"]
+        C4["Decisions:<br/>Hazard warning<br/>Evacuation / operational control"]
+        P4 --> A4 --> B4 --> C4
+    end
+
+    subgraph S5 ["Phase V"]
+        direction TB
+        P5["Post-event Assessment"]
+        A5["Physical variables:<br/>Geometry, defects"]
+        B5["Sensing:<br/>LiDAR, photogrammetry, GPR"]
+        C5["Decisions:<br/>Repair / reinforce / abandon"]
+        P5 --> A5 --> B5 --> C5
+    end
+
+    S1 --> S2 --> S3 --> S4 --> S5
+
+    %% ===== Styling =====
+    classDef phase fill:#f5f5f5,stroke:#333,stroke-width:2px;
+    classDef physics fill:#e3f2fd,stroke:#1565c0;
+    classDef sensing fill:#fff3e0,stroke:#ef6c00;
+    classDef decision fill:#e8f5e9,stroke:#2e7d32;
+
+    class P1,P2,P3,P4,P5 phase;
+    class A1,A2,A3,A4,A5 physics;
+    class B1,B2,B3,B4,B5 sensing;
+    class C1,C2,C3,C4,C5 decision;
+```
+
+## Early-age risks
+
+Early-age behavior strongly influences long-term performance because strength development, microstructure formation, and bond quality are established during the first hours to days after placement. Key early-age risks include excessive hydration heat, steep thermal gradients, rapid moisture loss, delayed setting, insufficient early strength, and plastic shrinkage cracking. Temperature and moisture history govern hydration kinetics, while restraint conditions from surrounding rock or formwork influence stress development and cracking potential.
+
+Thermal gradients can generate tensile stresses when surface cooling outpaces internal hydration heat, resulting in early thermal cracking [@safiuddinEarlyAgeCrackingConcrete2018]. In shotcrete, rebound, segregation, and poor compaction may also lead to voids, weak interfaces, and local debonding. Insufficient curing or early loading before adequate strength gain may cause microcracking that remains undetected but degrades long-term performance.
+
+In cemented backfill, bleeding, segregation, and inadequate roof contact can compromise strength and stiffness development, producing voids or weak layers that influence long-term stability [@zhaoMechanicsSafetyIssues2020].
+
+## Mechnical damage and structural instability
+
+Once the material has hardened and begins interacting with the rock mass, mechanical and structural failure mechanisms become dominant. These mechanisms arise from load transfer, stress redistribution, and incompatibility of deformation between the support and the surrounding rock.
+
+Typical mechanical damage modes include flexural cracking, tensile splitting, shear failure, punching failure, and delamination of layered support systems. Debonding at the rock–support interface is a particularly important mechanism because it reduces confinement and load transfer capacity, accelerating localized failure [@mainaliExperimentalStudyDebonding2015]. In shotcrete and cast-in-place linings, tensile stresses induced by rock movement can cause crack initiation and propagation, while stress concentration around openings can trigger shear or punching failures.
+
+Reinforced or fiber-reinforced cementitious materials exhibit different failure characteristics. Fibers can improve post-cracking behavior and energy absorption, but failure may still occur through fiber pull-out, matrix cracking, or bond degradation [@wangMechanicalPropertiesFailure2025]. In grouted bolts, failure may occur through bolt rupture, grout cracking, or bond degradation at the bolt–grout or grout–rock interface [@heFullyGroutedRock2015].
+
+## Time-dependent deformation 
+
+Time-dependent deformation in cementitious materials is primarily governed by creep and shrinkage, which can lead to excessive cracking and deflection even in structures that meet design requirements [@gilbertTimeDependentBehaviourConcrete2010; @StateArtTimedependent2013]. In underground environments, these mechanisms are further coupled with transport-driven processes such as moisture migration, diffusion, and corrosion, linking mechanical deformation with long-term durability degradation. The total strain can be expressed as the superposition of instantaneous, creep, shrinkage, and thermal components:
+
+$$
+\epsilon(t) = \epsilon_{e}(t) + \epsilon_{p}(t) + \epsilon_{cr}(t) + \epsilon_{sh}(t) + \epsilon_{T}(t) 
+$${#eq-time-dependent-strain}
+
+The @eq-time-dependent-strain provides a basis for separating time-dependent deformation mechanisms and supports model-based interpretation of in situ measurements [@gilbert2010time]. In practice, these processes are monitored using embedded strain gauges, vibrating wire instruments, extensometers, and distributed fibre optic sensing, while coupled durability effects (e.g., corrosion and carbonation) are assessed through electrochemical and resistivity-based techniques.
+
+## Corrosion and carbonization
+
+Corrosion and carbonization are two widespread problem affecting cementitious materials, and they are also the time-dependent failure types, but they are not like the creep and shrinkage, which is more related to the mechanical deformation, but more related to the chemical and electrochemical degradation @agboolaReviewCorrosionConcrete2021. For improving the strength and durability, steel reinforcement is widely used in cast-in-place concrete, but the corrosion of steel reinforcement is more serious than the concrete itself, with costly repair in billions of dollars annually worldwide [@quraishiCorrosionReinforcedSteel2017]. The time-dependent reduction coefficient can be calculated by laboratory methods, and the deptth of carbonation increses over time (as shown in the @fig-carbonation),  @nokkenTimeDependentDiffusion2006 based on three methods obtaining service life of concrete structure in laboratory sucessfully.
+
+![Schematic representation of the carbonation of concrete, adapted from @felixParametricAnalysisCarbonation2017](./assets/carbonation.png){#fig-carbonation width=70%}
+
+The main cause of carbonnation the the gaseous $CO_2$ entering , and then diffusing and dissolution into the cementious materials through the pores and fractures. It has two major processes, the formation of carbonic acid and the neutralization rection, as shown in the @eq-carbonation-1 and @eq-carbonation-2.
+
+$$
+CO_2 + H_2O \rightarrow H_2CO_3
+$${#eq-carbonation-1}
+
+$$
+H_2CO_3 + Ca(OH)_2 \rightarrow CaCO_3 + 2H_2O
+$${#eq-carbonation-2}
+
+Over time, this reaction can also affect other hydration products like Calcium Silicate Hydrate (C-S-H) gel, causing it to decalcify and further lowering the pH.
+
+![Schematics of corrosion adapted from @goyalReviewCorrosionProtection2018](./assets/2026-03-16-15-04-20.png){#fig-corrosion width=70%}
+
+Corrosion is often caused by the by chloride ions. Unlike carbonation, which lowers the pH of the entire concrete matrix, chloride-induced corrosion is a more aggresive and localized mechanism. The chloride ions can move through the three main processes: diffusion, capillary absorption, and permeation, enventually reaching the steel reinforcement. There are also two phases of chloride ingress: initiation phase and propagation phase.
+
+In the initiation phase, chloride ions just penetrate the surface and accumulate in the concrete structure, in particular in the steel surface, but they don't cause corrosion in this phase, yet. Once the critical chloride threshold is reached, the propagation phase starts, and  the anodic reaction and cathodic reaction occur, the chmechical reaction of the corrosion process is shown in the @eq-corrosion-1 and @eq-corrosion-2.
+$$
+Fe \rightarrow Fe^{2+} + 2e^-
+$${#eq-corrosion-1}
+$$
+2H_2O + O_2 + 4e^- \rightarrow 4OH^-
+$${#eq-corrosion-2}
+
+The @eq-corrosion-2 comsumes the electrons generated by the @eq-corrosion-1, and produces the hydroxide ions, which can further react with the ferrous ions to form the rust products, such as $Fe(OH)_2$ and $Fe(OH)_3$. The corrosion process can cause the expansion of the steel reinforcement, which can lead to cracking and spalling of the concrete cover, and eventually structural failure.
+
+## Dynamic loading and rockburst interaction.
+
+Dynamic loading arising from blasting, seismicity, and rockburst events introduces high strain rates and transient stress waves that can significantly damage cementitious support systems. Unlike quasi-static loading, dynamic events can generate rapid crack initiation and propagation, interface debonding, and fragmentation.
+
+Rockbursts and blasting vibrations can impose tensile and shear stresses that exceed material strength within milliseconds, particularly at discontinuities or weakened interfaces. Repeated dynamic loading can also cause fatigue damage, progressive microcracking, and stiffness degradation. In severe cases, dynamic loading may trigger sudden failure of shotcrete linings, delamination, or loss of confinement in backfilled stopes.
+
+Dynamic damage mechanisms are therefore critical for evaluating residual capacity after seismic events and for designing support systems capable of absorbing and dissipating energy.
+
+# Sensing technologies for cementitious ground support
+
+A sensor can be a module, device, machine or subsystem that can capture or capture the target infromation or changes relaying on it's inter properties or reaction[@javaidSensorsDailyLife2021]. There are different classification method based on different purposes or standards. In this paper, the sensors are catogried by the lifecycle of support systems.
+
+## Phase I: placement and early-age
+
+The early-age phase (fresh state) is critical for re-entry decisions and quality control. Monitoring focuses on indirect proxies of strength development, primarily temperature evolution, moisture condition, and early stiffness. Thermocouples are widely used to record hydration temperature history, which can be converted to in-situ strength using maturity methods [@taheriReviewFiveKey2019]. Distributed temperature sensing (DTS) further enables continuous spatial monitoring but requires careful installation and cost considerations. 
+
+Moisture sensors help assess curing conditions, while non-destructive methods such as ultrasonic pulse velocity provide indirect evaluation of stiffness development by measuring wave propagation velocity in the material [@yooUltrasonicMonitoringSetting2016]. In addition, LiDAR and laser scanning are increasingly used to verify shotcrete thickness and coverage at the system scale.
+
+Overall, sensing in this phase relies on thermal–hydraulic–stiffness proxies to support re-entry time and QA/QC decisions.
+
+
+## Phase II: Early service and load adaptation
+
+During early service (days to weeks), the support system begins to interact with the surrounding rock mass, and monitoring shifts toward structural response. Strain gauges and vibrating wire sensors are commonly used to measure stress and strain evolution, while fibre optic sensing (FBG and distributed systems) enables spatially continuous monitoring of deformation and strain localization [@liuReviewFiberOptic2025]. Acoustic emission techniques can detect microcrack initiation and debonding at the support–rock interface, providing early warning of damage [@grosseAcousticEmissionTesting2021].
+
+In this phase, sensing is primarily used to detect load redistribution and early damage, supporting decisions on reinforcement and support optimization. Compared with traditional sonsors that only can be performed on specific points, specific time, or single parameter, distributed fibre optic sensing (DFOS) provides continuous spatial monitoring of strain and temperature, which is particularly valuable for detecting localized deformation and damage. However, its application in underground mining remains challenging due to complex geometries, installation constraints, and harsh environmental conditions, requiring careful system design and calibration.
+
+## Phase III: Long-term service and degradation
+
+In the long-term stage (months to years), monitoring focuses on time-dependent deformation and durability-related processes such as creep, shrinkage, and corrosion. Extensometers, vibrating wire gauges, and distributed fibre optic sensing are used to track deformation over time, while durability is assessed through electrical resistivity, half-cell potential, and embedded electrode sensors [@agboolaReviewCorrosionConcrete2021]. Moisture and transport properties also play a key role in interpreting degradation mechanisms.
+
+Sensing in this phase supports maintenance planning and residual capacity assessment by capturing both mechanical and chemical degradation processes.
+
+## Phase IV: Safety events and system-level response
+
+Dynamic loading from blasting and seismic activity introduces high strain rates and rapid damage evolution. Monitoring in this phase relies on high-frequency sensing techniques such as acoustic emission and microseismic systems to capture fracture processes and energy release [@grosseAcousticEmissionTesting2021]. In addition, rapid scanning methods such as LiDAR can be used for post-event deformation assessment[@gelinasAdvancedGeotechnicalMonitoring2019].
+
+In addition to conventional sensing systems, emerging self-sensing cementitious materials provide an alternative approach by embedding sensing capability directly into the material. The self-sensing principle has been massive studying in decades, as a novel concepts without traditional sensor achieving the monitoring function for the stress, strain, crack and flaws. Self-sensing function is obtained from the piezoresistive effect of functional fillers, which are scattered in the matrix phase and form a conductive network or planes [@bekzhanovaSelfSensingCementitiousComposites2021a]
+
+```{r}
+#| label: fig-selfsensedemo-r
+#| fig-cap: "Schematic diagram of self-sensing principle [@hanIntrinsicSelfsensingConcrete2015]"
+#| fig-subcap:
+#|   - "Structure of ISSC"
+#|   - "Typical sensing behavior of ISSC under loading"
+#| layout-ncol: 2
+#| fig-align: center
+#| out-height: "2in"
+#| echo: false
+
+knitr::include_graphics(c("assets/2026-03-13-11-20-19.png", "assets/2026-03-13-11-34-08.png"))
+```
+
+To follow safety priority principle,  sensing emphasizes real-time detection and hazard warning under transient loading conditions.
+
+## Phase V: Post-event assessment and rehabilitation
+
+After extreme events or during scheduled inspections, sensing focuses on damage mapping and structural assessment. LiDAR, photogrammetry, and ground penetrating radar (GPR) are commonly used to identify geometric changes, cracking, and internal defects. Non-destructive methods such as ultrasonic and impact-echo testing can further evaluate internal integrity.
+
+This phase supports decisions on repair, reinforcement, or decommissioning of support systems.
+
+## Sensing technique selection guidance
+
+To summarize the role of different sensing technologies across the lifecycle, the @tbl-phase-sensing-mapping maps representative techniques to their primary application phases, which are grouped by measurement function rather than installation form, to maintain consistency across lifecycle phases.
+
+| Technology / Function                | Phase I | Phase II | Phase III | Phase IV | Phase V |
+|-------------------------------------|---------|----------|-----------|----------|---------|
+| **Thermal & maturity**              |         |          |           |          |         |
+| Thermocouples / temperature sensors | ✓       | △        | –         | –        | –       |
+| Maturity sensors                    | ✓       | △        | –         | –        | –       |
+| Distributed temperature sensing (DTS) | ✓     | ✓        | △         | △        | –       |
+| **Mechanical (strain / stress)**    |         |          |           |          |         |
+| Strain gauges (electrical/FBG)      | △       | ✓        | ✓         | ✓        | △       |
+| Vibrating wire gauges               | –       | ✓        | ✓         | △        | –       |
+| Pressure cells / load cells         | –       | ✓        | ✓         | △        | –       |
+| Fibre optic sensing (DFOS, DSS)     | △       | ✓        | ✓         | ✓        | △       |
+| **Deformation & displacement**      |         |          |           |          |         |
+| Extensometers                       | –       | ✓        | ✓         | △        | –       |
+| Convergence meters                  | –       | ✓        | ✓         | ✓        | ✓       |
+| Inclinometers                       | –       | △        | ✓         | △        | –       |
+| **Damage & wave-based methods**     |         |          |           |          |         |
+| Acoustic emission (AE)              | –       | ✓        | △         | ✓        | –       |
+| Ultrasonic / UPV                    | ✓       | ✓        | △         | –        | ✓       |
+| Impact-echo                         | ✓       | ✓        | △         | –        | ✓       |
+| Microseismic monitoring             | –       | △        | △         | ✓        | △       |
+| **Durability & chemical**           |         |          |           |          |         |
+| Half-cell potential                 | –       | –        | ✓         | –        | △       |
+| Electrical resistivity              | △       | △        | ✓         | –        | △       |
+| Corrosion probes                    | –       | –        | ✓         | –        | △       |
+| Humidity / RH sensors               | ✓       | △        | ✓         | –        | –       |
+| **Geometric / global mapping**      |         |          |           |          |         |
+| LiDAR / laser scanning              | ✓       | △        | ✓         | ✓        | ✓       |
+| Photogrammetry / DIC                | ✓       | △        | ✓         | △        | ✓       |
+| Ground penetrating radar (GPR)      | –       | △        | ✓         | –        | ✓       |
+| **Emerging / integrated**           |         |          |           |          |         |
+| Self-sensing cementitious materials | △       | ✓        | ✓         | △        | –       |
+
+: Mapping of sensing technologies to suport lifecycle phases. Across the lifecycle, sensing focus from: (1) material state (thermal–hydraulic), to (2) structural response (mechanical), to (3) degradation processes (chemical), and finally to (4) system-level behavior under dynamic loading. {#tbl-phase-sensing-mapping}
+
+To explicitly link sensing technologies with making engineering decision, a lifecycle-oriented framework is proposed as @fig-selection, in which each phase is mapped to key physical variables, sensing methods, and operational decisions.
+
+```{mermaid}
+%%| label: fig-selection
+%%| fig-cap:  Selection process for sensing technologies in underground mining
+flowchart LR
+    %% Thick lines between phases to lock the left-to-right order
+    Phase1 ==> Phase2 ==> Phase3 ==> Phase4
+
+    subgraph Phase1 [Phase 1: Objectives & Characteristics]
+        direction TB
+        A1[1. Define Monitoring Goals<br/>Early Hydration / Long-term Stability / Internal Defects] --> A2[2. Assess Material Properties<br/>Flowable Backfill Slurry / Wet-mix Concrete]
+        A2 --> A3[3. Determine Key Indicators<br/>Stress & Displacement / Viscosity / Corrosion / Heat of Hydration]
+    end
+
+    subgraph Phase2 [Phase 2: Environmental Adaptation]
+        direction TB
+        B1[4. Basic Environment Constraints<br/>Mechanical Damage / Humidity / pH Level / EMI] --> B2[5. Extreme Challenge Assessment<br/>Blasting Impact / High In-situ Stress / Groundwater Seepage]
+        B2 --> B3[6. Data Transmission Network<br/>Manual Inspection / LoRa / Industrial Ethernet]
+    end
+
+    subgraph Phase3 [Phase 3: Technology Screening]
+        direction TB
+        C1[7. Sensing Principle Matching<br/>Match Sampling Rate / Range / Durability] --> C2[8. Technology Type Comparison<br/>Point: Vibrating Wire, FBG vs. Distributed Fiber Optic]
+        C2 --> C3[9. Cost & Lifespan Evaluation<br/>Balance Unit Price / Installation Difficulty / Mining Cycle]
+    end
+
+    subgraph Phase4 [Phase 4: Solution Implementation]
+        direction TB
+        D1[10. Initial Selection & Verification<br/>Determine Model / Sensitivity / Temp Compensation] --> D2{11. Validation & Trial<br/>Lab Calibration / On-site Pilot Test}
+        D2 -- Pass --> D3([Final Selection Result])
+        
+        %% 👇 Internal jump node to perfectly solve cross-graph layout crashes
+        D2 -. Fail .-> D4((Return to<br/>Phase 3))
+    end
+
+    %% Style beautification and visual hierarchy
+    style Phase1 fill:#f5f5f5,stroke:#333,stroke-dasharray: 5 5,stroke-width:2px
+    style Phase2 fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Phase3 fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Phase4 fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    
+    style D3 fill:#c8e6c9,stroke:#2e7d32,stroke-width:3px,color:#000
+    style D2 fill:#fff,stroke:#d32f2f,stroke-width:2px,color:#d32f2f
+    
+    %% Special warning style for the return node
+    style D4 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#c62828,stroke-dasharray: 3 3
+```
+
+# System integration
+
+The transition from individual sensor measurements to actionable engineering decisions requires a robust intelligent integration framework. In the harsh environment of underground mining, system integration must address the physical challenges of signal propagation, the time sync challenges of multi-stage data fusion, and the algorithmic challenges of converting raw signals into structural health indicators.
+
+## Underground  communication and data transmission
+
+Until now, no single communication system exists which can solve all of the problems and difficulties encountered in underground mine communications [@yarkanUndergroundMineCommunications2009]. Underground mining has complex geometry, metallic infrastructure, and no GPS, which makes wireless communication challenging. Common technologies such as Wi‑Fi, Zigbee, Bluetooth, and LoRa offer different trade‑offs between data rate, range, and power consumption; long‑range systems typically support lower data rates, whereas high‑bandwidth systems require denser infrastructure and shorter links. The relationship between data rates and transimission range is shown as the @fig-data-transer-system [@ngwenyamaRecentAdvancesChallenges2025]. For cementitious support monitoring, low‑rate measurements (temperature, humidity, strain from vibrating‑wire gauges) can use low‑power, long‑range protocols, while high‑volume data from AE, microseismic, LiDAR, or high‑rate DFOS usually require local buffering, image processing, and higher‑bandwidth.
+
+![Comparison of wireless communication systems (this figure only provides a qualitative comparison only; actual data rates and transmission ranges vary significantly depending on environment conditions and specific protocal version)](assets/2026-03-12-15-45-30.png){#fig-data-transer-system width=70%}
+
+## Multi-Modal data fusion
+
+No single sensor can fully describe the condition of shotcrete, backfill, or grouted bolts and their environment, so practical systems combine embedded sensors with external measurements such as LiDAR, photogrammetry, and ground penetrating radar. A simple three‑layer framework is often adopted: data acquisition and normalization (synchronizing and cleaning heterogeneous data), state estimation and feature extraction, and situation assessment [@wangAutomaticMonitoringSystem2020]. This layered approach needs amount of data analysis and building the relationships between different data sources, which helps connect detailed measurements at a few locations with lower‑frequency, large‑scale observations, and makes it easier to define consistent alarm thresholds and QA/QC procedures across the mine.
+
+## AI/ML and digital twin
+
+As more monitoring data are accumulated, data‑driven and hybrid AI/ML approaches are being  explored for anomaly detection, early warning, and residual capacity estimation of cementitious support [@vinayMachineLearningApproach2023]. Typical applications include detecting abnormal trends in strain or convergence relative to historical behaviour, or using multi‑sensor inputs to predict the probability of exceeding displacement or cracking limits. In parallel, digital twin concepts are being introduced, where numerical models of support and rock mass are continuously updated with sensing data to maintain a “live” representation of the underground excavations [@nobaharExploringDigitalTwin2024]. However, there are few mature applications in underground mining for digital twins system yet.
+
+# Challenges and future rsearch directions
+
+Although many sensing technologies have reached prototype or early commercial use in underground mines, several fundamental challenges still limit their widespread and reliable application to cementitious ground support systems.
+
+## Sensor longevity and robustness
+
+At present, the first challenge is achieving sufficient robustness and service life for sensors embedded in shotcrete, backfill, and grouted bolts under harsh underground conditions[@yadavPredictingBatteryLevels2025]. Dust, moisture, aggressive groundwater, blasting vibration, and mechanical impact from equipment can degrade sensors, cables, and connectors, leading to drift or sudden failure.Traditional wired instruments add complexity in installation and maintenance, whereas wireless nodes face power‑supply and enclosure‑durability constraints in confined headings[@zrelliDesignOpticalWireless2018]. Future work should focus on mining‑specific packaging, low‑power designs, and self‑diagnostics to ensure that sensors remain reliable over representative fractions of the support lifecycle[@cacciuttoloLowCostSensorsTechnologies2023].
+
+## Transition from monitoring to active control
+
+The second challenge is turning discrete monitoring data into reliable, predictive information about support condition and remaining capacity, and utilising the development of artificial intelligence. Datasets are often sparse, site‑specific, and biased toward normal operation, which complicates the training and validation of AI/ML models and digital twins[@nobaharExploringDigitalTwin2024]. There is still a weak link between measured indicators and quantitative performance metrics such as probability of cracking, debonding, or loss of load‑bearing capacity[@chimunhuReviewMachineLearning2022]. Future work should emphasize hybrid models that combine mechanics‑based understanding with data‑driven methods, as well as shared data formats and open interfaces that allow long‑term, various model learning for using ML/AI [@rokemOpensourceModelsDevelopment2025].
+
+## Towards self assessment and self-decision
+
+Recently, the sudden popularity of openclaw has brought a new potential direction for industrial transformation, and the MineClaw (refer [OpenClaw](https://openclaw.ai/)) with self-assesment and self-decision ability becomes possible. There is also a strategic challenge in moving from passive monitoring to self-assessment and self-decision of cementitious support. In practice, sensing outputs are still rarely coupled to structured decision rules for re‑entry timing, support upgrade, or operational restrictions now. Research opportunities include simple, transparent decision trees that map sensing indicators to pre‑defined actions, and modular control architectures where orchestration platforms execute these actions under strict safe requirements and human's constraints. Addressing these challenges will be central to realizing the full future potential of sensing technologies for safer and more productive underground mining [@konieczna-fulawkaAutonomousMobileInspection2025].
+
+# Conclusion
+
+This study establishes a lifecycle-oriented sensing framework that integrates physical variables, sensing technologies, and engineering decisions into a unified perspective. It demonstrates that no single sensing technology can satisfy all monitoring demands in underground mining environments. Instead, effective monitoring relies on the integration of complementary techniques, including embedded sensors, surface-attached instrumentation, external and remote sensing methods, and emerging self-sensing materials. Each modality provides distinct spatial and temporal resolution, and their combined use is essential for capturing multi-scale behavior under complex geological and operational conditions.
+
+A key implication of this work is the need to move beyond isolated measurements toward system-level integration. The combination of multi-modal sensing, reliable data transmission, and data fusion enables the transformation of raw measurements into actionable information. In this context, sensing technologies play a central role in supporting critical decisions such as re-entry timing, support quality verification, maintenance planning, and hazard warning.
+
+Future research should focus on improving sensor robustness under harsh underground conditions, developing standardized QA/QC frameworks, and advancing data integration methods. In particular, the coupling of sensing systems with IoT architectures, data-driven models, and digital twin concepts offers a pathway toward predictive and adaptive ground support management. Such developments will facilitate the transition from passive monitoring to risk-informed, autonomous control of cementitious support systems in underground mining.
+
+# References
+
+::: {#refs}
+:::

@@ -66,14 +66,14 @@ limit 10
 
 ### **📁 Article Box**
 ```dataview
-table without id
-	link(file.path) AS "File",
-	title AS "Title",
-	dateformat(date, "yyyy-MM-dd") AS "Date"
-from "content"
-where draft=false
-sort date desc
-limit 15
+TABLE WITHOUT ID
+    link(file.path) AS "File",
+    title AS "Title",
+    dateformat(date(date), "yyyy-MM-dd") AS "Date"
+FROM "content"
+WHERE draft = false AND date
+SORT date(date) DESC
+LIMIT 15
 ```
 
 ### **📈 Statistics**

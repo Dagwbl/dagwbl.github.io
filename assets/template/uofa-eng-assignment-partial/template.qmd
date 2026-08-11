@@ -1,0 +1,35 @@
+---
+title: "Assignment Title"
+format:
+  pdf:
+    template-partials:
+      - 123/title.tex
+    pdf-engine: lualatex
+    fig-pos: H
+author: "Your Full Name"
+student-id: "Your Student ID"
+course: "Course Name (Course Code)"
+assignment: "Assignment Number"
+# date: "YYYY-MM-DD"  # Optional: Uncomment and add date if needed
+# logo: "path/to/custom/logo.png"  # Optional: Custom logo path
+---
+
+## Question Number 1
+
+Write your answer here. You can use inline math like $x^2$ or display math:
+
+$$
+\int_0^2\left(x^4 - 2x +1 \right)dx
+$$
+
+## Question Number 2
+
+Add more content as needed.
+
+$$
+J_m(x)=\frac{1}{\pi}\int_0^\pi \cos(m\theta-x\sin(\theta))d\theta
+$$
+
+## Question Number 3
+
+Continue with your assignment content.
