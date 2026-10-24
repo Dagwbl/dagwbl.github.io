@@ -6,7 +6,7 @@ tags: ["年度回顾"]
 language: zh
 showToc: true
 TocOpen: false
-draft: true
+draft: false
 math: false
 hidemeta: false
 comments: true
